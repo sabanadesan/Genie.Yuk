@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genie3D.DirectX12.Test", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F2A7A33F-9B3D-40EF-85DC-2340690E8CF9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genie3D.Net.Test", "Test\Genie3D.Net.Test\Genie3D.Net.Test.csproj", "{360CAF5F-F564-4A44-B0C5-0FCE1E33CC28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genie3D.Yuk.Test", "Test\Genie3D.Net.Test\Genie3D.Yuk.Test.csproj", "{360CAF5F-F564-4A44-B0C5-0FCE1E33CC28}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genie3D.Vulkan.Test", "Test\Genie3D.Vulkan.Test\Genie3D.Vulkan.Test.csproj", "{E716FB39-221C-4CB4-A52A-E14FB1422501}"
 EndProject

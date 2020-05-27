@@ -21,6 +21,14 @@ namespace Genie3D.Net
 
         private void Startup()
         {
+            Setting setting = new Setting();
+            Menu menu = new Menu("Graphics");
+
+            setting.Add(menu);
+
+            MenuEntryBool entry = new MenuEntryBool("Fullscreen", false);
+            menu.Add(entry);
+
 
             if (IsOnScreen)
             {
