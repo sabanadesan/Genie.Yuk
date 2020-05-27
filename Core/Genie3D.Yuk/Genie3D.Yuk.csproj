@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="shaders.hlsl" />
+    <None Remove="Output\Shaders\frag.spv" />
+    <None Remove="Output\Shaders\vert.spv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="glfw3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\shaders.hlsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\frag.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\vert.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Genie3D.DirectX12\Genie3D.DirectX12.csproj" />
+    <ProjectReference Include="..\Genie3D.Vulkan\Genie3D.Vulkan.csproj" />
+  </ItemGroup>
+  
+</Project>

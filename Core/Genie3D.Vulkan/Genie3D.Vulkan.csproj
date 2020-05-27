@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Output\Shaders\frag.spv" />
+    <None Remove="Output\Shaders\vert.spv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="glfw3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\frag.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\vert.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpVk" Version="0.4.2" />
+    <PackageReference Include="SharpVk.Glfw" Version="0.4.1" />
+  </ItemGroup>
+
+</Project>
