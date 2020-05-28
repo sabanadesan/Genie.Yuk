@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Transactions;
 
@@ -42,13 +43,13 @@ namespace Genie3D.Net
             _entryList.AddLast(entry);
         }
 
-        public void Get(int index)
+        public MenuEntry Get(int index)
         {
-
+            return _entryList.ElementAt<MenuEntry>(index);
         }
     }
 
-    class MenuEntry
+    abstract class MenuEntry
     {
         private MenuType _type;
         private String _name;
@@ -57,6 +58,18 @@ namespace Genie3D.Net
         {
             _type = type;
             _name = name;
+        }
+
+        public String Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpVk.Spirv;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,14 +22,11 @@ namespace Genie3D.Net
 
         private void Startup()
         {
-            Setting setting = new Setting();
-            Menu menu = new Menu("Graphics");
 
-            setting.Add(menu);
+            Service.Register<Setting>(new Setting());
+            Setting setting = Service.Resolve<Setting>();
 
-            MenuEntryBool entry = new MenuEntryBool("Fullscreen", false);
-            menu.Add(entry);
-
+            CreateSettings(setting);
 
             if (IsOnScreen)
             {
@@ -52,6 +50,19 @@ namespace Genie3D.Net
                     GameGraphics cls = Service.Resolve<GameGraphics>();
                 }
             }
+        }
+
+        private void CreateSettings(Setting setting)
+        {
+            Menu menu = new Menu("Graphics");
+
+            setting.Add(menu);
+
+            MenuEntryBool entry = new MenuEntryBool("Fullscreen", false);
+            menu.Add(entry);
+
+            MenuEntryFloat entry1 = new MenuEntryFloat("Height", 100);
+            menu.Add(entry1);
         }
 
         public static GameManager Instance
