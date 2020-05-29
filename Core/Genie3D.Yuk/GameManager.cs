@@ -26,7 +26,7 @@ namespace Genie3D.Net
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
 
-            CreateSettings(setting);
+            CreateDefaultSettings(setting);
 
             if (IsOnScreen)
             {
@@ -52,7 +52,7 @@ namespace Genie3D.Net
             }
         }
 
-        private void CreateSettings(Setting setting)
+        private void CreateDefaultSettings(Setting setting)
         {
             Menu menu = new Menu("Graphics");
 

@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Transactions;
 
+using IniParser;
+
+
 namespace Genie3D.Net
 {
     public enum MenuType
     {
         Boolean,
-        Float
+        Float,
+        String
     }
 
     class Setting
@@ -18,6 +22,11 @@ namespace Genie3D.Net
 
         public Setting()
         {
+            var FileParser = new FileIniDataParser();
+            IniData data = FileParser.ReadAndParseIniFile("Config.ini", "Output", Encoding.ASCII);
+
+            FileParser.WriteFile("Configuration.ini", "Output", data);
+
             _menuList = new LinkedList<Menu>();
         }
         
@@ -88,6 +97,16 @@ namespace Genie3D.Net
         private Boolean _default;
         
         public MenuEntryBool(String name, Boolean def) : base(name, MenuType.Boolean)
+        {
+            _default = def;
+        }
+    }
+
+    class MenuEntryString : MenuEntry
+    {
+        private String _default;
+
+        public MenuEntryString(String name, String def) : base(name, MenuType.String)
         {
             _default = def;
         }

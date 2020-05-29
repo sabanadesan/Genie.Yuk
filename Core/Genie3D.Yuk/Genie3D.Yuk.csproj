@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Output\Config.ini" />
     <None Remove="shaders.hlsl" />
     <None Remove="Output\Shaders\frag.spv" />
     <None Remove="Output\Shaders\vert.spv" />
@@ -12,6 +13,9 @@
 
   <ItemGroup>
     <Content Include="glfw3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Config.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Output\shaders.hlsl">
@@ -28,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Genie3D.DirectX12\Genie3D.DirectX12.csproj" />
     <ProjectReference Include="..\Genie3D.Vulkan\Genie3D.Vulkan.csproj" />
+    <ProjectReference Include="..\IniParser\IniParser.csproj" />
   </ItemGroup>
   
 </Project>
