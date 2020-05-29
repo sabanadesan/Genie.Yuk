@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Transactions;
 
-using IniParser;
+using Utility.Ini;
 
 
 namespace Genie3D.Net

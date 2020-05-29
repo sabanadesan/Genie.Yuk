@@ -32,7 +32,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Genie3D.DirectX12\Genie3D.DirectX12.csproj" />
     <ProjectReference Include="..\Genie3D.Vulkan\Genie3D.Vulkan.csproj" />
-    <ProjectReference Include="..\IniParser\IniParser.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Utility.Ini">
+      <HintPath>..\..\..\Utility.Yuk\Utility.Ini\bin\Debug\netstandard2.0\Utility.Ini.dll</HintPath>
+    </Reference>
   </ItemGroup>
   
 </Project>
