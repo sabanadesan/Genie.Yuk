@@ -1,0 +1,25 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "**/*.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "."
+        }
+      ],
+      "dest": "docs/docfx/api/dotnet",
+      "shouldSkipMarkup": true
+    },
+    {
+      "src": [
+        {
+          "files": [ "**/*.js" ],
+          "src": "../src"
+        }
+      ],
+      "dest": "docs/docfx/api/js",
+      "useCompatibilityFileName": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "Genie3D.Net": "Genie3D.Net.yml",
+  "Genie3D.Net.Game": "Genie3D.Net.Game.yml",
+  "Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)": "Genie3D.Net.Game.yml",
+  "Genie3D.Net.Game.Run": "Genie3D.Net.Game.yml",
+  "Genie3D.Net.Game.SetWindow(System.Object,System.Int32,System.Int32)": "Genie3D.Net.Game.yml",
+  "Genie3D.Net.GameGraphics": "Genie3D.Net.GameGraphics.yml",
+  "Genie3D.Net.GameGraphics.#ctor": "Genie3D.Net.GameGraphics.yml",
+  "Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)": "Genie3D.Net.GameGraphics.yml",
+  "Genie3D.Net.GraphicsBackend": "Genie3D.Net.GraphicsBackend.yml",
+  "Genie3D.Net.GraphicsBackend.DirectX12": "Genie3D.Net.GraphicsBackend.yml",
+  "Genie3D.Net.GraphicsBackend.Vulkan": "Genie3D.Net.GraphicsBackend.yml",
+  "Genie3D.Net.MenuType": "Genie3D.Net.MenuType.yml",
+  "Genie3D.Net.MenuType.Boolean": "Genie3D.Net.MenuType.yml",
+  "Genie3D.Net.MenuType.Float": "Genie3D.Net.MenuType.yml",
+  "Genie3D.Net.MenuType.String": "Genie3D.Net.MenuType.yml",
+  "Genie3D.Net.Service": "Genie3D.Net.Service.yml",
+  "Genie3D.Net.Service.Register``1(``0)": "Genie3D.Net.Service.yml",
+  "Genie3D.Net.Service.Resolve``1": "Genie3D.Net.Service.yml"
+}

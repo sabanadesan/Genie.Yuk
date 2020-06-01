@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Net
+  commentId: N:Genie3D.Net
+  id: Genie3D.Net
+  children:
+  - Genie3D.Net.Game
+  - Genie3D.Net.GameGraphics
+  - Genie3D.Net.GraphicsBackend
+  - Genie3D.Net.MenuType
+  - Genie3D.Net.Service
+  langs:
+  - csharp
+  - vb
+  name: Genie3D.Net
+  nameWithType: Genie3D.Net
+  fullName: Genie3D.Net
+  type: Namespace
+  assemblies:
+  - Genie3D.Yuk
+references:
+- uid: Genie3D.Net.Game
+  commentId: T:Genie3D.Net.Game
+  name: Game
+  nameWithType: Game
+  fullName: Genie3D.Net.Game
+- uid: Genie3D.Net.GraphicsBackend
+  commentId: T:Genie3D.Net.GraphicsBackend
+  parent: Genie3D.Net
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie3D.Net.GraphicsBackend
+- uid: Genie3D.Net.GameGraphics
+  commentId: T:Genie3D.Net.GameGraphics
+  name: GameGraphics
+  nameWithType: GameGraphics
+  fullName: Genie3D.Net.GameGraphics
+- uid: Genie3D.Net.Service
+  commentId: T:Genie3D.Net.Service
+  name: Service
+  nameWithType: Service
+  fullName: Genie3D.Net.Service
+- uid: Genie3D.Net.MenuType
+  commentId: T:Genie3D.Net.MenuType
+  parent: Genie3D.Net
+  name: MenuType
+  nameWithType: MenuType
+  fullName: Genie3D.Net.MenuType
+- uid: Genie3D.Net
+  commentId: N:Genie3D.Net
+  name: Genie3D.Net
+  nameWithType: Genie3D.Net
+  fullName: Genie3D.Net
+shouldSkipMarkup: true

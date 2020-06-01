@@ -30,6 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.54.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Genie3D.DirectX12\Genie3D.DirectX12.csproj" />
     <ProjectReference Include="..\Genie3D.Vulkan\Genie3D.Vulkan.csproj" />
   </ItemGroup>

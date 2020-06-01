@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Net.GraphicsBackend
+  commentId: T:Genie3D.Net.GraphicsBackend
+  id: GraphicsBackend
+  parent: Genie3D.Net
+  children:
+  - Genie3D.Net.GraphicsBackend.DirectX12
+  - Genie3D.Net.GraphicsBackend.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie3D.Net.GraphicsBackend
+  type: Enum
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: GraphicsBackend
+    path: GameGraphics.cs
+    startLine: 9
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: public enum GraphicsBackend
+    content.vb: Public Enum GraphicsBackend
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Genie3D.Net.GraphicsBackend.Vulkan
+  commentId: F:Genie3D.Net.GraphicsBackend.Vulkan
+  id: Vulkan
+  parent: Genie3D.Net.GraphicsBackend
+  langs:
+  - csharp
+  - vb
+  name: Vulkan
+  nameWithType: GraphicsBackend.Vulkan
+  fullName: Genie3D.Net.GraphicsBackend.Vulkan
+  type: Field
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: Vulkan
+    path: GameGraphics.cs
+    startLine: 11
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: Vulkan = 0
+    return:
+      type: Genie3D.Net.GraphicsBackend
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Genie3D.Net.GraphicsBackend.DirectX12
+  commentId: F:Genie3D.Net.GraphicsBackend.DirectX12
+  id: DirectX12
+  parent: Genie3D.Net.GraphicsBackend
+  langs:
+  - csharp
+  - vb
+  name: DirectX12
+  nameWithType: GraphicsBackend.DirectX12
+  fullName: Genie3D.Net.GraphicsBackend.DirectX12
+  type: Field
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: DirectX12
+    path: GameGraphics.cs
+    startLine: 12
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: DirectX12 = 1
+    return:
+      type: Genie3D.Net.GraphicsBackend
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Genie3D.Net
+  commentId: N:Genie3D.Net
+  name: Genie3D.Net
+  nameWithType: Genie3D.Net
+  fullName: Genie3D.Net
+- uid: Genie3D.Net.GraphicsBackend
+  commentId: T:Genie3D.Net.GraphicsBackend
+  parent: Genie3D.Net
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie3D.Net.GraphicsBackend
+shouldSkipMarkup: true

@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Net.MenuType
+  commentId: T:Genie3D.Net.MenuType
+  id: MenuType
+  parent: Genie3D.Net
+  children:
+  - Genie3D.Net.MenuType.Boolean
+  - Genie3D.Net.MenuType.Float
+  - Genie3D.Net.MenuType.String
+  langs:
+  - csharp
+  - vb
+  name: MenuType
+  nameWithType: MenuType
+  fullName: Genie3D.Net.MenuType
+  type: Enum
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/Setting.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: MenuType
+    path: Setting.cs
+    startLine: 11
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: public enum MenuType
+    content.vb: Public Enum MenuType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Genie3D.Net.MenuType.Boolean
+  commentId: F:Genie3D.Net.MenuType.Boolean
+  id: Boolean
+  parent: Genie3D.Net.MenuType
+  langs:
+  - csharp
+  - vb
+  name: Boolean
+  nameWithType: MenuType.Boolean
+  fullName: Genie3D.Net.MenuType.Boolean
+  type: Field
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/Setting.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: Boolean
+    path: Setting.cs
+    startLine: 13
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: Boolean = 0
+    return:
+      type: Genie3D.Net.MenuType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Genie3D.Net.MenuType.Float
+  commentId: F:Genie3D.Net.MenuType.Float
+  id: Float
+  parent: Genie3D.Net.MenuType
+  langs:
+  - csharp
+  - vb
+  name: Float
+  nameWithType: MenuType.Float
+  fullName: Genie3D.Net.MenuType.Float
+  type: Field
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/Setting.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: Float
+    path: Setting.cs
+    startLine: 14
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: Float = 1
+    return:
+      type: Genie3D.Net.MenuType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Genie3D.Net.MenuType.String
+  commentId: F:Genie3D.Net.MenuType.String
+  id: String
+  parent: Genie3D.Net.MenuType
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: MenuType.String
+  fullName: Genie3D.Net.MenuType.String
+  type: Field
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/Setting.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: String
+    path: Setting.cs
+    startLine: 15
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Net
+  syntax:
+    content: String = 2
+    return:
+      type: Genie3D.Net.MenuType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Genie3D.Net
+  commentId: N:Genie3D.Net
+  name: Genie3D.Net
+  nameWithType: Genie3D.Net
+  fullName: Genie3D.Net
+- uid: Genie3D.Net.MenuType
+  commentId: T:Genie3D.Net.MenuType
+  parent: Genie3D.Net
+  name: MenuType
+  nameWithType: MenuType
+  fullName: Genie3D.Net.MenuType
+shouldSkipMarkup: true
