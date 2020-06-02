@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SharpVk" Version="0.4.2" />
-    <PackageReference Include="SharpVk.Glfw" Version="0.4.1" />
+    <PackageReference Include="SharpVk" Version="0.4.3-dev2" />
+    <PackageReference Include="SharpVk.Glfw" Version="0.4.3-dev2" />
   </ItemGroup>
 
 </Project>

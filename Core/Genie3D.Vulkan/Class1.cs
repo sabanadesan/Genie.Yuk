@@ -58,8 +58,8 @@ namespace Genie3D.Vulkan
         {
             Glfw3.Init();
 
-            Glfw3.WindowHint(0x00022001, 0);
-            this.window = Glfw3.CreateWindow(SurfaceWidth, SurfaceHeight, "Hello Triangle", IntPtr.Zero, IntPtr.Zero);
+            Glfw3.WindowHint(WindowAttribute.ClientApi, 0);
+            this.window = Glfw3.CreateWindow(SurfaceWidth, SurfaceHeight, "Hello Triangle", MonitorHandle.Zero, WindowHandle.Zero);
             this.windowSizeCallback = (x, y, z) => this.RecreateSwapChain();
 
             Glfw3.SetWindowSizeCallback(this.window, this.windowSizeCallback);
