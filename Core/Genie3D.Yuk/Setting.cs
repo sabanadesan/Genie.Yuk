@@ -25,7 +25,7 @@ namespace Genie3D.Net
             var FileParser = new FileIniDataParser();
             IniData data = FileParser.ReadAndParseIniFile("Config.ini", "Output", Encoding.ASCII);
 
-            FileParser.WriteFile("Configuration.ini", "Output", data);
+            //FileParser.WriteFile("Configuration.ini", "Output", data);
 
             _menuList = new LinkedList<Menu>();
         }

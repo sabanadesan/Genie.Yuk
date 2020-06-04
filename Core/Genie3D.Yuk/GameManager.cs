@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Utility.Yuk;
+
 namespace Genie3D.Net
 {
     internal class GameManager
@@ -37,14 +39,8 @@ namespace Genie3D.Net
                 }
                 else if (_backend == GraphicsBackend.DirectX12)
                 {
-                    if (_swapChainPanel == null)
-                        throw new Exception("Please initialize variable: " + "'_swapChainPanel'");
 
-                    if (_width == null)
-                        throw new Exception("Please initialize variable: " + "'_width'");
-
-                    if (_height == null)
-                        throw new Exception("Please initialize variable: " + "'_height'");
+                    Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
 
                     Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
                     GameGraphics cls = Service.Resolve<GameGraphics>();

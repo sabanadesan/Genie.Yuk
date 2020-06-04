@@ -43,7 +43,10 @@
 
   <ItemGroup>
     <Reference Include="Utility.Ini">
-      <HintPath>..\..\..\Utility.Yuk\Utility.Ini\bin\Debug\netstandard2.0\Utility.Ini.dll</HintPath>
+      <HintPath>..\..\..\Utility.Yuk\Utility.Ini\bin\Release\netstandard2.0\Utility.Ini.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility.Yuk">
+      <HintPath>..\..\..\Utility.Yuk\Utility.Yuk\bin\Release\netstandard2.0\Utility.Yuk.dll</HintPath>
     </Reference>
   </ItemGroup>
   
