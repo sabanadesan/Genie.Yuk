@@ -8,7 +8,7 @@ namespace Genie3D.Console
     {
         static void Main(string[] args)
         {
-            Game game = new Game(GraphicsBackend.Vulkan);
+            Game game = new Game(GraphicsBackend.Vulkan, "Output");
             game.Run();
 
             System.Console.WriteLine("Hello World!");

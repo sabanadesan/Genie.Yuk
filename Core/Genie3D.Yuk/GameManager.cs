@@ -17,6 +17,7 @@ namespace Genie3D.Net
         private static System.Object _swapChainPanel;
         private static int? _width;
         private static int? _height;
+        private static String _path;
 
         private GameManager() {
             Startup();
@@ -28,11 +29,11 @@ namespace Genie3D.Net
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
 
-            setting.Load("Config.ini", "Output");
+            setting.Load("Config.ini", _path);
 
             CreateDefaultSettings(setting);
 
-            //setting.Save("Configuration.ini", "Output");
+            setting.Save("Configuration.ini", _path);
 
             if (IsOnScreen)
             {
@@ -135,6 +136,18 @@ namespace Genie3D.Net
             set
             {
                 _swapChainPanel = value;
+            }
+        }
+
+        public static string Path
+        {
+            get
+            {
+                return _path;
+            }
+            set
+            {
+                _path = value;
             }
         }
     }

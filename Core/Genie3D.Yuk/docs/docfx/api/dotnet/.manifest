@@ -4,7 +4,7 @@
   "Genie3D.Net.DirectX.#ctor(System.Object,System.Int32,System.Int32)": "Genie3D.Net.DirectX.yml",
   "Genie3D.Net.DirectX.Run": "Genie3D.Net.DirectX.yml",
   "Genie3D.Net.Game": "Genie3D.Net.Game.yml",
-  "Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)": "Genie3D.Net.Game.yml",
+  "Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend,System.String)": "Genie3D.Net.Game.yml",
   "Genie3D.Net.Game.Run": "Genie3D.Net.Game.yml",
   "Genie3D.Net.Game.SetWindow(System.Object,System.Int32,System.Int32)": "Genie3D.Net.Game.yml",
   "Genie3D.Net.GameGraphics": "Genie3D.Net.GameGraphics.yml",

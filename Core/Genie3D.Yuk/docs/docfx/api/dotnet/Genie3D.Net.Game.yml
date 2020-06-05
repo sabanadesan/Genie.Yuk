@@ -5,7 +5,7 @@ items:
   id: Game
   parent: Genie3D.Net
   children:
-  - Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)
+  - Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend,System.String)
   - Genie3D.Net.Game.Run
   - Genie3D.Net.Game.SetWindow(System.Object,System.Int32,System.Int32)
   langs:
@@ -45,16 +45,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)
-  commentId: M:Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)
-  id: '#ctor(Genie3D.Net.GraphicsBackend)'
+- uid: Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend,System.String)
+  commentId: M:Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend,System.String)
+  id: '#ctor(Genie3D.Net.GraphicsBackend,System.String)'
   parent: Genie3D.Net.Game
   langs:
   - csharp
   - vb
-  name: Game(GraphicsBackend)
-  nameWithType: Game.Game(GraphicsBackend)
-  fullName: Genie3D.Net.Game.Game(Genie3D.Net.GraphicsBackend)
+  name: Game(GraphicsBackend, String)
+  nameWithType: Game.Game(GraphicsBackend, String)
+  fullName: Genie3D.Net.Game.Game(Genie3D.Net.GraphicsBackend, System.String)
   type: Constructor
   source:
     remote:
@@ -68,11 +68,13 @@ items:
   - Genie3D.Yuk
   namespace: Genie3D.Net
   syntax:
-    content: public Game(GraphicsBackend backend)
+    content: public Game(GraphicsBackend backend, string path)
     parameters:
     - id: backend
       type: Genie3D.Net.GraphicsBackend
-    content.vb: Public Sub New(backend As GraphicsBackend)
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(backend As GraphicsBackend, path As String)
   overload: Genie3D.Net.Game.#ctor*
   modifiers.csharp:
   - public
@@ -96,7 +98,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: SetWindow
     path: Game.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
@@ -133,7 +135,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Run
     path: Game.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
@@ -454,6 +456,13 @@ references:
   name: GraphicsBackend
   nameWithType: GraphicsBackend
   fullName: Genie3D.Net.GraphicsBackend
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie3D.Net.Game.SetWindow*
   commentId: Overload:Genie3D.Net.Game.SetWindow
   name: SetWindow
