@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Service
     path: Service.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Register
     path: Service.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Resolve
     path: Service.cs

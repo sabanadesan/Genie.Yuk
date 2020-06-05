@@ -36,19 +36,24 @@ namespace Genie3D.Net
 
             if (IsOnScreen)
             {
-                if(_backend == GraphicsBackend.Vulkan)
+                GameGraphics cls = null; 
+
+                if (_backend == GraphicsBackend.Vulkan)
                 {
                     Service.Register<GameGraphics>(new GameGraphics());
-                    GameGraphics cls = Service.Resolve<GameGraphics>();
+                    cls = Service.Resolve<GameGraphics>();
                 }
                 else if (_backend == GraphicsBackend.DirectX12)
                 {
-
                     Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
 
                     Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
-                    GameGraphics cls = Service.Resolve<GameGraphics>();
+                    cls = Service.Resolve<GameGraphics>();
                 }
+
+                Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
+
+                cls.Run();
             }
         }
 

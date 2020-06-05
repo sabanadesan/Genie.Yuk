@@ -1,36 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.GameGraphics
-  commentId: T:Genie3D.Net.GameGraphics
-  id: GameGraphics
+- uid: Genie3D.Net.Vulkan
+  commentId: T:Genie3D.Net.Vulkan
+  id: Vulkan
   parent: Genie3D.Net
   children:
-  - Genie3D.Net.GameGraphics.#ctor
-  - Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  - Genie3D.Net.GameGraphics.Run
+  - Genie3D.Net.Vulkan.#ctor
+  - Genie3D.Net.Vulkan.Run
   langs:
   - csharp
   - vb
-  name: GameGraphics
-  nameWithType: GameGraphics
-  fullName: Genie3D.Net.GameGraphics
+  name: Vulkan
+  nameWithType: Vulkan
+  fullName: Genie3D.Net.Vulkan
   type: Class
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
       branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: GameGraphics
+    id: Vulkan
     path: GameGraphics.cs
-    startLine: 15
+    startLine: 42
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
   syntax:
-    content: public class GameGraphics
-    content.vb: Public Class GameGraphics
+    content: 'public class Vulkan : Graphics'
+    content.vb: >-
+      Public Class Vulkan
+          Inherits Graphics
   inheritance:
   - System.Object
+  - Genie3D.Net.Graphics
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -45,53 +47,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  commentId: M:Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  id: '#ctor(System.Object,System.Int32,System.Int32)'
-  parent: Genie3D.Net.GameGraphics
-  langs:
-  - csharp
-  - vb
-  name: GameGraphics(Object, Int32, Int32)
-  nameWithType: GameGraphics.GameGraphics(Object, Int32, Int32)
-  fullName: Genie3D.Net.GameGraphics.GameGraphics(System.Object, System.Int32, System.Int32)
-  type: Constructor
-  source:
-    remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: .ctor
-    path: GameGraphics.cs
-    startLine: 19
-  assemblies:
-  - Genie3D.Yuk
-  namespace: Genie3D.Net
-  syntax:
-    content: public GameGraphics(object swapChainPanel, int width, int height)
-    parameters:
-    - id: swapChainPanel
-      type: System.Object
-    - id: width
-      type: System.Int32
-    - id: height
-      type: System.Int32
-    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
-  overload: Genie3D.Net.GameGraphics.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie3D.Net.GameGraphics.#ctor
-  commentId: M:Genie3D.Net.GameGraphics.#ctor
+- uid: Genie3D.Net.Vulkan.#ctor
+  commentId: M:Genie3D.Net.Vulkan.#ctor
   id: '#ctor'
-  parent: Genie3D.Net.GameGraphics
+  parent: Genie3D.Net.Vulkan
   langs:
   - csharp
   - vb
-  name: GameGraphics()
-  nameWithType: GameGraphics.GameGraphics()
-  fullName: Genie3D.Net.GameGraphics.GameGraphics()
+  name: Vulkan()
+  nameWithType: Vulkan.Vulkan()
+  fullName: Genie3D.Net.Vulkan.Vulkan()
   type: Constructor
   source:
     remote:
@@ -100,28 +65,28 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: .ctor
     path: GameGraphics.cs
-    startLine: 24
+    startLine: 46
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
   syntax:
-    content: public GameGraphics()
+    content: public Vulkan()
     content.vb: Public Sub New
-  overload: Genie3D.Net.GameGraphics.#ctor*
+  overload: Genie3D.Net.Vulkan.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie3D.Net.GameGraphics.Run
-  commentId: M:Genie3D.Net.GameGraphics.Run
+- uid: Genie3D.Net.Vulkan.Run
+  commentId: M:Genie3D.Net.Vulkan.Run
   id: Run
-  parent: Genie3D.Net.GameGraphics
+  parent: Genie3D.Net.Vulkan
   langs:
   - csharp
   - vb
   name: Run()
-  nameWithType: GameGraphics.Run()
-  fullName: Genie3D.Net.GameGraphics.Run()
+  nameWithType: Vulkan.Run()
+  fullName: Genie3D.Net.Vulkan.Run()
   type: Method
   source:
     remote:
@@ -130,18 +95,21 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 29
+    startLine: 51
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
   syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
-  overload: Genie3D.Net.GameGraphics.Run*
+    content: public override void Run()
+    content.vb: Public Overrides Sub Run
+  overridden: Genie3D.Net.Graphics.Run
+  overload: Genie3D.Net.Vulkan.Run*
   modifiers.csharp:
   - public
+  - override
   modifiers.vb:
   - Public
+  - Overrides
 references:
 - uid: Genie3D.Net
   commentId: N:Genie3D.Net
@@ -155,6 +123,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Genie3D.Net.Graphics
+  commentId: T:Genie3D.Net.Graphics
+  parent: Genie3D.Net
+  name: Graphics
+  nameWithType: Graphics
+  fullName: Genie3D.Net.Graphics
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -440,21 +414,42 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Net.GameGraphics.#ctor*
-  commentId: Overload:Genie3D.Net.GameGraphics.#ctor
-  name: GameGraphics
-  nameWithType: GameGraphics.GameGraphics
-  fullName: Genie3D.Net.GameGraphics.GameGraphics
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: Genie3D.Net.GameGraphics.Run*
-  commentId: Overload:Genie3D.Net.GameGraphics.Run
+- uid: Genie3D.Net.Vulkan.#ctor*
+  commentId: Overload:Genie3D.Net.Vulkan.#ctor
+  name: Vulkan
+  nameWithType: Vulkan.Vulkan
+  fullName: Genie3D.Net.Vulkan.Vulkan
+- uid: Genie3D.Net.Graphics.Run
+  commentId: M:Genie3D.Net.Graphics.Run
+  parent: Genie3D.Net.Graphics
+  name: Run()
+  nameWithType: Graphics.Run()
+  fullName: Genie3D.Net.Graphics.Run()
+  spec.csharp:
+  - uid: Genie3D.Net.Graphics.Run
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie3D.Net.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie3D.Net.Graphics.Run
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie3D.Net.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie3D.Net.Vulkan.Run*
+  commentId: Overload:Genie3D.Net.Vulkan.Run
   name: Run
-  nameWithType: GameGraphics.Run
-  fullName: Genie3D.Net.GameGraphics.Run
+  nameWithType: Vulkan.Run
+  fullName: Genie3D.Net.Vulkan.Run
 shouldSkipMarkup: true

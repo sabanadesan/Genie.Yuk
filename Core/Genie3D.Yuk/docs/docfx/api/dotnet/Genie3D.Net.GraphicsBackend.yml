@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: GraphicsBackend
     path: GameGraphics.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Vulkan
     path: GameGraphics.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: DirectX12
     path: GameGraphics.cs

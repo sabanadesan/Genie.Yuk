@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Setting.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: MenuType
     path: Setting.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Setting.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Boolean
     path: Setting.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Setting.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Float
     path: Setting.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Core/Genie3D.Yuk/Setting.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: String
     path: Setting.cs

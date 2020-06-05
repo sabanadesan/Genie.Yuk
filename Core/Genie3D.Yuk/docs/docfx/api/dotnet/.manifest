@@ -1,5 +1,8 @@
 {
   "Genie3D.Net": "Genie3D.Net.yml",
+  "Genie3D.Net.DirectX": "Genie3D.Net.DirectX.yml",
+  "Genie3D.Net.DirectX.#ctor(System.Object,System.Int32,System.Int32)": "Genie3D.Net.DirectX.yml",
+  "Genie3D.Net.DirectX.Run": "Genie3D.Net.DirectX.yml",
   "Genie3D.Net.Game": "Genie3D.Net.Game.yml",
   "Genie3D.Net.Game.#ctor(Genie3D.Net.GraphicsBackend)": "Genie3D.Net.Game.yml",
   "Genie3D.Net.Game.Run": "Genie3D.Net.Game.yml",
@@ -7,6 +10,9 @@
   "Genie3D.Net.GameGraphics": "Genie3D.Net.GameGraphics.yml",
   "Genie3D.Net.GameGraphics.#ctor": "Genie3D.Net.GameGraphics.yml",
   "Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)": "Genie3D.Net.GameGraphics.yml",
+  "Genie3D.Net.GameGraphics.Run": "Genie3D.Net.GameGraphics.yml",
+  "Genie3D.Net.Graphics": "Genie3D.Net.Graphics.yml",
+  "Genie3D.Net.Graphics.Run": "Genie3D.Net.Graphics.yml",
   "Genie3D.Net.GraphicsBackend": "Genie3D.Net.GraphicsBackend.yml",
   "Genie3D.Net.GraphicsBackend.DirectX12": "Genie3D.Net.GraphicsBackend.yml",
   "Genie3D.Net.GraphicsBackend.Vulkan": "Genie3D.Net.GraphicsBackend.yml",
@@ -16,5 +22,8 @@
   "Genie3D.Net.MenuType.String": "Genie3D.Net.MenuType.yml",
   "Genie3D.Net.Service": "Genie3D.Net.Service.yml",
   "Genie3D.Net.Service.Register``1(``0)": "Genie3D.Net.Service.yml",
-  "Genie3D.Net.Service.Resolve``1": "Genie3D.Net.Service.yml"
+  "Genie3D.Net.Service.Resolve``1": "Genie3D.Net.Service.yml",
+  "Genie3D.Net.Vulkan": "Genie3D.Net.Vulkan.yml",
+  "Genie3D.Net.Vulkan.#ctor": "Genie3D.Net.Vulkan.yml",
+  "Genie3D.Net.Vulkan.Run": "Genie3D.Net.Vulkan.yml"
 }
