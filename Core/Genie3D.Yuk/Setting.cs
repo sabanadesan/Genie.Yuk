@@ -13,7 +13,7 @@ namespace Genie3D.Net
     public enum MenuType
     {
         Boolean,
-        Float,
+        Number,
         String
     }
 
@@ -49,9 +49,9 @@ namespace Genie3D.Net
 
                 foreach(MenuEntry entry in menu.List)
                 {
-                    if (entry is MenuEntryFloat)
+                    if (entry is MenuEntryNumber)
                     {
-                        MenuEntryFloat fentry = (MenuEntryFloat) entry;
+                        MenuEntryNumber fentry = (MenuEntryNumber) entry;
                         property = new Property(fentry.Name, fentry.Value.ToString());
                         section.Properties.Add(property);
                     }
@@ -99,7 +99,7 @@ namespace Genie3D.Net
                     }
                     else if (float.TryParse(property.Value, out fresult))
                     {
-                        MenuEntryFloat entry = new MenuEntryFloat(property.Key, fresult);
+                        MenuEntryNumber entry = new MenuEntryNumber(property.Key, fresult);
                         menu.Add(entry);
                     }
                     else
@@ -180,16 +180,22 @@ namespace Genie3D.Net
         }
     }
 
-    class MenuEntryFloat : MenuEntry
+    class MenuEntryNumber : MenuEntry
     {
-        private float _default;
+        private double _default;
+        private double _min;
+        private double _max;
+        private double _step;
 
-        public MenuEntryFloat(String name, float def) : base(name, MenuType.Float)
+        public MenuEntryNumber(String name, double def, double min = 0, double max = 1, double step = 0.1) : base(name, MenuType.Number)
         {
             _default = def;
+            _min = min;
+            _max = max;
+            _step = step;
         }
 
-        public float Value
+        public double Value
         {
             get
             {
@@ -200,6 +206,43 @@ namespace Genie3D.Net
                 _default = value;
             }
         }
+
+        public double Min
+        {
+            get
+            {
+                return _min;
+            }
+            set
+            {
+                _min = value;
+            }
+        }
+
+        public double Max
+        {
+            get
+            {
+                return _max;
+            }
+            set
+            {
+                _max = value;
+            }
+        }
+
+        public double Step
+        {
+            get
+            {
+                return _step;
+            }
+            set
+            {
+                _step = value;
+            }
+        }
+
     }
 
     class MenuEntryBool : MenuEntry

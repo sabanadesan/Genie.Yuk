@@ -18,7 +18,7 @@
   "Genie3D.Net.GraphicsBackend.Vulkan": "Genie3D.Net.GraphicsBackend.yml",
   "Genie3D.Net.MenuType": "Genie3D.Net.MenuType.yml",
   "Genie3D.Net.MenuType.Boolean": "Genie3D.Net.MenuType.yml",
-  "Genie3D.Net.MenuType.Float": "Genie3D.Net.MenuType.yml",
+  "Genie3D.Net.MenuType.Number": "Genie3D.Net.MenuType.yml",
   "Genie3D.Net.MenuType.String": "Genie3D.Net.MenuType.yml",
   "Genie3D.Net.Service": "Genie3D.Net.Service.yml",
   "Genie3D.Net.Service.Register``1(``0)": "Genie3D.Net.Service.yml",

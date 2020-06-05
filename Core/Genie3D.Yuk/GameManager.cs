@@ -67,7 +67,7 @@ namespace Genie3D.Net
             MenuEntryBool entry = new MenuEntryBool("Fullscreen", false);
             menu.Add(entry);
 
-            MenuEntryFloat entry1 = new MenuEntryFloat("Height", 100);
+            MenuEntryNumber entry1 = new MenuEntryNumber("Height", 10.00);
             menu.Add(entry1);
         }
 

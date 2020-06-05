@@ -6,7 +6,7 @@ items:
   parent: Genie3D.Net
   children:
   - Genie3D.Net.MenuType.Boolean
-  - Genie3D.Net.MenuType.Float
+  - Genie3D.Net.MenuType.Number
   - Genie3D.Net.MenuType.String
   langs:
   - csharp
@@ -67,30 +67,30 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Genie3D.Net.MenuType.Float
-  commentId: F:Genie3D.Net.MenuType.Float
-  id: Float
+- uid: Genie3D.Net.MenuType.Number
+  commentId: F:Genie3D.Net.MenuType.Number
+  id: Number
   parent: Genie3D.Net.MenuType
   langs:
   - csharp
   - vb
-  name: Float
-  nameWithType: MenuType.Float
-  fullName: Genie3D.Net.MenuType.Float
+  name: Number
+  nameWithType: MenuType.Number
+  fullName: Genie3D.Net.MenuType.Number
   type: Field
   source:
     remote:
       path: Core/Genie3D.Yuk/Setting.cs
       branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: Float
+    id: Number
     path: Setting.cs
     startLine: 15
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
   syntax:
-    content: Float = 1
+    content: Number = 1
     return:
       type: Genie3D.Net.MenuType
   modifiers.csharp:
