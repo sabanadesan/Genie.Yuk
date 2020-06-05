@@ -22,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: MenuType
     path: Setting.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Boolean
     path: Setting.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
@@ -85,7 +85,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Float
     path: Setting.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net
@@ -117,7 +117,7 @@ items:
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: String
     path: Setting.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Genie3D.Yuk
   namespace: Genie3D.Net

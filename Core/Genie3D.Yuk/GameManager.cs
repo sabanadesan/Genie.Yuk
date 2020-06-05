@@ -32,6 +32,8 @@ namespace Genie3D.Net
 
             CreateDefaultSettings(setting);
 
+            //setting.Save("Configuration.ini", "Output");
+
             if (IsOnScreen)
             {
                 if(_backend == GraphicsBackend.Vulkan)

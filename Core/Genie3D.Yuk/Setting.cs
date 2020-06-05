@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpVk.Interop.Khronos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,46 @@ namespace Genie3D.Net
         public void Clear()
         {
             _menuList.Clear();
+        }
+
+        public void Save(string fileName, string path)
+        {
+            IniData data = new IniData();
+
+            Section section;
+            Property property;
+
+            foreach (Menu menu in _menuList)
+            {
+                section = new Section(menu.Name);
+
+                foreach(MenuEntry entry in menu.List)
+                {
+                    if (entry is MenuEntryFloat)
+                    {
+                        MenuEntryFloat fentry = (MenuEntryFloat) entry;
+                        property = new Property(fentry.Name, fentry.Value.ToString());
+                        section.Properties.Add(property);
+                    }
+                    else if (entry is MenuEntryBool)
+                    {
+                        MenuEntryBool bentry = (MenuEntryBool) entry;
+                        property = new Property(bentry.Name, bentry.Value.ToString());
+                        section.Properties.Add(property);
+                    }
+                    else if (entry is MenuEntryString)
+                    {
+                        MenuEntryString sentry = (MenuEntryString) entry;
+                        property = new Property(sentry.Name, sentry.Value);
+                        section.Properties.Add(property);
+                    }
+                }
+
+                data.Sections.Add(section);
+            }
+
+            var FileParser = new FileIniDataParser();
+            FileParser.WriteFile(fileName, path, data);
         }
 
         public void Load(string fileName, string path)
@@ -93,6 +134,26 @@ namespace Genie3D.Net
         {
             return _entryList.ElementAt<MenuEntry>(index);
         }
+
+        public LinkedList<MenuEntry> List
+        {
+            get
+            {
+                return _entryList;
+            }
+        }
+
+        public String Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
     }
 
     abstract class MenuEntry
@@ -127,6 +188,18 @@ namespace Genie3D.Net
         {
             _default = def;
         }
+
+        public float Value
+        {
+            get
+            {
+                return _default;
+            }
+            set
+            {
+                _default = value;
+            }
+        }
     }
 
     class MenuEntryBool : MenuEntry
@@ -137,6 +210,18 @@ namespace Genie3D.Net
         {
             _default = def;
         }
+
+        public Boolean Value
+        {
+            get
+            {
+                return _default;
+            }
+            set
+            {
+                _default = value;
+            }
+        }
     }
 
     class MenuEntryString : MenuEntry
@@ -146,6 +231,18 @@ namespace Genie3D.Net
         public MenuEntryString(String name, String def) : base(name, MenuType.String)
         {
             _default = def;
+        }
+
+        public String Value
+        {
+            get
+            {
+                return _default;
+            }
+            set
+            {
+                _default = value;
+            }
         }
     }
 }
