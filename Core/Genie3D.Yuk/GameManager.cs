@@ -41,15 +41,15 @@ namespace Genie3D.Net
                 if (_backend == GraphicsBackend.Vulkan)
                 {
                     Service.Register<GameGraphics>(new GameGraphics());
-                    cls = Service.Resolve<GameGraphics>();
                 }
                 else if (_backend == GraphicsBackend.DirectX12)
                 {
                     Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
 
                     Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
-                    cls = Service.Resolve<GameGraphics>();
                 }
+
+                cls = Service.Resolve<GameGraphics>();
 
                 Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
 
