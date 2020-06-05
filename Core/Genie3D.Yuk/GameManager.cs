@@ -28,6 +28,8 @@ namespace Genie3D.Net
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
 
+            setting.Load("Config.ini", "Output");
+
             CreateDefaultSettings(setting);
 
             if (IsOnScreen)

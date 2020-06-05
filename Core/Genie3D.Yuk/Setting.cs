@@ -5,7 +5,7 @@ using System.Text;
 using System.Transactions;
 
 using Utility.Ini;
-
+using Utility.Ini.Model;
 
 namespace Genie3D.Net
 {
@@ -22,17 +22,54 @@ namespace Genie3D.Net
 
         public Setting()
         {
-            var FileParser = new FileIniDataParser();
-            IniData data = FileParser.ReadAndParseIniFile("Config.ini", "Output", Encoding.ASCII);
-
-            //FileParser.WriteFile("Configuration.ini", "Output", data);
-
             _menuList = new LinkedList<Menu>();
         }
         
         public void Add(Menu item)
         {
             _menuList.AddLast(item);
+        }
+
+        public void Clear()
+        {
+            _menuList.Clear();
+        }
+
+        public void Load(string fileName, string path)
+        {
+            var FileParser = new FileIniDataParser();
+            IniData data = FileParser.ReadAndParseIniFile(fileName, path, Encoding.ASCII);
+
+            bool bresult;
+            float fresult;
+            Menu menu;
+
+            SectionCollection sections = data.Sections;
+            foreach (Section section in sections)
+            {
+                menu = new Menu(section.Name);
+
+                foreach (Property property in section.Properties)
+                {
+                    if (Boolean.TryParse(property.Value, out bresult))
+                    {
+                        MenuEntryBool entry = new MenuEntryBool(property.Key, bresult);
+                        menu.Add(entry);
+                    }
+                    else if (float.TryParse(property.Value, out fresult))
+                    {
+                        MenuEntryFloat entry = new MenuEntryFloat(property.Key, fresult);
+                        menu.Add(entry);
+                    }
+                    else
+                    {
+                        MenuEntryString entry = new MenuEntryString(property.Key, property.Value);
+                        menu.Add(entry);
+                    }
+                }
+
+                Add(menu);
+            }
         }
     }
 
