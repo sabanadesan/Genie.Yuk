@@ -1,33 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.Service
-  commentId: T:Genie3D.Net.Service
-  id: Service
-  parent: Genie3D.Net
+- uid: Genie3D.Yuk.Game
+  commentId: T:Genie3D.Yuk.Game
+  id: Game
+  parent: Genie3D.Yuk
   children:
-  - Genie3D.Net.Service.Register``1(``0)
-  - Genie3D.Net.Service.Resolve``1
+  - Genie3D.Yuk.Game.#ctor(Genie3D.Yuk.GraphicsBackend,System.String)
+  - Genie3D.Yuk.Game.Run
+  - Genie3D.Yuk.Game.SetWindow(System.Object,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
-  name: Service
-  nameWithType: Service
-  fullName: Genie3D.Net.Service
+  name: Game
+  nameWithType: Game
+  fullName: Genie3D.Yuk.Game
   type: Class
   source:
     remote:
-      path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      path: Core/Genie3D.Yuk/Game.cs
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: Service
-    path: Service.cs
-    startLine: 7
+    id: Game
+    path: Game.cs
+    startLine: 6
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
-    content: public static class Service
-    content.vb: Public Module Service
+    content: public class Game
+    content.vb: Public Class Game
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,96 +41,118 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: Genie3D.Net.Service.Register``1(``0)
-  commentId: M:Genie3D.Net.Service.Register``1(``0)
-  id: Register``1(``0)
-  parent: Genie3D.Net.Service
+  - Class
+- uid: Genie3D.Yuk.Game.#ctor(Genie3D.Yuk.GraphicsBackend,System.String)
+  commentId: M:Genie3D.Yuk.Game.#ctor(Genie3D.Yuk.GraphicsBackend,System.String)
+  id: '#ctor(Genie3D.Yuk.GraphicsBackend,System.String)'
+  parent: Genie3D.Yuk.Game
   langs:
   - csharp
   - vb
-  name: Register<T>(T)
-  nameWithType: Service.Register<T>(T)
-  fullName: Genie3D.Net.Service.Register<T>(T)
-  type: Method
+  name: Game(GraphicsBackend, String)
+  nameWithType: Game.Game(GraphicsBackend, String)
+  fullName: Genie3D.Yuk.Game.Game(Genie3D.Yuk.GraphicsBackend, System.String)
+  type: Constructor
   source:
     remote:
-      path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      path: Core/Genie3D.Yuk/Game.cs
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: Register
-    path: Service.cs
-    startLine: 11
+    id: .ctor
+    path: Game.cs
+    startLine: 8
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
-    content: public static void Register<T>(T toRegister)
+    content: public Game(GraphicsBackend backend, string path)
     parameters:
-    - id: toRegister
-      type: '{T}'
-    typeParameters:
-    - id: T
-    content.vb: Public Shared Sub Register(Of T)(toRegister As T)
-  overload: Genie3D.Net.Service.Register*
-  nameWithType.vb: Service.Register(Of T)(T)
+    - id: backend
+      type: Genie3D.Yuk.GraphicsBackend
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(backend As GraphicsBackend, path As String)
+  overload: Genie3D.Yuk.Game.#ctor*
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: Genie3D.Net.Service.Register(Of T)(T)
-  name.vb: Register(Of T)(T)
-- uid: Genie3D.Net.Service.Resolve``1
-  commentId: M:Genie3D.Net.Service.Resolve``1
-  id: Resolve``1
-  parent: Genie3D.Net.Service
+- uid: Genie3D.Yuk.Game.SetWindow(System.Object,System.Int32,System.Int32)
+  commentId: M:Genie3D.Yuk.Game.SetWindow(System.Object,System.Int32,System.Int32)
+  id: SetWindow(System.Object,System.Int32,System.Int32)
+  parent: Genie3D.Yuk.Game
   langs:
   - csharp
   - vb
-  name: Resolve<T>()
-  nameWithType: Service.Resolve<T>()
-  fullName: Genie3D.Net.Service.Resolve<T>()
+  name: SetWindow(Object, Int32, Int32)
+  nameWithType: Game.SetWindow(Object, Int32, Int32)
+  fullName: Genie3D.Yuk.Game.SetWindow(System.Object, System.Int32, System.Int32)
   type: Method
   source:
     remote:
-      path: Core/Genie3D.Yuk/Service.cs
-      branch: master
+      path: Core/Genie3D.Yuk/Game.cs
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: Resolve
-    path: Service.cs
-    startLine: 16
+    id: SetWindow
+    path: Game.cs
+    startLine: 14
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
-    content: public static T Resolve<T>()
-    typeParameters:
-    - id: T
-    return:
-      type: '{T}'
-    content.vb: Public Shared Function Resolve(Of T) As T
-  overload: Genie3D.Net.Service.Resolve*
-  nameWithType.vb: Service.Resolve(Of T)()
+    content: public void SetWindow(object swapChainPanel, int width, int height)
+    parameters:
+    - id: swapChainPanel
+      type: System.Object
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub SetWindow(swapChainPanel As Object, width As Integer, height As Integer)
+  overload: Genie3D.Yuk.Game.SetWindow*
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: Genie3D.Net.Service.Resolve(Of T)()
-  name.vb: Resolve(Of T)()
+- uid: Genie3D.Yuk.Game.Run
+  commentId: M:Genie3D.Yuk.Game.Run
+  id: Run
+  parent: Genie3D.Yuk.Game
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Game.Run()
+  fullName: Genie3D.Yuk.Game.Run()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie3D.Yuk/Game.cs
+      branch: develop
+      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+    id: Run
+    path: Game.cs
+    startLine: 21
+  assemblies:
+  - Genie3D.Yuk
+  namespace: Genie3D.Yuk
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run
+  overload: Genie3D.Yuk.Game.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: Genie3D.Net
-  commentId: N:Genie3D.Net
-  name: Genie3D.Net
-  nameWithType: Genie3D.Net
-  fullName: Genie3D.Net
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -422,24 +445,39 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Net.Service.Register*
-  commentId: Overload:Genie3D.Net.Service.Register
-  name: Register
-  nameWithType: Service.Register
-  fullName: Genie3D.Net.Service.Register
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: Genie3D.Net.Service.Resolve*
-  commentId: Overload:Genie3D.Net.Service.Resolve
-  name: Resolve
-  nameWithType: Service.Resolve
-  fullName: Genie3D.Net.Service.Resolve
+- uid: Genie3D.Yuk.Game.#ctor*
+  commentId: Overload:Genie3D.Yuk.Game.#ctor
+  name: Game
+  nameWithType: Game.Game
+  fullName: Genie3D.Yuk.Game.Game
+- uid: Genie3D.Yuk.GraphicsBackend
+  commentId: T:Genie3D.Yuk.GraphicsBackend
+  parent: Genie3D.Yuk
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie3D.Yuk.GraphicsBackend
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Genie3D.Yuk.Game.SetWindow*
+  commentId: Overload:Genie3D.Yuk.Game.SetWindow
+  name: SetWindow
+  nameWithType: Game.SetWindow
+  fullName: Genie3D.Yuk.Game.SetWindow
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Genie3D.Yuk.Game.Run*
+  commentId: Overload:Genie3D.Yuk.Game.Run
+  name: Run
+  nameWithType: Game.Run
+  fullName: Genie3D.Yuk.Game.Run
 shouldSkipMarkup: true

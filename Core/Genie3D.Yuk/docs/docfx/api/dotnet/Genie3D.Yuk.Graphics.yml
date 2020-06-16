@@ -1,35 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.GameGraphics
-  commentId: T:Genie3D.Net.GameGraphics
-  id: GameGraphics
-  parent: Genie3D.Net
+- uid: Genie3D.Yuk.Graphics
+  commentId: T:Genie3D.Yuk.Graphics
+  id: Graphics
+  parent: Genie3D.Yuk
   children:
-  - Genie3D.Net.GameGraphics.#ctor
-  - Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie3D.Yuk.Graphics.Run
   langs:
   - csharp
   - vb
-  name: GameGraphics
-  nameWithType: GameGraphics
-  fullName: Genie3D.Net.GameGraphics
+  name: Graphics
+  nameWithType: Graphics
+  fullName: Genie3D.Yuk.Graphics
   type: Class
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: GameGraphics
+    id: Graphics
     path: GameGraphics.cs
-    startLine: 15
+    startLine: 35
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
-    content: public class GameGraphics
-    content.vb: Public Class GameGraphics
+    content: public abstract class Graphics
+    content.vb: Public MustInherit Class Graphics
   inheritance:
   - System.Object
+  derivedClasses:
+  - Genie3D.Yuk.DirectX
+  - Genie3D.Yuk.Vulkan
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -40,83 +42,50 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - abstract
   - class
   modifiers.vb:
   - Public
+  - MustInherit
   - Class
-- uid: Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  commentId: M:Genie3D.Net.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  id: '#ctor(System.Object,System.Int32,System.Int32)'
-  parent: Genie3D.Net.GameGraphics
+- uid: Genie3D.Yuk.Graphics.Run
+  commentId: M:Genie3D.Yuk.Graphics.Run
+  id: Run
+  parent: Genie3D.Yuk.Graphics
   langs:
   - csharp
   - vb
-  name: GameGraphics(Object, Int32, Int32)
-  nameWithType: GameGraphics.GameGraphics(Object, Int32, Int32)
-  fullName: Genie3D.Net.GameGraphics.GameGraphics(System.Object, System.Int32, System.Int32)
-  type: Constructor
+  name: Run()
+  nameWithType: Graphics.Run()
+  fullName: Genie3D.Yuk.Graphics.Run()
+  type: Method
   source:
     remote:
       path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
+      branch: develop
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: .ctor
+    id: Run
     path: GameGraphics.cs
-    startLine: 18
+    startLine: 37
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
-    content: public GameGraphics(object swapChainPanel, int width, int height)
-    parameters:
-    - id: swapChainPanel
-      type: System.Object
-    - id: width
-      type: System.Int32
-    - id: height
-      type: System.Int32
-    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
-  overload: Genie3D.Net.GameGraphics.#ctor*
+    content: public virtual void Run()
+    content.vb: Public Overridable Sub Run
+  overload: Genie3D.Yuk.Graphics.Run*
   modifiers.csharp:
   - public
+  - virtual
   modifiers.vb:
   - Public
-- uid: Genie3D.Net.GameGraphics.#ctor
-  commentId: M:Genie3D.Net.GameGraphics.#ctor
-  id: '#ctor'
-  parent: Genie3D.Net.GameGraphics
-  langs:
-  - csharp
-  - vb
-  name: GameGraphics()
-  nameWithType: GameGraphics.GameGraphics()
-  fullName: Genie3D.Net.GameGraphics.GameGraphics()
-  type: Constructor
-  source:
-    remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
-    id: .ctor
-    path: GameGraphics.cs
-    startLine: 24
-  assemblies:
-  - Genie3D.Yuk
-  namespace: Genie3D.Net
-  syntax:
-    content: public GameGraphics()
-    content.vb: Public Sub New
-  overload: Genie3D.Net.GameGraphics.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
+  - Overridable
 references:
-- uid: Genie3D.Net
-  commentId: N:Genie3D.Net
-  name: Genie3D.Net
-  nameWithType: Genie3D.Net
-  fullName: Genie3D.Net
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -409,16 +378,9 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Net.GameGraphics.#ctor*
-  commentId: Overload:Genie3D.Net.GameGraphics.#ctor
-  name: GameGraphics
-  nameWithType: GameGraphics.GameGraphics
-  fullName: Genie3D.Net.GameGraphics.GameGraphics
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+- uid: Genie3D.Yuk.Graphics.Run*
+  commentId: Overload:Genie3D.Yuk.Graphics.Run
+  name: Run
+  nameWithType: Graphics.Run
+  fullName: Genie3D.Yuk.Graphics.Run
 shouldSkipMarkup: true

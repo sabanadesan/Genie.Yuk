@@ -46,6 +46,7 @@ namespace Genie3D.Vulkan
 
         private Format swapChainFormat;
         private Extent2D swapChainExtent;
+
         public void Run()
         {
             this.InitialiseWindow();

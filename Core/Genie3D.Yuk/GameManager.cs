@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Utility.Yuk;
 
-namespace Genie3D.Net
+namespace Genie3D.Yuk
 {
     internal class GameManager
     {
@@ -17,6 +17,7 @@ namespace Genie3D.Net
         private static System.Object _swapChainPanel;
         private static int? _width;
         private static int? _height;
+        private static String _path;
 
         private GameManager() {
             Startup();
@@ -28,27 +29,32 @@ namespace Genie3D.Net
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
 
-            setting.Load("Config.ini", "Output");
+            setting.Load("Config.ini", _path);
 
             CreateDefaultSettings(setting);
 
-            //setting.Save("Configuration.ini", "Output");
+            setting.Save("Configuration.ini", _path);
 
             if (IsOnScreen)
             {
-                if(_backend == GraphicsBackend.Vulkan)
+                GameGraphics cls = null; 
+
+                if (_backend == GraphicsBackend.Vulkan)
                 {
                     Service.Register<GameGraphics>(new GameGraphics());
-                    GameGraphics cls = Service.Resolve<GameGraphics>();
                 }
                 else if (_backend == GraphicsBackend.DirectX12)
                 {
-
                     Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
 
                     Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
-                    GameGraphics cls = Service.Resolve<GameGraphics>();
                 }
+
+                cls = Service.Resolve<GameGraphics>();
+
+                Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
+
+                cls.Run();
             }
         }
 
@@ -61,7 +67,7 @@ namespace Genie3D.Net
             MenuEntryBool entry = new MenuEntryBool("Fullscreen", false);
             menu.Add(entry);
 
-            MenuEntryFloat entry1 = new MenuEntryFloat("Height", 100);
+            MenuEntryNumber entry1 = new MenuEntryNumber("Height", 10.00);
             menu.Add(entry1);
         }
 
@@ -130,6 +136,18 @@ namespace Genie3D.Net
             set
             {
                 _swapChainPanel = value;
+            }
+        }
+
+        public static string Path
+        {
+            get
+            {
+                return _path;
+            }
+            set
+            {
+                _path = value;
             }
         }
     }
