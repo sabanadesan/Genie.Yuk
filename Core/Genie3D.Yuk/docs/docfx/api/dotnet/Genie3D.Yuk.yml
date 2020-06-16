@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  id: Genie3D.Yuk
+  children:
+  - Genie3D.Yuk.DirectX
+  - Genie3D.Yuk.Game
+  - Genie3D.Yuk.GameGraphics
+  - Genie3D.Yuk.Graphics
+  - Genie3D.Yuk.GraphicsBackend
+  - Genie3D.Yuk.MenuType
+  - Genie3D.Yuk.Service
+  - Genie3D.Yuk.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
+  type: Namespace
+  assemblies:
+  - Genie3D.Yuk
+references:
+- uid: Genie3D.Yuk.Game
+  commentId: T:Genie3D.Yuk.Game
+  name: Game
+  nameWithType: Game
+  fullName: Genie3D.Yuk.Game
+- uid: Genie3D.Yuk.GraphicsBackend
+  commentId: T:Genie3D.Yuk.GraphicsBackend
+  parent: Genie3D.Yuk
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie3D.Yuk.GraphicsBackend
+- uid: Genie3D.Yuk.GameGraphics
+  commentId: T:Genie3D.Yuk.GameGraphics
+  name: GameGraphics
+  nameWithType: GameGraphics
+  fullName: Genie3D.Yuk.GameGraphics
+- uid: Genie3D.Yuk.Graphics
+  commentId: T:Genie3D.Yuk.Graphics
+  parent: Genie3D.Yuk
+  name: Graphics
+  nameWithType: Graphics
+  fullName: Genie3D.Yuk.Graphics
+- uid: Genie3D.Yuk.Vulkan
+  commentId: T:Genie3D.Yuk.Vulkan
+  name: Vulkan
+  nameWithType: Vulkan
+  fullName: Genie3D.Yuk.Vulkan
+- uid: Genie3D.Yuk.DirectX
+  commentId: T:Genie3D.Yuk.DirectX
+  name: DirectX
+  nameWithType: DirectX
+  fullName: Genie3D.Yuk.DirectX
+- uid: Genie3D.Yuk.Service
+  commentId: T:Genie3D.Yuk.Service
+  name: Service
+  nameWithType: Service
+  fullName: Genie3D.Yuk.Service
+- uid: Genie3D.Yuk.MenuType
+  commentId: T:Genie3D.Yuk.MenuType
+  parent: Genie3D.Yuk
+  name: MenuType
+  nameWithType: MenuType
+  fullName: Genie3D.Yuk.MenuType
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
+shouldSkipMarkup: true

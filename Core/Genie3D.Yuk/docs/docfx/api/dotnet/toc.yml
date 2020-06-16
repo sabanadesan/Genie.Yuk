@@ -1,20 +1,20 @@
 ### YamlMime:TableOfContent
-- uid: Genie3D.Net
-  name: Genie3D.Net
+- uid: Genie3D.Yuk
+  name: Genie3D.Yuk
   items:
-  - uid: Genie3D.Net.DirectX
+  - uid: Genie3D.Yuk.DirectX
     name: DirectX
-  - uid: Genie3D.Net.Game
+  - uid: Genie3D.Yuk.Game
     name: Game
-  - uid: Genie3D.Net.GameGraphics
+  - uid: Genie3D.Yuk.GameGraphics
     name: GameGraphics
-  - uid: Genie3D.Net.Graphics
+  - uid: Genie3D.Yuk.Graphics
     name: Graphics
-  - uid: Genie3D.Net.GraphicsBackend
+  - uid: Genie3D.Yuk.GraphicsBackend
     name: GraphicsBackend
-  - uid: Genie3D.Net.MenuType
+  - uid: Genie3D.Yuk.MenuType
     name: MenuType
-  - uid: Genie3D.Net.Service
+  - uid: Genie3D.Yuk.Service
     name: Service
-  - uid: Genie3D.Net.Vulkan
+  - uid: Genie3D.Yuk.Vulkan
     name: Vulkan

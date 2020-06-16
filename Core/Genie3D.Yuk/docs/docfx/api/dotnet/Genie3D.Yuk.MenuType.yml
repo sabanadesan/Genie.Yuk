@@ -1,19 +1,19 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.MenuType
-  commentId: T:Genie3D.Net.MenuType
+- uid: Genie3D.Yuk.MenuType
+  commentId: T:Genie3D.Yuk.MenuType
   id: MenuType
-  parent: Genie3D.Net
+  parent: Genie3D.Yuk
   children:
-  - Genie3D.Net.MenuType.Boolean
-  - Genie3D.Net.MenuType.Number
-  - Genie3D.Net.MenuType.String
+  - Genie3D.Yuk.MenuType.Boolean
+  - Genie3D.Yuk.MenuType.Number
+  - Genie3D.Yuk.MenuType.String
   langs:
   - csharp
   - vb
   name: MenuType
   nameWithType: MenuType
-  fullName: Genie3D.Net.MenuType
+  fullName: Genie3D.Yuk.MenuType
   type: Enum
   source:
     remote:
@@ -25,7 +25,7 @@ items:
     startLine: 12
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public enum MenuType
     content.vb: Public Enum MenuType
@@ -35,16 +35,16 @@ items:
   modifiers.vb:
   - Public
   - Enum
-- uid: Genie3D.Net.MenuType.Boolean
-  commentId: F:Genie3D.Net.MenuType.Boolean
+- uid: Genie3D.Yuk.MenuType.Boolean
+  commentId: F:Genie3D.Yuk.MenuType.Boolean
   id: Boolean
-  parent: Genie3D.Net.MenuType
+  parent: Genie3D.Yuk.MenuType
   langs:
   - csharp
   - vb
   name: Boolean
   nameWithType: MenuType.Boolean
-  fullName: Genie3D.Net.MenuType.Boolean
+  fullName: Genie3D.Yuk.MenuType.Boolean
   type: Field
   source:
     remote:
@@ -56,27 +56,27 @@ items:
     startLine: 14
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: Boolean = 0
     return:
-      type: Genie3D.Net.MenuType
+      type: Genie3D.Yuk.MenuType
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Genie3D.Net.MenuType.Number
-  commentId: F:Genie3D.Net.MenuType.Number
+- uid: Genie3D.Yuk.MenuType.Number
+  commentId: F:Genie3D.Yuk.MenuType.Number
   id: Number
-  parent: Genie3D.Net.MenuType
+  parent: Genie3D.Yuk.MenuType
   langs:
   - csharp
   - vb
   name: Number
   nameWithType: MenuType.Number
-  fullName: Genie3D.Net.MenuType.Number
+  fullName: Genie3D.Yuk.MenuType.Number
   type: Field
   source:
     remote:
@@ -88,27 +88,27 @@ items:
     startLine: 15
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: Number = 1
     return:
-      type: Genie3D.Net.MenuType
+      type: Genie3D.Yuk.MenuType
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Genie3D.Net.MenuType.String
-  commentId: F:Genie3D.Net.MenuType.String
+- uid: Genie3D.Yuk.MenuType.String
+  commentId: F:Genie3D.Yuk.MenuType.String
   id: String
-  parent: Genie3D.Net.MenuType
+  parent: Genie3D.Yuk.MenuType
   langs:
   - csharp
   - vb
   name: String
   nameWithType: MenuType.String
-  fullName: Genie3D.Net.MenuType.String
+  fullName: Genie3D.Yuk.MenuType.String
   type: Field
   source:
     remote:
@@ -120,11 +120,11 @@ items:
     startLine: 16
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: String = 2
     return:
-      type: Genie3D.Net.MenuType
+      type: Genie3D.Yuk.MenuType
   modifiers.csharp:
   - public
   - const
@@ -132,15 +132,15 @@ items:
   - Public
   - Const
 references:
-- uid: Genie3D.Net
-  commentId: N:Genie3D.Net
-  name: Genie3D.Net
-  nameWithType: Genie3D.Net
-  fullName: Genie3D.Net
-- uid: Genie3D.Net.MenuType
-  commentId: T:Genie3D.Net.MenuType
-  parent: Genie3D.Net
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
+- uid: Genie3D.Yuk.MenuType
+  commentId: T:Genie3D.Yuk.MenuType
+  parent: Genie3D.Yuk
   name: MenuType
   nameWithType: MenuType
-  fullName: Genie3D.Net.MenuType
+  fullName: Genie3D.Yuk.MenuType
 shouldSkipMarkup: true

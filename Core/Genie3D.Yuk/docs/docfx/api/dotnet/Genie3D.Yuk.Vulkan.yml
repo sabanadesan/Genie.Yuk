@@ -1,18 +1,18 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.Vulkan
-  commentId: T:Genie3D.Net.Vulkan
+- uid: Genie3D.Yuk.Vulkan
+  commentId: T:Genie3D.Yuk.Vulkan
   id: Vulkan
-  parent: Genie3D.Net
+  parent: Genie3D.Yuk
   children:
-  - Genie3D.Net.Vulkan.#ctor
-  - Genie3D.Net.Vulkan.Run
+  - Genie3D.Yuk.Vulkan.#ctor
+  - Genie3D.Yuk.Vulkan.Run
   langs:
   - csharp
   - vb
   name: Vulkan
   nameWithType: Vulkan
-  fullName: Genie3D.Net.Vulkan
+  fullName: Genie3D.Yuk.Vulkan
   type: Class
   source:
     remote:
@@ -24,7 +24,7 @@ items:
     startLine: 42
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: 'public class Vulkan : Graphics'
     content.vb: >-
@@ -32,7 +32,7 @@ items:
           Inherits Graphics
   inheritance:
   - System.Object
-  - Genie3D.Net.Graphics
+  - Genie3D.Yuk.Graphics
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -47,16 +47,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie3D.Net.Vulkan.#ctor
-  commentId: M:Genie3D.Net.Vulkan.#ctor
+- uid: Genie3D.Yuk.Vulkan.#ctor
+  commentId: M:Genie3D.Yuk.Vulkan.#ctor
   id: '#ctor'
-  parent: Genie3D.Net.Vulkan
+  parent: Genie3D.Yuk.Vulkan
   langs:
   - csharp
   - vb
   name: Vulkan()
   nameWithType: Vulkan.Vulkan()
-  fullName: Genie3D.Net.Vulkan.Vulkan()
+  fullName: Genie3D.Yuk.Vulkan.Vulkan()
   type: Constructor
   source:
     remote:
@@ -68,25 +68,25 @@ items:
     startLine: 46
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public Vulkan()
     content.vb: Public Sub New
-  overload: Genie3D.Net.Vulkan.#ctor*
+  overload: Genie3D.Yuk.Vulkan.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie3D.Net.Vulkan.Run
-  commentId: M:Genie3D.Net.Vulkan.Run
+- uid: Genie3D.Yuk.Vulkan.Run
+  commentId: M:Genie3D.Yuk.Vulkan.Run
   id: Run
-  parent: Genie3D.Net.Vulkan
+  parent: Genie3D.Yuk.Vulkan
   langs:
   - csharp
   - vb
   name: Run()
   nameWithType: Vulkan.Run()
-  fullName: Genie3D.Net.Vulkan.Run()
+  fullName: Genie3D.Yuk.Vulkan.Run()
   type: Method
   source:
     remote:
@@ -98,12 +98,12 @@ items:
     startLine: 51
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public override void Run()
     content.vb: Public Overrides Sub Run
-  overridden: Genie3D.Net.Graphics.Run
-  overload: Genie3D.Net.Vulkan.Run*
+  overridden: Genie3D.Yuk.Graphics.Run
+  overload: Genie3D.Yuk.Vulkan.Run*
   modifiers.csharp:
   - public
   - override
@@ -111,11 +111,11 @@ items:
   - Public
   - Overrides
 references:
-- uid: Genie3D.Net
-  commentId: N:Genie3D.Net
-  name: Genie3D.Net
-  nameWithType: Genie3D.Net
-  fullName: Genie3D.Net
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -123,12 +123,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Genie3D.Net.Graphics
-  commentId: T:Genie3D.Net.Graphics
-  parent: Genie3D.Net
+- uid: Genie3D.Yuk.Graphics
+  commentId: T:Genie3D.Yuk.Graphics
+  parent: Genie3D.Yuk
   name: Graphics
   nameWithType: Graphics
-  fullName: Genie3D.Net.Graphics
+  fullName: Genie3D.Yuk.Graphics
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -414,22 +414,22 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Net.Vulkan.#ctor*
-  commentId: Overload:Genie3D.Net.Vulkan.#ctor
+- uid: Genie3D.Yuk.Vulkan.#ctor*
+  commentId: Overload:Genie3D.Yuk.Vulkan.#ctor
   name: Vulkan
   nameWithType: Vulkan.Vulkan
-  fullName: Genie3D.Net.Vulkan.Vulkan
-- uid: Genie3D.Net.Graphics.Run
-  commentId: M:Genie3D.Net.Graphics.Run
-  parent: Genie3D.Net.Graphics
+  fullName: Genie3D.Yuk.Vulkan.Vulkan
+- uid: Genie3D.Yuk.Graphics.Run
+  commentId: M:Genie3D.Yuk.Graphics.Run
+  parent: Genie3D.Yuk.Graphics
   name: Run()
   nameWithType: Graphics.Run()
-  fullName: Genie3D.Net.Graphics.Run()
+  fullName: Genie3D.Yuk.Graphics.Run()
   spec.csharp:
-  - uid: Genie3D.Net.Graphics.Run
+  - uid: Genie3D.Yuk.Graphics.Run
     name: Run
     nameWithType: Graphics.Run
-    fullName: Genie3D.Net.Graphics.Run
+    fullName: Genie3D.Yuk.Graphics.Run
   - name: (
     nameWithType: (
     fullName: (
@@ -437,19 +437,19 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Genie3D.Net.Graphics.Run
+  - uid: Genie3D.Yuk.Graphics.Run
     name: Run
     nameWithType: Graphics.Run
-    fullName: Genie3D.Net.Graphics.Run
+    fullName: Genie3D.Yuk.Graphics.Run
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Genie3D.Net.Vulkan.Run*
-  commentId: Overload:Genie3D.Net.Vulkan.Run
+- uid: Genie3D.Yuk.Vulkan.Run*
+  commentId: Overload:Genie3D.Yuk.Vulkan.Run
   name: Run
   nameWithType: Vulkan.Run
-  fullName: Genie3D.Net.Vulkan.Run
+  fullName: Genie3D.Yuk.Vulkan.Run
 shouldSkipMarkup: true

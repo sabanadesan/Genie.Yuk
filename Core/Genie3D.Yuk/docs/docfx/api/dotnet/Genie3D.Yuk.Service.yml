@@ -1,18 +1,18 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Net.Service
-  commentId: T:Genie3D.Net.Service
+- uid: Genie3D.Yuk.Service
+  commentId: T:Genie3D.Yuk.Service
   id: Service
-  parent: Genie3D.Net
+  parent: Genie3D.Yuk
   children:
-  - Genie3D.Net.Service.Register``1(``0)
-  - Genie3D.Net.Service.Resolve``1
+  - Genie3D.Yuk.Service.Register``1(``0)
+  - Genie3D.Yuk.Service.Resolve``1
   langs:
   - csharp
   - vb
   name: Service
   nameWithType: Service
-  fullName: Genie3D.Net.Service
+  fullName: Genie3D.Yuk.Service
   type: Class
   source:
     remote:
@@ -24,7 +24,7 @@ items:
     startLine: 7
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public static class Service
     content.vb: Public Module Service
@@ -45,16 +45,16 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Genie3D.Net.Service.Register``1(``0)
-  commentId: M:Genie3D.Net.Service.Register``1(``0)
+- uid: Genie3D.Yuk.Service.Register``1(``0)
+  commentId: M:Genie3D.Yuk.Service.Register``1(``0)
   id: Register``1(``0)
-  parent: Genie3D.Net.Service
+  parent: Genie3D.Yuk.Service
   langs:
   - csharp
   - vb
   name: Register<T>(T)
   nameWithType: Service.Register<T>(T)
-  fullName: Genie3D.Net.Service.Register<T>(T)
+  fullName: Genie3D.Yuk.Service.Register<T>(T)
   type: Method
   source:
     remote:
@@ -66,7 +66,7 @@ items:
     startLine: 11
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public static void Register<T>(T toRegister)
     parameters:
@@ -75,7 +75,7 @@ items:
     typeParameters:
     - id: T
     content.vb: Public Shared Sub Register(Of T)(toRegister As T)
-  overload: Genie3D.Net.Service.Register*
+  overload: Genie3D.Yuk.Service.Register*
   nameWithType.vb: Service.Register(Of T)(T)
   modifiers.csharp:
   - public
@@ -83,18 +83,18 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Genie3D.Net.Service.Register(Of T)(T)
+  fullName.vb: Genie3D.Yuk.Service.Register(Of T)(T)
   name.vb: Register(Of T)(T)
-- uid: Genie3D.Net.Service.Resolve``1
-  commentId: M:Genie3D.Net.Service.Resolve``1
+- uid: Genie3D.Yuk.Service.Resolve``1
+  commentId: M:Genie3D.Yuk.Service.Resolve``1
   id: Resolve``1
-  parent: Genie3D.Net.Service
+  parent: Genie3D.Yuk.Service
   langs:
   - csharp
   - vb
   name: Resolve<T>()
   nameWithType: Service.Resolve<T>()
-  fullName: Genie3D.Net.Service.Resolve<T>()
+  fullName: Genie3D.Yuk.Service.Resolve<T>()
   type: Method
   source:
     remote:
@@ -106,7 +106,7 @@ items:
     startLine: 16
   assemblies:
   - Genie3D.Yuk
-  namespace: Genie3D.Net
+  namespace: Genie3D.Yuk
   syntax:
     content: public static T Resolve<T>()
     typeParameters:
@@ -114,7 +114,7 @@ items:
     return:
       type: '{T}'
     content.vb: Public Shared Function Resolve(Of T) As T
-  overload: Genie3D.Net.Service.Resolve*
+  overload: Genie3D.Yuk.Service.Resolve*
   nameWithType.vb: Service.Resolve(Of T)()
   modifiers.csharp:
   - public
@@ -122,14 +122,14 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Genie3D.Net.Service.Resolve(Of T)()
+  fullName.vb: Genie3D.Yuk.Service.Resolve(Of T)()
   name.vb: Resolve(Of T)()
 references:
-- uid: Genie3D.Net
-  commentId: N:Genie3D.Net
-  name: Genie3D.Net
-  nameWithType: Genie3D.Net
-  fullName: Genie3D.Net
+- uid: Genie3D.Yuk
+  commentId: N:Genie3D.Yuk
+  name: Genie3D.Yuk
+  nameWithType: Genie3D.Yuk
+  fullName: Genie3D.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -422,11 +422,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Net.Service.Register*
-  commentId: Overload:Genie3D.Net.Service.Register
+- uid: Genie3D.Yuk.Service.Register*
+  commentId: Overload:Genie3D.Yuk.Service.Register
   name: Register
   nameWithType: Service.Register
-  fullName: Genie3D.Net.Service.Register
+  fullName: Genie3D.Yuk.Service.Register
 - uid: '{T}'
   commentId: '!:T'
   definition: T
@@ -437,9 +437,9 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: Genie3D.Net.Service.Resolve*
-  commentId: Overload:Genie3D.Net.Service.Resolve
+- uid: Genie3D.Yuk.Service.Resolve*
+  commentId: Overload:Genie3D.Yuk.Service.Resolve
   name: Resolve
   nameWithType: Service.Resolve
-  fullName: Genie3D.Net.Service.Resolve
+  fullName: Genie3D.Yuk.Service.Resolve
 shouldSkipMarkup: true

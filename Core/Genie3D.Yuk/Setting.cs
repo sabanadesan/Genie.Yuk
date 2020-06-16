@@ -8,7 +8,7 @@ using System.Transactions;
 using Utility.Ini;
 using Utility.Ini.Model;
 
-namespace Genie3D.Net
+namespace Genie3D.Yuk
 {
     public enum MenuType
     {

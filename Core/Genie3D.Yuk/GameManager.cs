@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Utility.Yuk;
 
-namespace Genie3D.Net
+namespace Genie3D.Yuk
 {
     internal class GameManager
     {

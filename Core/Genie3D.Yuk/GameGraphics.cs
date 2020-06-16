@@ -5,7 +5,7 @@ using System.Text;
 using Genie3D.DirectX12;
 using Genie3D.Vulkan;
 
-namespace Genie3D.Net
+namespace Genie3D.Yuk
 {
     public enum GraphicsBackend
     {
