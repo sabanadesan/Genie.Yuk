@@ -155,9 +155,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Genie3D.Yuk\Genie3D.Yuk.csproj">
+    <ProjectReference Include="..\..\Core\Genie.Yuk\Genie.Yuk.csproj">
       <Project>{a3a50c08-9ce6-4e2f-a173-4f4edd3af08b}</Project>
-      <Name>Genie3D.Yuk</Name>
+      <Name>Genie.Yuk</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
@@ -172,4 +172,3 @@
   </Target>
   -->
 </Project>
-

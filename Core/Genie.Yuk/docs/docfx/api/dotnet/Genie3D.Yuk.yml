@@ -20,7 +20,7 @@ items:
   fullName: Genie3D.Yuk
   type: Namespace
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
 references:
 - uid: Genie3D.Yuk.Game
   commentId: T:Genie3D.Yuk.Game

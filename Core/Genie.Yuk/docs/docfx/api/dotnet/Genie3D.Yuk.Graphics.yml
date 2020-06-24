@@ -15,14 +15,14 @@ items:
   type: Class
   source:
     remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Graphics
     path: GameGraphics.cs
     startLine: 35
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: public abstract class Graphics
@@ -61,14 +61,14 @@ items:
   type: Method
   source:
     remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Run
     path: GameGraphics.cs
     startLine: 37
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: public virtual void Run()

@@ -16,14 +16,14 @@ items:
   type: Enum
   source:
     remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: GraphicsBackend
     path: GameGraphics.cs
     startLine: 9
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: public enum GraphicsBackend
@@ -47,14 +47,14 @@ items:
   type: Field
   source:
     remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Vulkan
     path: GameGraphics.cs
     startLine: 11
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: Vulkan = 0
@@ -79,14 +79,14 @@ items:
   type: Field
   source:
     remote:
-      path: Core/Genie3D.Yuk/GameGraphics.cs
-      branch: develop
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: DirectX12
     path: GameGraphics.cs
     startLine: 12
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: DirectX12 = 1

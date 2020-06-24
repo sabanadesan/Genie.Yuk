@@ -17,14 +17,14 @@ items:
   type: Enum
   source:
     remote:
-      path: Core/Genie3D.Yuk/Setting.cs
-      branch: develop
+      path: Core/Genie.Yuk/Setting.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: MenuType
     path: Setting.cs
     startLine: 12
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: public enum MenuType
@@ -48,14 +48,14 @@ items:
   type: Field
   source:
     remote:
-      path: Core/Genie3D.Yuk/Setting.cs
-      branch: develop
+      path: Core/Genie.Yuk/Setting.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Boolean
     path: Setting.cs
     startLine: 14
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: Boolean = 0
@@ -80,14 +80,14 @@ items:
   type: Field
   source:
     remote:
-      path: Core/Genie3D.Yuk/Setting.cs
-      branch: develop
+      path: Core/Genie.Yuk/Setting.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: Number
     path: Setting.cs
     startLine: 15
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: Number = 1
@@ -112,14 +112,14 @@ items:
   type: Field
   source:
     remote:
-      path: Core/Genie3D.Yuk/Setting.cs
-      branch: develop
+      path: Core/Genie.Yuk/Setting.cs
+      branch: master
       repo: https://github.com/sabanadesan/Genie3D.Yuk.git
     id: String
     path: Setting.cs
     startLine: 16
   assemblies:
-  - Genie3D.Yuk
+  - Genie.Yuk
   namespace: Genie3D.Yuk
   syntax:
     content: String = 2
