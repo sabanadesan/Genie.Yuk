@@ -19,10 +19,10 @@ items:
     remote:
       path: Core/Genie.Yuk/Setting.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: MenuType
     path: Setting.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Yuk
@@ -50,10 +50,10 @@ items:
     remote:
       path: Core/Genie.Yuk/Setting.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Boolean
     path: Setting.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Yuk
@@ -82,10 +82,10 @@ items:
     remote:
       path: Core/Genie.Yuk/Setting.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Number
     path: Setting.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Yuk
@@ -114,10 +114,10 @@ items:
     remote:
       path: Core/Genie.Yuk/Setting.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: String
     path: Setting.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Yuk

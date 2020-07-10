@@ -19,7 +19,7 @@ items:
     remote:
       path: Core/Genie.Yuk/Game.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Game
     path: Game.cs
     startLine: 6
@@ -60,7 +60,7 @@ items:
     remote:
       path: Core/Genie.Yuk/Game.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Game.cs
     startLine: 8
@@ -95,7 +95,7 @@ items:
     remote:
       path: Core/Genie.Yuk/Game.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: SetWindow
     path: Game.cs
     startLine: 14
@@ -132,7 +132,7 @@ items:
     remote:
       path: Core/Genie.Yuk/Game.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Game.cs
     startLine: 21

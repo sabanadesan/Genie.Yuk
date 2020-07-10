@@ -18,7 +18,7 @@ items:
     remote:
       path: Core/Genie.Yuk/GameGraphics.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Vulkan
     path: GameGraphics.cs
     startLine: 42
@@ -62,7 +62,7 @@ items:
     remote:
       path: Core/Genie.Yuk/GameGraphics.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: GameGraphics.cs
     startLine: 46
@@ -92,7 +92,7 @@ items:
     remote:
       path: Core/Genie.Yuk/GameGraphics.cs
       branch: master
-      repo: https://github.com/sabanadesan/Genie3D.Yuk.git
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
     startLine: 51

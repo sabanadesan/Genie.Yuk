@@ -5,8 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Transactions;
 
+using System.IO;
+
 using Utility.Ini;
 using Utility.Ini.Model;
+using System.Runtime.CompilerServices;
 
 namespace Genie3D.Yuk
 {
@@ -36,7 +39,7 @@ namespace Genie3D.Yuk
             _menuList.Clear();
         }
 
-        public void Save(string fileName, string path)
+        public Boolean Save(string fileName, string path)
         {
             IniData data = new IniData();
 
@@ -73,13 +76,24 @@ namespace Genie3D.Yuk
             }
 
             var FileParser = new FileIniDataParser();
-            FileParser.WriteFile(fileName, path, data);
+            FileParser.WriteIniFile(fileName, path, data);
+
+            return true;
         }
 
-        public void Load(string fileName, string path)
+        public Boolean Load(string fileName, string path)
         {
+
             var FileParser = new FileIniDataParser();
-            IniData data = FileParser.ReadAndParseIniFile(fileName, path, Encoding.ASCII);
+
+            Boolean isExist = FileParser.IsFileExists(fileName, path);
+
+            if (!isExist)
+            {
+                return false;
+            }
+
+            IniData data = FileParser.ReadIniFile(fileName, path, Encoding.ASCII);
 
             bool bresult;
             float fresult;
@@ -111,6 +125,8 @@ namespace Genie3D.Yuk
 
                 Add(menu);
             }
+
+            return true;
         }
     }
 
