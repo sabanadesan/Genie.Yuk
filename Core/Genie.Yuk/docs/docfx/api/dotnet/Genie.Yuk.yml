@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  id: Genie.Yuk
+  children:
+  - Genie.Yuk.LinkedList
+  - Genie.Yuk.Resource
+  - Genie.Yuk.ResourceManager
+  - Genie.Yuk.ResourceNode
+  - Genie.Yuk.ShaderResource
+  langs:
+  - csharp
+  - vb
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+  type: Namespace
+  assemblies:
+  - Genie.Yuk
+references:
+- uid: Genie.Yuk.LinkedList
+  commentId: T:Genie.Yuk.LinkedList
+  name: LinkedList
+  nameWithType: LinkedList
+  fullName: Genie.Yuk.LinkedList
+- uid: Genie.Yuk.ResourceNode
+  commentId: T:Genie.Yuk.ResourceNode
+  name: ResourceNode
+  nameWithType: ResourceNode
+  fullName: Genie.Yuk.ResourceNode
+- uid: Genie.Yuk.Resource
+  commentId: T:Genie.Yuk.Resource
+  parent: Genie.Yuk
+  name: Resource
+  nameWithType: Resource
+  fullName: Genie.Yuk.Resource
+- uid: Genie.Yuk.ShaderResource
+  commentId: T:Genie.Yuk.ShaderResource
+  name: ShaderResource
+  nameWithType: ShaderResource
+  fullName: Genie.Yuk.ShaderResource
+- uid: Genie.Yuk.ResourceManager
+  commentId: T:Genie.Yuk.ResourceManager
+  name: ResourceManager
+  nameWithType: ResourceManager
+  fullName: Genie.Yuk.ResourceManager
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+shouldSkipMarkup: true
