@@ -6,10 +6,14 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.ResourceNode.#ctor
-  - Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32)
-  - Genie.Yuk.ResourceNode._GUID
+  - Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  - Genie.Yuk.ResourceNode._content
+  - Genie.Yuk.ResourceNode._date
+  - Genie.Yuk.ResourceNode._internal_GUID
   - Genie.Yuk.ResourceNode._version
-  - Genie.Yuk.ResourceNode.GUID
+  - Genie.Yuk.ResourceNode.Content
+  - Genie.Yuk.ResourceNode.Date
+  - Genie.Yuk.ResourceNode.Internal_GUID
   - Genie.Yuk.ResourceNode.Version
   langs:
   - csharp
@@ -34,6 +38,8 @@ items:
     content.vb: Public Class ResourceNode
   inheritance:
   - System.Object
+  derivedClasses:
+  - Genie.Yuk.ShaderResourceNode
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -48,33 +54,33 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.ResourceNode._GUID
-  commentId: F:Genie.Yuk.ResourceNode._GUID
-  id: _GUID
+- uid: Genie.Yuk.ResourceNode._internal_GUID
+  commentId: F:Genie.Yuk.ResourceNode._internal_GUID
+  id: _internal_GUID
   parent: Genie.Yuk.ResourceNode
   langs:
   - csharp
   - vb
-  name: _GUID
-  nameWithType: ResourceNode._GUID
-  fullName: Genie.Yuk.ResourceNode._GUID
+  name: _internal_GUID
+  nameWithType: ResourceNode._internal_GUID
+  fullName: Genie.Yuk.ResourceNode._internal_GUID
   type: Field
   source:
     remote:
       path: Core/Genie.Yuk/ResourceManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: _GUID
+    id: _internal_GUID
     path: ResourceManager.cs
     startLine: 11
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: protected Guid _GUID
+    content: protected Guid _internal_GUID
     return:
       type: System.Guid
-    content.vb: Protected _GUID As Guid
+    content.vb: Protected _internal_GUID As Guid
   modifiers.csharp:
   - protected
   modifiers.vb:
@@ -110,6 +116,68 @@ items:
   - protected
   modifiers.vb:
   - Protected
+- uid: Genie.Yuk.ResourceNode._date
+  commentId: F:Genie.Yuk.ResourceNode._date
+  id: _date
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _date
+  nameWithType: ResourceNode._date
+  fullName: Genie.Yuk.ResourceNode._date
+  type: Field
+  source:
+    remote:
+      path: Core/Genie.Yuk/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _date
+    path: ResourceManager.cs
+    startLine: 13
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected DateTime _date
+    return:
+      type: System.DateTime
+    content.vb: Protected _date As Date
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.ResourceNode._content
+  commentId: F:Genie.Yuk.ResourceNode._content
+  id: _content
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _content
+  nameWithType: ResourceNode._content
+  fullName: Genie.Yuk.ResourceNode._content
+  type: Field
+  source:
+    remote:
+      path: Core/Genie.Yuk/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _content
+    path: ResourceManager.cs
+    startLine: 14
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected string _content
+    return:
+      type: System.String
+    content.vb: Protected _content As String
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Genie.Yuk.ResourceNode.#ctor
   commentId: M:Genie.Yuk.ResourceNode.#ctor
   id: '#ctor'
@@ -128,7 +196,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: ResourceManager.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -140,16 +208,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32)
-  commentId: M:Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32)
-  id: '#ctor(System.Guid,System.Int32)'
+- uid: Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  commentId: M:Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  id: '#ctor(System.Guid,System.Int32,System.DateTime,System.String)'
   parent: Genie.Yuk.ResourceNode
   langs:
   - csharp
   - vb
-  name: ResourceNode(Guid, Int32)
-  nameWithType: ResourceNode.ResourceNode(Guid, Int32)
-  fullName: Genie.Yuk.ResourceNode.ResourceNode(System.Guid, System.Int32)
+  name: ResourceNode(Guid, Int32, DateTime, String)
+  nameWithType: ResourceNode.ResourceNode(Guid, Int32, DateTime, String)
+  fullName: Genie.Yuk.ResourceNode.ResourceNode(System.Guid, System.Int32, System.DateTime, System.String)
   type: Constructor
   source:
     remote:
@@ -158,52 +226,56 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: ResourceManager.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public ResourceNode(Guid GUID, int version)
+    content: public ResourceNode(Guid internal_GUID, int version, DateTime date, string content)
     parameters:
-    - id: GUID
+    - id: internal_GUID
       type: System.Guid
     - id: version
       type: System.Int32
-    content.vb: Public Sub New(GUID As Guid, version As Integer)
+    - id: date
+      type: System.DateTime
+    - id: content
+      type: System.String
+    content.vb: Public Sub New(internal_GUID As Guid, version As Integer, date As Date, content As String)
   overload: Genie.Yuk.ResourceNode.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.ResourceNode.GUID
-  commentId: P:Genie.Yuk.ResourceNode.GUID
-  id: GUID
+- uid: Genie.Yuk.ResourceNode.Internal_GUID
+  commentId: P:Genie.Yuk.ResourceNode.Internal_GUID
+  id: Internal_GUID
   parent: Genie.Yuk.ResourceNode
   langs:
   - csharp
   - vb
-  name: GUID
-  nameWithType: ResourceNode.GUID
-  fullName: Genie.Yuk.ResourceNode.GUID
+  name: Internal_GUID
+  nameWithType: ResourceNode.Internal_GUID
+  fullName: Genie.Yuk.ResourceNode.Internal_GUID
   type: Property
   source:
     remote:
       path: Core/Genie.Yuk/ResourceManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: GUID
+    id: Internal_GUID
     path: ResourceManager.cs
-    startLine: 26
+    startLine: 31
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Guid GUID { get; set; }
+    content: public Guid Internal_GUID { get; set; }
     parameters: []
     return:
       type: System.Guid
-    content.vb: Public Property GUID As Guid
-  overload: Genie.Yuk.ResourceNode.GUID*
+    content.vb: Public Property Internal_GUID As Guid
+  overload: Genie.Yuk.ResourceNode.Internal_GUID*
   modifiers.csharp:
   - public
   - get
@@ -228,7 +300,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Version
     path: ResourceManager.cs
-    startLine: 38
+    startLine: 43
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -239,6 +311,76 @@ items:
       type: System.Int32
     content.vb: Public Property Version As Integer
   overload: Genie.Yuk.ResourceNode.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Date
+  commentId: P:Genie.Yuk.ResourceNode.Date
+  id: Date
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: ResourceNode.Date
+  fullName: Genie.Yuk.ResourceNode.Date
+  type: Property
+  source:
+    remote:
+      path: Core/Genie.Yuk/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Date
+    path: ResourceManager.cs
+    startLine: 55
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public DateTime Date { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Date As Date
+  overload: Genie.Yuk.ResourceNode.Date*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Content
+  commentId: P:Genie.Yuk.ResourceNode.Content
+  id: Content
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: ResourceNode.Content
+  fullName: Genie.Yuk.ResourceNode.Content
+  type: Property
+  source:
+    remote:
+      path: Core/Genie.Yuk/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Content
+    path: ResourceManager.cs
+    startLine: 67
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public string Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Content As String
+  overload: Genie.Yuk.ResourceNode.Content*
   modifiers.csharp:
   - public
   - get
@@ -557,19 +699,43 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.ResourceNode.#ctor*
   commentId: Overload:Genie.Yuk.ResourceNode.#ctor
   name: ResourceNode
   nameWithType: ResourceNode.ResourceNode
   fullName: Genie.Yuk.ResourceNode.ResourceNode
-- uid: Genie.Yuk.ResourceNode.GUID*
-  commentId: Overload:Genie.Yuk.ResourceNode.GUID
-  name: GUID
-  nameWithType: ResourceNode.GUID
-  fullName: Genie.Yuk.ResourceNode.GUID
+- uid: Genie.Yuk.ResourceNode.Internal_GUID*
+  commentId: Overload:Genie.Yuk.ResourceNode.Internal_GUID
+  name: Internal_GUID
+  nameWithType: ResourceNode.Internal_GUID
+  fullName: Genie.Yuk.ResourceNode.Internal_GUID
 - uid: Genie.Yuk.ResourceNode.Version*
   commentId: Overload:Genie.Yuk.ResourceNode.Version
   name: Version
   nameWithType: ResourceNode.Version
   fullName: Genie.Yuk.ResourceNode.Version
+- uid: Genie.Yuk.ResourceNode.Date*
+  commentId: Overload:Genie.Yuk.ResourceNode.Date
+  name: Date
+  nameWithType: ResourceNode.Date
+  fullName: Genie.Yuk.ResourceNode.Date
+- uid: Genie.Yuk.ResourceNode.Content*
+  commentId: Overload:Genie.Yuk.ResourceNode.Content
+  name: Content
+  nameWithType: ResourceNode.Content
+  fullName: Genie.Yuk.ResourceNode.Content
 shouldSkipMarkup: true

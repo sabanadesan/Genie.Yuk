@@ -2,8 +2,6 @@
 - uid: Genie.Yuk
   name: Genie.Yuk
   items:
-  - uid: Genie.Yuk.LinkedList
-    name: LinkedList
   - uid: Genie.Yuk.Resource
     name: Resource
   - uid: Genie.Yuk.ResourceManager
@@ -12,6 +10,8 @@
     name: ResourceNode
   - uid: Genie.Yuk.ShaderResource
     name: ShaderResource
+  - uid: Genie.Yuk.ShaderResourceNode
+    name: ShaderResourceNode
 - uid: Genie3D.Yuk
   name: Genie3D.Yuk
   items:

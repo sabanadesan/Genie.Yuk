@@ -25,7 +25,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ResourceManager
     path: ResourceManager.cs
-    startLine: 81
+    startLine: 122
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Register
     path: ResourceManager.cs
-    startLine: 85
+    startLine: 126
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Resolve
     path: ResourceManager.cs
-    startLine: 90
+    startLine: 131
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -139,7 +139,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ContainsKey
     path: ResourceManager.cs
-    startLine: 95
+    startLine: 136
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: CreateResource
     path: ResourceManager.cs
-    startLine: 100
+    startLine: 141
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: DeleteResource
     path: ResourceManager.cs
-    startLine: 105
+    startLine: 146
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: MoveResource
     path: ResourceManager.cs
-    startLine: 110
+    startLine: 151
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

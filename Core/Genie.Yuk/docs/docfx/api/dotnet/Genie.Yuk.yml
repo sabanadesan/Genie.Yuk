@@ -4,11 +4,11 @@ items:
   commentId: N:Genie.Yuk
   id: Genie.Yuk
   children:
-  - Genie.Yuk.LinkedList
   - Genie.Yuk.Resource
   - Genie.Yuk.ResourceManager
   - Genie.Yuk.ResourceNode
   - Genie.Yuk.ShaderResource
+  - Genie.Yuk.ShaderResourceNode
   langs:
   - csharp
   - vb
@@ -19,13 +19,9 @@ items:
   assemblies:
   - Genie.Yuk
 references:
-- uid: Genie.Yuk.LinkedList
-  commentId: T:Genie.Yuk.LinkedList
-  name: LinkedList
-  nameWithType: LinkedList
-  fullName: Genie.Yuk.LinkedList
 - uid: Genie.Yuk.ResourceNode
   commentId: T:Genie.Yuk.ResourceNode
+  parent: Genie.Yuk
   name: ResourceNode
   nameWithType: ResourceNode
   fullName: Genie.Yuk.ResourceNode
@@ -35,6 +31,11 @@ references:
   name: Resource
   nameWithType: Resource
   fullName: Genie.Yuk.Resource
+- uid: Genie.Yuk.ShaderResourceNode
+  commentId: T:Genie.Yuk.ShaderResourceNode
+  name: ShaderResourceNode
+  nameWithType: ShaderResourceNode
+  fullName: Genie.Yuk.ShaderResourceNode
 - uid: Genie.Yuk.ShaderResource
   commentId: T:Genie.Yuk.ShaderResource
   name: ShaderResource

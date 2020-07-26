@@ -19,7 +19,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ShaderResource
     path: ResourceManager.cs
-    startLine: 76
+    startLine: 117
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -32,6 +32,7 @@ items:
   - System.Object
   - Genie.Yuk.Resource
   inheritedMembers:
+  - Genie.Yuk.Resource._GUID
   - Genie.Yuk.Resource.GUID
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -65,6 +66,12 @@ references:
   name: Resource
   nameWithType: Resource
   fullName: Genie.Yuk.Resource
+- uid: Genie.Yuk.Resource._GUID
+  commentId: F:Genie.Yuk.Resource._GUID
+  parent: Genie.Yuk.Resource
+  name: _GUID
+  nameWithType: Resource._GUID
+  fullName: Genie.Yuk.Resource._GUID
 - uid: Genie.Yuk.Resource.GUID
   commentId: P:Genie.Yuk.Resource.GUID
   parent: Genie.Yuk.Resource

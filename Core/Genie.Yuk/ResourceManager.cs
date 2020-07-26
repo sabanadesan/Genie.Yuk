@@ -9,33 +9,35 @@ namespace Genie.Yuk
 
     public class ResourceNode
     {
-        protected Guid _GUID;
+        protected Guid _internal_GUID;
         protected int _version;
         protected DateTime _date;
+        protected String _content;
 
         public ResourceNode()
         {
-            _GUID = Guid.NewGuid();
+            _internal_GUID = Guid.NewGuid();
             _version = 1;
             _date = DateTime.Now;
         }
 
-        public ResourceNode(Guid GUID, int version, DateTime date)
+        public ResourceNode(Guid internal_GUID, int version, DateTime date, String content)
         {
-            _GUID = GUID;
+            _internal_GUID = internal_GUID;
             _version = version;
             _date = date;
+            _content = content;
         }
 
-        public Guid GUID
+        public Guid Internal_GUID
         {
             get
             {
-                return _GUID;
+                return _internal_GUID;
             }
             set
             {
-                _GUID = value;
+                _internal_GUID = value;
             }
         }
 
@@ -62,29 +64,48 @@ namespace Genie.Yuk
                 _date = value;
             }
         }
+
+        public String Content
+        {
+            get
+            {
+                return _content;
+            }
+            set
+            {
+                _content = value;
+            }
+        }
     }
 
     public class Resource
     {
         private LinkedList<ResourceNode> revision;
+        protected Guid _GUID;
 
         public Resource()
         {
+            _GUID = Guid.NewGuid();
             revision = new LinkedList<ResourceNode>();
             revision.AddLast(new LinkedListNode<ResourceNode>(new ResourceNode()));
         }
 
-        public Resource(Guid GUID, int version, DateTime date)
+        public Resource(Guid GUID, Guid internal_GUID, int version, DateTime date, String content)
         {
+            _GUID = GUID;
             revision = new LinkedList<ResourceNode>();
-            revision.AddLast(new LinkedListNode<ResourceNode>(new ResourceNode(GUID, version, date)));
+            revision.AddLast(new LinkedListNode<ResourceNode>(new ResourceNode(internal_GUID, version, date, content)));
         }
 
         public Guid GUID
         {
             get
             {
-                return revision.First().GUID;
+                return _GUID;
+            }
+            set
+            {
+                _GUID = value;
             }
         }
     }

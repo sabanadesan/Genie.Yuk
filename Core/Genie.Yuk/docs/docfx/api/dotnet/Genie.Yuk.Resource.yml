@@ -6,7 +6,8 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Resource.#ctor
-  - Genie.Yuk.Resource.#ctor(System.Guid,System.Int32)
+  - Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+  - Genie.Yuk.Resource._GUID
   - Genie.Yuk.Resource.GUID
   langs:
   - csharp
@@ -22,7 +23,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Resource
     path: ResourceManager.cs
-    startLine: 51
+    startLine: 80
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -47,6 +48,37 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Genie.Yuk.Resource._GUID
+  commentId: F:Genie.Yuk.Resource._GUID
+  id: _GUID
+  parent: Genie.Yuk.Resource
+  langs:
+  - csharp
+  - vb
+  name: _GUID
+  nameWithType: Resource._GUID
+  fullName: Genie.Yuk.Resource._GUID
+  type: Field
+  source:
+    remote:
+      path: Core/Genie.Yuk/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _GUID
+    path: ResourceManager.cs
+    startLine: 83
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected Guid _GUID
+    return:
+      type: System.Guid
+    content.vb: Protected _GUID As Guid
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Genie.Yuk.Resource.#ctor
   commentId: M:Genie.Yuk.Resource.#ctor
   id: '#ctor'
@@ -65,7 +97,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: ResourceManager.cs
-    startLine: 55
+    startLine: 85
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -77,16 +109,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Resource.#ctor(System.Guid,System.Int32)
-  commentId: M:Genie.Yuk.Resource.#ctor(System.Guid,System.Int32)
-  id: '#ctor(System.Guid,System.Int32)'
+- uid: Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+  commentId: M:Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+  id: '#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)'
   parent: Genie.Yuk.Resource
   langs:
   - csharp
   - vb
-  name: Resource(Guid, Int32)
-  nameWithType: Resource.Resource(Guid, Int32)
-  fullName: Genie.Yuk.Resource.Resource(System.Guid, System.Int32)
+  name: Resource(Guid, Guid, Int32, DateTime, String)
+  nameWithType: Resource.Resource(Guid, Guid, Int32, DateTime, String)
+  fullName: Genie.Yuk.Resource.Resource(System.Guid, System.Guid, System.Int32, System.DateTime, System.String)
   type: Constructor
   source:
     remote:
@@ -95,18 +127,24 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: ResourceManager.cs
-    startLine: 61
+    startLine: 92
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Resource(Guid GUID, int version)
+    content: public Resource(Guid GUID, Guid internal_GUID, int version, DateTime date, string content)
     parameters:
     - id: GUID
       type: System.Guid
+    - id: internal_GUID
+      type: System.Guid
     - id: version
       type: System.Int32
-    content.vb: Public Sub New(GUID As Guid, version As Integer)
+    - id: date
+      type: System.DateTime
+    - id: content
+      type: System.String
+    content.vb: Public Sub New(GUID As Guid, internal_GUID As Guid, version As Integer, date As Date, content As String)
   overload: Genie.Yuk.Resource.#ctor*
   modifiers.csharp:
   - public
@@ -130,23 +168,23 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: GUID
     path: ResourceManager.cs
-    startLine: 67
+    startLine: 99
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Guid GUID { get; }
+    content: public Guid GUID { get; set; }
     parameters: []
     return:
       type: System.Guid
-    content.vb: Public ReadOnly Property GUID As Guid
+    content.vb: Public Property GUID As Guid
   overload: Genie.Yuk.Resource.GUID*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -445,11 +483,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Resource.#ctor*
-  commentId: Overload:Genie.Yuk.Resource.#ctor
-  name: Resource
-  nameWithType: Resource.Resource
-  fullName: Genie.Yuk.Resource.Resource
 - uid: System.Guid
   commentId: T:System.Guid
   parent: System
@@ -457,6 +490,11 @@ references:
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
+- uid: Genie.Yuk.Resource.#ctor*
+  commentId: Overload:Genie.Yuk.Resource.#ctor
+  name: Resource
+  nameWithType: Resource.Resource
+  fullName: Genie.Yuk.Resource.Resource
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -464,6 +502,20 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.Resource.GUID*
   commentId: Overload:Genie.Yuk.Resource.GUID
   name: GUID
