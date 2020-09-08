@@ -1,7 +1,0 @@
-﻿<Application
-    x:Class="Genie3D.Win10.Test.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Genie3D.Win10.Test">
-
-</Application>

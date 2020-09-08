@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 using Windows.Storage;
-using Genie3D.Yuk;
+using Genie.Yuk;
 
 namespace Genie3D.Win10
 {

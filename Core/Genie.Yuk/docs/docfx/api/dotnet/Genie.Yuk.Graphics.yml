@@ -1,35 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Yuk.Service
-  commentId: T:Genie3D.Yuk.Service
-  id: Service
-  parent: Genie3D.Yuk
+- uid: Genie.Yuk.Graphics
+  commentId: T:Genie.Yuk.Graphics
+  id: Graphics
+  parent: Genie.Yuk
   children:
-  - Genie3D.Yuk.Service.Register``1(``0)
-  - Genie3D.Yuk.Service.Resolve``1
+  - Genie.Yuk.Graphics.Run
   langs:
   - csharp
   - vb
-  name: Service
-  nameWithType: Service
-  fullName: Genie3D.Yuk.Service
+  name: Graphics
+  nameWithType: Graphics
+  fullName: Genie.Yuk.Graphics
   type: Class
   source:
     remote:
-      path: Core/Genie.Yuk/Service.cs
+      path: Core/Genie.Yuk/GameGraphics.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Service
-    path: Service.cs
-    startLine: 7
+    id: Graphics
+    path: GameGraphics.cs
+    startLine: 35
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: public static class Service
-    content.vb: Public Module Service
+    content: public abstract class Graphics
+    content.vb: Public MustInherit Class Graphics
   inheritance:
   - System.Object
+  derivedClasses:
+  - Genie.Yuk.DirectX
+  - Genie.Yuk.Vulkan
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -40,96 +42,50 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - static
+  - abstract
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: Genie3D.Yuk.Service.Register``1(``0)
-  commentId: M:Genie3D.Yuk.Service.Register``1(``0)
-  id: Register``1(``0)
-  parent: Genie3D.Yuk.Service
+  - MustInherit
+  - Class
+- uid: Genie.Yuk.Graphics.Run
+  commentId: M:Genie.Yuk.Graphics.Run
+  id: Run
+  parent: Genie.Yuk.Graphics
   langs:
   - csharp
   - vb
-  name: Register<T>(T)
-  nameWithType: Service.Register<T>(T)
-  fullName: Genie3D.Yuk.Service.Register<T>(T)
+  name: Run()
+  nameWithType: Graphics.Run()
+  fullName: Genie.Yuk.Graphics.Run()
   type: Method
   source:
     remote:
-      path: Core/Genie.Yuk/Service.cs
+      path: Core/Genie.Yuk/GameGraphics.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Register
-    path: Service.cs
-    startLine: 11
+    id: Run
+    path: GameGraphics.cs
+    startLine: 37
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: public static void Register<T>(T toRegister)
-    parameters:
-    - id: toRegister
-      type: '{T}'
-    typeParameters:
-    - id: T
-    content.vb: Public Shared Sub Register(Of T)(toRegister As T)
-  overload: Genie3D.Yuk.Service.Register*
-  nameWithType.vb: Service.Register(Of T)(T)
+    content: public virtual void Run()
+    content.vb: Public Overridable Sub Run
+  overload: Genie.Yuk.Graphics.Run*
   modifiers.csharp:
   - public
-  - static
+  - virtual
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: Genie3D.Yuk.Service.Register(Of T)(T)
-  name.vb: Register(Of T)(T)
-- uid: Genie3D.Yuk.Service.Resolve``1
-  commentId: M:Genie3D.Yuk.Service.Resolve``1
-  id: Resolve``1
-  parent: Genie3D.Yuk.Service
-  langs:
-  - csharp
-  - vb
-  name: Resolve<T>()
-  nameWithType: Service.Resolve<T>()
-  fullName: Genie3D.Yuk.Service.Resolve<T>()
-  type: Method
-  source:
-    remote:
-      path: Core/Genie.Yuk/Service.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Resolve
-    path: Service.cs
-    startLine: 16
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.Yuk
-  syntax:
-    content: public static T Resolve<T>()
-    typeParameters:
-    - id: T
-    return:
-      type: '{T}'
-    content.vb: Public Shared Function Resolve(Of T) As T
-  overload: Genie3D.Yuk.Service.Resolve*
-  nameWithType.vb: Service.Resolve(Of T)()
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Genie3D.Yuk.Service.Resolve(Of T)()
-  name.vb: Resolve(Of T)()
+  - Overridable
 references:
-- uid: Genie3D.Yuk
-  commentId: N:Genie3D.Yuk
-  name: Genie3D.Yuk
-  nameWithType: Genie3D.Yuk
-  fullName: Genie3D.Yuk
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -422,24 +378,9 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Yuk.Service.Register*
-  commentId: Overload:Genie3D.Yuk.Service.Register
-  name: Register
-  nameWithType: Service.Register
-  fullName: Genie3D.Yuk.Service.Register
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: Genie3D.Yuk.Service.Resolve*
-  commentId: Overload:Genie3D.Yuk.Service.Resolve
-  name: Resolve
-  nameWithType: Service.Resolve
-  fullName: Genie3D.Yuk.Service.Resolve
+- uid: Genie.Yuk.Graphics.Run*
+  commentId: Overload:Genie.Yuk.Graphics.Run
+  name: Run
+  nameWithType: Graphics.Run
+  fullName: Genie.Yuk.Graphics.Run
 shouldSkipMarkup: true

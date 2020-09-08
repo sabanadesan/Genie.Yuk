@@ -4,11 +4,23 @@ items:
   commentId: N:Genie.Yuk
   id: Genie.Yuk
   children:
+  - Genie.Yuk.DirectX
+  - Genie.Yuk.Game
+  - Genie.Yuk.GameGraphics
+  - Genie.Yuk.Graphics
+  - Genie.Yuk.GraphicsBackend
+  - Genie.Yuk.MenuType
+  - Genie.Yuk.Process
+  - Genie.Yuk.Process.MyFunction
+  - Genie.Yuk.ProcessServer
   - Genie.Yuk.Resource
   - Genie.Yuk.ResourceManager
   - Genie.Yuk.ResourceNode
+  - Genie.Yuk.Service
   - Genie.Yuk.ShaderResource
   - Genie.Yuk.ShaderResourceNode
+  - Genie.Yuk.Task
+  - Genie.Yuk.Vulkan
   langs:
   - csharp
   - vb
@@ -19,6 +31,60 @@ items:
   assemblies:
   - Genie.Yuk
 references:
+- uid: Genie.Yuk.Game
+  commentId: T:Genie.Yuk.Game
+  name: Game
+  nameWithType: Game
+  fullName: Genie.Yuk.Game
+- uid: Genie.Yuk.GraphicsBackend
+  commentId: T:Genie.Yuk.GraphicsBackend
+  parent: Genie.Yuk
+  name: GraphicsBackend
+  nameWithType: GraphicsBackend
+  fullName: Genie.Yuk.GraphicsBackend
+- uid: Genie.Yuk.GameGraphics
+  commentId: T:Genie.Yuk.GameGraphics
+  name: GameGraphics
+  nameWithType: GameGraphics
+  fullName: Genie.Yuk.GameGraphics
+- uid: Genie.Yuk.Graphics
+  commentId: T:Genie.Yuk.Graphics
+  parent: Genie.Yuk
+  name: Graphics
+  nameWithType: Graphics
+  fullName: Genie.Yuk.Graphics
+- uid: Genie.Yuk.Vulkan
+  commentId: T:Genie.Yuk.Vulkan
+  name: Vulkan
+  nameWithType: Vulkan
+  fullName: Genie.Yuk.Vulkan
+- uid: Genie.Yuk.DirectX
+  commentId: T:Genie.Yuk.DirectX
+  name: DirectX
+  nameWithType: DirectX
+  fullName: Genie.Yuk.DirectX
+- uid: Genie.Yuk.ProcessServer
+  commentId: T:Genie.Yuk.ProcessServer
+  name: ProcessServer
+  nameWithType: ProcessServer
+  fullName: Genie.Yuk.ProcessServer
+- uid: Genie.Yuk.Process
+  commentId: T:Genie.Yuk.Process
+  parent: Genie.Yuk
+  name: Process
+  nameWithType: Process
+  fullName: Genie.Yuk.Process
+- uid: Genie.Yuk.Process.MyFunction
+  commentId: T:Genie.Yuk.Process.MyFunction
+  parent: Genie.Yuk
+  name: Process.MyFunction
+  nameWithType: Process.MyFunction
+  fullName: Genie.Yuk.Process.MyFunction
+- uid: Genie.Yuk.Task
+  commentId: T:Genie.Yuk.Task
+  name: Task
+  nameWithType: Task
+  fullName: Genie.Yuk.Task
 - uid: Genie.Yuk.ResourceNode
   commentId: T:Genie.Yuk.ResourceNode
   parent: Genie.Yuk
@@ -46,6 +112,17 @@ references:
   name: ResourceManager
   nameWithType: ResourceManager
   fullName: Genie.Yuk.ResourceManager
+- uid: Genie.Yuk.Service
+  commentId: T:Genie.Yuk.Service
+  name: Service
+  nameWithType: Service
+  fullName: Genie.Yuk.Service
+- uid: Genie.Yuk.MenuType
+  commentId: T:Genie.Yuk.MenuType
+  parent: Genie.Yuk
+  name: MenuType
+  nameWithType: MenuType
+  fullName: Genie.Yuk.MenuType
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
   name: Genie.Yuk

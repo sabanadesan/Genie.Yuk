@@ -11,7 +11,7 @@ using Utility.Ini;
 using Utility.Ini.Model;
 using System.Runtime.CompilerServices;
 
-namespace Genie3D.Yuk
+namespace Genie.Yuk
 {
     public enum MenuType
     {

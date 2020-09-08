@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Genie3D.Yuk
+namespace Genie.Yuk
 {
     public class Game
     {

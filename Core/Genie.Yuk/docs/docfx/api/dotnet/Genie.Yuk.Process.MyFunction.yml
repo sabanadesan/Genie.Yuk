@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.Process.MyFunction
+  commentId: T:Genie.Yuk.Process.MyFunction
+  id: Process.MyFunction
+  parent: Genie.Yuk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Process.MyFunction
+  nameWithType: Process.MyFunction
+  fullName: Genie.Yuk.Process.MyFunction
+  type: Delegate
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: MyFunction
+    path: Process.cs
+    startLine: 43
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public delegate void MyFunction();
+    content.vb: Public Delegate Sub MyFunction
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+shouldSkipMarkup: true

@@ -1,38 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Yuk.DirectX
-  commentId: T:Genie3D.Yuk.DirectX
-  id: DirectX
-  parent: Genie3D.Yuk
+- uid: Genie.Yuk.Service
+  commentId: T:Genie.Yuk.Service
+  id: Service
+  parent: Genie.Yuk
   children:
-  - Genie3D.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
-  - Genie3D.Yuk.DirectX.Run
+  - Genie.Yuk.Service.Register``1(``0)
+  - Genie.Yuk.Service.Resolve``1
   langs:
   - csharp
   - vb
-  name: DirectX
-  nameWithType: DirectX
-  fullName: Genie3D.Yuk.DirectX
+  name: Service
+  nameWithType: Service
+  fullName: Genie.Yuk.Service
   type: Class
   source:
     remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
+      path: Core/Genie.Yuk/Service.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: DirectX
-    path: GameGraphics.cs
-    startLine: 57
+    id: Service
+    path: Service.cs
+    startLine: 7
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: 'public class DirectX : Graphics'
-    content.vb: >-
-      Public Class DirectX
-          Inherits Graphics
+    content: public static class Service
+    content.vb: Public Module Service
   inheritance:
   - System.Object
-  - Genie3D.Yuk.Graphics
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -43,86 +40,96 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - static
   - class
   modifiers.vb:
   - Public
-  - Class
-- uid: Genie3D.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
-  commentId: M:Genie3D.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
-  id: '#ctor(System.Object,System.Int32,System.Int32)'
-  parent: Genie3D.Yuk.DirectX
+  - Module
+- uid: Genie.Yuk.Service.Register``1(``0)
+  commentId: M:Genie.Yuk.Service.Register``1(``0)
+  id: Register``1(``0)
+  parent: Genie.Yuk.Service
   langs:
   - csharp
   - vb
-  name: DirectX(Object, Int32, Int32)
-  nameWithType: DirectX.DirectX(Object, Int32, Int32)
-  fullName: Genie3D.Yuk.DirectX.DirectX(System.Object, System.Int32, System.Int32)
-  type: Constructor
-  source:
-    remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: GameGraphics.cs
-    startLine: 61
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.Yuk
-  syntax:
-    content: public DirectX(object swapChainPanel, int width, int height)
-    parameters:
-    - id: swapChainPanel
-      type: System.Object
-    - id: width
-      type: System.Int32
-    - id: height
-      type: System.Int32
-    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
-  overload: Genie3D.Yuk.DirectX.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie3D.Yuk.DirectX.Run
-  commentId: M:Genie3D.Yuk.DirectX.Run
-  id: Run
-  parent: Genie3D.Yuk.DirectX
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: DirectX.Run()
-  fullName: Genie3D.Yuk.DirectX.Run()
+  name: Register<T>(T)
+  nameWithType: Service.Register<T>(T)
+  fullName: Genie.Yuk.Service.Register<T>(T)
   type: Method
   source:
     remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
+      path: Core/Genie.Yuk/Service.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: GameGraphics.cs
-    startLine: 66
+    id: Register
+    path: Service.cs
+    startLine: 11
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: public override void Run()
-    content.vb: Public Overrides Sub Run
-  overridden: Genie3D.Yuk.Graphics.Run
-  overload: Genie3D.Yuk.DirectX.Run*
+    content: public static void Register<T>(T toRegister)
+    parameters:
+    - id: toRegister
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub Register(Of T)(toRegister As T)
+  overload: Genie.Yuk.Service.Register*
+  nameWithType.vb: Service.Register(Of T)(T)
   modifiers.csharp:
   - public
-  - override
+  - static
   modifiers.vb:
   - Public
-  - Overrides
+  - Shared
+  fullName.vb: Genie.Yuk.Service.Register(Of T)(T)
+  name.vb: Register(Of T)(T)
+- uid: Genie.Yuk.Service.Resolve``1
+  commentId: M:Genie.Yuk.Service.Resolve``1
+  id: Resolve``1
+  parent: Genie.Yuk.Service
+  langs:
+  - csharp
+  - vb
+  name: Resolve<T>()
+  nameWithType: Service.Resolve<T>()
+  fullName: Genie.Yuk.Service.Resolve<T>()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Service.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Resolve
+    path: Service.cs
+    startLine: 16
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public static T Resolve<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Resolve(Of T) As T
+  overload: Genie.Yuk.Service.Resolve*
+  nameWithType.vb: Service.Resolve(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Genie.Yuk.Service.Resolve(Of T)()
+  name.vb: Resolve(Of T)()
 references:
-- uid: Genie3D.Yuk
-  commentId: N:Genie3D.Yuk
-  name: Genie3D.Yuk
-  nameWithType: Genie3D.Yuk
-  fullName: Genie3D.Yuk
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -130,12 +137,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Genie3D.Yuk.Graphics
-  commentId: T:Genie3D.Yuk.Graphics
-  parent: Genie3D.Yuk
-  name: Graphics
-  nameWithType: Graphics
-  fullName: Genie3D.Yuk.Graphics
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -421,49 +422,24 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Yuk.DirectX.#ctor*
-  commentId: Overload:Genie3D.Yuk.DirectX.#ctor
-  name: DirectX
-  nameWithType: DirectX.DirectX
-  fullName: Genie3D.Yuk.DirectX.DirectX
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: Genie3D.Yuk.Graphics.Run
-  commentId: M:Genie3D.Yuk.Graphics.Run
-  parent: Genie3D.Yuk.Graphics
-  name: Run()
-  nameWithType: Graphics.Run()
-  fullName: Genie3D.Yuk.Graphics.Run()
-  spec.csharp:
-  - uid: Genie3D.Yuk.Graphics.Run
-    name: Run
-    nameWithType: Graphics.Run
-    fullName: Genie3D.Yuk.Graphics.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie3D.Yuk.Graphics.Run
-    name: Run
-    nameWithType: Graphics.Run
-    fullName: Genie3D.Yuk.Graphics.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Genie3D.Yuk.DirectX.Run*
-  commentId: Overload:Genie3D.Yuk.DirectX.Run
-  name: Run
-  nameWithType: DirectX.Run
-  fullName: Genie3D.Yuk.DirectX.Run
+- uid: Genie.Yuk.Service.Register*
+  commentId: Overload:Genie.Yuk.Service.Register
+  name: Register
+  nameWithType: Service.Register
+  fullName: Genie.Yuk.Service.Register
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Genie.Yuk.Service.Resolve*
+  commentId: Overload:Genie.Yuk.Service.Resolve
+  name: Resolve
+  nameWithType: Service.Resolve
+  fullName: Genie.Yuk.Service.Resolve
 shouldSkipMarkup: true

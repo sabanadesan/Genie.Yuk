@@ -1,34 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Yuk.GameGraphics
-  commentId: T:Genie3D.Yuk.GameGraphics
-  id: GameGraphics
-  parent: Genie3D.Yuk
+- uid: Genie.Yuk.ProcessServer
+  commentId: T:Genie.Yuk.ProcessServer
+  id: ProcessServer
+  parent: Genie.Yuk
   children:
-  - Genie3D.Yuk.GameGraphics.#ctor
-  - Genie3D.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  - Genie3D.Yuk.GameGraphics.Run
+  - Genie.Yuk.ProcessServer.CreateProcess(System.String)
+  - Genie.Yuk.ProcessServer.Register(System.String,Genie.Yuk.Process)
+  - Genie.Yuk.ProcessServer.Resolve(System.String)
+  - Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
   langs:
   - csharp
   - vb
-  name: GameGraphics
-  nameWithType: GameGraphics
-  fullName: Genie3D.Yuk.GameGraphics
+  name: ProcessServer
+  nameWithType: ProcessServer
+  fullName: Genie.Yuk.ProcessServer
   type: Class
   source:
     remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
+      path: Core/Genie.Yuk/Process.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: GameGraphics
-    path: GameGraphics.cs
-    startLine: 15
+    id: ProcessServer
+    path: Process.cs
+    startLine: 9
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: public class GameGraphics
-    content.vb: Public Class GameGraphics
+    content: public static class ProcessServer
+    content.vb: Public Module ProcessServer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -41,113 +42,163 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - static
   - class
   modifiers.vb:
   - Public
-  - Class
-- uid: Genie3D.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  commentId: M:Genie3D.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
-  id: '#ctor(System.Object,System.Int32,System.Int32)'
-  parent: Genie3D.Yuk.GameGraphics
+  - Module
+- uid: Genie.Yuk.ProcessServer.Register(System.String,Genie.Yuk.Process)
+  commentId: M:Genie.Yuk.ProcessServer.Register(System.String,Genie.Yuk.Process)
+  id: Register(System.String,Genie.Yuk.Process)
+  parent: Genie.Yuk.ProcessServer
   langs:
   - csharp
   - vb
-  name: GameGraphics(Object, Int32, Int32)
-  nameWithType: GameGraphics.GameGraphics(Object, Int32, Int32)
-  fullName: Genie3D.Yuk.GameGraphics.GameGraphics(System.Object, System.Int32, System.Int32)
-  type: Constructor
-  source:
-    remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: GameGraphics.cs
-    startLine: 19
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.Yuk
-  syntax:
-    content: public GameGraphics(object swapChainPanel, int width, int height)
-    parameters:
-    - id: swapChainPanel
-      type: System.Object
-    - id: width
-      type: System.Int32
-    - id: height
-      type: System.Int32
-    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
-  overload: Genie3D.Yuk.GameGraphics.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie3D.Yuk.GameGraphics.#ctor
-  commentId: M:Genie3D.Yuk.GameGraphics.#ctor
-  id: '#ctor'
-  parent: Genie3D.Yuk.GameGraphics
-  langs:
-  - csharp
-  - vb
-  name: GameGraphics()
-  nameWithType: GameGraphics.GameGraphics()
-  fullName: Genie3D.Yuk.GameGraphics.GameGraphics()
-  type: Constructor
-  source:
-    remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: GameGraphics.cs
-    startLine: 24
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.Yuk
-  syntax:
-    content: public GameGraphics()
-    content.vb: Public Sub New
-  overload: Genie3D.Yuk.GameGraphics.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie3D.Yuk.GameGraphics.Run
-  commentId: M:Genie3D.Yuk.GameGraphics.Run
-  id: Run
-  parent: Genie3D.Yuk.GameGraphics
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: GameGraphics.Run()
-  fullName: Genie3D.Yuk.GameGraphics.Run()
+  name: Register(String, Process)
+  nameWithType: ProcessServer.Register(String, Process)
+  fullName: Genie.Yuk.ProcessServer.Register(System.String, Genie.Yuk.Process)
   type: Method
   source:
     remote:
-      path: Core/Genie.Yuk/GameGraphics.cs
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Register
+    path: Process.cs
+    startLine: 13
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public static void Register(string key, Process p)
+    parameters:
+    - id: key
+      type: System.String
+    - id: p
+      type: Genie.Yuk.Process
+    content.vb: Public Shared Sub Register(key As String, p As Process)
+  overload: Genie.Yuk.ProcessServer.Register*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Genie.Yuk.ProcessServer.Resolve(System.String)
+  commentId: M:Genie.Yuk.ProcessServer.Resolve(System.String)
+  id: Resolve(System.String)
+  parent: Genie.Yuk.ProcessServer
+  langs:
+  - csharp
+  - vb
+  name: Resolve(String)
+  nameWithType: ProcessServer.Resolve(String)
+  fullName: Genie.Yuk.ProcessServer.Resolve(System.String)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Resolve
+    path: Process.cs
+    startLine: 18
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public static Process Resolve(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: Genie.Yuk.Process
+    content.vb: Public Shared Function Resolve(key As String) As Process
+  overload: Genie.Yuk.ProcessServer.Resolve*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Genie.Yuk.ProcessServer.CreateProcess(System.String)
+  commentId: M:Genie.Yuk.ProcessServer.CreateProcess(System.String)
+  id: CreateProcess(System.String)
+  parent: Genie.Yuk.ProcessServer
+  langs:
+  - csharp
+  - vb
+  name: CreateProcess(String)
+  nameWithType: ProcessServer.CreateProcess(String)
+  fullName: Genie.Yuk.ProcessServer.CreateProcess(System.String)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: CreateProcess
+    path: Process.cs
+    startLine: 23
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public static Process CreateProcess(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: Genie.Yuk.Process
+    content.vb: Public Shared Function CreateProcess(key As String) As Process
+  overload: Genie.Yuk.ProcessServer.CreateProcess*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
+  commentId: M:Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
+  id: Run(Genie.Yuk.Process)
+  parent: Genie.Yuk.ProcessServer
+  langs:
+  - csharp
+  - vb
+  name: Run(Process)
+  nameWithType: ProcessServer.Run(Process)
+  fullName: Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
-    path: GameGraphics.cs
-    startLine: 29
+    path: Process.cs
+    startLine: 30
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
-  overload: Genie3D.Yuk.GameGraphics.Run*
+    content: public static void Run(Process p)
+    parameters:
+    - id: p
+      type: Genie.Yuk.Process
+    content.vb: Public Shared Sub Run(p As Process)
+  overload: Genie.Yuk.ProcessServer.Run*
   modifiers.csharp:
   - public
+  - static
   modifiers.vb:
   - Public
+  - Shared
 references:
-- uid: Genie3D.Yuk
-  commentId: N:Genie3D.Yuk
-  name: Genie3D.Yuk
-  nameWithType: Genie3D.Yuk
-  fullName: Genie3D.Yuk
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -440,21 +491,37 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie3D.Yuk.GameGraphics.#ctor*
-  commentId: Overload:Genie3D.Yuk.GameGraphics.#ctor
-  name: GameGraphics
-  nameWithType: GameGraphics.GameGraphics
-  fullName: Genie3D.Yuk.GameGraphics.GameGraphics
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: Genie.Yuk.ProcessServer.Register*
+  commentId: Overload:Genie.Yuk.ProcessServer.Register
+  name: Register
+  nameWithType: ProcessServer.Register
+  fullName: Genie.Yuk.ProcessServer.Register
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: Genie3D.Yuk.GameGraphics.Run*
-  commentId: Overload:Genie3D.Yuk.GameGraphics.Run
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Genie.Yuk.Process
+  commentId: T:Genie.Yuk.Process
+  parent: Genie.Yuk
+  name: Process
+  nameWithType: Process
+  fullName: Genie.Yuk.Process
+- uid: Genie.Yuk.ProcessServer.Resolve*
+  commentId: Overload:Genie.Yuk.ProcessServer.Resolve
+  name: Resolve
+  nameWithType: ProcessServer.Resolve
+  fullName: Genie.Yuk.ProcessServer.Resolve
+- uid: Genie.Yuk.ProcessServer.CreateProcess*
+  commentId: Overload:Genie.Yuk.ProcessServer.CreateProcess
+  name: CreateProcess
+  nameWithType: ProcessServer.CreateProcess
+  fullName: Genie.Yuk.ProcessServer.CreateProcess
+- uid: Genie.Yuk.ProcessServer.Run*
+  commentId: Overload:Genie.Yuk.ProcessServer.Run
   name: Run
-  nameWithType: GameGraphics.Run
-  fullName: Genie3D.Yuk.GameGraphics.Run
+  nameWithType: ProcessServer.Run
+  fullName: Genie.Yuk.ProcessServer.Run
 shouldSkipMarkup: true

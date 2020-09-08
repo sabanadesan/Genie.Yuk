@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Utility.Yuk;
 
-namespace Genie3D.Yuk
+namespace Genie.Yuk
 {
     internal class GameManager
     {
@@ -20,7 +20,24 @@ namespace Genie3D.Yuk
         private static String _path;
 
         private GameManager() {
-            Startup();
+
+            if (_backend == GraphicsBackend.Vulkan)
+            {
+                Process BackgroundWorker = ProcessServer.CreateProcess("BackgroundWorker");
+                BackgroundWorker.AddHandler(Startup);
+                BackgroundWorker.Run();
+            }
+            else if (_backend == GraphicsBackend.DirectX12)
+            {
+                Startup();
+            }
+
+            /*
+            while(true)
+            {
+                Thread.Sleep(1000);
+            }
+            */
         }
 
         private void Startup()

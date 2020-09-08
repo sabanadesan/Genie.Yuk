@@ -1,18 +1,18 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie3D.Yuk.GraphicsBackend
-  commentId: T:Genie3D.Yuk.GraphicsBackend
+- uid: Genie.Yuk.GraphicsBackend
+  commentId: T:Genie.Yuk.GraphicsBackend
   id: GraphicsBackend
-  parent: Genie3D.Yuk
+  parent: Genie.Yuk
   children:
-  - Genie3D.Yuk.GraphicsBackend.DirectX12
-  - Genie3D.Yuk.GraphicsBackend.Vulkan
+  - Genie.Yuk.GraphicsBackend.DirectX12
+  - Genie.Yuk.GraphicsBackend.Vulkan
   langs:
   - csharp
   - vb
   name: GraphicsBackend
   nameWithType: GraphicsBackend
-  fullName: Genie3D.Yuk.GraphicsBackend
+  fullName: Genie.Yuk.GraphicsBackend
   type: Enum
   source:
     remote:
@@ -24,7 +24,7 @@ items:
     startLine: 9
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
     content: public enum GraphicsBackend
     content.vb: Public Enum GraphicsBackend
@@ -34,16 +34,16 @@ items:
   modifiers.vb:
   - Public
   - Enum
-- uid: Genie3D.Yuk.GraphicsBackend.Vulkan
-  commentId: F:Genie3D.Yuk.GraphicsBackend.Vulkan
+- uid: Genie.Yuk.GraphicsBackend.Vulkan
+  commentId: F:Genie.Yuk.GraphicsBackend.Vulkan
   id: Vulkan
-  parent: Genie3D.Yuk.GraphicsBackend
+  parent: Genie.Yuk.GraphicsBackend
   langs:
   - csharp
   - vb
   name: Vulkan
   nameWithType: GraphicsBackend.Vulkan
-  fullName: Genie3D.Yuk.GraphicsBackend.Vulkan
+  fullName: Genie.Yuk.GraphicsBackend.Vulkan
   type: Field
   source:
     remote:
@@ -55,27 +55,27 @@ items:
     startLine: 11
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
     content: Vulkan = 0
     return:
-      type: Genie3D.Yuk.GraphicsBackend
+      type: Genie.Yuk.GraphicsBackend
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Genie3D.Yuk.GraphicsBackend.DirectX12
-  commentId: F:Genie3D.Yuk.GraphicsBackend.DirectX12
+- uid: Genie.Yuk.GraphicsBackend.DirectX12
+  commentId: F:Genie.Yuk.GraphicsBackend.DirectX12
   id: DirectX12
-  parent: Genie3D.Yuk.GraphicsBackend
+  parent: Genie.Yuk.GraphicsBackend
   langs:
   - csharp
   - vb
   name: DirectX12
   nameWithType: GraphicsBackend.DirectX12
-  fullName: Genie3D.Yuk.GraphicsBackend.DirectX12
+  fullName: Genie.Yuk.GraphicsBackend.DirectX12
   type: Field
   source:
     remote:
@@ -87,11 +87,11 @@ items:
     startLine: 12
   assemblies:
   - Genie.Yuk
-  namespace: Genie3D.Yuk
+  namespace: Genie.Yuk
   syntax:
     content: DirectX12 = 1
     return:
-      type: Genie3D.Yuk.GraphicsBackend
+      type: Genie.Yuk.GraphicsBackend
   modifiers.csharp:
   - public
   - const
@@ -99,15 +99,15 @@ items:
   - Public
   - Const
 references:
-- uid: Genie3D.Yuk
-  commentId: N:Genie3D.Yuk
-  name: Genie3D.Yuk
-  nameWithType: Genie3D.Yuk
-  fullName: Genie3D.Yuk
-- uid: Genie3D.Yuk.GraphicsBackend
-  commentId: T:Genie3D.Yuk.GraphicsBackend
-  parent: Genie3D.Yuk
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: Genie.Yuk.GraphicsBackend
+  commentId: T:Genie.Yuk.GraphicsBackend
+  parent: Genie.Yuk
   name: GraphicsBackend
   nameWithType: GraphicsBackend
-  fullName: Genie3D.Yuk.GraphicsBackend
+  fullName: Genie.Yuk.GraphicsBackend
 shouldSkipMarkup: true

@@ -1,6 +1,6 @@
 ﻿using System;
 
-using Genie3D.Yuk;
+using Genie.Yuk;
 
 namespace Genie3D.Console
 {

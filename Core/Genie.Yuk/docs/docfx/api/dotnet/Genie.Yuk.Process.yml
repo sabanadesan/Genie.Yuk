@@ -1,0 +1,496 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.Process
+  commentId: T:Genie.Yuk.Process
+  id: Process
+  parent: Genie.Yuk
+  children:
+  - Genie.Yuk.Process.#ctor
+  - Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
+  - Genie.Yuk.Process.Run
+  - Genie.Yuk.Process.Start
+  langs:
+  - csharp
+  - vb
+  name: Process
+  nameWithType: Process
+  fullName: Genie.Yuk.Process
+  type: Class
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Process
+    path: Process.cs
+    startLine: 41
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public class Process
+    content.vb: Public Class Process
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Genie.Yuk.Process.#ctor
+  commentId: M:Genie.Yuk.Process.#ctor
+  id: '#ctor'
+  parent: Genie.Yuk.Process
+  langs:
+  - csharp
+  - vb
+  name: Process()
+  nameWithType: Process.Process()
+  fullName: Genie.Yuk.Process.Process()
+  type: Constructor
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Process.cs
+    startLine: 46
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public Process()
+    content.vb: Public Sub New
+  overload: Genie.Yuk.Process.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
+  commentId: M:Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
+  id: AddHandler(Genie.Yuk.Process.MyFunction)
+  parent: Genie.Yuk.Process
+  langs:
+  - csharp
+  - vb
+  name: AddHandler(Process.MyFunction)
+  nameWithType: Process.AddHandler(Process.MyFunction)
+  fullName: Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AddHandler
+    path: Process.cs
+    startLine: 51
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void AddHandler(Process.MyFunction f)
+    parameters:
+    - id: f
+      type: Genie.Yuk.Process.MyFunction
+    content.vb: Public Sub AddHandler(f As Process.MyFunction)
+  overload: Genie.Yuk.Process.AddHandler*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Process.Run
+  commentId: M:Genie.Yuk.Process.Run
+  id: Run
+  parent: Genie.Yuk.Process
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Process.Run()
+  fullName: Genie.Yuk.Process.Run()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Process.cs
+    startLine: 56
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run
+  overload: Genie.Yuk.Process.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Process.Start
+  commentId: M:Genie.Yuk.Process.Start
+  id: Start
+  parent: Genie.Yuk.Process
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Process.Start()
+  fullName: Genie.Yuk.Process.Start()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Process.cs
+    startLine: 61
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Genie.Yuk.Process.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Genie.Yuk.Process.#ctor*
+  commentId: Overload:Genie.Yuk.Process.#ctor
+  name: Process
+  nameWithType: Process.Process
+  fullName: Genie.Yuk.Process.Process
+- uid: Genie.Yuk.Process.AddHandler*
+  commentId: Overload:Genie.Yuk.Process.AddHandler
+  name: AddHandler
+  nameWithType: Process.AddHandler
+  fullName: Genie.Yuk.Process.AddHandler
+- uid: Genie.Yuk.Process.MyFunction
+  commentId: T:Genie.Yuk.Process.MyFunction
+  parent: Genie.Yuk
+  name: Process.MyFunction
+  nameWithType: Process.MyFunction
+  fullName: Genie.Yuk.Process.MyFunction
+- uid: Genie.Yuk.Process.Run*
+  commentId: Overload:Genie.Yuk.Process.Run
+  name: Run
+  nameWithType: Process.Run
+  fullName: Genie.Yuk.Process.Run
+- uid: Genie.Yuk.Process.Start*
+  commentId: Overload:Genie.Yuk.Process.Start
+  name: Start
+  nameWithType: Process.Start
+  fullName: Genie.Yuk.Process.Start
+shouldSkipMarkup: true
