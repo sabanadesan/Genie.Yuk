@@ -32,10 +32,34 @@ namespace Genie.Yuk
         private CancellationTokenSource source1;
         private CancellationToken token1;
 
+        public delegate void MyFunction(CancellationToken token);
+        private MyFunction m;
 
         public Process(String key)
         {
             m_key = key;
+        }
+
+        public Task Run(MyFunction f)
+        {
+            source1 = new CancellationTokenSource();
+            token1 = source1.Token;
+
+            token1.Register(() =>
+            {
+                Console.WriteLine("Cancelled.");
+            });
+
+            m_t = new Task(() =>
+            {
+                f(token1);
+            }, token1);
+
+            m_t.Start();
+
+            ProcessServer.Register(m_key, this);
+
+            return m_t;
         }
 
         public Task Run(Do d)
@@ -71,16 +95,10 @@ namespace Genie.Yuk
 
     public abstract class Do
     {
-        public virtual void Run(CancellationToken token)
-        {
-        }
+        public abstract void Run(CancellationToken token);
 
-        public virtual void Run()
-        {
-        }
+        public abstract void Run();
 
-        public virtual void Stop()
-        {
-        }
+        public abstract void Stop();
     }
 }

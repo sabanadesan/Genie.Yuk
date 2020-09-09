@@ -22,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Graphics
     path: GameGraphics.cs
-    startLine: 112
+    startLine: 115
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -68,23 +68,23 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 114
+    startLine: 117
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public virtual void Run(CancellationToken token)
+    content: public abstract void Run(CancellationToken token)
     parameters:
     - id: token
       type: System.Threading.CancellationToken
-    content.vb: Public Overridable Sub Run(token As CancellationToken)
+    content.vb: Public MustOverride Sub Run(token As CancellationToken)
   overload: Genie.Yuk.Graphics.Run*
   modifiers.csharp:
   - public
-  - virtual
+  - abstract
   modifiers.vb:
   - Public
-  - Overridable
+  - MustOverride
 - uid: Genie.Yuk.Graphics.Run
   commentId: M:Genie.Yuk.Graphics.Run
   id: Run
@@ -103,20 +103,20 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 118
+    startLine: 119
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public virtual void Run()
-    content.vb: Public Overridable Sub Run
+    content: public abstract void Run()
+    content.vb: Public MustOverride Sub Run
   overload: Genie.Yuk.Graphics.Run*
   modifiers.csharp:
   - public
-  - virtual
+  - abstract
   modifiers.vb:
   - Public
-  - Overridable
+  - MustOverride
 - uid: Genie.Yuk.Graphics.Stop
   commentId: M:Genie.Yuk.Graphics.Stop
   id: Stop
@@ -135,20 +135,20 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: GameGraphics.cs
-    startLine: 122
+    startLine: 121
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public virtual void Stop()
-    content.vb: Public Overridable Sub Stop
+    content: public abstract void Stop()
+    content.vb: Public MustOverride Sub Stop
   overload: Genie.Yuk.Graphics.Stop*
   modifiers.csharp:
   - public
-  - virtual
+  - abstract
   modifiers.vb:
   - Public
-  - Overridable
+  - MustOverride
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk

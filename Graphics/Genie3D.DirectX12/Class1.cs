@@ -30,6 +30,28 @@ namespace Genie3D.DirectX12
             InitializeD3D();
             InitScene();
             Render();
+
+            MainLoop(token);
+        }
+
+        private void MainLoop(CancellationToken token)
+        {
+            try
+            {
+                Calculate(token);
+            }
+            catch (OperationCanceledException ex) when (ex.CancellationToken == token) // includes TaskCanceledException
+            {
+                Console.WriteLine("Cancelled Exception.");
+            }
+        }
+
+        private void Calculate(CancellationToken token)
+        {
+            while (true)
+            {
+                token.ThrowIfCancellationRequested();
+            }
         }
 
         public void Run()

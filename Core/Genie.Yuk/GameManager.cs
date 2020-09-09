@@ -13,11 +13,7 @@ namespace Genie.Yuk
     internal class GameManager
     {
         private static GameManager _instance;
-        private Boolean _is_screen;
-        private static GraphicsBackend _backend;
-        private static System.Object _swapChainPanel;
-        private static int? _width;
-        private static int? _height;
+
         private static String _path;
 
         private GameManager() {
@@ -28,52 +24,41 @@ namespace Genie.Yuk
         {
             var tasks = new List<Task>();
 
-            if (_backend == GraphicsBackend.Vulkan)
+            Process BackgroundWorker = new Process("BackgroundWorker");
+            Task t = BackgroundWorker.Run(Startup);
+            tasks.Add(t);
+
+            Action<object> action = (object obj) =>
             {
-                GameGraphics g = Startup();
+                Thread.Sleep(5000);
+                Process p = ProcessServer.Resolve("BackgroundWorker");
+                p.Stop();
+            };
 
-                Process BackgroundWorker = new Process("BackgroundWorker");
-                Task t = BackgroundWorker.Run(g);
-                tasks.Add(t);
+            Task t1 = new Task(action, "alpha");
+            t1.Start();
+            tasks.Add(t1);
 
-                Action<object> action = (object obj) =>
-                {
-
-                    Thread.Sleep(5000);
-                    Process p = ProcessServer.Resolve("BackgroundWorker");
-                    p.Stop();
-                };
-
-                Task t1 = new Task(action, "alpha");
-                t1.Start();
-                tasks.Add(t1);
-
-                Action<object> action2 = (object obj) =>
-                {
-
-                    Console.WriteLine("Enter input:"); // Prompt
-                };
-
-                Task t2 = new Task(action2, "alpha2");
-                t2.Start();
-                tasks.Add(t2);
-
-                var continuation = Task.WhenAll(tasks);
-                try
-                {
-                    continuation.Wait();
-                }
-                catch
-                { }
-            }
-            else if (_backend == GraphicsBackend.DirectX12)
+            Action<object> action2 = (object obj) =>
             {
-                GameGraphics g = Startup();
-                g.Run();
+                Thread.Sleep(10000);
+                Console.WriteLine("Enter input:"); // Prompt
+            };
+
+            Task t2 = new Task(action2, "alpha2");
+            t2.Start();
+            tasks.Add(t2);
+
+            var continuation = Task.WhenAll(tasks);
+            try
+            {
+                continuation.Wait();
             }
+            catch
+            { }
         }
 
-        private GameGraphics Startup()
+        public void Startup(CancellationToken token)
         {
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
@@ -83,25 +68,6 @@ namespace Genie.Yuk
             CreateDefaultSettings(setting);
 
             setting.Save("Configuration.ini", _path);
-
-            GameGraphics cls = null; 
-
-            if (_backend == GraphicsBackend.Vulkan)
-            {
-                Service.Register<GameGraphics>(new GameGraphics());
-            }
-            else if (_backend == GraphicsBackend.DirectX12)
-            {
-                Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
-
-                Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
-            }
-
-            cls = Service.Resolve<GameGraphics>();
-
-            Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
-
-            return cls;
         }
 
         private void CreateDefaultSettings(Setting setting)
@@ -126,62 +92,6 @@ namespace Genie.Yuk
                     _instance = new GameManager();
                 }
                 return _instance;
-            }
-        }
-
-        public Boolean IsOnScreen
-        {
-            get
-            {
-                _is_screen = true;
-                return _is_screen;
-            }
-        }
-
-        public static GraphicsBackend Backend
-        {
-            get
-            {
-                return _backend;
-            }
-            set 
-            {
-                _backend = value; 
-            }
-        }
-
-        public static int? Height
-        {
-            get
-            {
-                return _height;
-            }
-            set
-            {
-                _height = value;
-            }
-        }
-        public static int? Width
-        {
-            get
-            {
-                return _width;
-            }
-            set
-            {
-                _width = value;
-            }
-        }
-
-        public static System.Object SwapChainPanel
-        {
-            get
-            {
-                return _swapChainPanel;
-            }
-            set
-            {
-                _swapChainPanel = value;
             }
         }
 

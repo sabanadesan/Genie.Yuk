@@ -14,8 +14,6 @@
     name: Game
   - uid: Genie.Yuk.GameGraphics
     name: GameGraphics
-  - uid: Genie.Yuk.Gme
-    name: Gme
   - uid: Genie.Yuk.Graphics
     name: Graphics
   - uid: Genie.Yuk.GraphicsBackend
@@ -26,6 +24,8 @@
     name: MenuType
   - uid: Genie.Yuk.Process
     name: Process
+  - uid: Genie.Yuk.Process.MyFunction
+    name: Process.MyFunction
   - uid: Genie.Yuk.ProcessServer
     name: ProcessServer
   - uid: Genie.Yuk.Resource

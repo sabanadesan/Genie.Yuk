@@ -2,26 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace Genie.Yuk
 {
-    public class Game
+    public class Game : Do
     {
-        public Game(GraphicsBackend backend, String path)
+        public Game(String path)
         {
-            GameManager.Backend = backend;
             GameManager.Path = path;
         }
 
-        public void SetWindow(System.Object swapChainPanel, int width, int height)
-        {
-            GameManager.SwapChainPanel = swapChainPanel;
-            GameManager.Width = width;
-            GameManager.Height = height;
-        }
 
-        public void Run()
+        public override void Run(CancellationToken token)
         {
             GameManager mng = GameManager.Instance;
+        }
+
+        public override void Run()
+        {
+            GameManager mng = GameManager.Instance;
+        }
+
+        public override void Stop()
+        {
+
         }
     }
 }

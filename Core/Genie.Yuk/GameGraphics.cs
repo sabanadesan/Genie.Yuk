@@ -16,6 +16,7 @@ namespace Genie.Yuk
         DirectX12
     }
 
+    /*
     public class Gme : Do
     {
         private Queue<Event> _events;
@@ -80,6 +81,8 @@ namespace Genie.Yuk
         }
     }
 
+    */
+
         public class GameGraphics : Do
     {
         private Graphics cls;
@@ -112,17 +115,11 @@ namespace Genie.Yuk
 
     public abstract class Graphics
     {
-        public virtual void Run(CancellationToken token)
-        {
-        }
+        public abstract void Run(CancellationToken token);
 
-        public virtual void Run()
-        {
-        }
+        public abstract void Run();
 
-        public virtual void Stop()
-        {
-        }
+        public abstract void Stop();
     }
 
     public class Vulkan : Graphics
