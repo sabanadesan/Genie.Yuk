@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections.Concurrent;
 using Utility.Yuk;
+using System.Threading;
 
 namespace Genie.Yuk
 {
@@ -20,29 +21,60 @@ namespace Genie.Yuk
         private static String _path;
 
         private GameManager() {
+            Run();
+        }
+
+        private void Run()
+        {
+            var tasks = new List<Task>();
 
             if (_backend == GraphicsBackend.Vulkan)
             {
-                Process BackgroundWorker = ProcessServer.CreateProcess("BackgroundWorker");
-                BackgroundWorker.AddHandler(Startup);
-                BackgroundWorker.Run();
+                GameGraphics g = Startup();
+
+                Process BackgroundWorker = new Process("BackgroundWorker");
+                Task t = BackgroundWorker.Run(g);
+                tasks.Add(t);
+
+                Action<object> action = (object obj) =>
+                {
+
+                    Thread.Sleep(5000);
+                    Process p = ProcessServer.Resolve("BackgroundWorker");
+                    p.Stop();
+                };
+
+                Task t1 = new Task(action, "alpha");
+                t1.Start();
+                tasks.Add(t1);
+
+                Action<object> action2 = (object obj) =>
+                {
+
+                    Console.WriteLine("Enter input:"); // Prompt
+                };
+
+                Task t2 = new Task(action2, "alpha2");
+                t2.Start();
+                tasks.Add(t2);
+
+                var continuation = Task.WhenAll(tasks);
+                try
+                {
+                    continuation.Wait();
+                }
+                catch
+                { }
             }
             else if (_backend == GraphicsBackend.DirectX12)
             {
-                Startup();
+                GameGraphics g = Startup();
+                g.Run();
             }
-
-            /*
-            while(true)
-            {
-                Thread.Sleep(1000);
-            }
-            */
         }
 
-        private void Startup()
+        private GameGraphics Startup()
         {
-
             Service.Register<Setting>(new Setting());
             Setting setting = Service.Resolve<Setting>();
 
@@ -52,27 +84,24 @@ namespace Genie.Yuk
 
             setting.Save("Configuration.ini", _path);
 
-            if (IsOnScreen)
+            GameGraphics cls = null; 
+
+            if (_backend == GraphicsBackend.Vulkan)
             {
-                GameGraphics cls = null; 
-
-                if (_backend == GraphicsBackend.Vulkan)
-                {
-                    Service.Register<GameGraphics>(new GameGraphics());
-                }
-                else if (_backend == GraphicsBackend.DirectX12)
-                {
-                    Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
-
-                    Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
-                }
-
-                cls = Service.Resolve<GameGraphics>();
-
-                Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
-
-                cls.Run();
+                Service.Register<GameGraphics>(new GameGraphics());
             }
+            else if (_backend == GraphicsBackend.DirectX12)
+            {
+                Utility.Yuk.Exception.CheckIsIntializedOrThrow(_swapChainPanel, _width, _height);
+
+                Service.Register<GameGraphics>(new GameGraphics(_swapChainPanel, (int)_width, (int)_height));
+            }
+
+            cls = Service.Resolve<GameGraphics>();
+
+            Utility.Yuk.Exception.CheckIsIntializedOrThrow(cls);
+
+            return cls;
         }
 
         private void CreateDefaultSettings(Setting setting)

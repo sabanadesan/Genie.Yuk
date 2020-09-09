@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Text;
 
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Genie.Yuk
 {
@@ -11,62 +12,75 @@ namespace Genie.Yuk
     {
         private static Dictionary<String, Process> _registeredProcesses = new Dictionary<String, Process>();
 
-        public static void Register(String key, Process p)
+        public static void Register(String key, Process t)
         {
-            _registeredProcesses.Add(key, p);
+            _registeredProcesses.Add(key, t);
         }
 
         public static Process Resolve(String key)
         {
             return _registeredProcesses[key];
         }
-
-        public static Process CreateProcess(String key)
-        {
-            Process p = new Process();
-            Register(key, p);
-            return p;
-        }
-
-        public static void Run(Process p)
-        {
-            Thread t1 = new Thread(() =>
-            {
-               p.Start();
-            });
-
-            t1.Start();
-        }
     }
 
     public class Process
     {
-        public delegate void MyFunction();
-        private MyFunction m;
+        private String m_key;
+        private Task m_t;
+        private Do m_d;
 
-        public Process()
-        { 
+        private CancellationTokenSource source1;
+        private CancellationToken token1;
 
+
+        public Process(String key)
+        {
+            m_key = key;
         }
 
-        public void AddHandler(MyFunction f)
+        public Task Run(Do d)
         {
-            m = f;
-        }
+            source1 = new CancellationTokenSource();
+            token1 = source1.Token;
 
-        public void Run()
-        {
-            ProcessServer.Run(this);
-        }
+            token1.Register(() =>
+            {
+                Console.WriteLine("Cancelled.");
+            });
 
-        public void Start()
+            m_d = d;
+
+            m_t = new Task(() =>
+            {
+                m_d.Run(token1);
+            }, token1);
+
+            m_t.Start();
+
+            ProcessServer.Register(m_key, this);
+
+            return m_t;
+        }
+        
+        public void Stop()
         {
-            m();
+            source1.Cancel();
+            source1.Dispose();
         }
     }
 
-    public class Task
+    public abstract class Do
     {
+        public virtual void Run(CancellationToken token)
+        {
+        }
 
+        public virtual void Run()
+        {
+        }
+
+        public virtual void Stop()
+        {
+        }
     }
 }

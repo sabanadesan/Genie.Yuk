@@ -5,10 +5,9 @@ items:
   id: Process
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Process.#ctor
-  - Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
-  - Genie.Yuk.Process.Run
-  - Genie.Yuk.Process.Start
+  - Genie.Yuk.Process.#ctor(System.String)
+  - Genie.Yuk.Process.Run(Genie.Yuk.Do)
+  - Genie.Yuk.Process.Stop
   langs:
   - csharp
   - vb
@@ -23,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Process
     path: Process.cs
-    startLine: 41
+    startLine: 25
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -46,16 +45,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Process.#ctor
-  commentId: M:Genie.Yuk.Process.#ctor
-  id: '#ctor'
+- uid: Genie.Yuk.Process.#ctor(System.String)
+  commentId: M:Genie.Yuk.Process.#ctor(System.String)
+  id: '#ctor(System.String)'
   parent: Genie.Yuk.Process
   langs:
   - csharp
   - vb
-  name: Process()
-  nameWithType: Process.Process()
-  fullName: Genie.Yuk.Process.Process()
+  name: Process(String)
+  nameWithType: Process.Process(String)
+  fullName: Genie.Yuk.Process.Process(System.String)
   type: Constructor
   source:
     remote:
@@ -64,61 +63,31 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Process.cs
-    startLine: 46
+    startLine: 35
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Process()
-    content.vb: Public Sub New
+    content: public Process(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Public Sub New(key As String)
   overload: Genie.Yuk.Process.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
-  commentId: M:Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
-  id: AddHandler(Genie.Yuk.Process.MyFunction)
+- uid: Genie.Yuk.Process.Run(Genie.Yuk.Do)
+  commentId: M:Genie.Yuk.Process.Run(Genie.Yuk.Do)
+  id: Run(Genie.Yuk.Do)
   parent: Genie.Yuk.Process
   langs:
   - csharp
   - vb
-  name: AddHandler(Process.MyFunction)
-  nameWithType: Process.AddHandler(Process.MyFunction)
-  fullName: Genie.Yuk.Process.AddHandler(Genie.Yuk.Process.MyFunction)
-  type: Method
-  source:
-    remote:
-      path: Core/Genie.Yuk/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: AddHandler
-    path: Process.cs
-    startLine: 51
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void AddHandler(Process.MyFunction f)
-    parameters:
-    - id: f
-      type: Genie.Yuk.Process.MyFunction
-    content.vb: Public Sub AddHandler(f As Process.MyFunction)
-  overload: Genie.Yuk.Process.AddHandler*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie.Yuk.Process.Run
-  commentId: M:Genie.Yuk.Process.Run
-  id: Run
-  parent: Genie.Yuk.Process
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: Process.Run()
-  fullName: Genie.Yuk.Process.Run()
+  name: Run(Do)
+  nameWithType: Process.Run(Do)
+  fullName: Genie.Yuk.Process.Run(Genie.Yuk.Do)
   type: Method
   source:
     remote:
@@ -127,44 +96,49 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Process.cs
-    startLine: 56
+    startLine: 40
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
+    content: public Task Run(Do d)
+    parameters:
+    - id: d
+      type: Genie.Yuk.Do
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Run(d As  Do) As Task
   overload: Genie.Yuk.Process.Run*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Process.Start
-  commentId: M:Genie.Yuk.Process.Start
-  id: Start
+- uid: Genie.Yuk.Process.Stop
+  commentId: M:Genie.Yuk.Process.Stop
+  id: Stop
   parent: Genie.Yuk.Process
   langs:
   - csharp
   - vb
-  name: Start()
-  nameWithType: Process.Start()
-  fullName: Genie.Yuk.Process.Start()
+  name: Stop()
+  nameWithType: Process.Stop()
+  fullName: Genie.Yuk.Process.Stop()
   type: Method
   source:
     remote:
       path: Core/Genie.Yuk/Process.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Start
+    id: Stop
     path: Process.cs
-    startLine: 61
+    startLine: 64
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public void Start()
-    content.vb: Public Sub Start
-  overload: Genie.Yuk.Process.Start*
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: Genie.Yuk.Process.Stop*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -472,25 +446,40 @@ references:
   name: Process
   nameWithType: Process.Process
   fullName: Genie.Yuk.Process.Process
-- uid: Genie.Yuk.Process.AddHandler*
-  commentId: Overload:Genie.Yuk.Process.AddHandler
-  name: AddHandler
-  nameWithType: Process.AddHandler
-  fullName: Genie.Yuk.Process.AddHandler
-- uid: Genie.Yuk.Process.MyFunction
-  commentId: T:Genie.Yuk.Process.MyFunction
-  parent: Genie.Yuk
-  name: Process.MyFunction
-  nameWithType: Process.MyFunction
-  fullName: Genie.Yuk.Process.MyFunction
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.Process.Run*
   commentId: Overload:Genie.Yuk.Process.Run
   name: Run
   nameWithType: Process.Run
   fullName: Genie.Yuk.Process.Run
-- uid: Genie.Yuk.Process.Start*
-  commentId: Overload:Genie.Yuk.Process.Start
-  name: Start
-  nameWithType: Process.Start
-  fullName: Genie.Yuk.Process.Start
+- uid: Genie.Yuk.Do
+  commentId: T:Genie.Yuk.Do
+  parent: Genie.Yuk
+  name: Do
+  nameWithType: Do
+  fullName: Genie.Yuk.Do
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Genie.Yuk.Process.Stop*
+  commentId: Overload:Genie.Yuk.Process.Stop
+  name: Stop
+  nameWithType: Process.Stop
+  fullName: Genie.Yuk.Process.Stop
 shouldSkipMarkup: true

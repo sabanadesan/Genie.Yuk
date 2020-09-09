@@ -7,6 +7,8 @@ items:
   children:
   - Genie.Yuk.Vulkan.#ctor
   - Genie.Yuk.Vulkan.Run
+  - Genie.Yuk.Vulkan.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.Vulkan.Stop
   langs:
   - csharp
   - vb
@@ -21,7 +23,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Vulkan
     path: GameGraphics.cs
-    startLine: 42
+    startLine: 127
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -65,7 +67,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: GameGraphics.cs
-    startLine: 46
+    startLine: 131
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -77,6 +79,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie.Yuk.Vulkan.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Vulkan.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: Vulkan.Run(CancellationToken)
+  fullName: Genie.Yuk.Vulkan.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: GameGraphics.cs
+    startLine: 136
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overrides Sub Run(token As CancellationToken)
+  overridden: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  overload: Genie.Yuk.Vulkan.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: Genie.Yuk.Vulkan.Run
   commentId: M:Genie.Yuk.Vulkan.Run
   id: Run
@@ -95,7 +133,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 51
+    startLine: 141
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -104,6 +142,39 @@ items:
     content.vb: Public Overrides Sub Run
   overridden: Genie.Yuk.Graphics.Run
   overload: Genie.Yuk.Vulkan.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.Vulkan.Stop
+  commentId: M:Genie.Yuk.Vulkan.Stop
+  id: Stop
+  parent: Genie.Yuk.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Vulkan.Stop()
+  fullName: Genie.Yuk.Vulkan.Stop()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: GameGraphics.cs
+    startLine: 146
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Stop()
+    content.vb: Public Overrides Sub Stop
+  overridden: Genie.Yuk.Graphics.Stop
+  overload: Genie.Yuk.Vulkan.Stop*
   modifiers.csharp:
   - public
   - override
@@ -419,6 +490,63 @@ references:
   name: Vulkan
   nameWithType: Vulkan.Vulkan
   fullName: Genie.Yuk.Vulkan.Vulkan
+- uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Graphics
+  isExternal: true
+  name: Run(CancellationToken)
+  nameWithType: Graphics.Run(CancellationToken)
+  fullName: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie.Yuk.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie.Yuk.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Vulkan.Run*
+  commentId: Overload:Genie.Yuk.Vulkan.Run
+  name: Run
+  nameWithType: Vulkan.Run
+  fullName: Genie.Yuk.Vulkan.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
 - uid: Genie.Yuk.Graphics.Run
   commentId: M:Genie.Yuk.Graphics.Run
   parent: Genie.Yuk.Graphics
@@ -447,9 +575,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Genie.Yuk.Vulkan.Run*
-  commentId: Overload:Genie.Yuk.Vulkan.Run
-  name: Run
-  nameWithType: Vulkan.Run
-  fullName: Genie.Yuk.Vulkan.Run
+- uid: Genie.Yuk.Graphics.Stop
+  commentId: M:Genie.Yuk.Graphics.Stop
+  parent: Genie.Yuk.Graphics
+  name: Stop()
+  nameWithType: Graphics.Stop()
+  fullName: Genie.Yuk.Graphics.Stop()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Stop
+    name: Stop
+    nameWithType: Graphics.Stop
+    fullName: Genie.Yuk.Graphics.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Stop
+    name: Stop
+    nameWithType: Graphics.Stop
+    fullName: Genie.Yuk.Graphics.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Vulkan.Stop*
+  commentId: Overload:Genie.Yuk.Vulkan.Stop
+  name: Stop
+  nameWithType: Vulkan.Stop
+  fullName: Genie.Yuk.Vulkan.Stop
 shouldSkipMarkup: true

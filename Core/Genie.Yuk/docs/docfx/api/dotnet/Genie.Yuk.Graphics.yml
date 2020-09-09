@@ -6,6 +6,8 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Graphics.Run
+  - Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.Graphics.Stop
   langs:
   - csharp
   - vb
@@ -20,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Graphics
     path: GameGraphics.cs
-    startLine: 35
+    startLine: 112
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -48,6 +50,41 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: Graphics.Run(CancellationToken)
+  fullName: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: GameGraphics.cs
+    startLine: 114
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public virtual void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overridable Sub Run(token As CancellationToken)
+  overload: Genie.Yuk.Graphics.Run*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: Genie.Yuk.Graphics.Run
   commentId: M:Genie.Yuk.Graphics.Run
   id: Run
@@ -66,7 +103,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 37
+    startLine: 118
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -74,6 +111,38 @@ items:
     content: public virtual void Run()
     content.vb: Public Overridable Sub Run
   overload: Genie.Yuk.Graphics.Run*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Genie.Yuk.Graphics.Stop
+  commentId: M:Genie.Yuk.Graphics.Stop
+  id: Stop
+  parent: Genie.Yuk.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Graphics.Stop()
+  fullName: Genie.Yuk.Graphics.Stop()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: GameGraphics.cs
+    startLine: 122
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public virtual void Stop()
+    content.vb: Public Overridable Sub Stop
+  overload: Genie.Yuk.Graphics.Stop*
   modifiers.csharp:
   - public
   - virtual
@@ -383,4 +452,22 @@ references:
   name: Run
   nameWithType: Graphics.Run
   fullName: Genie.Yuk.Graphics.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Genie.Yuk.Graphics.Stop*
+  commentId: Overload:Genie.Yuk.Graphics.Stop
+  name: Stop
+  nameWithType: Graphics.Stop
+  fullName: Genie.Yuk.Graphics.Stop
 shouldSkipMarkup: true

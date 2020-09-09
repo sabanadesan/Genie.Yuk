@@ -25,11 +25,23 @@ namespace Genie3D.DirectX12
             this.swapChainPanel = swapChainPanel;
         }
 
+        public void Run(CancellationToken token)
+        {
+            InitializeD3D();
+            InitScene();
+            Render();
+        }
+
         public void Run()
         {
             InitializeD3D();
             InitScene();
             Render();
+        }
+
+        public void Stop()
+        {
+            
         }
 
         private void UpdateScene()

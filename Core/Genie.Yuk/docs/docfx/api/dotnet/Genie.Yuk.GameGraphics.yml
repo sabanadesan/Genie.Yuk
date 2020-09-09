@@ -8,6 +8,8 @@ items:
   - Genie.Yuk.GameGraphics.#ctor
   - Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
   - Genie.Yuk.GameGraphics.Run
+  - Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.GameGraphics.Stop
   langs:
   - csharp
   - vb
@@ -22,15 +24,20 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: GameGraphics
     path: GameGraphics.cs
-    startLine: 15
+    startLine: 82
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public class GameGraphics
-    content.vb: Public Class GameGraphics
+    content: 'public class GameGraphics : Do'
+    content.vb: >-
+      Public Class GameGraphics
+          Inherits
+
+           Do
   inheritance:
   - System.Object
+  - Genie.Yuk.Do
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -63,7 +70,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: GameGraphics.cs
-    startLine: 19
+    startLine: 86
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -100,7 +107,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: GameGraphics.cs
-    startLine: 24
+    startLine: 91
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -112,6 +119,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: GameGraphics.Run(CancellationToken)
+  fullName: Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: GameGraphics.cs
+    startLine: 96
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overrides Sub Run(token As CancellationToken)
+  overridden: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  overload: Genie.Yuk.GameGraphics.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: Genie.Yuk.GameGraphics.Run
   commentId: M:Genie.Yuk.GameGraphics.Run
   id: Run
@@ -130,18 +173,54 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 29
+    startLine: 101
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
+    content: public override void Run()
+    content.vb: Public Overrides Sub Run
+  overridden: Genie.Yuk.Do.Run
   overload: Genie.Yuk.GameGraphics.Run*
   modifiers.csharp:
   - public
+  - override
   modifiers.vb:
   - Public
+  - Overrides
+- uid: Genie.Yuk.GameGraphics.Stop
+  commentId: M:Genie.Yuk.GameGraphics.Stop
+  id: Stop
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: GameGraphics.Stop()
+  fullName: Genie.Yuk.GameGraphics.Stop()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: GameGraphics.cs
+    startLine: 106
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Stop()
+    content.vb: Public Overrides Sub Stop
+  overridden: Genie.Yuk.Do.Stop
+  overload: Genie.Yuk.GameGraphics.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -155,6 +234,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Genie.Yuk.Do
+  commentId: T:Genie.Yuk.Do
+  parent: Genie.Yuk
+  name: Do
+  nameWithType: Do
+  fullName: Genie.Yuk.Do
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -452,9 +537,122 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Do
+  isExternal: true
+  name: Run(CancellationToken)
+  nameWithType: Do.Run(CancellationToken)
+  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Genie.Yuk.GameGraphics.Run*
   commentId: Overload:Genie.Yuk.GameGraphics.Run
   name: Run
   nameWithType: GameGraphics.Run
   fullName: Genie.Yuk.GameGraphics.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Genie.Yuk.Do.Run
+  commentId: M:Genie.Yuk.Do.Run
+  parent: Genie.Yuk.Do
+  name: Run()
+  nameWithType: Do.Run()
+  fullName: Genie.Yuk.Do.Run()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Run
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Run
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Do.Stop
+  commentId: M:Genie.Yuk.Do.Stop
+  parent: Genie.Yuk.Do
+  name: Stop()
+  nameWithType: Do.Stop()
+  fullName: Genie.Yuk.Do.Stop()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Stop
+    name: Stop
+    nameWithType: Do.Stop
+    fullName: Genie.Yuk.Do.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Stop
+    name: Stop
+    nameWithType: Do.Stop
+    fullName: Genie.Yuk.Do.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.GameGraphics.Stop*
+  commentId: Overload:Genie.Yuk.GameGraphics.Stop
+  name: Stop
+  nameWithType: GameGraphics.Stop
+  fullName: Genie.Yuk.GameGraphics.Stop
 shouldSkipMarkup: true

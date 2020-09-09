@@ -5,10 +5,8 @@ items:
   id: ProcessServer
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.ProcessServer.CreateProcess(System.String)
   - Genie.Yuk.ProcessServer.Register(System.String,Genie.Yuk.Process)
   - Genie.Yuk.ProcessServer.Resolve(System.String)
-  - Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
   langs:
   - csharp
   - vb
@@ -23,7 +21,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ProcessServer
     path: Process.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -65,18 +63,18 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Register
     path: Process.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public static void Register(string key, Process p)
+    content: public static void Register(string key, Process t)
     parameters:
     - id: key
       type: System.String
-    - id: p
+    - id: t
       type: Genie.Yuk.Process
-    content.vb: Public Shared Sub Register(key As String, p As Process)
+    content.vb: Public Shared Sub Register(key As String, t As Process)
   overload: Genie.Yuk.ProcessServer.Register*
   modifiers.csharp:
   - public
@@ -102,7 +100,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Resolve
     path: Process.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -115,78 +113,6 @@ items:
       type: Genie.Yuk.Process
     content.vb: Public Shared Function Resolve(key As String) As Process
   overload: Genie.Yuk.ProcessServer.Resolve*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Genie.Yuk.ProcessServer.CreateProcess(System.String)
-  commentId: M:Genie.Yuk.ProcessServer.CreateProcess(System.String)
-  id: CreateProcess(System.String)
-  parent: Genie.Yuk.ProcessServer
-  langs:
-  - csharp
-  - vb
-  name: CreateProcess(String)
-  nameWithType: ProcessServer.CreateProcess(String)
-  fullName: Genie.Yuk.ProcessServer.CreateProcess(System.String)
-  type: Method
-  source:
-    remote:
-      path: Core/Genie.Yuk/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: CreateProcess
-    path: Process.cs
-    startLine: 23
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public static Process CreateProcess(string key)
-    parameters:
-    - id: key
-      type: System.String
-    return:
-      type: Genie.Yuk.Process
-    content.vb: Public Shared Function CreateProcess(key As String) As Process
-  overload: Genie.Yuk.ProcessServer.CreateProcess*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
-  commentId: M:Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
-  id: Run(Genie.Yuk.Process)
-  parent: Genie.Yuk.ProcessServer
-  langs:
-  - csharp
-  - vb
-  name: Run(Process)
-  nameWithType: ProcessServer.Run(Process)
-  fullName: Genie.Yuk.ProcessServer.Run(Genie.Yuk.Process)
-  type: Method
-  source:
-    remote:
-      path: Core/Genie.Yuk/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Process.cs
-    startLine: 30
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public static void Run(Process p)
-    parameters:
-    - id: p
-      type: Genie.Yuk.Process
-    content.vb: Public Shared Sub Run(p As Process)
-  overload: Genie.Yuk.ProcessServer.Run*
   modifiers.csharp:
   - public
   - static
@@ -514,14 +440,4 @@ references:
   name: Resolve
   nameWithType: ProcessServer.Resolve
   fullName: Genie.Yuk.ProcessServer.Resolve
-- uid: Genie.Yuk.ProcessServer.CreateProcess*
-  commentId: Overload:Genie.Yuk.ProcessServer.CreateProcess
-  name: CreateProcess
-  nameWithType: ProcessServer.CreateProcess
-  fullName: Genie.Yuk.ProcessServer.CreateProcess
-- uid: Genie.Yuk.ProcessServer.Run*
-  commentId: Overload:Genie.Yuk.ProcessServer.Run
-  name: Run
-  nameWithType: ProcessServer.Run
-  fullName: Genie.Yuk.ProcessServer.Run
 shouldSkipMarkup: true

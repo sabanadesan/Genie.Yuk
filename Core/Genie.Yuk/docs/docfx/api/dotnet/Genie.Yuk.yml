@@ -5,13 +5,17 @@ items:
   id: Genie.Yuk
   children:
   - Genie.Yuk.DirectX
+  - Genie.Yuk.Do
+  - Genie.Yuk.Event
+  - Genie.Yuk.EventType
   - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
+  - Genie.Yuk.Gme
   - Genie.Yuk.Graphics
   - Genie.Yuk.GraphicsBackend
+  - Genie.Yuk.GraphicsEvent
   - Genie.Yuk.MenuType
   - Genie.Yuk.Process
-  - Genie.Yuk.Process.MyFunction
   - Genie.Yuk.ProcessServer
   - Genie.Yuk.Resource
   - Genie.Yuk.ResourceManager
@@ -19,7 +23,7 @@ items:
   - Genie.Yuk.Service
   - Genie.Yuk.ShaderResource
   - Genie.Yuk.ShaderResourceNode
-  - Genie.Yuk.Task
+  - Genie.Yuk.StopEvent
   - Genie.Yuk.Vulkan
   langs:
   - csharp
@@ -31,6 +35,28 @@ items:
   assemblies:
   - Genie.Yuk
 references:
+- uid: Genie.Yuk.EventType
+  commentId: T:Genie.Yuk.EventType
+  parent: Genie.Yuk
+  name: EventType
+  nameWithType: EventType
+  fullName: Genie.Yuk.EventType
+- uid: Genie.Yuk.Event
+  commentId: T:Genie.Yuk.Event
+  parent: Genie.Yuk
+  name: Event
+  nameWithType: Event
+  fullName: Genie.Yuk.Event
+- uid: Genie.Yuk.GraphicsEvent
+  commentId: T:Genie.Yuk.GraphicsEvent
+  name: GraphicsEvent
+  nameWithType: GraphicsEvent
+  fullName: Genie.Yuk.GraphicsEvent
+- uid: Genie.Yuk.StopEvent
+  commentId: T:Genie.Yuk.StopEvent
+  name: StopEvent
+  nameWithType: StopEvent
+  fullName: Genie.Yuk.StopEvent
 - uid: Genie.Yuk.Game
   commentId: T:Genie.Yuk.Game
   name: Game
@@ -42,6 +68,11 @@ references:
   name: GraphicsBackend
   nameWithType: GraphicsBackend
   fullName: Genie.Yuk.GraphicsBackend
+- uid: Genie.Yuk.Gme
+  commentId: T:Genie.Yuk.Gme
+  name: Gme
+  nameWithType: Gme
+  fullName: Genie.Yuk.Gme
 - uid: Genie.Yuk.GameGraphics
   commentId: T:Genie.Yuk.GameGraphics
   name: GameGraphics
@@ -74,17 +105,12 @@ references:
   name: Process
   nameWithType: Process
   fullName: Genie.Yuk.Process
-- uid: Genie.Yuk.Process.MyFunction
-  commentId: T:Genie.Yuk.Process.MyFunction
+- uid: Genie.Yuk.Do
+  commentId: T:Genie.Yuk.Do
   parent: Genie.Yuk
-  name: Process.MyFunction
-  nameWithType: Process.MyFunction
-  fullName: Genie.Yuk.Process.MyFunction
-- uid: Genie.Yuk.Task
-  commentId: T:Genie.Yuk.Task
-  name: Task
-  nameWithType: Task
-  fullName: Genie.Yuk.Task
+  name: Do
+  nameWithType: Do
+  fullName: Genie.Yuk.Do
 - uid: Genie.Yuk.ResourceNode
   commentId: T:Genie.Yuk.ResourceNode
   parent: Genie.Yuk

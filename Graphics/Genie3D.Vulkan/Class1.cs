@@ -8,6 +8,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace Genie3D.Vulkan
 {
     public class Class1
@@ -41,11 +44,19 @@ namespace Genie3D.Vulkan
         private CommandPool commandPool;
         private CommandBuffer[] commandBuffers;
 
-        private Semaphore imageAvailableSemaphore;
-        private Semaphore renderFinishedSemaphore;
+        private SharpVk.Semaphore imageAvailableSemaphore;
+        private SharpVk.Semaphore renderFinishedSemaphore;
 
         private Format swapChainFormat;
         private Extent2D swapChainExtent;
+
+        public void Run(CancellationToken token)
+        {
+            this.InitialiseWindow();
+            this.InitialiseVulkan();
+            this.MainLoop(token);
+            this.TearDown();
+        }
 
         public void Run()
         {
@@ -53,6 +64,11 @@ namespace Genie3D.Vulkan
             this.InitialiseVulkan();
             this.MainLoop();
             this.TearDown();
+        }
+
+        public void Stop()
+        {
+            Glfw3.DestroyWindow(this.window);
         }
 
         private void InitialiseWindow()
@@ -84,6 +100,35 @@ namespace Genie3D.Vulkan
         }
 
         private void MainLoop()
+        {
+            Calculate();
+        }
+
+        private void MainLoop(CancellationToken token)
+        {
+            try
+            {
+                Calculate(token);
+            }
+            catch (OperationCanceledException ex) when (ex.CancellationToken == token) // includes TaskCanceledException
+            {
+                Console.WriteLine("Cancelled Exception.");
+            }
+        }
+
+        private void Calculate(CancellationToken token)
+        {
+            while (!Glfw3.WindowShouldClose(this.window))
+            {
+                token.ThrowIfCancellationRequested();
+
+                this.DrawFrame();
+
+                Glfw3.PollEvents();
+            }
+        }
+
+        private void Calculate()
         {
             while (!Glfw3.WindowShouldClose(this.window))
             {

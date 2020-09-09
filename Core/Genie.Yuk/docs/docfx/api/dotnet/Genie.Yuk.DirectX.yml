@@ -7,6 +7,8 @@ items:
   children:
   - Genie.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
   - Genie.Yuk.DirectX.Run
+  - Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.DirectX.Stop
   langs:
   - csharp
   - vb
@@ -21,7 +23,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: DirectX
     path: GameGraphics.cs
-    startLine: 57
+    startLine: 152
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -65,7 +67,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: GameGraphics.cs
-    startLine: 61
+    startLine: 156
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -84,6 +86,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.DirectX
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: DirectX.Run(CancellationToken)
+  fullName: Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: GameGraphics.cs
+    startLine: 161
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overrides Sub Run(token As CancellationToken)
+  overridden: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  overload: Genie.Yuk.DirectX.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: Genie.Yuk.DirectX.Run
   commentId: M:Genie.Yuk.DirectX.Run
   id: Run
@@ -102,7 +140,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: GameGraphics.cs
-    startLine: 66
+    startLine: 166
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -111,6 +149,39 @@ items:
     content.vb: Public Overrides Sub Run
   overridden: Genie.Yuk.Graphics.Run
   overload: Genie.Yuk.DirectX.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.DirectX.Stop
+  commentId: M:Genie.Yuk.DirectX.Stop
+  id: Stop
+  parent: Genie.Yuk.DirectX
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: DirectX.Stop()
+  fullName: Genie.Yuk.DirectX.Stop()
+  type: Method
+  source:
+    remote:
+      path: Core/Genie.Yuk/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: GameGraphics.cs
+    startLine: 171
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Stop()
+    content.vb: Public Overrides Sub Stop
+  overridden: Genie.Yuk.Graphics.Stop
+  overload: Genie.Yuk.DirectX.Stop*
   modifiers.csharp:
   - public
   - override
@@ -433,6 +504,63 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Graphics
+  isExternal: true
+  name: Run(CancellationToken)
+  nameWithType: Graphics.Run(CancellationToken)
+  fullName: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie.Yuk.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Graphics.Run
+    fullName: Genie.Yuk.Graphics.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.DirectX.Run*
+  commentId: Overload:Genie.Yuk.DirectX.Run
+  name: Run
+  nameWithType: DirectX.Run
+  fullName: Genie.Yuk.DirectX.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
 - uid: Genie.Yuk.Graphics.Run
   commentId: M:Genie.Yuk.Graphics.Run
   parent: Genie.Yuk.Graphics
@@ -461,9 +589,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Genie.Yuk.DirectX.Run*
-  commentId: Overload:Genie.Yuk.DirectX.Run
-  name: Run
-  nameWithType: DirectX.Run
-  fullName: Genie.Yuk.DirectX.Run
+- uid: Genie.Yuk.Graphics.Stop
+  commentId: M:Genie.Yuk.Graphics.Stop
+  parent: Genie.Yuk.Graphics
+  name: Stop()
+  nameWithType: Graphics.Stop()
+  fullName: Genie.Yuk.Graphics.Stop()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Stop
+    name: Stop
+    nameWithType: Graphics.Stop
+    fullName: Genie.Yuk.Graphics.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Stop
+    name: Stop
+    nameWithType: Graphics.Stop
+    fullName: Genie.Yuk.Graphics.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.DirectX.Stop*
+  commentId: Overload:Genie.Yuk.DirectX.Stop
+  name: Stop
+  nameWithType: DirectX.Stop
+  fullName: Genie.Yuk.DirectX.Stop
 shouldSkipMarkup: true
