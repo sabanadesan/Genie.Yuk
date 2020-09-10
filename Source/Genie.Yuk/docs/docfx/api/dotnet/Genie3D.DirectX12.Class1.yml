@@ -1,0 +1,620 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.DirectX12.Class1
+  commentId: T:Genie3D.DirectX12.Class1
+  id: Class1
+  parent: Genie3D.DirectX12
+  children:
+  - Genie3D.DirectX12.Class1.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie3D.DirectX12.Class1.Dispose
+  - Genie3D.DirectX12.Class1.Render
+  - Genie3D.DirectX12.Class1.Run
+  - Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
+  - Genie3D.DirectX12.Class1.Stop
+  - Genie3D.DirectX12.Class1.Update
+  langs:
+  - csharp
+  - vb
+  name: Class1
+  nameWithType: Class1
+  fullName: Genie3D.DirectX12.Class1
+  type: Class
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Class1
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 13
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public class Class1
+    content.vb: Public Class Class1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Genie3D.DirectX12.Class1.#ctor(System.Object,System.Int32,System.Int32)
+  commentId: M:Genie3D.DirectX12.Class1.#ctor(System.Object,System.Int32,System.Int32)
+  id: '#ctor(System.Object,System.Int32,System.Int32)'
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Class1(Object, Int32, Int32)
+  nameWithType: Class1.Class1(Object, Int32, Int32)
+  fullName: Genie3D.DirectX12.Class1.Class1(System.Object, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 19
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public Class1(object swapChainPanel, int width, int height)
+    parameters:
+    - id: swapChainPanel
+      type: System.Object
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
+  overload: Genie3D.DirectX12.Class1.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
+  commentId: M:Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: Class1.Run(CancellationToken)
+  fullName: Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 27
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Run(token As CancellationToken)
+  overload: Genie3D.DirectX12.Class1.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Run
+  commentId: M:Genie3D.DirectX12.Class1.Run
+  id: Run
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Class1.Run()
+  fullName: Genie3D.DirectX12.Class1.Run()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 56
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run
+  overload: Genie3D.DirectX12.Class1.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Stop
+  commentId: M:Genie3D.DirectX12.Class1.Stop
+  id: Stop
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Class1.Stop()
+  fullName: Genie3D.DirectX12.Class1.Stop()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 63
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: Genie3D.DirectX12.Class1.Stop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Update
+  commentId: M:Genie3D.DirectX12.Class1.Update
+  id: Update
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Class1.Update()
+  fullName: Genie3D.DirectX12.Class1.Update()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Update
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 162
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: Genie3D.DirectX12.Class1.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Render
+  commentId: M:Genie3D.DirectX12.Class1.Render
+  id: Render
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Render()
+  nameWithType: Class1.Render()
+  fullName: Genie3D.DirectX12.Class1.Render()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Render
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 319
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Render()
+    content.vb: Public Sub Render
+  overload: Genie3D.DirectX12.Class1.Render*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.Dispose
+  commentId: M:Genie3D.DirectX12.Class1.Dispose
+  id: Dispose
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Class1.Dispose()
+  fullName: Genie3D.DirectX12.Class1.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Dispose
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 333
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Genie3D.DirectX12.Class1.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Genie3D.DirectX12
+  commentId: N:Genie3D.DirectX12
+  name: Genie3D.DirectX12
+  nameWithType: Genie3D.DirectX12
+  fullName: Genie3D.DirectX12
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Genie3D.DirectX12.Class1.#ctor*
+  commentId: Overload:Genie3D.DirectX12.Class1.#ctor
+  name: Class1
+  nameWithType: Class1.Class1
+  fullName: Genie3D.DirectX12.Class1.Class1
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Genie3D.DirectX12.Class1.Run*
+  commentId: Overload:Genie3D.DirectX12.Class1.Run
+  name: Run
+  nameWithType: Class1.Run
+  fullName: Genie3D.DirectX12.Class1.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Genie3D.DirectX12.Class1.Stop*
+  commentId: Overload:Genie3D.DirectX12.Class1.Stop
+  name: Stop
+  nameWithType: Class1.Stop
+  fullName: Genie3D.DirectX12.Class1.Stop
+- uid: Genie3D.DirectX12.Class1.Update*
+  commentId: Overload:Genie3D.DirectX12.Class1.Update
+  name: Update
+  nameWithType: Class1.Update
+  fullName: Genie3D.DirectX12.Class1.Update
+- uid: Genie3D.DirectX12.Class1.Render*
+  commentId: Overload:Genie3D.DirectX12.Class1.Render
+  name: Render
+  nameWithType: Class1.Render
+  fullName: Genie3D.DirectX12.Class1.Render
+- uid: Genie3D.DirectX12.Class1.Dispose*
+  commentId: Overload:Genie3D.DirectX12.Class1.Dispose
+  name: Dispose
+  nameWithType: Class1.Dispose
+  fullName: Genie3D.DirectX12.Class1.Dispose
+shouldSkipMarkup: true

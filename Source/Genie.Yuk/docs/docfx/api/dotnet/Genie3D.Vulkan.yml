@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Vulkan
+  commentId: N:Genie3D.Vulkan
+  id: Genie3D.Vulkan
+  children:
+  - Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Genie3D.Vulkan
+  nameWithType: Genie3D.Vulkan
+  fullName: Genie3D.Vulkan
+  type: Namespace
+  assemblies:
+  - Genie.Yuk
+references:
+- uid: Genie3D.Vulkan.Class1
+  commentId: T:Genie3D.Vulkan.Class1
+  name: Class1
+  nameWithType: Class1
+  fullName: Genie3D.Vulkan.Class1
+shouldSkipMarkup: true

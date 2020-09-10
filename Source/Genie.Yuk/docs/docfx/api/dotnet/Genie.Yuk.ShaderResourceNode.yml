@@ -1,0 +1,408 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.ShaderResourceNode
+  commentId: T:Genie.Yuk.ShaderResourceNode
+  id: ShaderResourceNode
+  parent: Genie.Yuk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ShaderResourceNode
+  nameWithType: ShaderResourceNode
+  fullName: Genie.Yuk.ShaderResourceNode
+  type: Class
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: ShaderResourceNode
+    path: Genie.Core/ResourceManager.cs
+    startLine: 112
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: 'public class ShaderResourceNode : ResourceNode'
+    content.vb: >-
+      Public Class ShaderResourceNode
+          Inherits ResourceNode
+  inheritance:
+  - System.Object
+  - Genie.Yuk.ResourceNode
+  inheritedMembers:
+  - Genie.Yuk.ResourceNode._internal_GUID
+  - Genie.Yuk.ResourceNode._version
+  - Genie.Yuk.ResourceNode._date
+  - Genie.Yuk.ResourceNode._content
+  - Genie.Yuk.ResourceNode.Internal_GUID
+  - Genie.Yuk.ResourceNode.Version
+  - Genie.Yuk.ResourceNode.Date
+  - Genie.Yuk.ResourceNode.Content
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Genie.Yuk.ResourceNode
+  commentId: T:Genie.Yuk.ResourceNode
+  parent: Genie.Yuk
+  name: ResourceNode
+  nameWithType: ResourceNode
+  fullName: Genie.Yuk.ResourceNode
+- uid: Genie.Yuk.ResourceNode._internal_GUID
+  commentId: F:Genie.Yuk.ResourceNode._internal_GUID
+  parent: Genie.Yuk.ResourceNode
+  name: _internal_GUID
+  nameWithType: ResourceNode._internal_GUID
+  fullName: Genie.Yuk.ResourceNode._internal_GUID
+- uid: Genie.Yuk.ResourceNode._version
+  commentId: F:Genie.Yuk.ResourceNode._version
+  parent: Genie.Yuk.ResourceNode
+  name: _version
+  nameWithType: ResourceNode._version
+  fullName: Genie.Yuk.ResourceNode._version
+- uid: Genie.Yuk.ResourceNode._date
+  commentId: F:Genie.Yuk.ResourceNode._date
+  parent: Genie.Yuk.ResourceNode
+  name: _date
+  nameWithType: ResourceNode._date
+  fullName: Genie.Yuk.ResourceNode._date
+- uid: Genie.Yuk.ResourceNode._content
+  commentId: F:Genie.Yuk.ResourceNode._content
+  parent: Genie.Yuk.ResourceNode
+  name: _content
+  nameWithType: ResourceNode._content
+  fullName: Genie.Yuk.ResourceNode._content
+- uid: Genie.Yuk.ResourceNode.Internal_GUID
+  commentId: P:Genie.Yuk.ResourceNode.Internal_GUID
+  parent: Genie.Yuk.ResourceNode
+  name: Internal_GUID
+  nameWithType: ResourceNode.Internal_GUID
+  fullName: Genie.Yuk.ResourceNode.Internal_GUID
+- uid: Genie.Yuk.ResourceNode.Version
+  commentId: P:Genie.Yuk.ResourceNode.Version
+  parent: Genie.Yuk.ResourceNode
+  name: Version
+  nameWithType: ResourceNode.Version
+  fullName: Genie.Yuk.ResourceNode.Version
+- uid: Genie.Yuk.ResourceNode.Date
+  commentId: P:Genie.Yuk.ResourceNode.Date
+  parent: Genie.Yuk.ResourceNode
+  name: Date
+  nameWithType: ResourceNode.Date
+  fullName: Genie.Yuk.ResourceNode.Date
+- uid: Genie.Yuk.ResourceNode.Content
+  commentId: P:Genie.Yuk.ResourceNode.Content
+  parent: Genie.Yuk.ResourceNode
+  name: Content
+  nameWithType: ResourceNode.Content
+  fullName: Genie.Yuk.ResourceNode.Content
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+shouldSkipMarkup: true

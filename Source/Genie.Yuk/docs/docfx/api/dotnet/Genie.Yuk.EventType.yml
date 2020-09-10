@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.EventType
+  commentId: T:Genie.Yuk.EventType
+  id: EventType
+  parent: Genie.Yuk
+  children:
+  - Genie.Yuk.EventType.Graphics
+  - Genie.Yuk.EventType.Stop
+  langs:
+  - csharp
+  - vb
+  name: EventType
+  nameWithType: EventType
+  fullName: Genie.Yuk.EventType
+  type: Enum
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Event.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: EventType
+    path: Genie.Core/Event.cs
+    startLine: 6
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public enum EventType
+    content.vb: Public Enum EventType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Genie.Yuk.EventType.Graphics
+  commentId: F:Genie.Yuk.EventType.Graphics
+  id: Graphics
+  parent: Genie.Yuk.EventType
+  langs:
+  - csharp
+  - vb
+  name: Graphics
+  nameWithType: EventType.Graphics
+  fullName: Genie.Yuk.EventType.Graphics
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Event.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Graphics
+    path: Genie.Core/Event.cs
+    startLine: 8
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: Graphics = 0
+    return:
+      type: Genie.Yuk.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Genie.Yuk.EventType.Stop
+  commentId: F:Genie.Yuk.EventType.Stop
+  id: Stop
+  parent: Genie.Yuk.EventType
+  langs:
+  - csharp
+  - vb
+  name: Stop
+  nameWithType: EventType.Stop
+  fullName: Genie.Yuk.EventType.Stop
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Event.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: Genie.Core/Event.cs
+    startLine: 9
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: Stop = 1
+    return:
+      type: Genie.Yuk.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: Genie.Yuk.EventType
+  commentId: T:Genie.Yuk.EventType
+  parent: Genie.Yuk
+  name: EventType
+  nameWithType: EventType
+  fullName: Genie.Yuk.EventType
+shouldSkipMarkup: true

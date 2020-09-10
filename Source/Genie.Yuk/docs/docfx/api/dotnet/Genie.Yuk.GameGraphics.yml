@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.GameGraphics
+  commentId: T:Genie.Yuk.GameGraphics
+  id: GameGraphics
+  parent: Genie.Yuk
+  children:
+  - Genie.Yuk.GameGraphics.#ctor
+  - Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie.Yuk.GameGraphics.Run
+  - Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.GameGraphics.Stop
+  langs:
+  - csharp
+  - vb
+  name: GameGraphics
+  nameWithType: GameGraphics
+  fullName: Genie.Yuk.GameGraphics
+  type: Class
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: GameGraphics
+    path: Genie.Core/GameGraphics.cs
+    startLine: 82
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: 'public class GameGraphics : Do'
+    content.vb: >-
+      Public Class GameGraphics
+          Inherits
+
+           Do
+  inheritance:
+  - System.Object
+  - Genie.Yuk.Do
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
+  commentId: M:Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
+  id: '#ctor(System.Object,System.Int32,System.Int32)'
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: GameGraphics(Object, Int32, Int32)
+  nameWithType: GameGraphics.GameGraphics(Object, Int32, Int32)
+  fullName: Genie.Yuk.GameGraphics.GameGraphics(System.Object, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/GameGraphics.cs
+    startLine: 86
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public GameGraphics(object swapChainPanel, int width, int height)
+    parameters:
+    - id: swapChainPanel
+      type: System.Object
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(swapChainPanel As Object, width As Integer, height As Integer)
+  overload: Genie.Yuk.GameGraphics.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.GameGraphics.#ctor
+  commentId: M:Genie.Yuk.GameGraphics.#ctor
+  id: '#ctor'
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: GameGraphics()
+  nameWithType: GameGraphics.GameGraphics()
+  fullName: Genie.Yuk.GameGraphics.GameGraphics()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/GameGraphics.cs
+    startLine: 91
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public GameGraphics()
+    content.vb: Public Sub New
+  overload: Genie.Yuk.GameGraphics.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: GameGraphics.Run(CancellationToken)
+  fullName: Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie.Core/GameGraphics.cs
+    startLine: 96
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overrides Sub Run(token As CancellationToken)
+  overridden: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  overload: Genie.Yuk.GameGraphics.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.GameGraphics.Run
+  commentId: M:Genie.Yuk.GameGraphics.Run
+  id: Run
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: GameGraphics.Run()
+  fullName: Genie.Yuk.GameGraphics.Run()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie.Core/GameGraphics.cs
+    startLine: 101
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Run()
+    content.vb: Public Overrides Sub Run
+  overridden: Genie.Yuk.Do.Run
+  overload: Genie.Yuk.GameGraphics.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.GameGraphics.Stop
+  commentId: M:Genie.Yuk.GameGraphics.Stop
+  id: Stop
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: GameGraphics.Stop()
+  fullName: Genie.Yuk.GameGraphics.Stop()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: Genie.Core/GameGraphics.cs
+    startLine: 106
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Stop()
+    content.vb: Public Overrides Sub Stop
+  overridden: Genie.Yuk.Do.Stop
+  overload: Genie.Yuk.GameGraphics.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Genie.Yuk.Do
+  commentId: T:Genie.Yuk.Do
+  parent: Genie.Yuk
+  name: Do
+  nameWithType: Do
+  fullName: Genie.Yuk.Do
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Genie.Yuk.GameGraphics.#ctor*
+  commentId: Overload:Genie.Yuk.GameGraphics.#ctor
+  name: GameGraphics
+  nameWithType: GameGraphics.GameGraphics
+  fullName: Genie.Yuk.GameGraphics.GameGraphics
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.Do
+  isExternal: true
+  name: Run(CancellationToken)
+  nameWithType: Do.Run(CancellationToken)
+  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.GameGraphics.Run*
+  commentId: Overload:Genie.Yuk.GameGraphics.Run
+  name: Run
+  nameWithType: GameGraphics.Run
+  fullName: Genie.Yuk.GameGraphics.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Genie.Yuk.Do.Run
+  commentId: M:Genie.Yuk.Do.Run
+  parent: Genie.Yuk.Do
+  name: Run()
+  nameWithType: Do.Run()
+  fullName: Genie.Yuk.Do.Run()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Run
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Run
+    name: Run
+    nameWithType: Do.Run
+    fullName: Genie.Yuk.Do.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Do.Stop
+  commentId: M:Genie.Yuk.Do.Stop
+  parent: Genie.Yuk.Do
+  name: Stop()
+  nameWithType: Do.Stop()
+  fullName: Genie.Yuk.Do.Stop()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Stop
+    name: Stop
+    nameWithType: Do.Stop
+    fullName: Genie.Yuk.Do.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Stop
+    name: Stop
+    nameWithType: Do.Stop
+    fullName: Genie.Yuk.Do.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.GameGraphics.Stop*
+  commentId: Overload:Genie.Yuk.GameGraphics.Stop
+  name: Stop
+  nameWithType: GameGraphics.Stop
+  fullName: Genie.Yuk.GameGraphics.Stop
+shouldSkipMarkup: true

@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.Vulkan.Class1
+  commentId: T:Genie3D.Vulkan.Class1
+  id: Class1
+  parent: Genie3D.Vulkan
+  children:
+  - Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  - Genie3D.Vulkan.Class1.Run
+  - Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
+  - Genie3D.Vulkan.Class1.Stop
+  langs:
+  - csharp
+  - vb
+  name: Class1
+  nameWithType: Class1
+  fullName: Genie3D.Vulkan.Class1
+  type: Class
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Class1
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 15
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public class Class1
+    content.vb: Public Class Class1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
+  commentId: M:Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
+  id: Run(System.Threading.CancellationToken)
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Run(CancellationToken)
+  nameWithType: Class1.Run(CancellationToken)
+  fullName: Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 52
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public void Run(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Sub Run(token As CancellationToken)
+  overload: Genie3D.Vulkan.Class1.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.Vulkan.Class1.Run
+  commentId: M:Genie3D.Vulkan.Class1.Run
+  id: Run
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Class1.Run()
+  fullName: Genie3D.Vulkan.Class1.Run()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Run
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 60
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run
+  overload: Genie3D.Vulkan.Class1.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.Vulkan.Class1.Stop
+  commentId: M:Genie3D.Vulkan.Class1.Stop
+  id: Stop
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Class1.Stop()
+  fullName: Genie3D.Vulkan.Class1.Stop()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Stop
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 68
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: Genie3D.Vulkan.Class1.Stop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  commentId: M:Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  id: ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: ChooseSwapExtent(SurfaceCapabilities)
+  nameWithType: Class1.ChooseSwapExtent(SurfaceCapabilities)
+  fullName: Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: ChooseSwapExtent
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 618
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public Extent2D ChooseSwapExtent(SurfaceCapabilities capabilities)
+    parameters:
+    - id: capabilities
+      type: SharpVk.Khronos.SurfaceCapabilities
+    return:
+      type: SharpVk.Extent2D
+    content.vb: Public Function ChooseSwapExtent(capabilities As SurfaceCapabilities) As Extent2D
+  overload: Genie3D.Vulkan.Class1.ChooseSwapExtent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Genie3D.Vulkan
+  commentId: N:Genie3D.Vulkan
+  name: Genie3D.Vulkan
+  nameWithType: Genie3D.Vulkan
+  fullName: Genie3D.Vulkan
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Genie3D.Vulkan.Class1.Run*
+  commentId: Overload:Genie3D.Vulkan.Class1.Run
+  name: Run
+  nameWithType: Class1.Run
+  fullName: Genie3D.Vulkan.Class1.Run
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: Genie3D.Vulkan.Class1.Stop*
+  commentId: Overload:Genie3D.Vulkan.Class1.Stop
+  name: Stop
+  nameWithType: Class1.Stop
+  fullName: Genie3D.Vulkan.Class1.Stop
+- uid: Genie3D.Vulkan.Class1.ChooseSwapExtent*
+  commentId: Overload:Genie3D.Vulkan.Class1.ChooseSwapExtent
+  name: ChooseSwapExtent
+  nameWithType: Class1.ChooseSwapExtent
+  fullName: Genie3D.Vulkan.Class1.ChooseSwapExtent
+- uid: SharpVk.Khronos.SurfaceCapabilities
+  commentId: T:SharpVk.Khronos.SurfaceCapabilities
+  parent: SharpVk.Khronos
+  isExternal: true
+  name: SurfaceCapabilities
+  nameWithType: SurfaceCapabilities
+  fullName: SharpVk.Khronos.SurfaceCapabilities
+- uid: SharpVk.Extent2D
+  commentId: T:SharpVk.Extent2D
+  parent: SharpVk
+  isExternal: true
+  name: Extent2D
+  nameWithType: Extent2D
+  fullName: SharpVk.Extent2D
+- uid: SharpVk.Khronos
+  commentId: N:SharpVk.Khronos
+  isExternal: true
+  name: SharpVk.Khronos
+  nameWithType: SharpVk.Khronos
+  fullName: SharpVk.Khronos
+- uid: SharpVk
+  commentId: N:SharpVk
+  isExternal: true
+  name: SharpVk
+  nameWithType: SharpVk
+  fullName: SharpVk
+shouldSkipMarkup: true

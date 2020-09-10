@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="glfw3.dll" />
+    <None Remove="Output\Config.ini" />
+    <None Remove="shaders.hlsl" />
+    <None Remove="Output\Shaders\frag.spv" />
+    <None Remove="Output\Shaders\vert.spv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="glfw3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\shaders.hlsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\frag.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Output\Shaders\vert.spv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.54.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SharpDX" Version="4.2.0" />
+    <PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Direct3D12" Version="4.2.0" />
+    <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+    <PackageReference Include="SharpVk" Version="0.4.2" />
+    <PackageReference Include="SharpVk.Glfw" Version="0.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Utility.Ini">
+      <HintPath>..\..\..\Utility.Yuk\Utility.Ini\bin\Release\netstandard2.0\Utility.Ini.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility.Yuk">
+      <HintPath>..\..\..\Utility.Yuk\Utility.Yuk\bin\Release\netstandard2.0\Utility.Yuk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+</Project>

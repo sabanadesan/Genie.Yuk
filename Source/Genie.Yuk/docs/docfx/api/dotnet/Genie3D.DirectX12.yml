@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie3D.DirectX12
+  commentId: N:Genie3D.DirectX12
+  id: Genie3D.DirectX12
+  children:
+  - Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Genie3D.DirectX12
+  nameWithType: Genie3D.DirectX12
+  fullName: Genie3D.DirectX12
+  type: Namespace
+  assemblies:
+  - Genie.Yuk
+references:
+- uid: Genie3D.DirectX12.Class1
+  commentId: T:Genie3D.DirectX12.Class1
+  name: Class1
+  nameWithType: Class1
+  fullName: Genie3D.DirectX12.Class1
+shouldSkipMarkup: true

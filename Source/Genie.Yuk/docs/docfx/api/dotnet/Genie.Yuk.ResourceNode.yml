@@ -1,0 +1,741 @@
+### YamlMime:ManagedReference
+items:
+- uid: Genie.Yuk.ResourceNode
+  commentId: T:Genie.Yuk.ResourceNode
+  id: ResourceNode
+  parent: Genie.Yuk
+  children:
+  - Genie.Yuk.ResourceNode.#ctor
+  - Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  - Genie.Yuk.ResourceNode._content
+  - Genie.Yuk.ResourceNode._date
+  - Genie.Yuk.ResourceNode._internal_GUID
+  - Genie.Yuk.ResourceNode._version
+  - Genie.Yuk.ResourceNode.Content
+  - Genie.Yuk.ResourceNode.Date
+  - Genie.Yuk.ResourceNode.Internal_GUID
+  - Genie.Yuk.ResourceNode.Version
+  langs:
+  - csharp
+  - vb
+  name: ResourceNode
+  nameWithType: ResourceNode
+  fullName: Genie.Yuk.ResourceNode
+  type: Class
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: ResourceNode
+    path: Genie.Core/ResourceManager.cs
+    startLine: 9
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public class ResourceNode
+    content.vb: Public Class ResourceNode
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Genie.Yuk.ShaderResourceNode
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Genie.Yuk.ResourceNode._internal_GUID
+  commentId: F:Genie.Yuk.ResourceNode._internal_GUID
+  id: _internal_GUID
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _internal_GUID
+  nameWithType: ResourceNode._internal_GUID
+  fullName: Genie.Yuk.ResourceNode._internal_GUID
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _internal_GUID
+    path: Genie.Core/ResourceManager.cs
+    startLine: 11
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected Guid _internal_GUID
+    return:
+      type: System.Guid
+    content.vb: Protected _internal_GUID As Guid
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.ResourceNode._version
+  commentId: F:Genie.Yuk.ResourceNode._version
+  id: _version
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _version
+  nameWithType: ResourceNode._version
+  fullName: Genie.Yuk.ResourceNode._version
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _version
+    path: Genie.Core/ResourceManager.cs
+    startLine: 12
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected int _version
+    return:
+      type: System.Int32
+    content.vb: Protected _version As Integer
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.ResourceNode._date
+  commentId: F:Genie.Yuk.ResourceNode._date
+  id: _date
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _date
+  nameWithType: ResourceNode._date
+  fullName: Genie.Yuk.ResourceNode._date
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _date
+    path: Genie.Core/ResourceManager.cs
+    startLine: 13
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected DateTime _date
+    return:
+      type: System.DateTime
+    content.vb: Protected _date As Date
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.ResourceNode._content
+  commentId: F:Genie.Yuk.ResourceNode._content
+  id: _content
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: _content
+  nameWithType: ResourceNode._content
+  fullName: Genie.Yuk.ResourceNode._content
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: _content
+    path: Genie.Core/ResourceManager.cs
+    startLine: 14
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected string _content
+    return:
+      type: System.String
+    content.vb: Protected _content As String
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.ResourceNode.#ctor
+  commentId: M:Genie.Yuk.ResourceNode.#ctor
+  id: '#ctor'
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: ResourceNode()
+  nameWithType: ResourceNode.ResourceNode()
+  fullName: Genie.Yuk.ResourceNode.ResourceNode()
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/ResourceManager.cs
+    startLine: 16
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public ResourceNode()
+    content.vb: Public Sub New
+  overload: Genie.Yuk.ResourceNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  commentId: M:Genie.Yuk.ResourceNode.#ctor(System.Guid,System.Int32,System.DateTime,System.String)
+  id: '#ctor(System.Guid,System.Int32,System.DateTime,System.String)'
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: ResourceNode(Guid, Int32, DateTime, String)
+  nameWithType: ResourceNode.ResourceNode(Guid, Int32, DateTime, String)
+  fullName: Genie.Yuk.ResourceNode.ResourceNode(System.Guid, System.Int32, System.DateTime, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/ResourceManager.cs
+    startLine: 23
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public ResourceNode(Guid internal_GUID, int version, DateTime date, string content)
+    parameters:
+    - id: internal_GUID
+      type: System.Guid
+    - id: version
+      type: System.Int32
+    - id: date
+      type: System.DateTime
+    - id: content
+      type: System.String
+    content.vb: Public Sub New(internal_GUID As Guid, version As Integer, date As Date, content As String)
+  overload: Genie.Yuk.ResourceNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Internal_GUID
+  commentId: P:Genie.Yuk.ResourceNode.Internal_GUID
+  id: Internal_GUID
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Internal_GUID
+  nameWithType: ResourceNode.Internal_GUID
+  fullName: Genie.Yuk.ResourceNode.Internal_GUID
+  type: Property
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Internal_GUID
+    path: Genie.Core/ResourceManager.cs
+    startLine: 31
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public Guid Internal_GUID { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Internal_GUID As Guid
+  overload: Genie.Yuk.ResourceNode.Internal_GUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Version
+  commentId: P:Genie.Yuk.ResourceNode.Version
+  id: Version
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: ResourceNode.Version
+  fullName: Genie.Yuk.ResourceNode.Version
+  type: Property
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Version
+    path: Genie.Core/ResourceManager.cs
+    startLine: 43
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public int Version { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Version As Integer
+  overload: Genie.Yuk.ResourceNode.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Date
+  commentId: P:Genie.Yuk.ResourceNode.Date
+  id: Date
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: ResourceNode.Date
+  fullName: Genie.Yuk.ResourceNode.Date
+  type: Property
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Date
+    path: Genie.Core/ResourceManager.cs
+    startLine: 55
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public DateTime Date { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Date As Date
+  overload: Genie.Yuk.ResourceNode.Date*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.ResourceNode.Content
+  commentId: P:Genie.Yuk.ResourceNode.Content
+  id: Content
+  parent: Genie.Yuk.ResourceNode
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: ResourceNode.Content
+  fullName: Genie.Yuk.ResourceNode.Content
+  type: Property
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Content
+    path: Genie.Core/ResourceManager.cs
+    startLine: 67
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public string Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Content As String
+  overload: Genie.Yuk.ResourceNode.Content*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Genie.Yuk
+  commentId: N:Genie.Yuk
+  name: Genie.Yuk
+  nameWithType: Genie.Yuk
+  fullName: Genie.Yuk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Genie.Yuk.ResourceNode.#ctor*
+  commentId: Overload:Genie.Yuk.ResourceNode.#ctor
+  name: ResourceNode
+  nameWithType: ResourceNode.ResourceNode
+  fullName: Genie.Yuk.ResourceNode.ResourceNode
+- uid: Genie.Yuk.ResourceNode.Internal_GUID*
+  commentId: Overload:Genie.Yuk.ResourceNode.Internal_GUID
+  name: Internal_GUID
+  nameWithType: ResourceNode.Internal_GUID
+  fullName: Genie.Yuk.ResourceNode.Internal_GUID
+- uid: Genie.Yuk.ResourceNode.Version*
+  commentId: Overload:Genie.Yuk.ResourceNode.Version
+  name: Version
+  nameWithType: ResourceNode.Version
+  fullName: Genie.Yuk.ResourceNode.Version
+- uid: Genie.Yuk.ResourceNode.Date*
+  commentId: Overload:Genie.Yuk.ResourceNode.Date
+  name: Date
+  nameWithType: ResourceNode.Date
+  fullName: Genie.Yuk.ResourceNode.Date
+- uid: Genie.Yuk.ResourceNode.Content*
+  commentId: Overload:Genie.Yuk.ResourceNode.Content
+  name: Content
+  nameWithType: ResourceNode.Content
+  fullName: Genie.Yuk.ResourceNode.Content
+shouldSkipMarkup: true
