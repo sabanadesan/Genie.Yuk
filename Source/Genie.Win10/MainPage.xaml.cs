@@ -16,9 +16,10 @@ using Windows.UI.Xaml.Navigation;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 using Windows.Storage;
 using Genie.Yuk;
-using System.Threading;
+using Genie.Win10.Utility;
+
 using System.Threading.Tasks;
-using Windows.UI.Core;
+using System.Threading;
 
 namespace Genie3D.Win10
 {
@@ -27,54 +28,25 @@ namespace Genie3D.Win10
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private CoreDispatcher dispatcher;
+        private WinUtility win;
 
         public MainPage()
         {
             this.InitializeComponent();
+
+            this.win = new WinUtility();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            var tasks = new List<Task>();
-
-            this.dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
-
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 
             Game game = new Game(localFolder.Path);
 
-            /*
-            Process BackgroundWorker = new Process("BackgroundWorker3");
-            Task t = BackgroundWorker.Run(game);
-            tasks.Add(t);
-            */
-
             CancellationTokenSource source1;
             source1 = Handler();
 
-            //tasks.Add(t);
-
-            Action<object> action2 = (object obj) =>
-            {
-                Thread.Sleep(5000);
-                Console.WriteLine("Enter input:"); // Prompt
-                source1.Cancel();
-            };
-
-            Task t2 = new Task(action2, "alpha2");
-            t2.Start();
-            tasks.Add(t2);
-
-
-            var continuation = Task.WhenAll(tasks);
-            try
-            {
-                continuation.Wait();
-            }
-            catch
-            { }
-            
+            source1.Cancel();
         }
 
         private CancellationTokenSource Handler()
@@ -92,23 +64,9 @@ namespace Genie3D.Win10
                 gg.Run(token1);
             });
 
-            Action myAction2 = (Action)(() =>
-            {
-                Console.WriteLine("hello");
-            });
-
-            Process BackgroundWorker1 = new Process("BackgroundWorker1");
-
-            Task t = OnUiThread(myAction);
-            //System.Runtime.CompilerServices.TaskAwaiter a = t.GetAwaiter();
-            //a.OnCompleted(myAction2);
+            Task t = this.win.OnUiThread(myAction);
 
             return source1;
-        }
-
-        private async Task OnUiThread(Action action)
-        {
-            await this.dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)
