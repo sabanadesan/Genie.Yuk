@@ -47,7 +47,7 @@ namespace Genie.Yuk
             EventQueue.Enqueue(new StopEvent());
         }
 
-        private void Calculate(CancellationToken token = new CancellationToken())
+        private void Calculate(CancellationToken token)
         {
             Boolean DoWhile = true;
 
