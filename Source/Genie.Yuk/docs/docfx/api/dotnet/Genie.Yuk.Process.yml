@@ -9,6 +9,7 @@ items:
   - Genie.Yuk.Process.Run(Genie.Yuk.Do)
   - Genie.Yuk.Process.Run(Genie.Yuk.Process.MyFunction)
   - Genie.Yuk.Process.Stop
+  - Genie.Yuk.Process.Wait
   langs:
   - csharp
   - vb
@@ -79,6 +80,36 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie.Yuk.Process.Wait
+  commentId: M:Genie.Yuk.Process.Wait
+  id: Wait
+  parent: Genie.Yuk.Process
+  langs:
+  - csharp
+  - vb
+  name: Wait()
+  nameWithType: Process.Wait()
+  fullName: Genie.Yuk.Process.Wait()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Wait
+    path: Genie.Core/Process.cs
+    startLine: 42
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void Wait()
+    content.vb: Public Sub Wait
+  overload: Genie.Yuk.Process.Wait*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Genie.Yuk.Process.Run(Genie.Yuk.Process.MyFunction)
   commentId: M:Genie.Yuk.Process.Run(Genie.Yuk.Process.MyFunction)
   id: Run(Genie.Yuk.Process.MyFunction)
@@ -97,7 +128,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/Process.cs
-    startLine: 42
+    startLine: 47
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -132,7 +163,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/Process.cs
-    startLine: 64
+    startLine: 69
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -167,7 +198,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/Process.cs
-    startLine: 88
+    startLine: 93
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -489,6 +520,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Genie.Yuk.Process.Wait*
+  commentId: Overload:Genie.Yuk.Process.Wait
+  name: Wait
+  nameWithType: Process.Wait
+  fullName: Genie.Yuk.Process.Wait
 - uid: Genie.Yuk.Process.Run*
   commentId: Overload:Genie.Yuk.Process.Run
   name: Run

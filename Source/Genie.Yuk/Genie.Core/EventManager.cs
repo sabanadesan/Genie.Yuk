@@ -24,6 +24,12 @@ namespace Genie.Yuk
 
     public class EventManager : Do
     {
+        public EventManager()
+        {
+            Process BackgroundWorker = new Process("EventsWorker");
+            Task t = BackgroundWorker.Run(this);
+        }
+
         public override void Run(CancellationToken token)
         {
             try

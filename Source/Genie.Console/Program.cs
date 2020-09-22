@@ -14,30 +14,26 @@ namespace Genie.Console
         {
             EventManager mgr = new EventManager();
 
-            EventQueue.Enqueue(new GraphicsEvent());
-
-            Process BackgroundWorker = new Process("Events");
-            Task t = BackgroundWorker.Run(mgr);
-
-            var tasks = new List<Task>();
-
             Game game = new Game("Output");
             //game.Run();
 
             GameGraphics gg = new GameGraphics();
+            gg.Thread();
 
-            Process BackgroundWorker1 = new Process("BackgroundWorker");
-            Task t1 = BackgroundWorker1.Run(gg.Run);
-            tasks.Add(t1);
+            EventQueue.Enqueue(new GraphicsEvent());
 
+
+            var tasks = new List<Task>();
             Action<object> action = (object obj) =>
             {
-                Thread.Sleep(5000);
-                Process p = ProcessServer.Resolve("BackgroundWorker");
-                p.Stop();
+                //Thread.Sleep(5000);
+                Process p = ProcessServer.Resolve("GraphicsWorker");
+                //p.Stop();
+                p.Wait();
+
             };
 
-            Task t2 = new Task(action, "alpha");
+            Task t2 = new Task(action, "Wait");
             t2.Start();
             tasks.Add(t2);
 
@@ -48,8 +44,6 @@ namespace Genie.Console
             }
             catch
             { }
-
-            System.Console.WriteLine("Hello World!");
         }
     }
 }

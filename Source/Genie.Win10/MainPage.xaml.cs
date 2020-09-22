@@ -32,22 +32,19 @@ namespace Genie.Win10
 
         public MainPage()
         {
+            this.win = new WinUtility();
+
             this.InitializeComponent();
 
             HandleEvents();
-
-            this.win = new WinUtility();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-
             Game game = new Game(localFolder.Path);
 
-            CancellationTokenSource source1;
-            source1 = Handler();
-
+            CancellationTokenSource source1 = Handler();
             source1.Cancel();
         }
 
@@ -56,20 +53,15 @@ namespace Genie.Win10
             EventManager mgr = new EventManager();
 
             EventQueue.Enqueue(new GraphicsEvent());
-
-            Process BackgroundWorker = new Process("Events");
-            Task t = BackgroundWorker.Run(mgr);
         }
 
         private CancellationTokenSource Handler()
         {
             GameGraphics gg = new GameGraphics(swapChainPanel, (int)(swapChainPanel.RenderSize.Width), (int)(swapChainPanel.RenderSize.Height));
+            //game.Run();
 
-            CancellationTokenSource source1;
-            CancellationToken token1;
-
-            source1 = new CancellationTokenSource();
-            token1 = source1.Token;
+            CancellationTokenSource source1 = new CancellationTokenSource();
+            CancellationToken token1 = source1.Token;
 
             Action myAction = (Action)(() =>
             {

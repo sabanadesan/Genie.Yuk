@@ -15,6 +15,10 @@ namespace Genie.Sample.RPG
 
     public class RpgEventManager : EventManager
     {
+        public RpgEventManager() : base()
+        {
+        }
+
         public override Boolean Loop()
         {
             Genie.Yuk.Event _event = null;

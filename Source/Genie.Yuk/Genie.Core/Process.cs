@@ -40,6 +40,11 @@ namespace Genie.Yuk
             m_key = key;
         }
 
+        public void Wait()
+        {
+            m_t.Wait();
+        }
+
         public Task Run(MyFunction f)
         {
             source1 = new CancellationTokenSource();
