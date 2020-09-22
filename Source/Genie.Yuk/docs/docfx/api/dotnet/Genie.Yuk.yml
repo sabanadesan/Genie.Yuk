@@ -7,6 +7,8 @@ items:
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
   - Genie.Yuk.Event
+  - Genie.Yuk.EventManager
+  - Genie.Yuk.EventQueue
   - Genie.Yuk.EventType
   - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
@@ -57,6 +59,16 @@ references:
   name: StopEvent
   nameWithType: StopEvent
   fullName: Genie.Yuk.StopEvent
+- uid: Genie.Yuk.EventQueue
+  commentId: T:Genie.Yuk.EventQueue
+  name: EventQueue
+  nameWithType: EventQueue
+  fullName: Genie.Yuk.EventQueue
+- uid: Genie.Yuk.EventManager
+  commentId: T:Genie.Yuk.EventManager
+  name: EventManager
+  nameWithType: EventManager
+  fullName: Genie.Yuk.EventManager
 - uid: Genie.Yuk.Game
   commentId: T:Genie.Yuk.Game
   name: Game

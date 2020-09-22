@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{7B3A7C24-4176-493F-AB5E-A31474EF9D15}</ProjectGuid>
+    <ProjectGuid>{80021CCE-E909-4E9B-B24D-2C3491B2E741}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Genie3D.Win10</RootNamespace>
-    <AssemblyName>Genie3D.Win10</AssemblyName>
+    <RootNamespace>Genie.Win10</RootNamespace>
+    <AssemblyName>Genie.Win10</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>

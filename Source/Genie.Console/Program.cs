@@ -6,12 +6,17 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Genie3D.Console
+namespace Genie.Console
 {
     class Program
     {
         static void Main(string[] args)
         {
+            EventManager mgr = new EventManager();
+
+            Process BackgroundWorker = new Process("Events");
+            Task t = BackgroundWorker.Run(mgr);
+
             var tasks = new List<Task>();
 
             Game game = new Game("Output");
@@ -19,9 +24,9 @@ namespace Genie3D.Console
 
             GameGraphics gg = new GameGraphics();
 
-            Process BackgroundWorker = new Process("BackgroundWorker");
-            Task t = BackgroundWorker.Run(gg.Run);
-            tasks.Add(t);
+            Process BackgroundWorker1 = new Process("BackgroundWorker");
+            Task t1 = BackgroundWorker1.Run(gg.Run);
+            tasks.Add(t1);
 
             Action<object> action = (object obj) =>
             {
@@ -30,9 +35,9 @@ namespace Genie3D.Console
                 p.Stop();
             };
 
-            Task t1 = new Task(action, "alpha");
-            t1.Start();
-            tasks.Add(t1);
+            Task t2 = new Task(action, "alpha");
+            t2.Start();
+            tasks.Add(t2);
 
             var continuation = Task.WhenAll(tasks);
             try

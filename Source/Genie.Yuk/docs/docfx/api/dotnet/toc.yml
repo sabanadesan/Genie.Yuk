@@ -8,6 +8,10 @@
     name: Do
   - uid: Genie.Yuk.Event
     name: Event
+  - uid: Genie.Yuk.EventManager
+    name: EventManager
+  - uid: Genie.Yuk.EventQueue
+    name: EventQueue
   - uid: Genie.Yuk.EventType
     name: EventType
   - uid: Genie.Yuk.Game

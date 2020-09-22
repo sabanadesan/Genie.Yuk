@@ -24,7 +24,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: GameGraphics
     path: Genie.Core/GameGraphics.cs
-    startLine: 82
+    startLine: 15
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -70,7 +70,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/GameGraphics.cs
-    startLine: 86
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/GameGraphics.cs
-    startLine: 91
+    startLine: 24
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -137,7 +137,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 96
+    startLine: 29
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -173,7 +173,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 101
+    startLine: 34
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 106
+    startLine: 39
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

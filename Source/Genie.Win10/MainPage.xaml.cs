@@ -21,7 +21,7 @@ using Genie.Win10.Utility;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Genie3D.Win10
+namespace Genie.Win10
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -33,6 +33,8 @@ namespace Genie3D.Win10
         public MainPage()
         {
             this.InitializeComponent();
+
+            HandleEvents();
 
             this.win = new WinUtility();
         }
@@ -47,6 +49,14 @@ namespace Genie3D.Win10
             source1 = Handler();
 
             source1.Cancel();
+        }
+
+        private void HandleEvents()
+        {
+            EventManager mgr = new EventManager();
+
+            Process BackgroundWorker = new Process("Events");
+            Task t = BackgroundWorker.Run(mgr);
         }
 
         private CancellationTokenSource Handler()
