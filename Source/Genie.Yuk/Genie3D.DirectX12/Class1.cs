@@ -54,13 +54,6 @@ namespace Genie3D.DirectX12
             }
         }
 
-        public void Run()
-        {
-            InitializeD3D();
-            InitScene();
-            Render();
-        }
-
         public void Stop()
         {
             

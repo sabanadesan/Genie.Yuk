@@ -102,8 +102,6 @@ namespace Genie.Yuk
     {
         public abstract void Run(CancellationToken token);
 
-        public abstract void Run();
-
         public abstract void Stop();
     }
 }

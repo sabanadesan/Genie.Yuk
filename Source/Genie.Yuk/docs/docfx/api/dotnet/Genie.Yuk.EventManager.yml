@@ -7,7 +7,6 @@ items:
   children:
   - Genie.Yuk.EventManager.#ctor
   - Genie.Yuk.EventManager.Loop
-  - Genie.Yuk.EventManager.Run
   - Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
   - Genie.Yuk.EventManager.Stop
   langs:
@@ -118,39 +117,6 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Genie.Yuk.EventManager.Run
-  commentId: M:Genie.Yuk.EventManager.Run
-  id: Run
-  parent: Genie.Yuk.EventManager
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: EventManager.Run()
-  fullName: Genie.Yuk.EventManager.Run()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/EventManager.cs
-    startLine: 44
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public override void Run()
-    content.vb: Public Overrides Sub Run
-  overridden: Genie.Yuk.Do.Run
-  overload: Genie.Yuk.EventManager.Run*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 - uid: Genie.Yuk.EventManager.Stop
   commentId: M:Genie.Yuk.EventManager.Stop
   id: Stop
@@ -169,7 +135,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/EventManager.cs
-    startLine: 49
+    startLine: 44
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -202,7 +168,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Loop
     path: Genie.Core/EventManager.cs
-    startLine: 77
+    startLine: 72
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -584,34 +550,6 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
-- uid: Genie.Yuk.Do.Run
-  commentId: M:Genie.Yuk.Do.Run
-  parent: Genie.Yuk.Do
-  name: Run()
-  nameWithType: Do.Run()
-  fullName: Genie.Yuk.Do.Run()
-  spec.csharp:
-  - uid: Genie.Yuk.Do.Run
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Do.Run
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Genie.Yuk.Do.Stop
   commentId: M:Genie.Yuk.Do.Stop
   parent: Genie.Yuk.Do

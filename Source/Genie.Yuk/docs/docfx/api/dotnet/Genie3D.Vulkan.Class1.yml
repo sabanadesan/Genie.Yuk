@@ -6,7 +6,6 @@ items:
   parent: Genie3D.Vulkan
   children:
   - Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
-  - Genie3D.Vulkan.Class1.Run
   - Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
   - Genie3D.Vulkan.Class1.Stop
   langs:
@@ -79,36 +78,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie3D.Vulkan.Class1.Run
-  commentId: M:Genie3D.Vulkan.Class1.Run
-  id: Run
-  parent: Genie3D.Vulkan.Class1
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: Class1.Run()
-  fullName: Genie3D.Vulkan.Class1.Run()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie3D.Vulkan/Class1.cs
-    startLine: 60
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.Vulkan
-  syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
-  overload: Genie3D.Vulkan.Class1.Run*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Genie3D.Vulkan.Class1.Stop
   commentId: M:Genie3D.Vulkan.Class1.Stop
   id: Stop
@@ -127,7 +96,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 68
+    startLine: 60
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -157,7 +126,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ChooseSwapExtent
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 618
+    startLine: 595
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan

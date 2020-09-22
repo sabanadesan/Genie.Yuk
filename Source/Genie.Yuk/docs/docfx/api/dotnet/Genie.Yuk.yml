@@ -4,6 +4,7 @@ items:
   commentId: N:Genie.Yuk
   id: Genie.Yuk
   children:
+  - Genie.Yuk.Clock
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
   - Genie.Yuk.Event
@@ -36,6 +37,11 @@ items:
   assemblies:
   - Genie.Yuk
 references:
+- uid: Genie.Yuk.Clock
+  commentId: T:Genie.Yuk.Clock
+  name: Clock
+  nameWithType: Clock
+  fullName: Genie.Yuk.Clock
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk

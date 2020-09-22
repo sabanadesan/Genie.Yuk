@@ -42,37 +42,32 @@ namespace Genie.Yuk
             }
         }
 
-        public override void Run()
-        {
-            Calculate();
-        }
-
         public override void Stop()
         {
             EventQueue.Enqueue(new StopEvent());
         }
 
-        private void Calculate()
+        private void Calculate(CancellationToken token = new CancellationToken())
         {
             Boolean DoWhile = true;
 
-            while (DoWhile)
-            {
-                DoWhile = Loop();
-            }
-        }
-
-        private void Calculate(CancellationToken token)
-        {
-            Boolean DoWhile = true;
-            EventQueue.Enqueue(new GraphicsEvent());
+            Clock timer = new Clock();
+            timer.Start();
+            int lastTime = timer.MsElapsed();
 
             while (DoWhile)
             {
                 token.ThrowIfCancellationRequested();
 
+                int current = timer.MsElapsed();
+                int elapsed = current - lastTime;
+
                 DoWhile = Loop();
+
+                lastTime = current;
             }
+
+            timer.Stop();
         }
 
         public virtual Boolean Loop()

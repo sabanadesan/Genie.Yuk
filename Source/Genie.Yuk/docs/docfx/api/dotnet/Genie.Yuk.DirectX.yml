@@ -6,7 +6,6 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
-  - Genie.Yuk.DirectX.Run
   - Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
   - Genie.Yuk.DirectX.Stop
   langs:
@@ -23,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: DirectX
     path: Genie.Core/GameGraphics.cs
-    startLine: 85
+    startLine: 73
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -67,7 +66,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/GameGraphics.cs
-    startLine: 89
+    startLine: 77
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -104,7 +103,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 94
+    startLine: 82
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -115,39 +114,6 @@ items:
       type: System.Threading.CancellationToken
     content.vb: Public Overrides Sub Run(token As CancellationToken)
   overridden: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
-  overload: Genie.Yuk.DirectX.Run*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: Genie.Yuk.DirectX.Run
-  commentId: M:Genie.Yuk.DirectX.Run
-  id: Run
-  parent: Genie.Yuk.DirectX
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: DirectX.Run()
-  fullName: Genie.Yuk.DirectX.Run()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/GameGraphics.cs
-    startLine: 99
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public override void Run()
-    content.vb: Public Overrides Sub Run
-  overridden: Genie.Yuk.Graphics.Run
   overload: Genie.Yuk.DirectX.Run*
   modifiers.csharp:
   - public
@@ -173,7 +139,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 104
+    startLine: 87
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -561,34 +527,6 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
-- uid: Genie.Yuk.Graphics.Run
-  commentId: M:Genie.Yuk.Graphics.Run
-  parent: Genie.Yuk.Graphics
-  name: Run()
-  nameWithType: Graphics.Run()
-  fullName: Genie.Yuk.Graphics.Run()
-  spec.csharp:
-  - uid: Genie.Yuk.Graphics.Run
-    name: Run
-    nameWithType: Graphics.Run
-    fullName: Genie.Yuk.Graphics.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Graphics.Run
-    name: Run
-    nameWithType: Graphics.Run
-    fullName: Genie.Yuk.Graphics.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Genie.Yuk.Graphics.Stop
   commentId: M:Genie.Yuk.Graphics.Stop
   parent: Genie.Yuk.Graphics

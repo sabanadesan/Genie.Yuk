@@ -1,38 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Graphics
-  commentId: T:Genie.Yuk.Graphics
-  id: Graphics
+- uid: Genie.Yuk.Clock
+  commentId: T:Genie.Yuk.Clock
+  id: Clock
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
-  - Genie.Yuk.Graphics.Stop
+  - Genie.Yuk.Clock.#ctor
+  - Genie.Yuk.Clock.Elapsed
+  - Genie.Yuk.Clock.MsElapsed
+  - Genie.Yuk.Clock.SecElapsed
+  - Genie.Yuk.Clock.Start
+  - Genie.Yuk.Clock.Stop
   langs:
   - csharp
   - vb
-  name: Graphics
-  nameWithType: Graphics
-  fullName: Genie.Yuk.Graphics
+  name: Clock
+  nameWithType: Clock
+  fullName: Genie.Yuk.Clock
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Graphics
-    path: Genie.Core/GameGraphics.cs
-    startLine: 46
+    id: Clock
+    path: Genie.Core/Clock.cs
+    startLine: 9
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract class Graphics
-    content.vb: Public MustInherit Class Graphics
+    content: public class Clock
+    content.vb: Public Class Clock
   inheritance:
   - System.Object
-  derivedClasses:
-  - Genie.Yuk.DirectX
-  - Genie.Yuk.Vulkan
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -43,79 +44,196 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - abstract
   - class
   modifiers.vb:
   - Public
-  - MustInherit
   - Class
-- uid: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
-  id: Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Graphics
+- uid: Genie.Yuk.Clock.#ctor
+  commentId: M:Genie.Yuk.Clock.#ctor
+  id: '#ctor'
+  parent: Genie.Yuk.Clock
   langs:
   - csharp
   - vb
-  name: Run(CancellationToken)
-  nameWithType: Graphics.Run(CancellationToken)
-  fullName: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
-  type: Method
+  name: Clock()
+  nameWithType: Clock.Clock()
+  fullName: Genie.Yuk.Clock.Clock()
+  type: Constructor
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/GameGraphics.cs
-    startLine: 48
+    id: .ctor
+    path: Genie.Core/Clock.cs
+    startLine: 13
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract void Run(CancellationToken token)
-    parameters:
-    - id: token
-      type: System.Threading.CancellationToken
-    content.vb: Public MustOverride Sub Run(token As CancellationToken)
-  overload: Genie.Yuk.Graphics.Run*
+    content: public Clock()
+    content.vb: Public Sub New
+  overload: Genie.Yuk.Clock.#ctor*
   modifiers.csharp:
   - public
-  - abstract
   modifiers.vb:
   - Public
-  - MustOverride
-- uid: Genie.Yuk.Graphics.Stop
-  commentId: M:Genie.Yuk.Graphics.Stop
+- uid: Genie.Yuk.Clock.Start
+  commentId: M:Genie.Yuk.Clock.Start
+  id: Start
+  parent: Genie.Yuk.Clock
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Clock.Start()
+  fullName: Genie.Yuk.Clock.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/Clock.cs
+    startLine: 18
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Genie.Yuk.Clock.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Clock.Stop
+  commentId: M:Genie.Yuk.Clock.Stop
   id: Stop
-  parent: Genie.Yuk.Graphics
+  parent: Genie.Yuk.Clock
   langs:
   - csharp
   - vb
   name: Stop()
-  nameWithType: Graphics.Stop()
-  fullName: Genie.Yuk.Graphics.Stop()
+  nameWithType: Clock.Stop()
+  fullName: Genie.Yuk.Clock.Stop()
   type: Method
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
-    path: Genie.Core/GameGraphics.cs
-    startLine: 50
+    path: Genie.Core/Clock.cs
+    startLine: 23
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract void Stop()
-    content.vb: Public MustOverride Sub Stop
-  overload: Genie.Yuk.Graphics.Stop*
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: Genie.Yuk.Clock.Stop*
   modifiers.csharp:
   - public
-  - abstract
   modifiers.vb:
   - Public
-  - MustOverride
+- uid: Genie.Yuk.Clock.Elapsed
+  commentId: M:Genie.Yuk.Clock.Elapsed
+  id: Elapsed
+  parent: Genie.Yuk.Clock
+  langs:
+  - csharp
+  - vb
+  name: Elapsed()
+  nameWithType: Clock.Elapsed()
+  fullName: Genie.Yuk.Clock.Elapsed()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Elapsed
+    path: Genie.Core/Clock.cs
+    startLine: 28
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public TimeSpan Elapsed()
+    return:
+      type: System.TimeSpan
+    content.vb: Public Function Elapsed As TimeSpan
+  overload: Genie.Yuk.Clock.Elapsed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Clock.MsElapsed
+  commentId: M:Genie.Yuk.Clock.MsElapsed
+  id: MsElapsed
+  parent: Genie.Yuk.Clock
+  langs:
+  - csharp
+  - vb
+  name: MsElapsed()
+  nameWithType: Clock.MsElapsed()
+  fullName: Genie.Yuk.Clock.MsElapsed()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: MsElapsed
+    path: Genie.Core/Clock.cs
+    startLine: 34
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public int MsElapsed()
+    return:
+      type: System.Int32
+    content.vb: Public Function MsElapsed As Integer
+  overload: Genie.Yuk.Clock.MsElapsed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Clock.SecElapsed
+  commentId: M:Genie.Yuk.Clock.SecElapsed
+  id: SecElapsed
+  parent: Genie.Yuk.Clock
+  langs:
+  - csharp
+  - vb
+  name: SecElapsed()
+  nameWithType: Clock.SecElapsed()
+  fullName: Genie.Yuk.Clock.SecElapsed()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: SecElapsed
+    path: Genie.Core/Clock.cs
+    startLine: 40
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public int SecElapsed()
+    return:
+      type: System.Int32
+    content.vb: Public Function SecElapsed As Integer
+  overload: Genie.Yuk.Clock.SecElapsed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -414,27 +532,48 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Graphics.Run*
-  commentId: Overload:Genie.Yuk.Graphics.Run
-  name: Run
-  nameWithType: Graphics.Run
-  fullName: Genie.Yuk.Graphics.Run
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-- uid: Genie.Yuk.Graphics.Stop*
-  commentId: Overload:Genie.Yuk.Graphics.Stop
+- uid: Genie.Yuk.Clock.#ctor*
+  commentId: Overload:Genie.Yuk.Clock.#ctor
+  name: Clock
+  nameWithType: Clock.Clock
+  fullName: Genie.Yuk.Clock.Clock
+- uid: Genie.Yuk.Clock.Start*
+  commentId: Overload:Genie.Yuk.Clock.Start
+  name: Start
+  nameWithType: Clock.Start
+  fullName: Genie.Yuk.Clock.Start
+- uid: Genie.Yuk.Clock.Stop*
+  commentId: Overload:Genie.Yuk.Clock.Stop
   name: Stop
-  nameWithType: Graphics.Stop
-  fullName: Genie.Yuk.Graphics.Stop
+  nameWithType: Clock.Stop
+  fullName: Genie.Yuk.Clock.Stop
+- uid: Genie.Yuk.Clock.Elapsed*
+  commentId: Overload:Genie.Yuk.Clock.Elapsed
+  name: Elapsed
+  nameWithType: Clock.Elapsed
+  fullName: Genie.Yuk.Clock.Elapsed
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Genie.Yuk.Clock.MsElapsed*
+  commentId: Overload:Genie.Yuk.Clock.MsElapsed
+  name: MsElapsed
+  nameWithType: Clock.MsElapsed
+  fullName: Genie.Yuk.Clock.MsElapsed
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Genie.Yuk.Clock.SecElapsed*
+  commentId: Overload:Genie.Yuk.Clock.SecElapsed
+  name: SecElapsed
+  nameWithType: Clock.SecElapsed
+  fullName: Genie.Yuk.Clock.SecElapsed
 shouldSkipMarkup: true

@@ -38,11 +38,6 @@ namespace Genie.Yuk
             cls.Run(token);
         }
 
-        public override void Run()
-        {
-            cls.Run();
-        }
-
         public override void Stop()
         {
             cls.Stop();
@@ -52,8 +47,6 @@ namespace Genie.Yuk
     public abstract class Graphics
     {
         public abstract void Run(CancellationToken token);
-
-        public abstract void Run();
 
         public abstract void Stop();
     }
@@ -70,11 +63,6 @@ namespace Genie.Yuk
         public override void Run(CancellationToken token)
         {
             cls.Run(token);
-        }
-
-        public override void Run()
-        {
-            cls.Run();
         }
 
         public override void Stop()
@@ -95,11 +83,6 @@ namespace Genie.Yuk
         public override void Run(CancellationToken token)
         {
             cls.Run(token);
-        }
-
-        public override void Run()
-        {
-            cls.Run();
         }
 
         public override void Stop()

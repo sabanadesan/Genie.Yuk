@@ -5,7 +5,6 @@ items:
   id: Do
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Do.Run
   - Genie.Yuk.Do.Run(System.Threading.CancellationToken)
   - Genie.Yuk.Do.Stop
   langs:
@@ -86,38 +85,6 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-- uid: Genie.Yuk.Do.Run
-  commentId: M:Genie.Yuk.Do.Run
-  id: Run
-  parent: Genie.Yuk.Do
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: Do.Run()
-  fullName: Genie.Yuk.Do.Run()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/Process.cs
-    startLine: 104
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public abstract void Run()
-    content.vb: Public MustOverride Sub Run
-  overload: Genie.Yuk.Do.Run*
-  modifiers.csharp:
-  - public
-  - abstract
-  modifiers.vb:
-  - Public
-  - MustOverride
 - uid: Genie.Yuk.Do.Stop
   commentId: M:Genie.Yuk.Do.Stop
   id: Stop
@@ -136,7 +103,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/Process.cs
-    startLine: 106
+    startLine: 104
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

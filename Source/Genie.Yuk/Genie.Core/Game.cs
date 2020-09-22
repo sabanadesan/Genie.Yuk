@@ -20,11 +20,6 @@ namespace Genie.Yuk
             GameManager mng = GameManager.Instance;
         }
 
-        public override void Run()
-        {
-            GameManager mng = GameManager.Instance;
-        }
-
         public override void Stop()
         {
 

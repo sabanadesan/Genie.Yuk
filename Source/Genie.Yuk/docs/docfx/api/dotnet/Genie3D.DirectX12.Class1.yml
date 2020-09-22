@@ -8,7 +8,6 @@ items:
   - Genie3D.DirectX12.Class1.#ctor(System.Object,System.Int32,System.Int32)
   - Genie3D.DirectX12.Class1.Dispose
   - Genie3D.DirectX12.Class1.Render
-  - Genie3D.DirectX12.Class1.Run
   - Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
   - Genie3D.DirectX12.Class1.Stop
   - Genie3D.DirectX12.Class1.Update
@@ -119,36 +118,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie3D.DirectX12.Class1.Run
-  commentId: M:Genie3D.DirectX12.Class1.Run
-  id: Run
-  parent: Genie3D.DirectX12.Class1
-  langs:
-  - csharp
-  - vb
-  name: Run()
-  nameWithType: Class1.Run()
-  fullName: Genie3D.DirectX12.Class1.Run()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie3D.DirectX12/Class1.cs
-    startLine: 56
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie3D.DirectX12
-  syntax:
-    content: public void Run()
-    content.vb: Public Sub Run
-  overload: Genie3D.DirectX12.Class1.Run*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Genie3D.DirectX12.Class1.Stop
   commentId: M:Genie3D.DirectX12.Class1.Stop
   id: Stop
@@ -167,7 +136,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 63
+    startLine: 56
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -197,7 +166,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Update
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 162
+    startLine: 155
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -227,7 +196,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Render
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 319
+    startLine: 312
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -257,7 +226,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Dispose
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 333
+    startLine: 326
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12

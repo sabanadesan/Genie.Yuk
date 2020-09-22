@@ -58,14 +58,6 @@ namespace Genie3D.Vulkan
             this.TearDown();
         }
 
-        public void Run()
-        {
-            this.InitialiseWindow();
-            this.InitialiseVulkan();
-            this.MainLoop();
-            this.TearDown();
-        }
-
         public void Stop()
         {
             //Glfw3.DestroyWindow(this.window);
@@ -100,11 +92,6 @@ namespace Genie3D.Vulkan
             this.CreateSemaphores();
         }
 
-        private void MainLoop()
-        {
-            Calculate();
-        }
-
         private void MainLoop(CancellationToken token)
         {
             try
@@ -123,16 +110,6 @@ namespace Genie3D.Vulkan
             {
                 token.ThrowIfCancellationRequested();
 
-                this.DrawFrame();
-
-                Glfw3.PollEvents();
-            }
-        }
-
-        private void Calculate()
-        {
-            while (!Glfw3.WindowShouldClose(this.window))
-            {
                 this.DrawFrame();
 
                 Glfw3.PollEvents();
