@@ -55,6 +55,8 @@ namespace Genie.Win10
         {
             EventManager mgr = new EventManager();
 
+            EventQueue.Enqueue(new GraphicsEvent());
+
             Process BackgroundWorker = new Process("Events");
             Task t = BackgroundWorker.Run(mgr);
         }

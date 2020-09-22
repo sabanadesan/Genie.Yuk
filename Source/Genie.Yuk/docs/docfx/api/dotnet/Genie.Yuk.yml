@@ -9,7 +9,6 @@ items:
   - Genie.Yuk.Event
   - Genie.Yuk.EventManager
   - Genie.Yuk.EventQueue
-  - Genie.Yuk.EventType
   - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
   - Genie.Yuk.Graphics
@@ -37,12 +36,6 @@ items:
   assemblies:
   - Genie.Yuk
 references:
-- uid: Genie.Yuk.EventType
-  commentId: T:Genie.Yuk.EventType
-  parent: Genie.Yuk
-  name: EventType
-  nameWithType: EventType
-  fullName: Genie.Yuk.EventType
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk

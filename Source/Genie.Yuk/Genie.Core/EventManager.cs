@@ -49,7 +49,6 @@ namespace Genie.Yuk
         private void Calculate()
         {
             Boolean DoWhile = true;
-            EventQueue.Enqueue(new GraphicsEvent());
 
             while (DoWhile)
             {
@@ -70,7 +69,7 @@ namespace Genie.Yuk
             }
         }
 
-        private Boolean Loop()
+        public virtual Boolean Loop()
         {
             Genie.Yuk.Event _event = null;
 
@@ -85,12 +84,12 @@ namespace Genie.Yuk
 
             if (_event != null)
             {
-                if (_event.type == EventType.Graphics)
+                if (_event.GetType() == typeof(GraphicsEvent))
                 {
                     System.Console.WriteLine("Draw");
                     EventQueue.Enqueue(new GraphicsEvent());
                 }
-                else if (_event.type == EventType.Stop)
+                else if (_event.GetType() == typeof(StopEvent))
                 {
                     System.Console.WriteLine("Stop");
                     return false;

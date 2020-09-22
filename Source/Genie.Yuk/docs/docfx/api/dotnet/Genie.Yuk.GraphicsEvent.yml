@@ -4,8 +4,7 @@ items:
   commentId: T:Genie.Yuk.GraphicsEvent
   id: GraphicsEvent
   parent: Genie.Yuk
-  children:
-  - Genie.Yuk.GraphicsEvent.#ctor
+  children: []
   langs:
   - csharp
   - vb
@@ -20,7 +19,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: GraphicsEvent
     path: Genie.Core/Event.cs
-    startLine: 23
+    startLine: 10
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -35,8 +34,6 @@ items:
   - System.Object
   - Genie.Yuk.Event
   inheritedMembers:
-  - Genie.Yuk.Event._type
-  - Genie.Yuk.Event.type
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -50,36 +47,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.GraphicsEvent.#ctor
-  commentId: M:Genie.Yuk.GraphicsEvent.#ctor
-  id: '#ctor'
-  parent: Genie.Yuk.GraphicsEvent
-  langs:
-  - csharp
-  - vb
-  name: GraphicsEvent()
-  nameWithType: GraphicsEvent.GraphicsEvent()
-  fullName: Genie.Yuk.GraphicsEvent.GraphicsEvent()
-  type: Constructor
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Event.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: Genie.Core/Event.cs
-    startLine: 25
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public GraphicsEvent()
-    content.vb: Public Sub New
-  overload: Genie.Yuk.GraphicsEvent.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -99,18 +66,6 @@ references:
   name: Event
   nameWithType: Event
   fullName: Genie.Yuk.Event
-- uid: Genie.Yuk.Event._type
-  commentId: F:Genie.Yuk.Event._type
-  parent: Genie.Yuk.Event
-  name: _type
-  nameWithType: Event._type
-  fullName: Genie.Yuk.Event._type
-- uid: Genie.Yuk.Event.type
-  commentId: P:Genie.Yuk.Event.type
-  parent: Genie.Yuk.Event
-  name: type
-  nameWithType: Event.type
-  fullName: Genie.Yuk.Event.type
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -396,9 +351,4 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.GraphicsEvent.#ctor*
-  commentId: Overload:Genie.Yuk.GraphicsEvent.#ctor
-  name: GraphicsEvent
-  nameWithType: GraphicsEvent.GraphicsEvent
-  fullName: Genie.Yuk.GraphicsEvent.GraphicsEvent
 shouldSkipMarkup: true

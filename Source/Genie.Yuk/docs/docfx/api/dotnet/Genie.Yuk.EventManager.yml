@@ -5,6 +5,7 @@ items:
   id: EventManager
   parent: Genie.Yuk
   children:
+  - Genie.Yuk.EventManager.Loop
   - Genie.Yuk.EventManager.Run
   - Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
   - Genie.Yuk.EventManager.Stop
@@ -152,6 +153,40 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: Genie.Yuk.EventManager.Loop
+  commentId: M:Genie.Yuk.EventManager.Loop
+  id: Loop
+  parent: Genie.Yuk.EventManager
+  langs:
+  - csharp
+  - vb
+  name: Loop()
+  nameWithType: EventManager.Loop()
+  fullName: Genie.Yuk.EventManager.Loop()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Loop
+    path: Genie.Core/EventManager.cs
+    startLine: 71
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public virtual bool Loop()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Loop As Boolean
+  overload: Genie.Yuk.EventManager.Loop*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -574,4 +609,16 @@ references:
   name: Stop
   nameWithType: EventManager.Stop
   fullName: Genie.Yuk.EventManager.Stop
+- uid: Genie.Yuk.EventManager.Loop*
+  commentId: Overload:Genie.Yuk.EventManager.Loop
+  name: Loop
+  nameWithType: EventManager.Loop
+  fullName: Genie.Yuk.EventManager.Loop
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 shouldSkipMarkup: true

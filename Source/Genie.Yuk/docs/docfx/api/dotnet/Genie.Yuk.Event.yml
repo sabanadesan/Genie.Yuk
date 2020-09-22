@@ -4,9 +4,7 @@ items:
   commentId: T:Genie.Yuk.Event
   id: Event
   parent: Genie.Yuk
-  children:
-  - Genie.Yuk.Event._type
-  - Genie.Yuk.Event.type
+  children: []
   langs:
   - csharp
   - vb
@@ -21,7 +19,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Event
     path: Genie.Core/Event.cs
-    startLine: 12
+    startLine: 6
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -49,72 +47,6 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: Genie.Yuk.Event._type
-  commentId: F:Genie.Yuk.Event._type
-  id: _type
-  parent: Genie.Yuk.Event
-  langs:
-  - csharp
-  - vb
-  name: _type
-  nameWithType: Event._type
-  fullName: Genie.Yuk.Event._type
-  type: Field
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Event.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: _type
-    path: Genie.Core/Event.cs
-    startLine: 14
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: protected EventType _type
-    return:
-      type: Genie.Yuk.EventType
-    content.vb: Protected _type As EventType
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: Genie.Yuk.Event.type
-  commentId: P:Genie.Yuk.Event.type
-  id: type
-  parent: Genie.Yuk.Event
-  langs:
-  - csharp
-  - vb
-  name: type
-  nameWithType: Event.type
-  fullName: Genie.Yuk.Event.type
-  type: Property
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Event.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: type
-    path: Genie.Core/Event.cs
-    startLine: 16
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public EventType type { get; set; }
-    parameters: []
-    return:
-      type: Genie.Yuk.EventType
-    content.vb: Public Property type As EventType
-  overload: Genie.Yuk.Event.type*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -413,15 +345,4 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.EventType
-  commentId: T:Genie.Yuk.EventType
-  parent: Genie.Yuk
-  name: EventType
-  nameWithType: EventType
-  fullName: Genie.Yuk.EventType
-- uid: Genie.Yuk.Event.type*
-  commentId: Overload:Genie.Yuk.Event.type
-  name: type
-  nameWithType: Event.type
-  fullName: Genie.Yuk.Event.type
 shouldSkipMarkup: true

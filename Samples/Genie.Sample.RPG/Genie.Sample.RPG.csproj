@@ -123,6 +123,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\RpgEventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -155,6 +156,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Source\Genie.Win10.Utility\Genie.Win10.Utility.csproj">
+      <Project>{70a5c82c-7e0d-4c40-a206-ebd4007fd48b}</Project>
+      <Name>Genie.Win10.Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Source\Genie.Yuk\Genie.Yuk.csproj">
       <Project>{a4206b06-58b4-41bd-9dfb-b1c243030b79}</Project>
       <Name>Genie.Yuk</Name>
