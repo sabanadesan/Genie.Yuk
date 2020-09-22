@@ -52,7 +52,7 @@ namespace Genie.Sample.RPG
         {
             RpgEventManager mgr = new RpgEventManager();
 
-            EventQueue.Enqueue(new GraphicsEvent());
+            EventQueue.Enqueue(new RpgGraphicsEvent());
         }
 
         private CancellationTokenSource Handler()
