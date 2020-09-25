@@ -57,12 +57,17 @@ namespace Genie.Yuk
 
             Genie.Yuk.Event _event = null;
 
+            double fps;
+
             while (DoWhile)
             {
                 token.ThrowIfCancellationRequested();
 
                 int current = timer.MsElapsed();
                 int elapsed = current - lastTime;
+                fps = timer.FPS(elapsed);
+
+                Console.WriteLine(fps);
 
                 try
                 {

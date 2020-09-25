@@ -3,6 +3,7 @@
   "Genie.Yuk.Clock": "Genie.Yuk.Clock.yml",
   "Genie.Yuk.Clock.#ctor": "Genie.Yuk.Clock.yml",
   "Genie.Yuk.Clock.Elapsed": "Genie.Yuk.Clock.yml",
+  "Genie.Yuk.Clock.FPS(System.Int32)": "Genie.Yuk.Clock.yml",
   "Genie.Yuk.Clock.MsElapsed": "Genie.Yuk.Clock.yml",
   "Genie.Yuk.Clock.SecElapsed": "Genie.Yuk.Clock.yml",
   "Genie.Yuk.Clock.Start": "Genie.Yuk.Clock.yml",

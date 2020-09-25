@@ -43,5 +43,13 @@ namespace Genie.Yuk
             TimeSpan ts = stopWatch.Elapsed;
             return ts.Seconds;
         }
+
+        public double FPS(int ms)
+        {
+            double s = ((double) ms) / 1000;
+            double fps = 1 / s;
+
+            return fps;
+        }
     }
 }

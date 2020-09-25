@@ -7,6 +7,7 @@ items:
   children:
   - Genie.Yuk.Clock.#ctor
   - Genie.Yuk.Clock.Elapsed
+  - Genie.Yuk.Clock.FPS(System.Int32)
   - Genie.Yuk.Clock.MsElapsed
   - Genie.Yuk.Clock.SecElapsed
   - Genie.Yuk.Clock.Start
@@ -230,6 +231,41 @@ items:
       type: System.Int32
     content.vb: Public Function SecElapsed As Integer
   overload: Genie.Yuk.Clock.SecElapsed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Clock.FPS(System.Int32)
+  commentId: M:Genie.Yuk.Clock.FPS(System.Int32)
+  id: FPS(System.Int32)
+  parent: Genie.Yuk.Clock
+  langs:
+  - csharp
+  - vb
+  name: FPS(Int32)
+  nameWithType: Clock.FPS(Int32)
+  fullName: Genie.Yuk.Clock.FPS(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Clock.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: FPS
+    path: Genie.Core/Clock.cs
+    startLine: 46
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public double FPS(int ms)
+    parameters:
+    - id: ms
+      type: System.Int32
+    return:
+      type: System.Double
+    content.vb: Public Function FPS(ms As Integer) As Double
+  overload: Genie.Yuk.Clock.FPS*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -576,4 +612,16 @@ references:
   name: SecElapsed
   nameWithType: Clock.SecElapsed
   fullName: Genie.Yuk.Clock.SecElapsed
+- uid: Genie.Yuk.Clock.FPS*
+  commentId: Overload:Genie.Yuk.Clock.FPS
+  name: FPS
+  nameWithType: Clock.FPS
+  fullName: Genie.Yuk.Clock.FPS
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
 shouldSkipMarkup: true

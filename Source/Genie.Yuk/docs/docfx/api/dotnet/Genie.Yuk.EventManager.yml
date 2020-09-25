@@ -168,7 +168,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Loop
     path: Genie.Core/EventManager.cs
-    startLine: 82
+    startLine: 87
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
