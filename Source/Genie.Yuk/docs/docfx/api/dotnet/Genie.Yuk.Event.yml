@@ -30,6 +30,7 @@ items:
   - System.Object
   derivedClasses:
   - Genie.Yuk.GraphicsEvent
+  - Genie.Yuk.JobEvent
   - Genie.Yuk.StopEvent
   inheritedMembers:
   - System.Object.Equals(System.Object)

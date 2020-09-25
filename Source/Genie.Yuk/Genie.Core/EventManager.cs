@@ -55,6 +55,8 @@ namespace Genie.Yuk
             timer.Start();
             int lastTime = timer.MsElapsed();
 
+            Genie.Yuk.Event _event = null;
+
             while (DoWhile)
             {
                 token.ThrowIfCancellationRequested();
@@ -62,7 +64,15 @@ namespace Genie.Yuk
                 int current = timer.MsElapsed();
                 int elapsed = current - lastTime;
 
-                DoWhile = Loop();
+                try
+                {
+                    _event = EventQueue.Dequeue();
+                    DoWhile = Loop(_event);
+                }
+                catch (InvalidOperationException e)
+                {
+                    DoWhile = false;
+                }
 
                 lastTime = current;
             }
@@ -70,25 +80,33 @@ namespace Genie.Yuk
             timer.Stop();
         }
 
-        public virtual Boolean Loop()
+        public virtual Boolean Loop(Genie.Yuk.Event _event)
         {
-            Genie.Yuk.Event _event = null;
-
-            try
-            {
-                _event = EventQueue.Dequeue();
-            }
-            catch (InvalidOperationException e)
-            {
-                return false;
-            }
-
             if (_event != null)
             {
                 if (_event.GetType() == typeof(GraphicsEvent))
                 {
                     System.Console.WriteLine("Draw");
                     EventQueue.Enqueue(new GraphicsEvent());
+                }
+                else if (_event.GetType() == typeof(JobEvent))
+                {
+                    JobEvent job = (JobEvent) _event;
+               
+                    Boolean doLoop = true;
+
+                    while (doLoop)
+                    {
+                        try
+                        {
+                            Genie.Yuk.Event tmpEvent = job.Dequeue();
+                            Loop(tmpEvent);
+                        }
+                        catch (InvalidOperationException e)
+                        {
+                            doLoop = false;
+                        }
+                    }
                 }
                 else if (_event.GetType() == typeof(StopEvent))
                 {

@@ -24,6 +24,8 @@
     name: GraphicsBackend
   - uid: Genie.Yuk.GraphicsEvent
     name: GraphicsEvent
+  - uid: Genie.Yuk.JobEvent
+    name: JobEvent
   - uid: Genie.Yuk.MenuType
     name: MenuType
   - uid: Genie.Yuk.Process

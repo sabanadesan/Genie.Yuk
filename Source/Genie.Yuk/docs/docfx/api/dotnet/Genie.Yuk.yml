@@ -15,6 +15,7 @@ items:
   - Genie.Yuk.Graphics
   - Genie.Yuk.GraphicsBackend
   - Genie.Yuk.GraphicsEvent
+  - Genie.Yuk.JobEvent
   - Genie.Yuk.MenuType
   - Genie.Yuk.Process
   - Genie.Yuk.Process.MyFunction
@@ -58,6 +59,11 @@ references:
   name: StopEvent
   nameWithType: StopEvent
   fullName: Genie.Yuk.StopEvent
+- uid: Genie.Yuk.JobEvent
+  commentId: T:Genie.Yuk.JobEvent
+  name: JobEvent
+  nameWithType: JobEvent
+  fullName: Genie.Yuk.JobEvent
 - uid: Genie.Yuk.EventQueue
   commentId: T:Genie.Yuk.EventQueue
   name: EventQueue
