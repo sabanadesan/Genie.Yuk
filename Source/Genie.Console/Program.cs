@@ -14,8 +14,10 @@ namespace Genie.Console
         {
             Game game = new Game("Output");
 
+            EventManager e = new EventManager();
+            EventQueue.Enqueue(new GraphicsEvent());
+
             Server s = new Server();
-            s.HandleEvents();
 
             Client c = new Client();
             c.Handler();

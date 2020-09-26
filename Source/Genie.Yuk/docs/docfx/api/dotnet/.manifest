@@ -89,7 +89,6 @@
   "Genie.Yuk.ResourceNode.Version": "Genie.Yuk.ResourceNode.yml",
   "Genie.Yuk.Server": "Genie.Yuk.Server.yml",
   "Genie.Yuk.Server.#ctor(System.String)": "Genie.Yuk.Server.yml",
-  "Genie.Yuk.Server.HandleEvents": "Genie.Yuk.Server.yml",
   "Genie.Yuk.Server.StartServer": "Genie.Yuk.Server.yml",
   "Genie.Yuk.Service": "Genie.Yuk.Service.yml",
   "Genie.Yuk.Service.Register``1(``0)": "Genie.Yuk.Service.yml",

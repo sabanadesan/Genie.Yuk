@@ -17,12 +17,6 @@ namespace Genie.Yuk
             m_IPAddress = IPAddress;
         }
 
-        public void HandleEvents()
-        {
-            EventManager mgr = new EventManager();
-            EventQueue.Enqueue(new GraphicsEvent());
-        }
-
         public void StartServer()
         {
             try

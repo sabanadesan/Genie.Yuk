@@ -32,8 +32,10 @@ namespace Genie.Win10
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
             Game game = new Game(localFolder.Path);
 
+            EventManager e = new EventManager();
+            EventQueue.Enqueue(new GraphicsEvent());
+
             Server s = new Server();
-            s.HandleEvents();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)

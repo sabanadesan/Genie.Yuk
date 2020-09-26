@@ -6,7 +6,6 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Server.#ctor(System.String)
-  - Genie.Yuk.Server.HandleEvents
   - Genie.Yuk.Server.StartServer
   langs:
   - csharp
@@ -78,36 +77,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Server.HandleEvents
-  commentId: M:Genie.Yuk.Server.HandleEvents
-  id: HandleEvents
-  parent: Genie.Yuk.Server
-  langs:
-  - csharp
-  - vb
-  name: HandleEvents()
-  nameWithType: Server.HandleEvents()
-  fullName: Genie.Yuk.Server.HandleEvents()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Server.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: HandleEvents
-    path: Genie.Core/Server.cs
-    startLine: 19
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void HandleEvents()
-    content.vb: Public Sub HandleEvents
-  overload: Genie.Yuk.Server.HandleEvents*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Genie.Yuk.Server.StartServer
   commentId: M:Genie.Yuk.Server.StartServer
   id: StartServer
@@ -126,7 +95,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: StartServer
     path: Genie.Core/Server.cs
-    startLine: 25
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -448,11 +417,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Genie.Yuk.Server.HandleEvents*
-  commentId: Overload:Genie.Yuk.Server.HandleEvents
-  name: HandleEvents
-  nameWithType: Server.HandleEvents
-  fullName: Genie.Yuk.Server.HandleEvents
 - uid: Genie.Yuk.Server.StartServer*
   commentId: Overload:Genie.Yuk.Server.StartServer
   name: StartServer
