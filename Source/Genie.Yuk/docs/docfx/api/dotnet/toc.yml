@@ -2,6 +2,8 @@
 - uid: Genie.Yuk
   name: Genie.Yuk
   items:
+  - uid: Genie.Yuk.Client
+    name: Client
   - uid: Genie.Yuk.Clock
     name: Clock
   - uid: Genie.Yuk.DirectX
@@ -40,6 +42,8 @@
     name: ResourceManager
   - uid: Genie.Yuk.ResourceNode
     name: ResourceNode
+  - uid: Genie.Yuk.Server
+    name: Server
   - uid: Genie.Yuk.Service
     name: Service
   - uid: Genie.Yuk.ShaderResource

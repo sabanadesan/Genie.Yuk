@@ -18,9 +18,6 @@ using Windows.Storage;
 using Genie.Yuk;
 using Genie.Win10.Utility;
 
-using System.Threading.Tasks;
-using System.Threading;
-
 namespace Genie.Sample.RPG
 {
     /// <summary>
@@ -28,49 +25,13 @@ namespace Genie.Sample.RPG
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private WinUtility win;
-
         public MainPage()
         {
-            this.win = new WinUtility();
-
             this.InitializeComponent();
-
-            HandleEvents();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            Game game = new Game(localFolder.Path);
-
-            CancellationTokenSource source1 = Handler();
-            source1.Cancel();
-        }
-
-        private void HandleEvents()
-        {
-            RpgEventManager mgr = new RpgEventManager();
-
-            EventQueue.Enqueue(new RpgGraphicsEvent());
-        }
-
-        private CancellationTokenSource Handler()
-        {
-            GameGraphics gg = new GameGraphics(swapChainPanel, (int)(swapChainPanel.RenderSize.Width), (int)(swapChainPanel.RenderSize.Height));
-            //game.Run();
-
-            CancellationTokenSource source1 = new CancellationTokenSource();
-            CancellationToken token1 = source1.Token;
-
-            Action myAction = (Action)(() =>
-            {
-                gg.Run(token1);
-            });
-
-            Task t = this.win.OnUiThread(myAction);
-
-            return source1;
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

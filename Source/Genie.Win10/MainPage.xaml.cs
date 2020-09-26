@@ -18,9 +18,6 @@ using Windows.Storage;
 using Genie.Yuk;
 using Genie.Win10.Utility;
 
-using System.Threading.Tasks;
-using System.Threading;
-
 namespace Genie.Win10
 {
     /// <summary>
@@ -28,49 +25,21 @@ namespace Genie.Win10
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private WinUtility win;
-
         public MainPage()
         {
-            this.win = new WinUtility();
-
             this.InitializeComponent();
 
-            HandleEvents();
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            Game game = new Game(localFolder.Path);
+
+            Server s = new Server();
+            s.HandleEvents();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            Game game = new Game(localFolder.Path);
-
-            CancellationTokenSource source1 = Handler();
-            source1.Cancel();
-        }
-
-        private void HandleEvents()
-        {
-            EventManager mgr = new EventManager();
-
-            EventQueue.Enqueue(new GraphicsEvent());
-        }
-
-        private CancellationTokenSource Handler()
-        {
-            GameGraphics gg = new GameGraphics(swapChainPanel, (int)(swapChainPanel.RenderSize.Width), (int)(swapChainPanel.RenderSize.Height));
-            //game.Run();
-
-            CancellationTokenSource source1 = new CancellationTokenSource();
-            CancellationToken token1 = source1.Token;
-
-            Action myAction = (Action)(() =>
-            {
-                gg.Run(token1);
-            });
-
-            Task t = this.win.OnUiThread(myAction);
-
-            return source1;
+            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client();
+            c.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

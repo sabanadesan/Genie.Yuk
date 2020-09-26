@@ -19,19 +19,8 @@ namespace Genie.Sample.RPG
         {
         }
 
-        public override Boolean Loop()
+        public override Boolean Loop(Genie.Yuk.Event _event)
         {
-            Genie.Yuk.Event _event = null;
-
-            try
-            {
-                _event = EventQueue.Dequeue();
-            }
-            catch (InvalidOperationException e)
-            {
-                return false;
-            }
-
             if (_event != null)
             {
                 if (_event.GetType() == typeof(RpgGraphicsEvent))

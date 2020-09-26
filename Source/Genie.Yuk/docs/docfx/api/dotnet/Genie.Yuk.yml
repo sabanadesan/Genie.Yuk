@@ -4,6 +4,7 @@ items:
   commentId: N:Genie.Yuk
   id: Genie.Yuk
   children:
+  - Genie.Yuk.Client
   - Genie.Yuk.Clock
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
@@ -23,6 +24,7 @@ items:
   - Genie.Yuk.Resource
   - Genie.Yuk.ResourceManager
   - Genie.Yuk.ResourceNode
+  - Genie.Yuk.Server
   - Genie.Yuk.Service
   - Genie.Yuk.ShaderResource
   - Genie.Yuk.ShaderResourceNode
@@ -38,6 +40,11 @@ items:
   assemblies:
   - Genie.Yuk
 references:
+- uid: Genie.Yuk.Client
+  commentId: T:Genie.Yuk.Client
+  name: Client
+  nameWithType: Client
+  fullName: Genie.Yuk.Client
 - uid: Genie.Yuk.Clock
   commentId: T:Genie.Yuk.Clock
   name: Clock
@@ -156,6 +163,11 @@ references:
   name: ResourceManager
   nameWithType: ResourceManager
   fullName: Genie.Yuk.ResourceManager
+- uid: Genie.Yuk.Server
+  commentId: T:Genie.Yuk.Server
+  name: Server
+  nameWithType: Server
+  fullName: Genie.Yuk.Server
 - uid: Genie.Yuk.Service
   commentId: T:Genie.Yuk.Service
   name: Service
