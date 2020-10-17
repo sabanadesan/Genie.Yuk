@@ -17,11 +17,23 @@ namespace Genie.Win10.Utility
     {
         private String m_IPAddress;
         private Game m_Game;
+        private EventManagerClient m_Events;
 
-        public Client(String path, String IPAddress = "127.0.0.1")
+        public Client(String path, EventManagerClient events = null, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
             m_Game = new Game(path);
+
+            if (events == null)
+            {
+                m_Events = new EventManagerClient();
+            }
+            else
+            {
+                m_Events = events;
+            }
+
+            EventQueueClient.Enqueue(new GraphicsEvent());
         }
 
         public void ConnectServer()

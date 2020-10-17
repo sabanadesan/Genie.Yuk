@@ -37,7 +37,7 @@ namespace Genie.Win10
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 
             Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client(localFolder.Path);
-            c.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
+            c.Handler(swapChainPanel, (int) swapChainPanel.RenderSize.Width, (int) swapChainPanel.RenderSize.Height);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

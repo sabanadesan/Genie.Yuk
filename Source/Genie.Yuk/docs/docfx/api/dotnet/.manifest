@@ -1,7 +1,7 @@
 {
   "Genie.Yuk": "Genie.Yuk.yml",
   "Genie.Yuk.Client": "Genie.Yuk.Client.yml",
-  "Genie.Yuk.Client.#ctor(System.String,System.String)": "Genie.Yuk.Client.yml",
+  "Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.ConnectServer": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.Handler": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.Wait": "Genie.Yuk.Client.yml",

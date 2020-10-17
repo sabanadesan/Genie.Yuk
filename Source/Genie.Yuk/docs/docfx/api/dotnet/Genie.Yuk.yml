@@ -91,6 +91,7 @@ references:
   fullName: Genie.Yuk.EventQueueClient
 - uid: Genie.Yuk.EventManagerClient
   commentId: T:Genie.Yuk.EventManagerClient
+  parent: Genie.Yuk
   name: EventManagerClient
   nameWithType: EventManagerClient
   fullName: Genie.Yuk.EventManagerClient

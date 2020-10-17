@@ -5,7 +5,7 @@ items:
   id: Client
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Client.#ctor(System.String,System.String)
+  - Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
   - Genie.Yuk.Client.ConnectServer
   - Genie.Yuk.Client.Handler
   - Genie.Yuk.Client.Wait
@@ -46,16 +46,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Client.#ctor(System.String,System.String)
-  commentId: M:Genie.Yuk.Client.#ctor(System.String,System.String)
-  id: '#ctor(System.String,System.String)'
+- uid: Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
+  commentId: M:Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
+  id: '#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)'
   parent: Genie.Yuk.Client
   langs:
   - csharp
   - vb
-  name: Client(String, String)
-  nameWithType: Client.Client(String, String)
-  fullName: Genie.Yuk.Client.Client(System.String, System.String)
+  name: Client(String, EventManagerClient, String)
+  nameWithType: Client.Client(String, EventManagerClient, String)
+  fullName: Genie.Yuk.Client.Client(System.String, Genie.Yuk.EventManagerClient, System.String)
   type: Constructor
   source:
     remote:
@@ -69,13 +69,15 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Client(string path, string IPAddress = "127.0.0.1")
+    content: public Client(string path, EventManagerClient events = null, string IPAddress = "127.0.0.1")
     parameters:
     - id: path
       type: System.String
+    - id: events
+      type: Genie.Yuk.EventManagerClient
     - id: IPAddress
       type: System.String
-    content.vb: Public Sub New(path As String, IPAddress As String = "127.0.0.1")
+    content.vb: Public Sub New(path As String, events As EventManagerClient = Nothing, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Client.#ctor*
   modifiers.csharp:
   - public
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Wait
     path: Genie.Core/Client.cs
-    startLine: 28
+    startLine: 35
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -129,7 +131,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Handler
     path: Genie.Core/Client.cs
-    startLine: 53
+    startLine: 60
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -159,7 +161,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ConnectServer
     path: Genie.Core/Client.cs
-    startLine: 59
+    startLine: 66
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -481,6 +483,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Genie.Yuk.EventManagerClient
+  commentId: T:Genie.Yuk.EventManagerClient
+  parent: Genie.Yuk
+  name: EventManagerClient
+  nameWithType: EventManagerClient
+  fullName: Genie.Yuk.EventManagerClient
 - uid: Genie.Yuk.Client.Wait*
   commentId: Overload:Genie.Yuk.Client.Wait
   name: Wait
