@@ -58,6 +58,8 @@
     name: StopEvent
   - uid: Genie.Yuk.Vulkan
     name: Vulkan
+  - uid: Genie.Yuk.WriteServer
+    name: WriteServer
 - uid: Genie3D.DirectX12
   name: Genie3D.DirectX12
   items:

@@ -21,7 +21,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: EventQueueServer
     path: Genie.Core/EventManager.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Enqueue
     path: Genie.Core/EventManager.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Dequeue
     path: Genie.Core/EventManager.cs
-    startLine: 18
+    startLine: 24
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

@@ -1,35 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Client
-  commentId: T:Genie.Yuk.Client
-  id: Client
+- uid: Genie.Yuk.WriteServer
+  commentId: T:Genie.Yuk.WriteServer
+  id: WriteServer
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Client.#ctor(System.String,System.String)
-  - Genie.Yuk.Client.ConnectServer
-  - Genie.Yuk.Client.Handler
-  - Genie.Yuk.Client.Wait
+  - Genie.Yuk.WriteServer.balanceLock
   langs:
   - csharp
   - vb
-  name: Client
-  nameWithType: Client
-  fullName: Genie.Yuk.Client
+  name: WriteServer
+  nameWithType: WriteServer
+  fullName: Genie.Yuk.WriteServer
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Client
-    path: Genie.Core/Client.cs
-    startLine: 12
+    id: WriteServer
+    path: Genie.Core/EventManager.cs
+    startLine: 10
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public class Client
-    content.vb: Public Class Client
+    content: public static class WriteServer
+    content.vb: Public Module WriteServer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,135 +39,46 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - static
   - class
   modifiers.vb:
   - Public
-  - Class
-- uid: Genie.Yuk.Client.#ctor(System.String,System.String)
-  commentId: M:Genie.Yuk.Client.#ctor(System.String,System.String)
-  id: '#ctor(System.String,System.String)'
-  parent: Genie.Yuk.Client
+  - Module
+- uid: Genie.Yuk.WriteServer.balanceLock
+  commentId: F:Genie.Yuk.WriteServer.balanceLock
+  id: balanceLock
+  parent: Genie.Yuk.WriteServer
   langs:
   - csharp
   - vb
-  name: Client(String, String)
-  nameWithType: Client.Client(String, String)
-  fullName: Genie.Yuk.Client.Client(System.String, System.String)
-  type: Constructor
+  name: balanceLock
+  nameWithType: WriteServer.balanceLock
+  fullName: Genie.Yuk.WriteServer.balanceLock
+  type: Field
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: Genie.Core/Client.cs
-    startLine: 18
+    id: balanceLock
+    path: Genie.Core/EventManager.cs
+    startLine: 12
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Client(string path, string IPAddress = "127.0.0.1")
-    parameters:
-    - id: path
-      type: System.String
-    - id: IPAddress
-      type: System.String
-    content.vb: Public Sub New(path As String, IPAddress As String = "127.0.0.1")
-  overload: Genie.Yuk.Client.#ctor*
+    content: public static readonly object balanceLock
+    return:
+      type: System.Object
+    content.vb: Public Shared ReadOnly balanceLock As Object
   modifiers.csharp:
   - public
+  - static
+  - readonly
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Client.Wait
-  commentId: M:Genie.Yuk.Client.Wait
-  id: Wait
-  parent: Genie.Yuk.Client
-  langs:
-  - csharp
-  - vb
-  name: Wait()
-  nameWithType: Client.Wait()
-  fullName: Genie.Yuk.Client.Wait()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Wait
-    path: Genie.Core/Client.cs
-    startLine: 28
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void Wait()
-    content.vb: Public Sub Wait
-  overload: Genie.Yuk.Client.Wait*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie.Yuk.Client.Handler
-  commentId: M:Genie.Yuk.Client.Handler
-  id: Handler
-  parent: Genie.Yuk.Client
-  langs:
-  - csharp
-  - vb
-  name: Handler()
-  nameWithType: Client.Handler()
-  fullName: Genie.Yuk.Client.Handler()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Handler
-    path: Genie.Core/Client.cs
-    startLine: 53
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void Handler()
-    content.vb: Public Sub Handler
-  overload: Genie.Yuk.Client.Handler*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie.Yuk.Client.ConnectServer
-  commentId: M:Genie.Yuk.Client.ConnectServer
-  id: ConnectServer
-  parent: Genie.Yuk.Client
-  langs:
-  - csharp
-  - vb
-  name: ConnectServer()
-  nameWithType: Client.ConnectServer()
-  fullName: Genie.Yuk.Client.ConnectServer()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: ConnectServer
-    path: Genie.Core/Client.cs
-    startLine: 59
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void ConnectServer()
-    content.vb: Public Sub ConnectServer
-  overload: Genie.Yuk.Client.ConnectServer*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
+  - Shared
+  - ReadOnly
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -469,31 +377,4 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Client.#ctor*
-  commentId: Overload:Genie.Yuk.Client.#ctor
-  name: Client
-  nameWithType: Client.Client
-  fullName: Genie.Yuk.Client.Client
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: Genie.Yuk.Client.Wait*
-  commentId: Overload:Genie.Yuk.Client.Wait
-  name: Wait
-  nameWithType: Client.Wait
-  fullName: Genie.Yuk.Client.Wait
-- uid: Genie.Yuk.Client.Handler*
-  commentId: Overload:Genie.Yuk.Client.Handler
-  name: Handler
-  nameWithType: Client.Handler
-  fullName: Genie.Yuk.Client.Handler
-- uid: Genie.Yuk.Client.ConnectServer*
-  commentId: Overload:Genie.Yuk.Client.ConnectServer
-  name: ConnectServer
-  nameWithType: Client.ConnectServer
-  fullName: Genie.Yuk.Client.ConnectServer
 shouldSkipMarkup: true

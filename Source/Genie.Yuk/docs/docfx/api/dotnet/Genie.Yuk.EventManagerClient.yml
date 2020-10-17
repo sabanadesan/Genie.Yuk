@@ -5,6 +5,8 @@ items:
   id: EventManagerClient
   parent: Genie.Yuk
   children:
+  - Genie.Yuk.EventManagerClient.#ctor(System.String)
+  - Genie.Yuk.EventManagerClient.Calculate(System.Threading.CancellationToken)
   - Genie.Yuk.EventManagerClient.Loop(Genie.Yuk.Event)
   - Genie.Yuk.EventManagerClient.Stop
   langs:
@@ -21,7 +23,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: EventManagerClient
     path: Genie.Core/EventManager.cs
-    startLine: 39
+    startLine: 45
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -49,6 +51,39 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Genie.Yuk.EventManagerClient.#ctor(System.String)
+  commentId: M:Genie.Yuk.EventManagerClient.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Genie.Yuk.EventManagerClient
+  langs:
+  - csharp
+  - vb
+  name: EventManagerClient(String)
+  nameWithType: EventManagerClient.EventManagerClient(String)
+  fullName: Genie.Yuk.EventManagerClient.EventManagerClient(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/EventManager.cs
+    startLine: 47
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public EventManagerClient(string process = "EventsWorkerClient")
+    parameters:
+    - id: process
+      type: System.String
+    content.vb: Public Sub New(process As String = "EventsWorkerClient")
+  overload: Genie.Yuk.EventManagerClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Genie.Yuk.EventManagerClient.Stop
   commentId: M:Genie.Yuk.EventManagerClient.Stop
   id: Stop
@@ -67,7 +102,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/EventManager.cs
-    startLine: 41
+    startLine: 51
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -76,6 +111,42 @@ items:
     content.vb: Public Overrides Sub Stop
   overridden: Genie.Yuk.EventManagerServer.Stop
   overload: Genie.Yuk.EventManagerClient.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.EventManagerClient.Calculate(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.EventManagerClient.Calculate(System.Threading.CancellationToken)
+  id: Calculate(System.Threading.CancellationToken)
+  parent: Genie.Yuk.EventManagerClient
+  langs:
+  - csharp
+  - vb
+  name: Calculate(CancellationToken)
+  nameWithType: EventManagerClient.Calculate(CancellationToken)
+  fullName: Genie.Yuk.EventManagerClient.Calculate(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Calculate
+    path: Genie.Core/EventManager.cs
+    startLine: 56
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Calculate(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Public Overrides Sub Calculate(token As CancellationToken)
+  overridden: Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+  overload: Genie.Yuk.EventManagerClient.Calculate*
   modifiers.csharp:
   - public
   - override
@@ -100,7 +171,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Loop
     path: Genie.Core/EventManager.cs
-    startLine: 84
+    startLine: 94
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -469,6 +540,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Genie.Yuk.EventManagerClient.#ctor*
+  commentId: Overload:Genie.Yuk.EventManagerClient.#ctor
+  name: EventManagerClient
+  nameWithType: EventManagerClient.EventManagerClient
+  fullName: Genie.Yuk.EventManagerClient.EventManagerClient
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.EventManagerServer.Stop
   commentId: M:Genie.Yuk.EventManagerServer.Stop
   parent: Genie.Yuk.EventManagerServer
@@ -502,6 +585,63 @@ references:
   name: Stop
   nameWithType: EventManagerClient.Stop
   fullName: Genie.Yuk.EventManagerClient.Stop
+- uid: Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+  parent: Genie.Yuk.EventManagerServer
+  isExternal: true
+  name: Calculate(CancellationToken)
+  nameWithType: EventManagerServer.Calculate(CancellationToken)
+  fullName: Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+    name: Calculate
+    nameWithType: EventManagerServer.Calculate
+    fullName: Genie.Yuk.EventManagerServer.Calculate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.EventManagerServer.Calculate(System.Threading.CancellationToken)
+    name: Calculate
+    nameWithType: EventManagerServer.Calculate
+    fullName: Genie.Yuk.EventManagerServer.Calculate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.EventManagerClient.Calculate*
+  commentId: Overload:Genie.Yuk.EventManagerClient.Calculate
+  name: Calculate
+  nameWithType: EventManagerClient.Calculate
+  fullName: Genie.Yuk.EventManagerClient.Calculate
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
 - uid: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
   commentId: M:Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
   parent: Genie.Yuk.EventManagerServer

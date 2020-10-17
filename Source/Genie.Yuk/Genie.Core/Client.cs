@@ -14,11 +14,14 @@ namespace Genie.Yuk
     {
         private String m_IPAddress;
         private Game m_Game;
+        private EventManagerClient m_Events;
 
         public Client(String path, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
             m_Game = new Game(path);
+
+            m_Events = new EventManagerClient();
 
             EventQueueClient.Enqueue(new GraphicsEvent());
         }

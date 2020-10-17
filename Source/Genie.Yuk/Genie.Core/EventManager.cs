@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace Genie.Yuk
 {
+
+    public static class WriteServer
+    {
+        public static readonly object balanceLock = new object();
+    }
+
     public static class EventQueueServer
     {
         private static Queue<Genie.Yuk.Event> _registeredEvents = new Queue<Genie.Yuk.Event>();
@@ -39,12 +45,16 @@ namespace Genie.Yuk
 
     public class EventManagerClient : EventManagerServer
     {
+        public EventManagerClient(String process = "EventsWorkerClient") : base(process)
+        {
+        }
+
         public override void Stop()
         {
             EventQueueClient.Enqueue(new StopEvent());
         }
 
-        private void Calculate(CancellationToken token)
+        public override void Calculate(CancellationToken token)
         {
             Boolean DoWhile = true;
 
@@ -88,7 +98,11 @@ namespace Genie.Yuk
             {
                 if (_event.GetType() == typeof(GraphicsEvent))
                 {
-                    System.Console.WriteLine("Draw Client");
+                    lock (WriteServer.balanceLock)
+                    {
+                        System.Console.WriteLine("Draw Client");
+                    }
+
                     EventQueueClient.Enqueue(new GraphicsEvent());
                 }
                 else if (_event.GetType() == typeof(JobEvent))
@@ -123,9 +137,9 @@ namespace Genie.Yuk
 
     public class EventManagerServer : Do
     {
-        public EventManagerServer()
+        public EventManagerServer(String process = "EventsWorkerServer")
         {
-            Process BackgroundWorker = new Process("EventsWorker");
+            Process BackgroundWorker = new Process(process);
             Task t = BackgroundWorker.Run(this);
         }
 
@@ -146,7 +160,7 @@ namespace Genie.Yuk
             EventQueueServer.Enqueue(new StopEvent());
         }
 
-        private void Calculate(CancellationToken token)
+        public virtual void Calculate(CancellationToken token)
         {
             Boolean DoWhile = true;
 
@@ -190,7 +204,11 @@ namespace Genie.Yuk
             {
                 if (_event.GetType() == typeof(GraphicsEvent))
                 {
-                    System.Console.WriteLine("Draw Server");
+                    lock (WriteServer.balanceLock)
+                    {
+                        System.Console.WriteLine("Draw Server");
+                    }
+              
                     EventQueueServer.Enqueue(new GraphicsEvent());
                 }
                 else if (_event.GetType() == typeof(JobEvent))

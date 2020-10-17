@@ -32,6 +32,7 @@ items:
   - Genie.Yuk.ShaderResourceNode
   - Genie.Yuk.StopEvent
   - Genie.Yuk.Vulkan
+  - Genie.Yuk.WriteServer
   langs:
   - csharp
   - vb
@@ -73,6 +74,11 @@ references:
   name: JobEvent
   nameWithType: JobEvent
   fullName: Genie.Yuk.JobEvent
+- uid: Genie.Yuk.WriteServer
+  commentId: T:Genie.Yuk.WriteServer
+  name: WriteServer
+  nameWithType: WriteServer
+  fullName: Genie.Yuk.WriteServer
 - uid: Genie.Yuk.EventQueueServer
   commentId: T:Genie.Yuk.EventQueueServer
   name: EventQueueServer
