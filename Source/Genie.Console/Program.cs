@@ -14,8 +14,6 @@ namespace Genie.Console
         {
             Server s = new Server();
 
-            EventQueue.Enqueue(new GraphicsEvent());
-
             Client c = new Client("Output");
             c.Handler();
             c.Wait();

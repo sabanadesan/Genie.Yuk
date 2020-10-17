@@ -12,10 +12,14 @@
     name: Do
   - uid: Genie.Yuk.Event
     name: Event
-  - uid: Genie.Yuk.EventManager
-    name: EventManager
-  - uid: Genie.Yuk.EventQueue
-    name: EventQueue
+  - uid: Genie.Yuk.EventManagerClient
+    name: EventManagerClient
+  - uid: Genie.Yuk.EventManagerServer
+    name: EventManagerServer
+  - uid: Genie.Yuk.EventQueueClient
+    name: EventQueueClient
+  - uid: Genie.Yuk.EventQueueServer
+    name: EventQueueServer
   - uid: Genie.Yuk.Game
     name: Game
   - uid: Genie.Yuk.GameGraphics

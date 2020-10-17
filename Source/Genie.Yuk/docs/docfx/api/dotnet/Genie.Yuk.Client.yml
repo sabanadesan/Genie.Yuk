@@ -99,7 +99,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Wait
     path: Genie.Core/Client.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -129,7 +129,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Handler
     path: Genie.Core/Client.cs
-    startLine: 48
+    startLine: 50
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -159,7 +159,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ConnectServer
     path: Genie.Core/Client.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

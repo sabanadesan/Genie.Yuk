@@ -13,7 +13,7 @@ namespace Genie.Sample.RPG
     {
     }
 
-    public class RpgEventManager : EventManager
+    public class RpgEventManager : EventManagerClient
     {
         public RpgEventManager() : base()
         {
@@ -25,8 +25,8 @@ namespace Genie.Sample.RPG
             {
                 if (_event.GetType() == typeof(RpgGraphicsEvent))
                 {
-                    System.Console.WriteLine("Draw");
-                    EventQueue.Enqueue(new RpgGraphicsEvent());
+                    System.Console.WriteLine("Draw RPG Client");
+                    EventQueueClient.Enqueue(new RpgGraphicsEvent());
                 }
                 else if (_event.GetType() == typeof(StopEvent))
                 {

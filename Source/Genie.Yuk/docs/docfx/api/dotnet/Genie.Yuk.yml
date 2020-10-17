@@ -9,8 +9,10 @@ items:
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
   - Genie.Yuk.Event
-  - Genie.Yuk.EventManager
-  - Genie.Yuk.EventQueue
+  - Genie.Yuk.EventManagerClient
+  - Genie.Yuk.EventManagerServer
+  - Genie.Yuk.EventQueueClient
+  - Genie.Yuk.EventQueueServer
   - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
   - Genie.Yuk.Graphics
@@ -71,17 +73,27 @@ references:
   name: JobEvent
   nameWithType: JobEvent
   fullName: Genie.Yuk.JobEvent
-- uid: Genie.Yuk.EventQueue
-  commentId: T:Genie.Yuk.EventQueue
-  name: EventQueue
-  nameWithType: EventQueue
-  fullName: Genie.Yuk.EventQueue
-- uid: Genie.Yuk.EventManager
-  commentId: T:Genie.Yuk.EventManager
+- uid: Genie.Yuk.EventQueueServer
+  commentId: T:Genie.Yuk.EventQueueServer
+  name: EventQueueServer
+  nameWithType: EventQueueServer
+  fullName: Genie.Yuk.EventQueueServer
+- uid: Genie.Yuk.EventQueueClient
+  commentId: T:Genie.Yuk.EventQueueClient
+  name: EventQueueClient
+  nameWithType: EventQueueClient
+  fullName: Genie.Yuk.EventQueueClient
+- uid: Genie.Yuk.EventManagerClient
+  commentId: T:Genie.Yuk.EventManagerClient
+  name: EventManagerClient
+  nameWithType: EventManagerClient
+  fullName: Genie.Yuk.EventManagerClient
+- uid: Genie.Yuk.EventManagerServer
+  commentId: T:Genie.Yuk.EventManagerServer
   parent: Genie.Yuk
-  name: EventManager
-  nameWithType: EventManager
-  fullName: Genie.Yuk.EventManager
+  name: EventManagerServer
+  nameWithType: EventManagerServer
+  fullName: Genie.Yuk.EventManagerServer
 - uid: Genie.Yuk.Game
   commentId: T:Genie.Yuk.Game
   name: Game

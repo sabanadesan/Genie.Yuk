@@ -30,8 +30,6 @@ namespace Genie.Win10
             this.InitializeComponent();
 
             Server s = new Server();
-
-            EventQueue.Enqueue(new GraphicsEvent());
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)

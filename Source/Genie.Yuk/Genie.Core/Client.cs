@@ -19,6 +19,8 @@ namespace Genie.Yuk
         {
             m_IPAddress = IPAddress;
             m_Game = new Game(path);
+
+            EventQueueClient.Enqueue(new GraphicsEvent());
         }
 
         public void Wait()

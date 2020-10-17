@@ -1,43 +1,41 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.EventManager
-  commentId: T:Genie.Yuk.EventManager
-  id: EventManager
+- uid: Genie.Yuk.EventManagerClient
+  commentId: T:Genie.Yuk.EventManagerClient
+  id: EventManagerClient
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.EventManager.#ctor
-  - Genie.Yuk.EventManager.Loop(Genie.Yuk.Event)
-  - Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
-  - Genie.Yuk.EventManager.Stop
+  - Genie.Yuk.EventManagerClient.Loop(Genie.Yuk.Event)
+  - Genie.Yuk.EventManagerClient.Stop
   langs:
   - csharp
   - vb
-  name: EventManager
-  nameWithType: EventManager
-  fullName: Genie.Yuk.EventManager
+  name: EventManagerClient
+  nameWithType: EventManagerClient
+  fullName: Genie.Yuk.EventManagerClient
   type: Class
   source:
     remote:
       path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: EventManager
+    id: EventManagerClient
     path: Genie.Core/EventManager.cs
-    startLine: 24
+    startLine: 39
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: 'public class EventManager : Do'
+    content: 'public class EventManagerClient : EventManagerServer'
     content.vb: >-
-      Public Class EventManager
-          Inherits
-
-           Do
+      Public Class EventManagerClient
+          Inherits EventManagerServer
   inheritance:
   - System.Object
   - Genie.Yuk.Do
+  - Genie.Yuk.EventManagerServer
   inheritedMembers:
+  - Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -51,82 +49,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.EventManager.#ctor
-  commentId: M:Genie.Yuk.EventManager.#ctor
-  id: '#ctor'
-  parent: Genie.Yuk.EventManager
-  langs:
-  - csharp
-  - vb
-  name: EventManager()
-  nameWithType: EventManager.EventManager()
-  fullName: Genie.Yuk.EventManager.EventManager()
-  type: Constructor
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: .ctor
-    path: Genie.Core/EventManager.cs
-    startLine: 26
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public EventManager()
-    content.vb: Public Sub New
-  overload: Genie.Yuk.EventManager.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
-  id: Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.EventManager
-  langs:
-  - csharp
-  - vb
-  name: Run(CancellationToken)
-  nameWithType: EventManager.Run(CancellationToken)
-  fullName: Genie.Yuk.EventManager.Run(System.Threading.CancellationToken)
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/EventManager.cs
-    startLine: 32
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public override void Run(CancellationToken token)
-    parameters:
-    - id: token
-      type: System.Threading.CancellationToken
-    content.vb: Public Overrides Sub Run(token As CancellationToken)
-  overridden: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  overload: Genie.Yuk.EventManager.Run*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: Genie.Yuk.EventManager.Stop
-  commentId: M:Genie.Yuk.EventManager.Stop
+- uid: Genie.Yuk.EventManagerClient.Stop
+  commentId: M:Genie.Yuk.EventManagerClient.Stop
   id: Stop
-  parent: Genie.Yuk.EventManager
+  parent: Genie.Yuk.EventManagerClient
   langs:
   - csharp
   - vb
   name: Stop()
-  nameWithType: EventManager.Stop()
-  fullName: Genie.Yuk.EventManager.Stop()
+  nameWithType: EventManagerClient.Stop()
+  fullName: Genie.Yuk.EventManagerClient.Stop()
   type: Method
   source:
     remote:
@@ -135,31 +67,31 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/EventManager.cs
-    startLine: 44
+    startLine: 41
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
     content: public override void Stop()
     content.vb: Public Overrides Sub Stop
-  overridden: Genie.Yuk.Do.Stop
-  overload: Genie.Yuk.EventManager.Stop*
+  overridden: Genie.Yuk.EventManagerServer.Stop
+  overload: Genie.Yuk.EventManagerClient.Stop*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Genie.Yuk.EventManager.Loop(Genie.Yuk.Event)
-  commentId: M:Genie.Yuk.EventManager.Loop(Genie.Yuk.Event)
+- uid: Genie.Yuk.EventManagerClient.Loop(Genie.Yuk.Event)
+  commentId: M:Genie.Yuk.EventManagerClient.Loop(Genie.Yuk.Event)
   id: Loop(Genie.Yuk.Event)
-  parent: Genie.Yuk.EventManager
+  parent: Genie.Yuk.EventManagerClient
   langs:
   - csharp
   - vb
   name: Loop(Event)
-  nameWithType: EventManager.Loop(Event)
-  fullName: Genie.Yuk.EventManager.Loop(Genie.Yuk.Event)
+  nameWithType: EventManagerClient.Loop(Event)
+  fullName: Genie.Yuk.EventManagerClient.Loop(Genie.Yuk.Event)
   type: Method
   source:
     remote:
@@ -168,25 +100,26 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Loop
     path: Genie.Core/EventManager.cs
-    startLine: 87
+    startLine: 84
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public virtual bool Loop(Event _event)
+    content: public override bool Loop(Event _event)
     parameters:
     - id: _event
       type: Genie.Yuk.Event
     return:
       type: System.Boolean
-    content.vb: Public Overridable Function Loop(_event As  Event) As Boolean
-  overload: Genie.Yuk.EventManager.Loop*
+    content.vb: Public Overrides Function Loop(_event As  Event) As Boolean
+  overridden: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+  overload: Genie.Yuk.EventManagerClient.Loop*
   modifiers.csharp:
   - public
-  - virtual
+  - override
   modifiers.vb:
   - Public
-  - Overridable
+  - Overrides
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -206,6 +139,51 @@ references:
   name: Do
   nameWithType: Do
   fullName: Genie.Yuk.Do
+- uid: Genie.Yuk.EventManagerServer
+  commentId: T:Genie.Yuk.EventManagerServer
+  parent: Genie.Yuk
+  name: EventManagerServer
+  nameWithType: EventManagerServer
+  fullName: Genie.Yuk.EventManagerServer
+- uid: Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+  commentId: M:Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+  parent: Genie.Yuk.EventManagerServer
+  isExternal: true
+  name: Run(CancellationToken)
+  nameWithType: EventManagerServer.Run(CancellationToken)
+  fullName: Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: EventManagerServer.Run
+    fullName: Genie.Yuk.EventManagerServer.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+    name: Run
+    nameWithType: EventManagerServer.Run
+    fullName: Genie.Yuk.EventManagerServer.Run
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -491,79 +469,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.EventManager.#ctor*
-  commentId: Overload:Genie.Yuk.EventManager.#ctor
-  name: EventManager
-  nameWithType: EventManager.EventManager
-  fullName: Genie.Yuk.EventManager.EventManager
-- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Do
-  isExternal: true
-  name: Run(CancellationToken)
-  nameWithType: Do.Run(CancellationToken)
-  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  spec.csharp:
-  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    nameWithType: CancellationToken
-    fullName: System.Threading.CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    nameWithType: CancellationToken
-    fullName: System.Threading.CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Genie.Yuk.EventManager.Run*
-  commentId: Overload:Genie.Yuk.EventManager.Run
-  name: Run
-  nameWithType: EventManager.Run
-  fullName: Genie.Yuk.EventManager.Run
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-- uid: Genie.Yuk.Do.Stop
-  commentId: M:Genie.Yuk.Do.Stop
-  parent: Genie.Yuk.Do
+- uid: Genie.Yuk.EventManagerServer.Stop
+  commentId: M:Genie.Yuk.EventManagerServer.Stop
+  parent: Genie.Yuk.EventManagerServer
   name: Stop()
-  nameWithType: Do.Stop()
-  fullName: Genie.Yuk.Do.Stop()
+  nameWithType: EventManagerServer.Stop()
+  fullName: Genie.Yuk.EventManagerServer.Stop()
   spec.csharp:
-  - uid: Genie.Yuk.Do.Stop
+  - uid: Genie.Yuk.EventManagerServer.Stop
     name: Stop
-    nameWithType: Do.Stop
-    fullName: Genie.Yuk.Do.Stop
+    nameWithType: EventManagerServer.Stop
+    fullName: Genie.Yuk.EventManagerServer.Stop
   - name: (
     nameWithType: (
     fullName: (
@@ -571,26 +487,62 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Genie.Yuk.Do.Stop
+  - uid: Genie.Yuk.EventManagerServer.Stop
     name: Stop
-    nameWithType: Do.Stop
-    fullName: Genie.Yuk.Do.Stop
+    nameWithType: EventManagerServer.Stop
+    fullName: Genie.Yuk.EventManagerServer.Stop
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Genie.Yuk.EventManager.Stop*
-  commentId: Overload:Genie.Yuk.EventManager.Stop
+- uid: Genie.Yuk.EventManagerClient.Stop*
+  commentId: Overload:Genie.Yuk.EventManagerClient.Stop
   name: Stop
-  nameWithType: EventManager.Stop
-  fullName: Genie.Yuk.EventManager.Stop
-- uid: Genie.Yuk.EventManager.Loop*
-  commentId: Overload:Genie.Yuk.EventManager.Loop
+  nameWithType: EventManagerClient.Stop
+  fullName: Genie.Yuk.EventManagerClient.Stop
+- uid: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+  commentId: M:Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+  parent: Genie.Yuk.EventManagerServer
+  name: Loop(Event)
+  nameWithType: EventManagerServer.Loop(Event)
+  fullName: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+  spec.csharp:
+  - uid: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+    name: Loop
+    nameWithType: EventManagerServer.Loop
+    fullName: Genie.Yuk.EventManagerServer.Loop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Genie.Yuk.Event
+    name: Event
+    nameWithType: Event
+    fullName: Genie.Yuk.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.EventManagerServer.Loop(Genie.Yuk.Event)
+    name: Loop
+    nameWithType: EventManagerServer.Loop
+    fullName: Genie.Yuk.EventManagerServer.Loop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Genie.Yuk.Event
+    name: Event
+    nameWithType: Event
+    fullName: Genie.Yuk.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.EventManagerClient.Loop*
+  commentId: Overload:Genie.Yuk.EventManagerClient.Loop
   name: Loop
-  nameWithType: EventManager.Loop
-  fullName: Genie.Yuk.EventManager.Loop
+  nameWithType: EventManagerClient.Loop
+  fullName: Genie.Yuk.EventManagerClient.Loop
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk

@@ -32,8 +32,6 @@ namespace Genie.Sample.RPG
             RpgEventManager events = new RpgEventManager();
 
             Server s = new Server(events);
-
-            EventQueue.Enqueue(new GraphicsEvent());
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)

@@ -1,39 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Do
-  commentId: T:Genie.Yuk.Do
-  id: Do
+- uid: Genie.Yuk.EventQueueClient
+  commentId: T:Genie.Yuk.EventQueueClient
+  id: EventQueueClient
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  - Genie.Yuk.Do.Stop
+  - Genie.Yuk.EventQueueClient.Dequeue
+  - Genie.Yuk.EventQueueClient.Enqueue(Genie.Yuk.Event)
   langs:
   - csharp
   - vb
-  name: Do
-  nameWithType: Do
-  fullName: Genie.Yuk.Do
+  name: EventQueueClient
+  nameWithType: EventQueueClient
+  fullName: Genie.Yuk.EventQueueClient
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Do
-    path: Genie.Core/Process.cs
-    startLine: 100
+    id: EventQueueClient
+    path: Genie.Core/EventManager.cs
+    startLine: 24
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract class Do
-    content.vb: Public MustInherit Class Do
+    content: public static class EventQueueClient
+    content.vb: Public Module EventQueueClient
   inheritance:
   - System.Object
-  derivedClasses:
-  - Genie.Yuk.EventManagerServer
-  - Genie.Yuk.Game
-  - Genie.Yuk.GameGraphics
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -44,79 +40,80 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - abstract
+  - static
   - class
   modifiers.vb:
   - Public
-  - MustInherit
-  - Class
-- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  id: Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Do
+  - Module
+- uid: Genie.Yuk.EventQueueClient.Enqueue(Genie.Yuk.Event)
+  commentId: M:Genie.Yuk.EventQueueClient.Enqueue(Genie.Yuk.Event)
+  id: Enqueue(Genie.Yuk.Event)
+  parent: Genie.Yuk.EventQueueClient
   langs:
   - csharp
   - vb
-  name: Run(CancellationToken)
-  nameWithType: Do.Run(CancellationToken)
-  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  name: Enqueue(Event)
+  nameWithType: EventQueueClient.Enqueue(Event)
+  fullName: Genie.Yuk.EventQueueClient.Enqueue(Genie.Yuk.Event)
   type: Method
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/Process.cs
-    startLine: 102
+    id: Enqueue
+    path: Genie.Core/EventManager.cs
+    startLine: 28
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract void Run(CancellationToken token)
+    content: public static void Enqueue(Event toRegister)
     parameters:
-    - id: token
-      type: System.Threading.CancellationToken
-    content.vb: Public MustOverride Sub Run(token As CancellationToken)
-  overload: Genie.Yuk.Do.Run*
+    - id: toRegister
+      type: Genie.Yuk.Event
+    content.vb: Public Shared Sub Enqueue(toRegister As  Event)
+  overload: Genie.Yuk.EventQueueClient.Enqueue*
   modifiers.csharp:
   - public
-  - abstract
+  - static
   modifiers.vb:
   - Public
-  - MustOverride
-- uid: Genie.Yuk.Do.Stop
-  commentId: M:Genie.Yuk.Do.Stop
-  id: Stop
-  parent: Genie.Yuk.Do
+  - Shared
+- uid: Genie.Yuk.EventQueueClient.Dequeue
+  commentId: M:Genie.Yuk.EventQueueClient.Dequeue
+  id: Dequeue
+  parent: Genie.Yuk.EventQueueClient
   langs:
   - csharp
   - vb
-  name: Stop()
-  nameWithType: Do.Stop()
-  fullName: Genie.Yuk.Do.Stop()
+  name: Dequeue()
+  nameWithType: EventQueueClient.Dequeue()
+  fullName: Genie.Yuk.EventQueueClient.Dequeue()
   type: Method
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      path: Source/Genie.Yuk/Genie.Core/EventManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Stop
-    path: Genie.Core/Process.cs
-    startLine: 104
+    id: Dequeue
+    path: Genie.Core/EventManager.cs
+    startLine: 33
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract void Stop()
-    content.vb: Public MustOverride Sub Stop
-  overload: Genie.Yuk.Do.Stop*
+    content: public static Event Dequeue()
+    return:
+      type: Genie.Yuk.Event
+    content.vb: 'Public Shared Function Dequeue As '
+  overload: Genie.Yuk.EventQueueClient.Dequeue*
   modifiers.csharp:
   - public
-  - abstract
+  - static
   modifiers.vb:
   - Public
-  - MustOverride
+  - Shared
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -415,27 +412,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Do.Run*
-  commentId: Overload:Genie.Yuk.Do.Run
-  name: Run
-  nameWithType: Do.Run
-  fullName: Genie.Yuk.Do.Run
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-- uid: Genie.Yuk.Do.Stop*
-  commentId: Overload:Genie.Yuk.Do.Stop
-  name: Stop
-  nameWithType: Do.Stop
-  fullName: Genie.Yuk.Do.Stop
+- uid: Genie.Yuk.EventQueueClient.Enqueue*
+  commentId: Overload:Genie.Yuk.EventQueueClient.Enqueue
+  name: Enqueue
+  nameWithType: EventQueueClient.Enqueue
+  fullName: Genie.Yuk.EventQueueClient.Enqueue
+- uid: Genie.Yuk.Event
+  commentId: T:Genie.Yuk.Event
+  parent: Genie.Yuk
+  name: Event
+  nameWithType: Event
+  fullName: Genie.Yuk.Event
+- uid: Genie.Yuk.EventQueueClient.Dequeue*
+  commentId: Overload:Genie.Yuk.EventQueueClient.Dequeue
+  name: Dequeue
+  nameWithType: EventQueueClient.Dequeue
+  fullName: Genie.Yuk.EventQueueClient.Dequeue
 shouldSkipMarkup: true
