@@ -52,7 +52,7 @@ namespace Genie.Sample.RPG
                 if (_event.GetType() == typeof(RpgGraphicsEvent))
                 {
                     System.Console.WriteLine("Draw RPG Server");
-                    EventQueueClient.Enqueue(new RpgGraphicsEvent());
+                    EventQueueServer.Enqueue(new RpgGraphicsEvent());
                 }
                 else if (_event.GetType() == typeof(StopEvent))
                 {
