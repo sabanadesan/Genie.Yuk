@@ -12,14 +12,11 @@ namespace Genie.Console
     {
         static void Main(string[] args)
         {
-            Game game = new Game("Output");
-
-            EventManager e = new EventManager();
-            EventQueue.Enqueue(new GraphicsEvent());
-
             Server s = new Server();
 
-            Client c = new Client();
+            EventQueue.Enqueue(new GraphicsEvent());
+
+            Client c = new Client("Output");
             c.Handler();
             c.Wait();
         }

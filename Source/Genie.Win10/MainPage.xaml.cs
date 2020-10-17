@@ -29,18 +29,16 @@ namespace Genie.Win10
         {
             this.InitializeComponent();
 
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            Game game = new Game(localFolder.Path);
-
-            EventManager e = new EventManager();
-            EventQueue.Enqueue(new GraphicsEvent());
-
             Server s = new Server();
+
+            EventQueue.Enqueue(new GraphicsEvent());
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client();
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+
+            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client(localFolder.Path);
             c.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
         }
 

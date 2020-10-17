@@ -78,6 +78,7 @@ references:
   fullName: Genie.Yuk.EventQueue
 - uid: Genie.Yuk.EventManager
   commentId: T:Genie.Yuk.EventManager
+  parent: Genie.Yuk
   name: EventManager
   nameWithType: EventManager
   fullName: Genie.Yuk.EventManager

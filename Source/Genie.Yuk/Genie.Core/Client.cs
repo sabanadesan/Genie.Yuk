@@ -13,10 +13,12 @@ namespace Genie.Yuk
     public class Client
     {
         private String m_IPAddress;
+        private Game m_Game;
 
-        public Client(String IPAddress = "127.0.0.1")
+        public Client(String path, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
+            m_Game = new Game(path);
         }
 
         public void Wait()

@@ -5,7 +5,7 @@ items:
   id: Client
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Client.#ctor(System.String)
+  - Genie.Yuk.Client.#ctor(System.String,System.String)
   - Genie.Yuk.Client.ConnectServer
   - Genie.Yuk.Client.Handler
   - Genie.Yuk.Client.Wait
@@ -46,16 +46,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Client.#ctor(System.String)
-  commentId: M:Genie.Yuk.Client.#ctor(System.String)
-  id: '#ctor(System.String)'
+- uid: Genie.Yuk.Client.#ctor(System.String,System.String)
+  commentId: M:Genie.Yuk.Client.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
   parent: Genie.Yuk.Client
   langs:
   - csharp
   - vb
-  name: Client(String)
-  nameWithType: Client.Client(String)
-  fullName: Genie.Yuk.Client.Client(System.String)
+  name: Client(String, String)
+  nameWithType: Client.Client(String, String)
+  fullName: Genie.Yuk.Client.Client(System.String, System.String)
   type: Constructor
   source:
     remote:
@@ -64,16 +64,18 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Client.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Client(string IPAddress = "127.0.0.1")
+    content: public Client(string path, string IPAddress = "127.0.0.1")
     parameters:
+    - id: path
+      type: System.String
     - id: IPAddress
       type: System.String
-    content.vb: Public Sub New(IPAddress As String = "127.0.0.1")
+    content.vb: Public Sub New(path As String, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Client.#ctor*
   modifiers.csharp:
   - public
@@ -97,7 +99,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Wait
     path: Genie.Core/Client.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -127,7 +129,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Handler
     path: Genie.Core/Client.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ConnectServer
     path: Genie.Core/Client.cs
-    startLine: 52
+    startLine: 54
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

@@ -29,19 +29,19 @@ namespace Genie.Sample.RPG
         {
             this.InitializeComponent();
 
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            Game game = new Game(localFolder.Path);
+            RpgEventManager events = new RpgEventManager();
 
-            RpgEventManager e = new RpgEventManager();
+            Server s = new Server(events);
+
             EventQueue.Enqueue(new GraphicsEvent());
-
-            Server s = new Server();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client();
-            c.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+
+            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client(localFolder.Path);
+            c.Handler(swapChainPanel, (int) swapChainPanel.RenderSize.Width, (int) swapChainPanel.RenderSize.Height);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -11,10 +11,20 @@ namespace Genie.Yuk
     public class Server
     {
         private String m_IPAddress;
+        private EventManager m_Events;
 
-        public Server(String IPAddress = "127.0.0.1")
+        public Server(EventManager events = null, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
+
+            if (events == null)
+            {
+                m_Events = new EventManager();
+            }
+            else
+            {
+                m_Events = events;
+            }
         }
 
         public void StartServer()

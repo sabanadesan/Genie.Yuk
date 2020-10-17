@@ -1,7 +1,7 @@
 {
   "Genie.Yuk": "Genie.Yuk.yml",
   "Genie.Yuk.Client": "Genie.Yuk.Client.yml",
-  "Genie.Yuk.Client.#ctor(System.String)": "Genie.Yuk.Client.yml",
+  "Genie.Yuk.Client.#ctor(System.String,System.String)": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.ConnectServer": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.Handler": "Genie.Yuk.Client.yml",
   "Genie.Yuk.Client.Wait": "Genie.Yuk.Client.yml",
@@ -88,7 +88,7 @@
   "Genie.Yuk.ResourceNode.Internal_GUID": "Genie.Yuk.ResourceNode.yml",
   "Genie.Yuk.ResourceNode.Version": "Genie.Yuk.ResourceNode.yml",
   "Genie.Yuk.Server": "Genie.Yuk.Server.yml",
-  "Genie.Yuk.Server.#ctor(System.String)": "Genie.Yuk.Server.yml",
+  "Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)": "Genie.Yuk.Server.yml",
   "Genie.Yuk.Server.StartServer": "Genie.Yuk.Server.yml",
   "Genie.Yuk.Service": "Genie.Yuk.Service.yml",
   "Genie.Yuk.Service.Register``1(``0)": "Genie.Yuk.Service.yml",
