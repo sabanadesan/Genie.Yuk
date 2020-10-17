@@ -83,7 +83,7 @@ namespace Genie.Yuk
                 }
                 catch (InvalidOperationException e)
                 {
-                    DoWhile = false;
+                    //DoWhile = false;
                 }
 
                 lastTime = current;
@@ -189,7 +189,7 @@ namespace Genie.Yuk
                 }
                 catch (InvalidOperationException e)
                 {
-                    DoWhile = false;
+                    //DoWhile = false;
                 }
 
                 lastTime = current;
