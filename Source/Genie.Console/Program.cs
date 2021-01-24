@@ -12,6 +12,9 @@ namespace Genie.Console
     {
         static void Main(string[] args)
         {
+            ScriptingEngine e = new ScriptingEngine();
+            e.GenerateAssembly();
+
             Server s = new Server();
 
             Client c = new Client("Output");

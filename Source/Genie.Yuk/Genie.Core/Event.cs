@@ -18,19 +18,19 @@ namespace Genie.Yuk
 
     public class JobEvent : Event
     {
-        private Queue<Genie.Yuk.Event> _jobEvents;
+        private Queue<Event> _jobEvents;
 
         public JobEvent()
         {
-            _jobEvents = new Queue<Genie.Yuk.Event>();
+            _jobEvents = new Queue<Event>();
         }
 
-        public void Enqueue(Genie.Yuk.Event toRegister)
+        public void Enqueue(Event toRegister)
         {
             _jobEvents.Enqueue(toRegister);
         }
 
-        public Genie.Yuk.Event Dequeue()
+        public Event Dequeue()
         {
             return _jobEvents.Dequeue();
         }

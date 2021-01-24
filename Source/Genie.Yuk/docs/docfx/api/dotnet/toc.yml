@@ -10,6 +10,8 @@
     name: DirectX
   - uid: Genie.Yuk.Do
     name: Do
+  - uid: Genie.Yuk.Entity
+    name: Entity
   - uid: Genie.Yuk.Event
     name: Event
   - uid: Genie.Yuk.EventManagerClient
@@ -46,6 +48,8 @@
     name: ResourceManager
   - uid: Genie.Yuk.ResourceNode
     name: ResourceNode
+  - uid: Genie.Yuk.ScriptingEngine
+    name: ScriptingEngine
   - uid: Genie.Yuk.Server
     name: Server
   - uid: Genie.Yuk.Service

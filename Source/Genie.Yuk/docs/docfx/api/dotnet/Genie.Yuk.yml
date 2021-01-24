@@ -8,6 +8,7 @@ items:
   - Genie.Yuk.Clock
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
+  - Genie.Yuk.Entity
   - Genie.Yuk.Event
   - Genie.Yuk.EventManagerClient
   - Genie.Yuk.EventManagerServer
@@ -26,6 +27,7 @@ items:
   - Genie.Yuk.Resource
   - Genie.Yuk.ResourceManager
   - Genie.Yuk.ResourceNode
+  - Genie.Yuk.ScriptingEngine
   - Genie.Yuk.Server
   - Genie.Yuk.Service
   - Genie.Yuk.ShaderResource
@@ -53,6 +55,11 @@ references:
   name: Clock
   nameWithType: Clock
   fullName: Genie.Yuk.Clock
+- uid: Genie.Yuk.Entity
+  commentId: T:Genie.Yuk.Entity
+  name: Entity
+  nameWithType: Entity
+  fullName: Genie.Yuk.Entity
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk
@@ -183,6 +190,11 @@ references:
   name: ResourceManager
   nameWithType: ResourceManager
   fullName: Genie.Yuk.ResourceManager
+- uid: Genie.Yuk.ScriptingEngine
+  commentId: T:Genie.Yuk.ScriptingEngine
+  name: ScriptingEngine
+  nameWithType: ScriptingEngine
+  fullName: Genie.Yuk.ScriptingEngine
 - uid: Genie.Yuk.Server
   commentId: T:Genie.Yuk.Server
   name: Server
