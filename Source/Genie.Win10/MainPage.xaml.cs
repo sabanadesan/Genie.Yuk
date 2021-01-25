@@ -25,19 +25,22 @@ namespace Genie.Win10
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Genie.Win10.Utility.Client client;
+        public Server server;
+
         public MainPage()
         {
             this.InitializeComponent();
 
-            Server s = new Server();
+            server = new Server();
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 
-            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client(localFolder.Path);
-            c.Handler(swapChainPanel, (int) swapChainPanel.RenderSize.Width, (int) swapChainPanel.RenderSize.Height);
+            client = new Genie.Win10.Utility.Client(localFolder.Path);
+            client.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -46,6 +49,11 @@ namespace Genie.Win10
 
         private void swapChainPanel_Unloaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void SubscribeButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

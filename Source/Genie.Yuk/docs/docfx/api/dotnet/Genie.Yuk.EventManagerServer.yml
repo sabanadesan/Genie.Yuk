@@ -32,7 +32,10 @@ items:
     content: 'public class EventManagerServer : Do'
     content.vb: >-
       Public Class EventManagerServer
+
           Inherits
+
+
 
            Do
   inheritance:

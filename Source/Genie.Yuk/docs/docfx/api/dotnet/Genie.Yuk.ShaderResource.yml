@@ -27,6 +27,7 @@ items:
     content: 'public class ShaderResource : Resource'
     content.vb: >-
       Public Class ShaderResource
+
           Inherits Resource
   inheritance:
   - System.Object

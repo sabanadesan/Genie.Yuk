@@ -30,7 +30,10 @@ items:
     content: 'public class Game : Do'
     content.vb: >-
       Public Class Game
+
           Inherits
+
+
 
            Do
   inheritance:

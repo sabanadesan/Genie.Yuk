@@ -9,7 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Subscribe" Click="SubscribeButton_Click" Grid.Row="0" Grid.Column="0"/>
         <SwapChainPanel x:Name="swapChainPanel" Loaded="swapChainPanel_Loaded" Unloaded="swapChainPanel_Unloaded"
-                        SizeChanged="swapChainPanel_SizeChanged"/>
+                        SizeChanged="swapChainPanel_SizeChanged" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Page>
