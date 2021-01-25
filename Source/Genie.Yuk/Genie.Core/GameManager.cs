@@ -15,8 +15,16 @@ namespace Genie.Yuk
 
         private static String _path;
 
+        private EntityManager _entityManager;
+
         private GameManager() {
+            _entityManager = new EntityManager();
             Run();
+        }
+
+        public void AddEntity()
+        {
+            _entityManager.AddEntity();
         }
 
         private void Run()

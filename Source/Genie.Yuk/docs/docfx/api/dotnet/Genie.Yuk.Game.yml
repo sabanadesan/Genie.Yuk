@@ -6,6 +6,7 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Game.#ctor(System.String)
+  - Genie.Yuk.Game.AddEntity
   - Genie.Yuk.Game.Run(System.Threading.CancellationToken)
   - Genie.Yuk.Game.Stop
   langs:
@@ -30,10 +31,7 @@ items:
     content: 'public class Game : Do'
     content.vb: >-
       Public Class Game
-
           Inherits
-
-
 
            Do
   inheritance:
@@ -71,7 +69,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Game.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -104,7 +102,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/Game.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -140,7 +138,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/Game.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -155,6 +153,36 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: Genie.Yuk.Game.AddEntity
+  commentId: M:Genie.Yuk.Game.AddEntity
+  id: AddEntity
+  parent: Genie.Yuk.Game
+  langs:
+  - csharp
+  - vb
+  name: AddEntity()
+  nameWithType: Game.AddEntity()
+  fullName: Genie.Yuk.Game.AddEntity()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Game.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AddEntity
+    path: Genie.Core/Game.cs
+    startLine: 31
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void AddEntity()
+    content.vb: Public Sub AddEntity
+  overload: Genie.Yuk.Game.AddEntity*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -561,4 +589,9 @@ references:
   name: Stop
   nameWithType: Game.Stop
   fullName: Genie.Yuk.Game.Stop
+- uid: Genie.Yuk.Game.AddEntity*
+  commentId: Overload:Genie.Yuk.Game.AddEntity
+  name: AddEntity
+  nameWithType: Game.AddEntity
+  fullName: Genie.Yuk.Game.AddEntity
 shouldSkipMarkup: true

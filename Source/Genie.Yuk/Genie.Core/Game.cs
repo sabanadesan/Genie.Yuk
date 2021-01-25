@@ -9,20 +9,29 @@ namespace Genie.Yuk
 {
     public class Game : Do
     {
+        private GameManager mng;
+
         public Game(String path)
         {
             GameManager.Path = path;
+
+            mng = GameManager.Instance;
         }
 
 
         public override void Run(CancellationToken token)
         {
-            GameManager mng = GameManager.Instance;
+            
         }
 
         public override void Stop()
         {
 
+        }
+
+        public void AddEntity()
+        {
+            mng.AddEntity();
         }
     }
 }

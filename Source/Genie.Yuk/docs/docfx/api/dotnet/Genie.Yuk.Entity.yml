@@ -14,11 +14,11 @@ items:
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Entity.cs
+      path: Source/Genie.Yuk/Genie.Core/EntityManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Entity
-    path: Genie.Core/Entity.cs
+    path: Genie.Core/EntityManager.cs
     startLine: 6
   assemblies:
   - Genie.Yuk

@@ -31,7 +31,6 @@ items:
     content: 'public class EventManagerClient : EventManagerServer'
     content.vb: >-
       Public Class EventManagerClient
-
           Inherits EventManagerServer
   inheritance:
   - System.Object

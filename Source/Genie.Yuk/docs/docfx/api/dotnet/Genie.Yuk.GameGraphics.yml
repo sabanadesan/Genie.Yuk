@@ -32,10 +32,7 @@ items:
     content: 'public class GameGraphics : Do'
     content.vb: >-
       Public Class GameGraphics
-
           Inherits
-
-
 
            Do
   inheritance:

@@ -30,10 +30,7 @@ items:
     content: 'public class JobEvent : Event'
     content.vb: >-
       Public Class JobEvent
-
           Inherits
-
-
 
            Event
   inheritance:

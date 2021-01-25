@@ -27,10 +27,7 @@ items:
     content: 'public class StopEvent : Event'
     content.vb: >-
       Public Class StopEvent
-
           Inherits
-
-
 
            Event
   inheritance:

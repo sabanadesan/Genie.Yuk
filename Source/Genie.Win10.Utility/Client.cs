@@ -68,5 +68,10 @@ namespace Genie.Win10.Utility
             source1.Cancel();
             return source1;
         }
+
+        public void AddEntity()
+        {
+            m_Game.AddEntity();
+        }
     }
 }

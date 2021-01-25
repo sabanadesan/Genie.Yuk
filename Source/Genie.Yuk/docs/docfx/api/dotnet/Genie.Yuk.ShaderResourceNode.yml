@@ -27,7 +27,6 @@ items:
     content: 'public class ShaderResourceNode : ResourceNode'
     content.vb: >-
       Public Class ShaderResourceNode
-
           Inherits ResourceNode
   inheritance:
   - System.Object

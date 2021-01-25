@@ -7,4 +7,12 @@ namespace Genie.Yuk
     public class Entity
     {
     }
+
+    public class EntityManager
+    {
+        public void AddEntity()
+        {
+
+        }
+    }
 }

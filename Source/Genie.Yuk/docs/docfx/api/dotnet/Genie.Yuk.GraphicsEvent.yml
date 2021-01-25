@@ -27,10 +27,7 @@ items:
     content: 'public class GraphicsEvent : Event'
     content.vb: >-
       Public Class GraphicsEvent
-
           Inherits
-
-
 
            Event
   inheritance:

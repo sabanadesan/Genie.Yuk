@@ -30,7 +30,6 @@ items:
     content: 'public class DirectX : Graphics'
     content.vb: >-
       Public Class DirectX
-
           Inherits Graphics
   inheritance:
   - System.Object

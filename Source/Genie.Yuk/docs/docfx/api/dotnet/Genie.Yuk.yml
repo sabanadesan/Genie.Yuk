@@ -9,6 +9,7 @@ items:
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
   - Genie.Yuk.Entity
+  - Genie.Yuk.EntityManager
   - Genie.Yuk.Event
   - Genie.Yuk.EventManagerClient
   - Genie.Yuk.EventManagerServer
@@ -60,6 +61,11 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: Genie.Yuk.Entity
+- uid: Genie.Yuk.EntityManager
+  commentId: T:Genie.Yuk.EntityManager
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: Genie.Yuk.EntityManager
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk

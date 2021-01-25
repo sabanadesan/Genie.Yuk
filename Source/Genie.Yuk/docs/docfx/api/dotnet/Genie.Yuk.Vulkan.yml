@@ -30,7 +30,6 @@ items:
     content: 'public class Vulkan : Graphics'
     content.vb: >-
       Public Class Vulkan
-
           Inherits Graphics
   inheritance:
   - System.Object

@@ -12,6 +12,8 @@
     name: Do
   - uid: Genie.Yuk.Entity
     name: Entity
+  - uid: Genie.Yuk.EntityManager
+    name: EntityManager
   - uid: Genie.Yuk.Event
     name: Event
   - uid: Genie.Yuk.EventManagerClient

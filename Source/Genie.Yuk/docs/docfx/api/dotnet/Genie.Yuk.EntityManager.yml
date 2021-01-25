@@ -1,39 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.ShaderResource
-  commentId: T:Genie.Yuk.ShaderResource
-  id: ShaderResource
+- uid: Genie.Yuk.EntityManager
+  commentId: T:Genie.Yuk.EntityManager
+  id: EntityManager
   parent: Genie.Yuk
-  children: []
+  children:
+  - Genie.Yuk.EntityManager.AddEntity
   langs:
   - csharp
   - vb
-  name: ShaderResource
-  nameWithType: ShaderResource
-  fullName: Genie.Yuk.ShaderResource
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: Genie.Yuk.EntityManager
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
+      path: Source/Genie.Yuk/Genie.Core/EntityManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: ShaderResource
-    path: Genie.Core/ResourceManager.cs
-    startLine: 117
+    id: EntityManager
+    path: Genie.Core/EntityManager.cs
+    startLine: 10
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: 'public class ShaderResource : Resource'
-    content.vb: >-
-      Public Class ShaderResource
-          Inherits Resource
+    content: public class EntityManager
+    content.vb: Public Class EntityManager
   inheritance:
   - System.Object
-  - Genie.Yuk.Resource
   inheritedMembers:
-  - Genie.Yuk.Resource._GUID
-  - Genie.Yuk.Resource.GUID
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -47,6 +43,36 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Genie.Yuk.EntityManager.AddEntity
+  commentId: M:Genie.Yuk.EntityManager.AddEntity
+  id: AddEntity
+  parent: Genie.Yuk.EntityManager
+  langs:
+  - csharp
+  - vb
+  name: AddEntity()
+  nameWithType: EntityManager.AddEntity()
+  fullName: Genie.Yuk.EntityManager.AddEntity()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/EntityManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AddEntity
+    path: Genie.Core/EntityManager.cs
+    startLine: 12
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void AddEntity()
+    content.vb: Public Sub AddEntity
+  overload: Genie.Yuk.EntityManager.AddEntity*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -60,24 +86,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Genie.Yuk.Resource
-  commentId: T:Genie.Yuk.Resource
-  parent: Genie.Yuk
-  name: Resource
-  nameWithType: Resource
-  fullName: Genie.Yuk.Resource
-- uid: Genie.Yuk.Resource._GUID
-  commentId: F:Genie.Yuk.Resource._GUID
-  parent: Genie.Yuk.Resource
-  name: _GUID
-  nameWithType: Resource._GUID
-  fullName: Genie.Yuk.Resource._GUID
-- uid: Genie.Yuk.Resource.GUID
-  commentId: P:Genie.Yuk.Resource.GUID
-  parent: Genie.Yuk.Resource
-  name: GUID
-  nameWithType: Resource.GUID
-  fullName: Genie.Yuk.Resource.GUID
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -363,4 +371,9 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Genie.Yuk.EntityManager.AddEntity*
+  commentId: Overload:Genie.Yuk.EntityManager.AddEntity
+  name: AddEntity
+  nameWithType: EntityManager.AddEntity
+  fullName: Genie.Yuk.EntityManager.AddEntity
 shouldSkipMarkup: true

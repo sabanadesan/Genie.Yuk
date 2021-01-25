@@ -6,6 +6,7 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
+  - Genie.Yuk.Client.AddEntity
   - Genie.Yuk.Client.ConnectServer
   - Genie.Yuk.Client.Handler
   - Genie.Yuk.Client.Wait
@@ -169,6 +170,36 @@ items:
     content: public void ConnectServer()
     content.vb: Public Sub ConnectServer
   overload: Genie.Yuk.Client.ConnectServer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Client.AddEntity
+  commentId: M:Genie.Yuk.Client.AddEntity
+  id: AddEntity
+  parent: Genie.Yuk.Client
+  langs:
+  - csharp
+  - vb
+  name: AddEntity()
+  nameWithType: Client.AddEntity()
+  fullName: Genie.Yuk.Client.AddEntity()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AddEntity
+    path: Genie.Core/Client.cs
+    startLine: 79
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void AddEntity()
+    content.vb: Public Sub AddEntity
+  overload: Genie.Yuk.Client.AddEntity*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -504,4 +535,9 @@ references:
   name: ConnectServer
   nameWithType: Client.ConnectServer
   fullName: Genie.Yuk.Client.ConnectServer
+- uid: Genie.Yuk.Client.AddEntity*
+  commentId: Overload:Genie.Yuk.Client.AddEntity
+  name: AddEntity
+  nameWithType: Client.AddEntity
+  fullName: Genie.Yuk.Client.AddEntity
 shouldSkipMarkup: true

@@ -76,5 +76,10 @@ namespace Genie.Yuk
                 Console.WriteLine("An Exception Occurred while Listening :" + e.ToString());
             }
         }
+
+        public void AddEntity()
+        {
+            m_Game.AddEntity();
+        }
     }
 }
