@@ -29,6 +29,7 @@ namespace Genie.Yuk
 
         private void Run()
         {
+            /*
             var tasks = new List<Task>();
 
             Process BackgroundWorker = new Process("BackgroundWorker");
@@ -63,6 +64,7 @@ namespace Genie.Yuk
             }
             catch
             { }
+            */
         }
 
         public void Startup(CancellationToken token)

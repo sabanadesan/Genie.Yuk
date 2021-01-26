@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Windows.UI.Core;
+using Windows.System.Threading;
+using Windows.Foundation;
 
 namespace Genie.Win10.Utility
 {
     public class WinUtility
     {
-        private CoreDispatcher dispatcher;
 
         public WinUtility()
         {
-            this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+
         }
 
-        public async Task OnUiThread(Action action)
+        public void OnUiThread(Action action)
         {
-            await this.dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
+            IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync((workItem) => action());
         }
     }
 }

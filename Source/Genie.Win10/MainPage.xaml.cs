@@ -18,6 +18,8 @@ using Windows.Storage;
 using Genie.Yuk;
 using Genie.Win10.Utility;
 
+using System.Threading;
+
 namespace Genie.Win10
 {
     /// <summary>
@@ -27,6 +29,8 @@ namespace Genie.Win10
     {
         public Genie.Win10.Utility.Client client;
         public Server server;
+
+        private CancellationTokenSource cancel;
 
         public MainPage()
         {
@@ -40,7 +44,7 @@ namespace Genie.Win10
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 
             client = new Genie.Win10.Utility.Client(localFolder.Path);
-            client.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
+            cancel = client.Handler(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -53,7 +57,7 @@ namespace Genie.Win10
 
         private void SubscribeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            cancel.Cancel();
         }
     }
 }

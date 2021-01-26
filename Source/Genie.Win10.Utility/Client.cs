@@ -63,9 +63,9 @@ namespace Genie.Win10.Utility
                 gg.Run(token1);
             });
 
-            Task t = win.OnUiThread(myAction);
+            win.OnUiThread(myAction);
 
-            source1.Cancel();
+            //source1.Cancel();
             return source1;
         }
 

@@ -23,15 +23,16 @@ namespace Genie3D.DirectX12
             this.height = height;
 
             this.swapChainPanel = swapChainPanel;
+
+            InitializeD3D();
+            InitScene();
         }
 
         public void Run(CancellationToken token)
         {
-            InitializeD3D();
-            InitScene();
-            Render();
-
             MainLoop(token);
+
+            Dispose();
         }
 
         private void MainLoop(CancellationToken token)
@@ -51,6 +52,9 @@ namespace Genie3D.DirectX12
             while (true)
             {
                 token.ThrowIfCancellationRequested();
+
+                Update();
+                Render();
             }
         }
 
