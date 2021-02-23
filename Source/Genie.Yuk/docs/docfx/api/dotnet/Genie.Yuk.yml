@@ -6,10 +6,10 @@ items:
   children:
   - Genie.Yuk.Client
   - Genie.Yuk.Clock
+  - Genie.Yuk.Component
+  - Genie.Yuk.ComponentManager
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
-  - Genie.Yuk.Entity
-  - Genie.Yuk.EntityManager
   - Genie.Yuk.Event
   - Genie.Yuk.EventManagerClient
   - Genie.Yuk.EventManagerServer
@@ -20,6 +20,7 @@ items:
   - Genie.Yuk.Graphics
   - Genie.Yuk.GraphicsBackend
   - Genie.Yuk.GraphicsEvent
+  - Genie.Yuk.InputComponent
   - Genie.Yuk.JobEvent
   - Genie.Yuk.MenuType
   - Genie.Yuk.Process
@@ -35,6 +36,7 @@ items:
   - Genie.Yuk.ShaderResourceNode
   - Genie.Yuk.StopEvent
   - Genie.Yuk.Vulkan
+  - Genie.Yuk.WinUtility
   - Genie.Yuk.WriteServer
   langs:
   - csharp
@@ -56,16 +58,22 @@ references:
   name: Clock
   nameWithType: Clock
   fullName: Genie.Yuk.Clock
-- uid: Genie.Yuk.Entity
-  commentId: T:Genie.Yuk.Entity
-  name: Entity
-  nameWithType: Entity
-  fullName: Genie.Yuk.Entity
-- uid: Genie.Yuk.EntityManager
-  commentId: T:Genie.Yuk.EntityManager
-  name: EntityManager
-  nameWithType: EntityManager
-  fullName: Genie.Yuk.EntityManager
+- uid: Genie.Yuk.ComponentManager
+  commentId: T:Genie.Yuk.ComponentManager
+  name: ComponentManager
+  nameWithType: ComponentManager
+  fullName: Genie.Yuk.ComponentManager
+- uid: Genie.Yuk.Component
+  commentId: T:Genie.Yuk.Component
+  parent: Genie.Yuk
+  name: Component
+  nameWithType: Component
+  fullName: Genie.Yuk.Component
+- uid: Genie.Yuk.InputComponent
+  commentId: T:Genie.Yuk.InputComponent
+  name: InputComponent
+  nameWithType: InputComponent
+  fullName: Genie.Yuk.InputComponent
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk
@@ -217,6 +225,11 @@ references:
   name: MenuType
   nameWithType: MenuType
   fullName: Genie.Yuk.MenuType
+- uid: Genie.Yuk.WinUtility
+  commentId: T:Genie.Yuk.WinUtility
+  name: WinUtility
+  nameWithType: WinUtility
+  fullName: Genie.Yuk.WinUtility
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
   name: Genie.Yuk

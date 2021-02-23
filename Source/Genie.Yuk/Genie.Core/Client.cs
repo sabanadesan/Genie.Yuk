@@ -33,35 +33,36 @@ namespace Genie.Yuk
             EventQueueClient.Enqueue(new GraphicsEvent());
         }
 
-        public void Wait()
+        public CancellationTokenSource Handler()
         {
-            var tasks = new List<Task>();
-            Action<object> action = (object obj) =>
-            {
-                //Thread.Sleep(5000);
-                Process p = ProcessServer.Resolve("GraphicsWorker");
-                //p.Stop();
-                p.Wait();
+            WinUtility win = new WinUtility();
 
-            };
-
-            Task t2 = new Task(action, "Wait");
-            t2.Start();
-            tasks.Add(t2);
-
-            var continuation = Task.WhenAll(tasks);
-            try
-            {
-                continuation.Wait();
-            }
-            catch
-            { }
-        }
-
-        public void Handler()
-        {
             GameGraphics gg = new GameGraphics();
-            gg.Thread();
+
+            CancellationTokenSource source1 = new CancellationTokenSource();
+            CancellationToken token1 = source1.Token;
+
+            Action myAction = (Action)(async () =>
+            {
+                while (!token1.IsCancellationRequested)
+                {
+                    ComponentManager.Update();
+                    gg.Run(token1);
+
+                    try
+                    {
+                        await Task.Delay(500, token1);
+                    }
+                    catch (TaskCanceledException)
+                    {
+                        System.Console.WriteLine("Request was cancelled");
+                    };
+                }
+            });
+
+            win.OnUiThread(myAction);
+
+            return source1;
         }
 
         public void ConnectServer()
@@ -75,11 +76,6 @@ namespace Genie.Yuk
             {
                 Console.WriteLine("An Exception Occurred while Listening :" + e.ToString());
             }
-        }
-
-        public void AddEntity()
-        {
-            m_Game.AddEntity();
         }
     }
 }

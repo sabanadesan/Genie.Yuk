@@ -90,7 +90,7 @@ namespace Genie.Yuk
 
             return m_t;
         }
-        
+
         public void Stop()
         {
             source1.Cancel();

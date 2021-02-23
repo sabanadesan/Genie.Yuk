@@ -9,7 +9,6 @@ items:
   - Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
   - Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
   - Genie.Yuk.GameGraphics.Stop
-  - Genie.Yuk.GameGraphics.Thread
   langs:
   - csharp
   - vb
@@ -119,36 +118,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.GameGraphics.Thread
-  commentId: M:Genie.Yuk.GameGraphics.Thread
-  id: Thread
-  parent: Genie.Yuk.GameGraphics
-  langs:
-  - csharp
-  - vb
-  name: Thread()
-  nameWithType: GameGraphics.Thread()
-  fullName: Genie.Yuk.GameGraphics.Thread()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Thread
-    path: Genie.Core/GameGraphics.cs
-    startLine: 29
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public void Thread()
-    content.vb: Public Sub Thread
-  overload: Genie.Yuk.GameGraphics.Thread*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
   commentId: M:Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
   id: Run(System.Threading.CancellationToken)
@@ -167,7 +136,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 35
+    startLine: 29
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -203,7 +172,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 40
+    startLine: 34
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -534,11 +503,6 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Genie.Yuk.GameGraphics.Thread*
-  commentId: Overload:Genie.Yuk.GameGraphics.Thread
-  name: Thread
-  nameWithType: GameGraphics.Thread
-  fullName: Genie.Yuk.GameGraphics.Thread
 - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
   commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
   parent: Genie.Yuk.Do

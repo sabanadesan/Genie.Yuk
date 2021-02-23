@@ -13,40 +13,10 @@ using Genie.Yuk;
 
 namespace Genie.Win10.Utility
 {
-    public class Client
+    public class Client : Genie.Yuk.Client
     {
-        private String m_IPAddress;
-        private Game m_Game;
-        private EventManagerClient m_Events;
-
-        public Client(String path, EventManagerClient events = null, String IPAddress = "127.0.0.1")
+        public Client(String path, EventManagerClient events = null, String IPAddress = "127.0.0.1") : base(path, events, IPAddress)
         {
-            m_IPAddress = IPAddress;
-            m_Game = new Game(path);
-
-            if (events == null)
-            {
-                m_Events = new EventManagerClient();
-            }
-            else
-            {
-                m_Events = events;
-            }
-
-            EventQueueClient.Enqueue(new GraphicsEvent());
-        }
-
-        public void ConnectServer()
-        {
-            try
-            {
-                String server = Dns.GetHostName();
-                IPAddress iIPAddress = IPAddress.Parse(m_IPAddress);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("An Exception Occurred while Listening :" + e.ToString());
-            }
         }
 
         public CancellationTokenSource Handler(Object swapChainPanel, int Width, int Height)
@@ -58,20 +28,28 @@ namespace Genie.Win10.Utility
             CancellationTokenSource source1 = new CancellationTokenSource();
             CancellationToken token1 = source1.Token;
 
-            Action myAction = (Action)(() =>
+            Action myAction = (Action)(async () =>
             {
-                gg.Run(token1);
+                while (!token1.IsCancellationRequested)
+                {
+                    ComponentManager.Update();
+                    gg.Run(token1);
+
+                    try
+                    {
+                        await Task.Delay(500, token1);
+                    }
+                    catch (TaskCanceledException)
+                    {
+                        System.Console.WriteLine("Request was cancelled");
+                    };
+                }
             });
 
             win.OnUiThread(myAction);
 
             //source1.Cancel();
             return source1;
-        }
-
-        public void AddEntity()
-        {
-            m_Game.AddEntity();
         }
     }
 }

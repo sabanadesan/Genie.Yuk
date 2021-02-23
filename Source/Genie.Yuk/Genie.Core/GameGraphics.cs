@@ -27,12 +27,6 @@ namespace Genie.Yuk
             cls = new Vulkan();
         }
 
-        public void Thread()
-        {
-            Process BackgroundWorker = new Process("GraphicsWorker");
-            Task t = BackgroundWorker.Run(this);
-        }
-
         public override void Run(CancellationToken token)
         {
             cls.Run(token);

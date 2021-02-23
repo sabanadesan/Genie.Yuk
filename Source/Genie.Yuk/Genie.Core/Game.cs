@@ -28,10 +28,5 @@ namespace Genie.Yuk
         {
 
         }
-
-        public void AddEntity()
-        {
-            mng.AddEntity();
-        }
     }
 }

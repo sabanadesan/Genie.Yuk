@@ -6,14 +6,14 @@
     name: Client
   - uid: Genie.Yuk.Clock
     name: Clock
+  - uid: Genie.Yuk.Component
+    name: Component
+  - uid: Genie.Yuk.ComponentManager
+    name: ComponentManager
   - uid: Genie.Yuk.DirectX
     name: DirectX
   - uid: Genie.Yuk.Do
     name: Do
-  - uid: Genie.Yuk.Entity
-    name: Entity
-  - uid: Genie.Yuk.EntityManager
-    name: EntityManager
   - uid: Genie.Yuk.Event
     name: Event
   - uid: Genie.Yuk.EventManagerClient
@@ -34,6 +34,8 @@
     name: GraphicsBackend
   - uid: Genie.Yuk.GraphicsEvent
     name: GraphicsEvent
+  - uid: Genie.Yuk.InputComponent
+    name: InputComponent
   - uid: Genie.Yuk.JobEvent
     name: JobEvent
   - uid: Genie.Yuk.MenuType
@@ -64,6 +66,8 @@
     name: StopEvent
   - uid: Genie.Yuk.Vulkan
     name: Vulkan
+  - uid: Genie.Yuk.WinUtility
+    name: WinUtility
   - uid: Genie.Yuk.WriteServer
     name: WriteServer
 - uid: Genie3D.DirectX12
