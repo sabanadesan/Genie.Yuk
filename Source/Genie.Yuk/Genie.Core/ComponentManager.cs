@@ -29,6 +29,11 @@ namespace Genie.Yuk
                 component.Update();
             }
         }
+
+        public static Dictionary<Guid, Component>.KeyCollection Keys()
+        {
+            return _registeredTypes.Keys;
+        }
     }
 
     public abstract class Component

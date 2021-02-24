@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using System.Threading;
 
+using Genie.Yuk;
+
 using SharpDX;
 using SharpDX.Direct3D12;
 
@@ -141,10 +143,12 @@ namespace Genie3D.DirectX12
             commandAllocator = device.CreateCommandAllocator(CommandListType.Direct);
         }
 
-
-
         public void Update()
         {
+            foreach (Guid key in ComponentManager.Keys())
+            {
+                Component component = ComponentManager.Resolve(key);
+            }
         }
 
         private void PopulateCommandList()

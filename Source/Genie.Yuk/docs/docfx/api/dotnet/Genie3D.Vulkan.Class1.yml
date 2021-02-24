@@ -8,9 +8,11 @@ items:
   - Genie3D.Vulkan.Class1.#ctor
   - Genie3D.Vulkan.Class1.AlwaysRun
   - Genie3D.Vulkan.Class1.ChooseSwapExtent(SharpVk.Khronos.SurfaceCapabilities)
+  - Genie3D.Vulkan.Class1.Render
   - Genie3D.Vulkan.Class1.Run(System.Threading.CancellationToken)
   - Genie3D.Vulkan.Class1.Start
   - Genie3D.Vulkan.Class1.Stop
+  - Genie3D.Vulkan.Class1.Update
   langs:
   - csharp
   - vb
@@ -25,7 +27,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Class1
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 52
+    startLine: 55
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -96,7 +98,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Start
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 57
+    startLine: 60
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -126,7 +128,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -159,7 +161,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: AlwaysRun
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 72
+    startLine: 74
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -167,6 +169,66 @@ items:
     content: public void AlwaysRun()
     content.vb: Public Sub AlwaysRun
   overload: Genie3D.Vulkan.Class1.AlwaysRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.Vulkan.Class1.Update
+  commentId: M:Genie3D.Vulkan.Class1.Update
+  id: Update
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Class1.Update()
+  fullName: Genie3D.Vulkan.Class1.Update()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Update
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 79
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: Genie3D.Vulkan.Class1.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.Vulkan.Class1.Render
+  commentId: M:Genie3D.Vulkan.Class1.Render
+  id: Render
+  parent: Genie3D.Vulkan.Class1
+  langs:
+  - csharp
+  - vb
+  name: Render()
+  nameWithType: Class1.Render()
+  fullName: Genie3D.Vulkan.Class1.Render()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.Vulkan/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Render
+    path: Genie3D.Vulkan/Class1.cs
+    startLine: 87
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.Vulkan
+  syntax:
+    content: public void Render()
+    content.vb: Public Sub Render
+  overload: Genie3D.Vulkan.Class1.Render*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -189,7 +251,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 77
+    startLine: 94
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -219,7 +281,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ChooseSwapExtent
     path: Genie3D.Vulkan/Class1.cs
-    startLine: 589
+    startLine: 606
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.Vulkan
@@ -567,6 +629,16 @@ references:
   name: AlwaysRun
   nameWithType: Class1.AlwaysRun
   fullName: Genie3D.Vulkan.Class1.AlwaysRun
+- uid: Genie3D.Vulkan.Class1.Update*
+  commentId: Overload:Genie3D.Vulkan.Class1.Update
+  name: Update
+  nameWithType: Class1.Update
+  fullName: Genie3D.Vulkan.Class1.Update
+- uid: Genie3D.Vulkan.Class1.Render*
+  commentId: Overload:Genie3D.Vulkan.Class1.Render
+  name: Render
+  nameWithType: Class1.Render
+  fullName: Genie3D.Vulkan.Class1.Render
 - uid: Genie3D.Vulkan.Class1.Stop*
   commentId: Overload:Genie3D.Vulkan.Class1.Stop
   name: Stop

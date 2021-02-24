@@ -27,7 +27,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Class1
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -105,7 +105,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Start
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 29
+    startLine: 31
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -168,7 +168,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: AlwaysRun
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 42
+    startLine: 44
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -198,7 +198,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -258,7 +258,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Render
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 302
+    startLine: 306
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -288,7 +288,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Dispose
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 316
+    startLine: 320
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12

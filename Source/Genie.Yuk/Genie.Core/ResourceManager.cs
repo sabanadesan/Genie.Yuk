@@ -78,19 +78,19 @@ namespace Genie.Yuk
         }
     }
 
-    public class Resource
+    public class ResourceList
     {
         private LinkedList<ResourceNode> revision;
         protected Guid _GUID;
 
-        public Resource()
+        public ResourceList()
         {
             _GUID = Guid.NewGuid();
             revision = new LinkedList<ResourceNode>();
             revision.AddLast(new LinkedListNode<ResourceNode>(new ResourceNode()));
         }
 
-        public Resource(Guid GUID, Guid internal_GUID, int version, DateTime date, String content)
+        public ResourceList(Guid GUID, Guid internal_GUID, int version, DateTime date, String content)
         {
             _GUID = GUID;
             revision = new LinkedList<ResourceNode>();
@@ -115,21 +115,21 @@ namespace Genie.Yuk
 
     }
 
-    public class ShaderResource : Resource
+    public class ShaderResource : ResourceList
     {
 
     }
 
     public static class ResourceManager
     {
-        private static Dictionary<Guid, Resource> _registeredResources = new Dictionary<Guid, Resource>();
+        private static Dictionary<Guid, ResourceList> _registeredResources = new Dictionary<Guid, ResourceList>();
 
-        public static void Register(Resource toRegister)
+        public static void Register(ResourceList toRegister)
         {
             _registeredResources.Add(toRegister.GUID, toRegister);
         }
 
-        public static Resource Resolve(Guid GUID)
+        public static ResourceList Resolve(Guid GUID)
         {
             return _registeredResources[GUID];
         }

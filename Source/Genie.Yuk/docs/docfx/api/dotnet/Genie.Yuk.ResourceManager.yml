@@ -9,7 +9,7 @@ items:
   - Genie.Yuk.ResourceManager.CreateResource
   - Genie.Yuk.ResourceManager.DeleteResource
   - Genie.Yuk.ResourceManager.MoveResource
-  - Genie.Yuk.ResourceManager.Register(Genie.Yuk.Resource)
+  - Genie.Yuk.ResourceManager.Register(Genie.Yuk.ResourceList)
   - Genie.Yuk.ResourceManager.Resolve(System.Guid)
   langs:
   - csharp
@@ -49,16 +49,16 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Genie.Yuk.ResourceManager.Register(Genie.Yuk.Resource)
-  commentId: M:Genie.Yuk.ResourceManager.Register(Genie.Yuk.Resource)
-  id: Register(Genie.Yuk.Resource)
+- uid: Genie.Yuk.ResourceManager.Register(Genie.Yuk.ResourceList)
+  commentId: M:Genie.Yuk.ResourceManager.Register(Genie.Yuk.ResourceList)
+  id: Register(Genie.Yuk.ResourceList)
   parent: Genie.Yuk.ResourceManager
   langs:
   - csharp
   - vb
-  name: Register(Resource)
-  nameWithType: ResourceManager.Register(Resource)
-  fullName: Genie.Yuk.ResourceManager.Register(Genie.Yuk.Resource)
+  name: Register(ResourceList)
+  nameWithType: ResourceManager.Register(ResourceList)
+  fullName: Genie.Yuk.ResourceManager.Register(Genie.Yuk.ResourceList)
   type: Method
   source:
     remote:
@@ -72,11 +72,11 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public static void Register(Resource toRegister)
+    content: public static void Register(ResourceList toRegister)
     parameters:
     - id: toRegister
-      type: Genie.Yuk.Resource
-    content.vb: Public Shared Sub Register(toRegister As Resource)
+      type: Genie.Yuk.ResourceList
+    content.vb: Public Shared Sub Register(toRegister As ResourceList)
   overload: Genie.Yuk.ResourceManager.Register*
   modifiers.csharp:
   - public
@@ -107,13 +107,13 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public static Resource Resolve(Guid GUID)
+    content: public static ResourceList Resolve(Guid GUID)
     parameters:
     - id: GUID
       type: System.Guid
     return:
-      type: Genie.Yuk.Resource
-    content.vb: Public Shared Function Resolve(GUID As Guid) As Resource
+      type: Genie.Yuk.ResourceList
+    content.vb: Public Shared Function Resolve(GUID As Guid) As ResourceList
   overload: Genie.Yuk.ResourceManager.Resolve*
   modifiers.csharp:
   - public
@@ -557,12 +557,12 @@ references:
   name: Register
   nameWithType: ResourceManager.Register
   fullName: Genie.Yuk.ResourceManager.Register
-- uid: Genie.Yuk.Resource
-  commentId: T:Genie.Yuk.Resource
+- uid: Genie.Yuk.ResourceList
+  commentId: T:Genie.Yuk.ResourceList
   parent: Genie.Yuk
-  name: Resource
-  nameWithType: Resource
-  fullName: Genie.Yuk.Resource
+  name: ResourceList
+  nameWithType: ResourceList
+  fullName: Genie.Yuk.ResourceList
 - uid: Genie.Yuk.ResourceManager.Resolve*
   commentId: Overload:Genie.Yuk.ResourceManager.Resolve
   name: Resolve

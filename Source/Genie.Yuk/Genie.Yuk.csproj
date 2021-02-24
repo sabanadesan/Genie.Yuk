@@ -54,5 +54,9 @@
       <HintPath>..\..\..\Utility.Yuk\Utility.Yuk\bin\Release\netstandard2.0\Utility.Yuk.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Genie3D\" />
+  </ItemGroup>
   
 </Project>

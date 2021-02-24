@@ -24,16 +24,16 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: 'public class ShaderResource : Resource'
+    content: 'public class ShaderResource : ResourceList'
     content.vb: >-
       Public Class ShaderResource
-          Inherits Resource
+          Inherits ResourceList
   inheritance:
   - System.Object
-  - Genie.Yuk.Resource
+  - Genie.Yuk.ResourceList
   inheritedMembers:
-  - Genie.Yuk.Resource._GUID
-  - Genie.Yuk.Resource.GUID
+  - Genie.Yuk.ResourceList._GUID
+  - Genie.Yuk.ResourceList.GUID
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -60,24 +60,24 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Genie.Yuk.Resource
-  commentId: T:Genie.Yuk.Resource
+- uid: Genie.Yuk.ResourceList
+  commentId: T:Genie.Yuk.ResourceList
   parent: Genie.Yuk
-  name: Resource
-  nameWithType: Resource
-  fullName: Genie.Yuk.Resource
-- uid: Genie.Yuk.Resource._GUID
-  commentId: F:Genie.Yuk.Resource._GUID
-  parent: Genie.Yuk.Resource
+  name: ResourceList
+  nameWithType: ResourceList
+  fullName: Genie.Yuk.ResourceList
+- uid: Genie.Yuk.ResourceList._GUID
+  commentId: F:Genie.Yuk.ResourceList._GUID
+  parent: Genie.Yuk.ResourceList
   name: _GUID
-  nameWithType: Resource._GUID
-  fullName: Genie.Yuk.Resource._GUID
-- uid: Genie.Yuk.Resource.GUID
-  commentId: P:Genie.Yuk.Resource.GUID
-  parent: Genie.Yuk.Resource
+  nameWithType: ResourceList._GUID
+  fullName: Genie.Yuk.ResourceList._GUID
+- uid: Genie.Yuk.ResourceList.GUID
+  commentId: P:Genie.Yuk.ResourceList.GUID
+  parent: Genie.Yuk.ResourceList
   name: GUID
-  nameWithType: Resource.GUID
-  fullName: Genie.Yuk.Resource.GUID
+  nameWithType: ResourceList.GUID
+  fullName: Genie.Yuk.ResourceList.GUID
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object

@@ -1,8 +1,4 @@
-﻿using SharpVk;
-using SharpVk.Glfw;
-using SharpVk.Khronos;
-using SharpVk.Multivendor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -10,6 +6,13 @@ using System.Linq;
 
 using System.Threading;
 using System.Threading.Tasks;
+
+using Genie.Yuk;
+
+using SharpVk;
+using SharpVk.Glfw;
+using SharpVk.Khronos;
+using SharpVk.Multivendor;
 
 namespace Genie3D.Vulkan
 {
@@ -65,13 +68,27 @@ namespace Genie3D.Vulkan
         {
             token.ThrowIfCancellationRequested();
 
-            this.DrawFrame();
-
-            Glfw3.PollEvents();
+            Update();
+            Render();
         }
 
         public void AlwaysRun()
         {
+            Glfw3.PollEvents();
+        }
+
+        public void Update()
+        {
+            foreach (Guid key in ComponentManager.Keys())
+            {
+                Component component = ComponentManager.Resolve(key);
+            }
+        }
+
+        public void Render()
+        {
+            this.DrawFrame();
+
             Glfw3.PollEvents();
         }
 

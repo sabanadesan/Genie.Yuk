@@ -5,6 +5,7 @@ items:
   id: ComponentManager
   parent: Genie.Yuk
   children:
+  - Genie.Yuk.ComponentManager.Keys
   - Genie.Yuk.ComponentManager.Register(System.Guid,Genie.Yuk.Component)
   - Genie.Yuk.ComponentManager.Resolve(System.Guid)
   - Genie.Yuk.ComponentManager.Update
@@ -146,6 +147,40 @@ items:
     content: public static void Update()
     content.vb: Public Shared Sub Update
   overload: Genie.Yuk.ComponentManager.Update*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Genie.Yuk.ComponentManager.Keys
+  commentId: M:Genie.Yuk.ComponentManager.Keys
+  id: Keys
+  parent: Genie.Yuk.ComponentManager
+  langs:
+  - csharp
+  - vb
+  name: Keys()
+  nameWithType: ComponentManager.Keys()
+  fullName: Genie.Yuk.ComponentManager.Keys()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ComponentManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Keys
+    path: Genie.Core/ComponentManager.cs
+    startLine: 32
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public static Dictionary<Guid, Component>.KeyCollection Keys()
+    return:
+      type: System.Collections.Generic.Dictionary{System.Guid,Genie.Yuk.Component}.KeyCollection
+    content.vb: Public Shared Function Keys As Dictionary(Of Guid, Component).KeyCollection
+  overload: Genie.Yuk.ComponentManager.Keys*
   modifiers.csharp:
   - public
   - static
@@ -478,4 +513,82 @@ references:
   name: Update
   nameWithType: ComponentManager.Update
   fullName: Genie.Yuk.ComponentManager.Update
+- uid: Genie.Yuk.ComponentManager.Keys*
+  commentId: Overload:Genie.Yuk.ComponentManager.Keys
+  name: Keys
+  nameWithType: ComponentManager.Keys
+  fullName: Genie.Yuk.ComponentManager.Keys
+- uid: System.Collections.Generic.Dictionary{System.Guid,Genie.Yuk.Component}.KeyCollection
+  commentId: T:System.Collections.Generic.Dictionary{System.Guid,Genie.Yuk.Component}.KeyCollection
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2.KeyCollection
+  name: Dictionary.KeyCollection<>
+  nameWithType: Dictionary.KeyCollection<>
+  fullName: System.Collections.Generic.Dictionary.KeyCollection<>
+  nameWithType.vb: Dictionary.KeyCollection(Of )
+  fullName.vb: System.Collections.Generic.Dictionary.KeyCollection(Of )
+  name.vb: Dictionary.KeyCollection(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2.KeyCollection
+    name: Dictionary.KeyCollection
+    nameWithType: Dictionary.KeyCollection
+    fullName: System.Collections.Generic.Dictionary.KeyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2.KeyCollection
+    name: Dictionary.KeyCollection
+    nameWithType: Dictionary.KeyCollection
+    fullName: System.Collections.Generic.Dictionary.KeyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2.KeyCollection
+  commentId: T:System.Collections.Generic.Dictionary`2.KeyCollection
+  isExternal: true
+  name: Dictionary.KeyCollection<>
+  nameWithType: Dictionary.KeyCollection<>
+  fullName: System.Collections.Generic.Dictionary.KeyCollection<>
+  nameWithType.vb: Dictionary.KeyCollection(Of )
+  fullName.vb: System.Collections.Generic.Dictionary.KeyCollection(Of )
+  name.vb: Dictionary.KeyCollection(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2.KeyCollection
+    name: Dictionary.KeyCollection
+    nameWithType: Dictionary.KeyCollection
+    fullName: System.Collections.Generic.Dictionary.KeyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2.KeyCollection
+    name: Dictionary.KeyCollection
+    nameWithType: Dictionary.KeyCollection
+    fullName: System.Collections.Generic.Dictionary.KeyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 shouldSkipMarkup: true

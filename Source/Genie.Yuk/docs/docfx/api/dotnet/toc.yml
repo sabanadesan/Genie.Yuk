@@ -44,8 +44,8 @@
     name: Process.MyFunction
   - uid: Genie.Yuk.ProcessServer
     name: ProcessServer
-  - uid: Genie.Yuk.Resource
-    name: Resource
+  - uid: Genie.Yuk.ResourceList
+    name: ResourceList
   - uid: Genie.Yuk.ResourceManager
     name: ResourceManager
   - uid: Genie.Yuk.ResourceNode

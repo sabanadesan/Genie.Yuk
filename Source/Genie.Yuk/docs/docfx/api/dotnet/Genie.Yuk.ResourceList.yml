@@ -1,35 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Resource
-  commentId: T:Genie.Yuk.Resource
-  id: Resource
+- uid: Genie.Yuk.ResourceList
+  commentId: T:Genie.Yuk.ResourceList
+  id: ResourceList
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Resource.#ctor
-  - Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
-  - Genie.Yuk.Resource._GUID
-  - Genie.Yuk.Resource.GUID
+  - Genie.Yuk.ResourceList.#ctor
+  - Genie.Yuk.ResourceList.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+  - Genie.Yuk.ResourceList._GUID
+  - Genie.Yuk.ResourceList.GUID
   langs:
   - csharp
   - vb
-  name: Resource
-  nameWithType: Resource
-  fullName: Genie.Yuk.Resource
+  name: ResourceList
+  nameWithType: ResourceList
+  fullName: Genie.Yuk.ResourceList
   type: Class
   source:
     remote:
       path: Source/Genie.Yuk/Genie.Core/ResourceManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Resource
+    id: ResourceList
     path: Genie.Core/ResourceManager.cs
     startLine: 80
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public class Resource
-    content.vb: Public Class Resource
+    content: public class ResourceList
+    content.vb: Public Class ResourceList
   inheritance:
   - System.Object
   derivedClasses:
@@ -48,16 +48,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Resource._GUID
-  commentId: F:Genie.Yuk.Resource._GUID
+- uid: Genie.Yuk.ResourceList._GUID
+  commentId: F:Genie.Yuk.ResourceList._GUID
   id: _GUID
-  parent: Genie.Yuk.Resource
+  parent: Genie.Yuk.ResourceList
   langs:
   - csharp
   - vb
   name: _GUID
-  nameWithType: Resource._GUID
-  fullName: Genie.Yuk.Resource._GUID
+  nameWithType: ResourceList._GUID
+  fullName: Genie.Yuk.ResourceList._GUID
   type: Field
   source:
     remote:
@@ -79,16 +79,16 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: Genie.Yuk.Resource.#ctor
-  commentId: M:Genie.Yuk.Resource.#ctor
+- uid: Genie.Yuk.ResourceList.#ctor
+  commentId: M:Genie.Yuk.ResourceList.#ctor
   id: '#ctor'
-  parent: Genie.Yuk.Resource
+  parent: Genie.Yuk.ResourceList
   langs:
   - csharp
   - vb
-  name: Resource()
-  nameWithType: Resource.Resource()
-  fullName: Genie.Yuk.Resource.Resource()
+  name: ResourceList()
+  nameWithType: ResourceList.ResourceList()
+  fullName: Genie.Yuk.ResourceList.ResourceList()
   type: Constructor
   source:
     remote:
@@ -102,23 +102,23 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Resource()
+    content: public ResourceList()
     content.vb: Public Sub New
-  overload: Genie.Yuk.Resource.#ctor*
+  overload: Genie.Yuk.ResourceList.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
-  commentId: M:Genie.Yuk.Resource.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+- uid: Genie.Yuk.ResourceList.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
+  commentId: M:Genie.Yuk.ResourceList.#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)
   id: '#ctor(System.Guid,System.Guid,System.Int32,System.DateTime,System.String)'
-  parent: Genie.Yuk.Resource
+  parent: Genie.Yuk.ResourceList
   langs:
   - csharp
   - vb
-  name: Resource(Guid, Guid, Int32, DateTime, String)
-  nameWithType: Resource.Resource(Guid, Guid, Int32, DateTime, String)
-  fullName: Genie.Yuk.Resource.Resource(System.Guid, System.Guid, System.Int32, System.DateTime, System.String)
+  name: ResourceList(Guid, Guid, Int32, DateTime, String)
+  nameWithType: ResourceList.ResourceList(Guid, Guid, Int32, DateTime, String)
+  fullName: Genie.Yuk.ResourceList.ResourceList(System.Guid, System.Guid, System.Int32, System.DateTime, System.String)
   type: Constructor
   source:
     remote:
@@ -132,7 +132,7 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Resource(Guid GUID, Guid internal_GUID, int version, DateTime date, string content)
+    content: public ResourceList(Guid GUID, Guid internal_GUID, int version, DateTime date, string content)
     parameters:
     - id: GUID
       type: System.Guid
@@ -145,21 +145,21 @@ items:
     - id: content
       type: System.String
     content.vb: Public Sub New(GUID As Guid, internal_GUID As Guid, version As Integer, date As Date, content As String)
-  overload: Genie.Yuk.Resource.#ctor*
+  overload: Genie.Yuk.ResourceList.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Resource.GUID
-  commentId: P:Genie.Yuk.Resource.GUID
+- uid: Genie.Yuk.ResourceList.GUID
+  commentId: P:Genie.Yuk.ResourceList.GUID
   id: GUID
-  parent: Genie.Yuk.Resource
+  parent: Genie.Yuk.ResourceList
   langs:
   - csharp
   - vb
   name: GUID
-  nameWithType: Resource.GUID
-  fullName: Genie.Yuk.Resource.GUID
+  nameWithType: ResourceList.GUID
+  fullName: Genie.Yuk.ResourceList.GUID
   type: Property
   source:
     remote:
@@ -178,7 +178,7 @@ items:
     return:
       type: System.Guid
     content.vb: Public Property GUID As Guid
-  overload: Genie.Yuk.Resource.GUID*
+  overload: Genie.Yuk.ResourceList.GUID*
   modifiers.csharp:
   - public
   - get
@@ -490,11 +490,11 @@ references:
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
-- uid: Genie.Yuk.Resource.#ctor*
-  commentId: Overload:Genie.Yuk.Resource.#ctor
-  name: Resource
-  nameWithType: Resource.Resource
-  fullName: Genie.Yuk.Resource.Resource
+- uid: Genie.Yuk.ResourceList.#ctor*
+  commentId: Overload:Genie.Yuk.ResourceList.#ctor
+  name: ResourceList
+  nameWithType: ResourceList.ResourceList
+  fullName: Genie.Yuk.ResourceList.ResourceList
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -516,9 +516,9 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Genie.Yuk.Resource.GUID*
-  commentId: Overload:Genie.Yuk.Resource.GUID
+- uid: Genie.Yuk.ResourceList.GUID*
+  commentId: Overload:Genie.Yuk.ResourceList.GUID
   name: GUID
-  nameWithType: Resource.GUID
-  fullName: Genie.Yuk.Resource.GUID
+  nameWithType: ResourceList.GUID
+  fullName: Genie.Yuk.ResourceList.GUID
 shouldSkipMarkup: true
