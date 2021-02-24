@@ -27,22 +27,24 @@ namespace Genie.Win10
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Genie.Win10.Utility.Client client;
-        public Server server;
+        private Genie.Win10.Utility.Client client;
+        private Server server;
+        private string m_path;
 
         public MainPage()
         {
             this.InitializeComponent();
 
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            m_path = localFolder.Path;
+
             Script script = new Script();
-            server = new Server();
+            server = new Server(m_path);
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-
-            client = new Genie.Win10.Utility.Client(localFolder.Path);
+            client = new Genie.Win10.Utility.Client(m_path);
             client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
         }
 

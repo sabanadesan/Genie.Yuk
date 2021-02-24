@@ -13,20 +13,20 @@ namespace Genie.Yuk
     public class Client
     {
         private String m_IPAddress;
-        private Game m_Game;
         protected EventManager m_Events;
+        protected string m_path;
         
         public Client(String path, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
-            m_Game = new Game(path);
+            m_path = path;
         }
 
         public void Start(EventManager events = null)
         {
             if (events == null)
             {
-                m_Events = new EventManager();
+                m_Events = new EventManager(m_path);
             }
             else
             {

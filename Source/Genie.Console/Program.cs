@@ -19,9 +19,11 @@ namespace Genie.Console
 
             Script script = new Script();
 
-            Server s = new Server();
+            string m_path = "output";
 
-            Client client = new Client("Output");
+            Server s = new Server(m_path);
+
+            Client client = new Client(m_path);
             client.Start();
 
             while (true)

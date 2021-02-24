@@ -32,7 +32,6 @@ items:
   inheritance:
   - System.Object
   derivedClasses:
-  - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
   inheritedMembers:
   - System.Object.Equals(System.Object)

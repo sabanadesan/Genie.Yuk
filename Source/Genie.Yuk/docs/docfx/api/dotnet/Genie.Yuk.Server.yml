@@ -5,7 +5,8 @@ items:
   id: Server
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
+  - Genie.Yuk.Server.#ctor(System.String,Genie.Yuk.EventManager,System.String)
+  - Genie.Yuk.Server.m_path
   - Genie.Yuk.Server.StartServer
   langs:
   - csharp
@@ -44,16 +45,47 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
-  commentId: M:Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
-  id: '#ctor(Genie.Yuk.EventManager,System.String)'
+- uid: Genie.Yuk.Server.m_path
+  commentId: F:Genie.Yuk.Server.m_path
+  id: m_path
   parent: Genie.Yuk.Server
   langs:
   - csharp
   - vb
-  name: Server(EventManager, String)
-  nameWithType: Server.Server(EventManager, String)
-  fullName: Genie.Yuk.Server.Server(Genie.Yuk.EventManager, System.String)
+  name: m_path
+  nameWithType: Server.m_path
+  fullName: Genie.Yuk.Server.m_path
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Server.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: m_path
+    path: Genie.Core/Server.cs
+    startLine: 14
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected string m_path
+    return:
+      type: System.String
+    content.vb: Protected m_path As String
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.Server.#ctor(System.String,Genie.Yuk.EventManager,System.String)
+  commentId: M:Genie.Yuk.Server.#ctor(System.String,Genie.Yuk.EventManager,System.String)
+  id: '#ctor(System.String,Genie.Yuk.EventManager,System.String)'
+  parent: Genie.Yuk.Server
+  langs:
+  - csharp
+  - vb
+  name: Server(String, EventManager, String)
+  nameWithType: Server.Server(String, EventManager, String)
+  fullName: Genie.Yuk.Server.Server(System.String, Genie.Yuk.EventManager, System.String)
   type: Constructor
   source:
     remote:
@@ -62,18 +94,20 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Server.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Server(EventManager events = null, string IPAddress = "127.0.0.1")
+    content: public Server(string path, EventManager events = null, string IPAddress = "127.0.0.1")
     parameters:
+    - id: path
+      type: System.String
     - id: events
       type: Genie.Yuk.EventManager
     - id: IPAddress
       type: System.String
-    content.vb: Public Sub New(events As EventManager = Nothing, IPAddress As String = "127.0.0.1")
+    content.vb: Public Sub New(path As String, events As EventManager = Nothing, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Server.#ctor*
   modifiers.csharp:
   - public
@@ -97,7 +131,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: StartServer
     path: Genie.Core/Server.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -407,6 +441,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.Server.#ctor*
   commentId: Overload:Genie.Yuk.Server.#ctor
   name: Server
@@ -418,13 +459,6 @@ references:
   name: EventManager
   nameWithType: EventManager
   fullName: Genie.Yuk.EventManager
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: Genie.Yuk.Server.StartServer*
   commentId: Overload:Genie.Yuk.Server.StartServer
   name: StartServer

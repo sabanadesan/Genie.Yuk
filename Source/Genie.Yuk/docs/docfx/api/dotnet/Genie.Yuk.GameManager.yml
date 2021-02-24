@@ -1,42 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Game
-  commentId: T:Genie.Yuk.Game
-  id: Game
+- uid: Genie.Yuk.GameManager
+  commentId: T:Genie.Yuk.GameManager
+  id: GameManager
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Game.#ctor(System.String)
-  - Genie.Yuk.Game.Run(System.Threading.CancellationToken)
-  - Genie.Yuk.Game.Start
-  - Genie.Yuk.Game.Stop
+  - Genie.Yuk.GameManager.#ctor(System.String)
+  - Genie.Yuk.GameManager.Startup
   langs:
   - csharp
   - vb
-  name: Game
-  nameWithType: Game
-  fullName: Genie.Yuk.Game
+  name: GameManager
+  nameWithType: GameManager
+  fullName: Genie.Yuk.GameManager
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Game.cs
+      path: Source/Genie.Yuk/Genie.Core/GameManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Game
-    path: Genie.Core/Game.cs
-    startLine: 9
+    id: GameManager
+    path: Genie.Core/GameManager.cs
+    startLine: 11
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: 'public class Game : Do'
-    content.vb: >-
-      Public Class Game
-          Inherits
-
-           Do
+    content: public class GameManager
+    content.vb: Public Class GameManager
   inheritance:
   - System.Object
-  - Genie.Yuk.Do
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,141 +44,69 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Game.#ctor(System.String)
-  commentId: M:Genie.Yuk.Game.#ctor(System.String)
+- uid: Genie.Yuk.GameManager.#ctor(System.String)
+  commentId: M:Genie.Yuk.GameManager.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Genie.Yuk.Game
+  parent: Genie.Yuk.GameManager
   langs:
   - csharp
   - vb
-  name: Game(String)
-  nameWithType: Game.Game(String)
-  fullName: Genie.Yuk.Game.Game(System.String)
+  name: GameManager(String)
+  nameWithType: GameManager.GameManager(String)
+  fullName: Genie.Yuk.GameManager.GameManager(System.String)
   type: Constructor
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Game.cs
+      path: Source/Genie.Yuk/Genie.Core/GameManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
-    path: Genie.Core/Game.cs
-    startLine: 13
+    path: Genie.Core/GameManager.cs
+    startLine: 16
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Game(string path)
+    content: public GameManager(string Path)
     parameters:
-    - id: path
+    - id: Path
       type: System.String
-    content.vb: Public Sub New(path As String)
-  overload: Genie.Yuk.Game.#ctor*
+    content.vb: Public Sub New(Path As String)
+  overload: Genie.Yuk.GameManager.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Game.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Game.Run(System.Threading.CancellationToken)
-  id: Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Game
+- uid: Genie.Yuk.GameManager.Startup
+  commentId: M:Genie.Yuk.GameManager.Startup
+  id: Startup
+  parent: Genie.Yuk.GameManager
   langs:
   - csharp
   - vb
-  name: Run(CancellationToken)
-  nameWithType: Game.Run(CancellationToken)
-  fullName: Genie.Yuk.Game.Run(System.Threading.CancellationToken)
+  name: Startup()
+  nameWithType: GameManager.Startup()
+  fullName: Genie.Yuk.GameManager.Startup()
   type: Method
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Game.cs
+      path: Source/Genie.Yuk/Genie.Core/GameManager.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/Game.cs
+    id: Startup
+    path: Genie.Core/GameManager.cs
     startLine: 21
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public override void Run(CancellationToken token)
-    parameters:
-    - id: token
-      type: System.Threading.CancellationToken
-    content.vb: Public Overrides Sub Run(token As CancellationToken)
-  overridden: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  overload: Genie.Yuk.Game.Run*
+    content: public void Startup()
+    content.vb: Public Sub Startup
+  overload: Genie.Yuk.GameManager.Startup*
   modifiers.csharp:
   - public
-  - override
   modifiers.vb:
   - Public
-  - Overrides
-- uid: Genie.Yuk.Game.Stop
-  commentId: M:Genie.Yuk.Game.Stop
-  id: Stop
-  parent: Genie.Yuk.Game
-  langs:
-  - csharp
-  - vb
-  name: Stop()
-  nameWithType: Game.Stop()
-  fullName: Genie.Yuk.Game.Stop()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Game.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Stop
-    path: Genie.Core/Game.cs
-    startLine: 26
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public override void Stop()
-    content.vb: Public Overrides Sub Stop
-  overridden: Genie.Yuk.Do.Stop
-  overload: Genie.Yuk.Game.Stop*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: Genie.Yuk.Game.Start
-  commentId: M:Genie.Yuk.Game.Start
-  id: Start
-  parent: Genie.Yuk.Game
-  langs:
-  - csharp
-  - vb
-  name: Start()
-  nameWithType: Game.Start()
-  fullName: Genie.Yuk.Game.Start()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Game.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Start
-    path: Genie.Core/Game.cs
-    startLine: 31
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public override void Start()
-    content.vb: Public Overrides Sub Start
-  overridden: Genie.Yuk.Do.Start
-  overload: Genie.Yuk.Game.Start*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -199,12 +120,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Genie.Yuk.Do
-  commentId: T:Genie.Yuk.Do
-  parent: Genie.Yuk
-  name: Do
-  nameWithType: Do
-  fullName: Genie.Yuk.Do
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -490,11 +405,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Game.#ctor*
-  commentId: Overload:Genie.Yuk.Game.#ctor
-  name: Game
-  nameWithType: Game.Game
-  fullName: Genie.Yuk.Game.Game
+- uid: Genie.Yuk.GameManager.#ctor*
+  commentId: Overload:Genie.Yuk.GameManager.#ctor
+  name: GameManager
+  nameWithType: GameManager.GameManager
+  fullName: Genie.Yuk.GameManager.GameManager
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -502,127 +417,9 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Do
-  isExternal: true
-  name: Run(CancellationToken)
-  nameWithType: Do.Run(CancellationToken)
-  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  spec.csharp:
-  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    nameWithType: CancellationToken
-    fullName: System.Threading.CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-    name: Run
-    nameWithType: Do.Run
-    fullName: Genie.Yuk.Do.Run
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    nameWithType: CancellationToken
-    fullName: System.Threading.CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Genie.Yuk.Game.Run*
-  commentId: Overload:Genie.Yuk.Game.Run
-  name: Run
-  nameWithType: Game.Run
-  fullName: Genie.Yuk.Game.Run
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-- uid: Genie.Yuk.Do.Stop
-  commentId: M:Genie.Yuk.Do.Stop
-  parent: Genie.Yuk.Do
-  name: Stop()
-  nameWithType: Do.Stop()
-  fullName: Genie.Yuk.Do.Stop()
-  spec.csharp:
-  - uid: Genie.Yuk.Do.Stop
-    name: Stop
-    nameWithType: Do.Stop
-    fullName: Genie.Yuk.Do.Stop
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Do.Stop
-    name: Stop
-    nameWithType: Do.Stop
-    fullName: Genie.Yuk.Do.Stop
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Genie.Yuk.Game.Stop*
-  commentId: Overload:Genie.Yuk.Game.Stop
-  name: Stop
-  nameWithType: Game.Stop
-  fullName: Genie.Yuk.Game.Stop
-- uid: Genie.Yuk.Do.Start
-  commentId: M:Genie.Yuk.Do.Start
-  parent: Genie.Yuk.Do
-  name: Start()
-  nameWithType: Do.Start()
-  fullName: Genie.Yuk.Do.Start()
-  spec.csharp:
-  - uid: Genie.Yuk.Do.Start
-    name: Start
-    nameWithType: Do.Start
-    fullName: Genie.Yuk.Do.Start
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Genie.Yuk.Do.Start
-    name: Start
-    nameWithType: Do.Start
-    fullName: Genie.Yuk.Do.Start
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Genie.Yuk.Game.Start*
-  commentId: Overload:Genie.Yuk.Game.Start
-  name: Start
-  nameWithType: Game.Start
-  fullName: Genie.Yuk.Game.Start
+- uid: Genie.Yuk.GameManager.Startup*
+  commentId: Overload:Genie.Yuk.GameManager.Startup
+  name: Startup
+  nameWithType: GameManager.Startup
+  fullName: Genie.Yuk.GameManager.Startup
 shouldSkipMarkup: true

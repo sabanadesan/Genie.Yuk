@@ -17,7 +17,7 @@ namespace Genie.Sample.RPG
 
     public class RpgEventManagerClient : EventManager
     {
-        public RpgEventManagerClient() : base()
+        public RpgEventManagerClient(String path) : base(path)
         {
 
         }
@@ -104,7 +104,7 @@ namespace Genie.Sample.RPG
 
     public class RpgEventManagerServer : EventManager
     {
-        public RpgEventManagerServer() : base()
+        public RpgEventManagerServer(String path) : base(path)
         {
         }
     }

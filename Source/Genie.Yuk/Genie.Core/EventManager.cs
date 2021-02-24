@@ -45,9 +45,11 @@ namespace Genie.Yuk
 
     public class EventManager
     {
-        public EventManager()
-        {
+        private string m_path;
 
+        public EventManager(String path)
+        {
+            m_path = path;
         }
 
         public virtual void Start(Object swapChainPanel, int Width, int Height)
@@ -68,6 +70,10 @@ namespace Genie.Yuk
 
         protected void StartAfter()
         {
+            GameManager gm = new GameManager(m_path);
+            gm.Startup();
+            Service.Register<GameManager>(gm);
+
             WinUtility win = new WinUtility();
 
             CancellationTokenSource source1 = new CancellationTokenSource();

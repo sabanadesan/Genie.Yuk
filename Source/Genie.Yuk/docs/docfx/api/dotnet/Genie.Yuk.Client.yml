@@ -8,6 +8,7 @@ items:
   - Genie.Yuk.Client.#ctor(System.String,System.String)
   - Genie.Yuk.Client.ConnectServer
   - Genie.Yuk.Client.m_Events
+  - Genie.Yuk.Client.m_path
   - Genie.Yuk.Client.Start(Genie.Yuk.EventManager)
   langs:
   - csharp
@@ -64,7 +65,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: m_Events
     path: Genie.Core/Client.cs
-    startLine: 16
+    startLine: 15
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -73,6 +74,37 @@ items:
     return:
       type: Genie.Yuk.EventManager
     content.vb: Protected m_Events As EventManager
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Genie.Yuk.Client.m_path
+  commentId: F:Genie.Yuk.Client.m_path
+  id: m_path
+  parent: Genie.Yuk.Client
+  langs:
+  - csharp
+  - vb
+  name: m_path
+  nameWithType: Client.m_path
+  fullName: Genie.Yuk.Client.m_path
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: m_path
+    path: Genie.Core/Client.cs
+    startLine: 16
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected string m_path
+    return:
+      type: System.String
+    content.vb: Protected m_path As String
   modifiers.csharp:
   - protected
   modifiers.vb:
@@ -479,11 +511,6 @@ references:
   name: EventManager
   nameWithType: EventManager
   fullName: Genie.Yuk.EventManager
-- uid: Genie.Yuk.Client.#ctor*
-  commentId: Overload:Genie.Yuk.Client.#ctor
-  name: Client
-  nameWithType: Client.Client
-  fullName: Genie.Yuk.Client.Client
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -491,6 +518,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Genie.Yuk.Client.#ctor*
+  commentId: Overload:Genie.Yuk.Client.#ctor
+  name: Client
+  nameWithType: Client.Client
+  fullName: Genie.Yuk.Client.Client
 - uid: Genie.Yuk.Client.Start*
   commentId: Overload:Genie.Yuk.Client.Start
   name: Start

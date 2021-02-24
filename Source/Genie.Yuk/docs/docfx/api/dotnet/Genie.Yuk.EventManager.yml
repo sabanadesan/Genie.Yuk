@@ -5,7 +5,7 @@ items:
   id: EventManager
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.EventManager.#ctor
+  - Genie.Yuk.EventManager.#ctor(System.String)
   - Genie.Yuk.EventManager.Calculate
   - Genie.Yuk.EventManager.Loop(Genie.Yuk.Event)
   - Genie.Yuk.EventManager.Start
@@ -49,16 +49,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.EventManager.#ctor
-  commentId: M:Genie.Yuk.EventManager.#ctor
-  id: '#ctor'
+- uid: Genie.Yuk.EventManager.#ctor(System.String)
+  commentId: M:Genie.Yuk.EventManager.#ctor(System.String)
+  id: '#ctor(System.String)'
   parent: Genie.Yuk.EventManager
   langs:
   - csharp
   - vb
-  name: EventManager()
-  nameWithType: EventManager.EventManager()
-  fullName: Genie.Yuk.EventManager.EventManager()
+  name: EventManager(String)
+  nameWithType: EventManager.EventManager(String)
+  fullName: Genie.Yuk.EventManager.EventManager(System.String)
   type: Constructor
   source:
     remote:
@@ -67,13 +67,16 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/EventManager.cs
-    startLine: 47
+    startLine: 49
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public EventManager()
-    content.vb: Public Sub New
+    content: public EventManager(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(path As String)
   overload: Genie.Yuk.EventManager.#ctor*
   modifiers.csharp:
   - public
@@ -97,7 +100,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Start
     path: Genie.Core/EventManager.cs
-    startLine: 52
+    startLine: 54
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -136,7 +139,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Start
     path: Genie.Core/EventManager.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -168,7 +171,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: StartAfter
     path: Genie.Core/EventManager.cs
-    startLine: 68
+    startLine: 70
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -198,7 +201,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/EventManager.cs
-    startLine: 82
+    startLine: 88
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -228,7 +231,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Calculate
     path: Genie.Core/EventManager.cs
-    startLine: 87
+    startLine: 93
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -258,7 +261,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Loop
     path: Genie.Core/EventManager.cs
-    startLine: 137
+    startLine: 143
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -580,6 +583,13 @@ references:
   name: EventManager
   nameWithType: EventManager.EventManager
   fullName: Genie.Yuk.EventManager.EventManager
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Genie.Yuk.EventManager.Start*
   commentId: Overload:Genie.Yuk.EventManager.Start
   name: Start

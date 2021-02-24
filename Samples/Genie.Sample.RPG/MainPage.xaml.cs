@@ -28,24 +28,25 @@ namespace Genie.Sample.RPG
     public sealed partial class MainPage : Page
     {
         private CancellationTokenSource cancel;
+        private string m_path;
 
         public MainPage()
         {
             this.InitializeComponent();
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            m_path = localFolder.Path;
 
-            RpgEventManagerServer serverEvents = new RpgEventManagerServer();
+            RpgEventManagerServer serverEvents = new RpgEventManagerServer(m_path);
 
             Script script = new Script();
-            Server s = new Server(serverEvents);
+            Server s = new Server(m_path, serverEvents);
         }
 
         private void swapChainPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            RpgEventManagerClient clientEvents = new RpgEventManagerClient(m_path);
 
-            RpgEventManagerClient clientEvents = new RpgEventManagerClient();
-
-            Genie.Win10.Utility.Client client = new Genie.Win10.Utility.Client(localFolder.Path);
+            Genie.Win10.Utility.Client client = new Genie.Win10.Utility.Client(m_path);
             client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height, clientEvents);
         }
 

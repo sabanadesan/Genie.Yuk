@@ -12,14 +12,16 @@ namespace Genie.Yuk
     {
         private String m_IPAddress;
         private EventManager m_Events;
+        protected string m_path;
 
-        public Server(EventManager events = null, String IPAddress = "127.0.0.1")
+        public Server(String path, EventManager events = null, String IPAddress = "127.0.0.1")
         {
             m_IPAddress = IPAddress;
+            m_path = path;
 
             if (events == null)
             {
-                m_Events = new EventManager();
+                m_Events = new EventManager(m_path);
             }
             else
             {

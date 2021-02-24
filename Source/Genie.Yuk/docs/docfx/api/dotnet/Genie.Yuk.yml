@@ -14,8 +14,8 @@ items:
   - Genie.Yuk.EventManager
   - Genie.Yuk.EventQueueClient
   - Genie.Yuk.EventQueueServer
-  - Genie.Yuk.Game
   - Genie.Yuk.GameGraphics
+  - Genie.Yuk.GameManager
   - Genie.Yuk.Graphics
   - Genie.Yuk.GraphicsBackend
   - Genie.Yuk.GraphicsEvent
@@ -116,11 +116,6 @@ references:
   name: EventManager
   nameWithType: EventManager
   fullName: Genie.Yuk.EventManager
-- uid: Genie.Yuk.Game
-  commentId: T:Genie.Yuk.Game
-  name: Game
-  nameWithType: Game
-  fullName: Genie.Yuk.Game
 - uid: Genie.Yuk.GraphicsBackend
   commentId: T:Genie.Yuk.GraphicsBackend
   parent: Genie.Yuk
@@ -148,6 +143,11 @@ references:
   name: DirectX
   nameWithType: DirectX
   fullName: Genie.Yuk.DirectX
+- uid: Genie.Yuk.GameManager
+  commentId: T:Genie.Yuk.GameManager
+  name: GameManager
+  nameWithType: GameManager
+  fullName: Genie.Yuk.GameManager
 - uid: Genie.Yuk.Position
   commentId: T:Genie.Yuk.Position
   parent: Genie.Yuk
