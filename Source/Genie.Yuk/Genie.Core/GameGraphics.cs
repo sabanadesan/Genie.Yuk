@@ -32,6 +32,16 @@ namespace Genie.Yuk
             cls.Run(token);
         }
 
+        public void AlwaysRun()
+        {
+            cls.AlwaysRun();
+        }
+
+        public override void Start()
+        {
+            cls.Start();
+        }
+
         public override void Stop()
         {
             cls.Stop();
@@ -42,7 +52,11 @@ namespace Genie.Yuk
     {
         public abstract void Run(CancellationToken token);
 
+        public abstract void AlwaysRun();
+
         public abstract void Stop();
+
+        public abstract void Start();
     }
 
     public class Vulkan : Graphics
@@ -59,9 +73,19 @@ namespace Genie.Yuk
             cls.Run(token);
         }
 
+        public override void AlwaysRun()
+        {
+            cls.AlwaysRun();
+        }
+
         public override void Stop()
         {
             cls.Stop();
+        }
+
+        public override void Start()
+        {
+            cls.Start();
         }
     }
 
@@ -79,9 +103,19 @@ namespace Genie.Yuk
             cls.Run(token);
         }
 
+        public override void AlwaysRun()
+        {
+            cls.AlwaysRun();
+        }
+
         public override void Stop()
         {
             cls.Stop();
+        }
+
+        public override void Start()
+        {
+            cls.Start();
         }
     }
 

@@ -6,7 +6,9 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.DirectX.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie.Yuk.DirectX.AlwaysRun
   - Genie.Yuk.DirectX.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.DirectX.Start
   - Genie.Yuk.DirectX.Stop
   langs:
   - csharp
@@ -22,7 +24,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: DirectX
     path: Genie.Core/GameGraphics.cs
-    startLine: 67
+    startLine: 91
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/GameGraphics.cs
-    startLine: 71
+    startLine: 95
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -103,7 +105,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 76
+    startLine: 100
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -115,6 +117,39 @@ items:
     content.vb: Public Overrides Sub Run(token As CancellationToken)
   overridden: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
   overload: Genie.Yuk.DirectX.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.DirectX.AlwaysRun
+  commentId: M:Genie.Yuk.DirectX.AlwaysRun
+  id: AlwaysRun
+  parent: Genie.Yuk.DirectX
+  langs:
+  - csharp
+  - vb
+  name: AlwaysRun()
+  nameWithType: DirectX.AlwaysRun()
+  fullName: Genie.Yuk.DirectX.AlwaysRun()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AlwaysRun
+    path: Genie.Core/GameGraphics.cs
+    startLine: 105
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void AlwaysRun()
+    content.vb: Public Overrides Sub AlwaysRun
+  overridden: Genie.Yuk.Graphics.AlwaysRun
+  overload: Genie.Yuk.DirectX.AlwaysRun*
   modifiers.csharp:
   - public
   - override
@@ -139,7 +174,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 81
+    startLine: 110
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -148,6 +183,39 @@ items:
     content.vb: Public Overrides Sub Stop
   overridden: Genie.Yuk.Graphics.Stop
   overload: Genie.Yuk.DirectX.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.DirectX.Start
+  commentId: M:Genie.Yuk.DirectX.Start
+  id: Start
+  parent: Genie.Yuk.DirectX
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: DirectX.Start()
+  fullName: Genie.Yuk.DirectX.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/GameGraphics.cs
+    startLine: 115
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start
+  overridden: Genie.Yuk.Graphics.Start
+  overload: Genie.Yuk.DirectX.Start*
   modifiers.csharp:
   - public
   - override
@@ -527,6 +595,39 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
+- uid: Genie.Yuk.Graphics.AlwaysRun
+  commentId: M:Genie.Yuk.Graphics.AlwaysRun
+  parent: Genie.Yuk.Graphics
+  name: AlwaysRun()
+  nameWithType: Graphics.AlwaysRun()
+  fullName: Genie.Yuk.Graphics.AlwaysRun()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.AlwaysRun
+    name: AlwaysRun
+    nameWithType: Graphics.AlwaysRun
+    fullName: Genie.Yuk.Graphics.AlwaysRun
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.AlwaysRun
+    name: AlwaysRun
+    nameWithType: Graphics.AlwaysRun
+    fullName: Genie.Yuk.Graphics.AlwaysRun
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.DirectX.AlwaysRun*
+  commentId: Overload:Genie.Yuk.DirectX.AlwaysRun
+  name: AlwaysRun
+  nameWithType: DirectX.AlwaysRun
+  fullName: Genie.Yuk.DirectX.AlwaysRun
 - uid: Genie.Yuk.Graphics.Stop
   commentId: M:Genie.Yuk.Graphics.Stop
   parent: Genie.Yuk.Graphics
@@ -560,4 +661,37 @@ references:
   name: Stop
   nameWithType: DirectX.Stop
   fullName: Genie.Yuk.DirectX.Stop
+- uid: Genie.Yuk.Graphics.Start
+  commentId: M:Genie.Yuk.Graphics.Start
+  parent: Genie.Yuk.Graphics
+  name: Start()
+  nameWithType: Graphics.Start()
+  fullName: Genie.Yuk.Graphics.Start()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Start
+    name: Start
+    nameWithType: Graphics.Start
+    fullName: Genie.Yuk.Graphics.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Start
+    name: Start
+    nameWithType: Graphics.Start
+    fullName: Genie.Yuk.Graphics.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.DirectX.Start*
+  commentId: Overload:Genie.Yuk.DirectX.Start
+  name: Start
+  nameWithType: DirectX.Start
+  fullName: Genie.Yuk.DirectX.Start
 shouldSkipMarkup: true

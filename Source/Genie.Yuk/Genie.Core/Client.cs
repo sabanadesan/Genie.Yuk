@@ -15,6 +15,7 @@ namespace Genie.Yuk
         private String m_IPAddress;
         private Game m_Game;
         private EventManagerClient m_Events;
+        protected GameGraphics gg;
 
         public Client(String path, EventManagerClient events = null, String IPAddress = "127.0.0.1")
         {
@@ -33,16 +34,39 @@ namespace Genie.Yuk
             EventQueueClient.Enqueue(new GraphicsEvent());
         }
 
+        public void Start()
+        {
+            gg = new GameGraphics();
+        }
+
         public CancellationTokenSource Handler()
         {
             WinUtility win = new WinUtility();
 
-            GameGraphics gg = new GameGraphics();
-
             CancellationTokenSource source1 = new CancellationTokenSource();
             CancellationToken token1 = source1.Token;
 
-            Action myAction = (Action)(async () =>
+            Action myAction0 = (Action)(() =>
+            {
+                gg.Start();
+            });
+
+            Task taskA = Task.Run(myAction0);
+            taskA.Wait();
+
+            //win.OnUiThread(myAction0);
+
+            Action myAction1 = (Action)(() =>
+            {
+                while (!token1.IsCancellationRequested)
+                {
+                    gg.AlwaysRun();
+                }
+            });
+
+            win.OnUiThread(myAction1);
+
+            Action myAction2 = (Action)(async () =>
             {
                 while (!token1.IsCancellationRequested)
                 {
@@ -60,7 +84,7 @@ namespace Genie.Yuk
                 }
             });
 
-            win.OnUiThread(myAction);
+            win.OnUiThread(myAction2);
 
             return source1;
         }

@@ -19,37 +19,9 @@ namespace Genie.Win10.Utility
         {
         }
 
-        public CancellationTokenSource Handler(Object swapChainPanel, int Width, int Height)
+        public void Start(Object swapChainPanel, int Width, int Height)
         {
-            WinUtility win = new WinUtility();
-
-            GameGraphics gg = new GameGraphics(swapChainPanel, Width, Height);
-
-            CancellationTokenSource source1 = new CancellationTokenSource();
-            CancellationToken token1 = source1.Token;
-
-            Action myAction = (Action)(async () =>
-            {
-                while (!token1.IsCancellationRequested)
-                {
-                    ComponentManager.Update();
-                    gg.Run(token1);
-
-                    try
-                    {
-                        await Task.Delay(500, token1);
-                    }
-                    catch (TaskCanceledException)
-                    {
-                        System.Console.WriteLine("Request was cancelled");
-                    };
-                }
-            });
-
-            win.OnUiThread(myAction);
-
-            //source1.Cancel();
-            return source1;
+            gg = new GameGraphics(swapChainPanel, Width, Height);
         }
     }
 }

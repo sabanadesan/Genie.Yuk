@@ -7,7 +7,9 @@ items:
   children:
   - Genie.Yuk.GameGraphics.#ctor
   - Genie.Yuk.GameGraphics.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie.Yuk.GameGraphics.AlwaysRun
   - Genie.Yuk.GameGraphics.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.GameGraphics.Start
   - Genie.Yuk.GameGraphics.Stop
   langs:
   - csharp
@@ -154,6 +156,69 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: Genie.Yuk.GameGraphics.AlwaysRun
+  commentId: M:Genie.Yuk.GameGraphics.AlwaysRun
+  id: AlwaysRun
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: AlwaysRun()
+  nameWithType: GameGraphics.AlwaysRun()
+  fullName: Genie.Yuk.GameGraphics.AlwaysRun()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AlwaysRun
+    path: Genie.Core/GameGraphics.cs
+    startLine: 34
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void AlwaysRun()
+    content.vb: Public Sub AlwaysRun
+  overload: Genie.Yuk.GameGraphics.AlwaysRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.GameGraphics.Start
+  commentId: M:Genie.Yuk.GameGraphics.Start
+  id: Start
+  parent: Genie.Yuk.GameGraphics
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GameGraphics.Start()
+  fullName: Genie.Yuk.GameGraphics.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/GameGraphics.cs
+    startLine: 39
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start
+  overridden: Genie.Yuk.Do.Start
+  overload: Genie.Yuk.GameGraphics.Start*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: Genie.Yuk.GameGraphics.Stop
   commentId: M:Genie.Yuk.GameGraphics.Stop
   id: Stop
@@ -172,7 +237,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 34
+    startLine: 44
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -560,6 +625,44 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
+- uid: Genie.Yuk.GameGraphics.AlwaysRun*
+  commentId: Overload:Genie.Yuk.GameGraphics.AlwaysRun
+  name: AlwaysRun
+  nameWithType: GameGraphics.AlwaysRun
+  fullName: Genie.Yuk.GameGraphics.AlwaysRun
+- uid: Genie.Yuk.Do.Start
+  commentId: M:Genie.Yuk.Do.Start
+  parent: Genie.Yuk.Do
+  name: Start()
+  nameWithType: Do.Start()
+  fullName: Genie.Yuk.Do.Start()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Start
+    name: Start
+    nameWithType: Do.Start
+    fullName: Genie.Yuk.Do.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Start
+    name: Start
+    nameWithType: Do.Start
+    fullName: Genie.Yuk.Do.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.GameGraphics.Start*
+  commentId: Overload:Genie.Yuk.GameGraphics.Start
+  name: Start
+  nameWithType: GameGraphics.Start
+  fullName: Genie.Yuk.GameGraphics.Start
 - uid: Genie.Yuk.Do.Stop
   commentId: M:Genie.Yuk.Do.Stop
   parent: Genie.Yuk.Do

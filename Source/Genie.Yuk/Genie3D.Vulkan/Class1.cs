@@ -50,17 +50,35 @@ namespace Genie3D.Vulkan
         private Format swapChainFormat;
         private Extent2D swapChainExtent;
 
-        public void Run(CancellationToken token)
+        public Class1()
+        {
+
+        }
+
+        public void Start()
         {
             this.InitialiseWindow();
             this.InitialiseVulkan();
-            this.MainLoop(token);
-            this.TearDown();
+        }
+
+        public void Run(CancellationToken token)
+        {
+            token.ThrowIfCancellationRequested();
+
+            this.DrawFrame();
+
+            Glfw3.PollEvents();
+        }
+
+        public void AlwaysRun()
+        {
+            Glfw3.PollEvents();
         }
 
         public void Stop()
         {
             //Glfw3.DestroyWindow(this.window);
+            this.TearDown();
         }
 
         private void InitialiseWindow()
@@ -90,30 +108,6 @@ namespace Genie3D.Vulkan
             this.CreateCommandPool();
             this.CreateCommandBuffers();
             this.CreateSemaphores();
-        }
-
-        private void MainLoop(CancellationToken token)
-        {
-            try
-            {
-                Calculate(token);
-            }
-            catch (OperationCanceledException ex) when (ex.CancellationToken == token) // includes TaskCanceledException
-            {
-                Console.WriteLine("Cancelled Exception.");
-            }
-        }
-
-        private void Calculate(CancellationToken token)
-        {
-            while (!Glfw3.WindowShouldClose(this.window))
-            {
-                token.ThrowIfCancellationRequested();
-
-                this.DrawFrame();
-
-                Glfw3.PollEvents();
-            }
         }
 
         private void RecreateSwapChain()

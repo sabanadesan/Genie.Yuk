@@ -19,7 +19,10 @@ namespace Genie.Win10.Utility
 
         public void OnUiThread(Action action)
         {
-            IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync((workItem) => action());
+            Task m_t = m_t = new Task(action);
+            m_t.Start();
+
+            //IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync((workItem) => action());
         }
     }
 }

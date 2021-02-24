@@ -6,6 +6,7 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Do.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.Do.Start
   - Genie.Yuk.Do.Stop
   langs:
   - csharp
@@ -111,6 +112,38 @@ items:
     content: public abstract void Stop()
     content.vb: Public MustOverride Sub Stop
   overload: Genie.Yuk.Do.Stop*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: Genie.Yuk.Do.Start
+  commentId: M:Genie.Yuk.Do.Start
+  id: Start
+  parent: Genie.Yuk.Do
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Do.Start()
+  fullName: Genie.Yuk.Do.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/Process.cs
+    startLine: 106
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public abstract void Start()
+    content.vb: Public MustOverride Sub Start
+  overload: Genie.Yuk.Do.Start*
   modifiers.csharp:
   - public
   - abstract
@@ -438,4 +471,9 @@ references:
   name: Stop
   nameWithType: Do.Stop
   fullName: Genie.Yuk.Do.Stop
+- uid: Genie.Yuk.Do.Start*
+  commentId: Overload:Genie.Yuk.Do.Start
+  name: Start
+  nameWithType: Do.Start
+  fullName: Genie.Yuk.Do.Start
 shouldSkipMarkup: true

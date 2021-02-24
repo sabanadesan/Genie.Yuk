@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 using Windows.Storage;
+using System.Threading;
 using Genie.Yuk;
 using Genie.Win10.Utility;
 using Genie.Make;
@@ -26,6 +27,8 @@ namespace Genie.Sample.RPG
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private CancellationTokenSource cancel;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -42,8 +45,9 @@ namespace Genie.Sample.RPG
 
             RpgEventManagerClient clientEvents = new RpgEventManagerClient();
 
-            Genie.Win10.Utility.Client c = new Genie.Win10.Utility.Client(localFolder.Path, clientEvents);
-            c.Handler(swapChainPanel, (int) swapChainPanel.RenderSize.Width, (int) swapChainPanel.RenderSize.Height);
+            Genie.Win10.Utility.Client client = new Genie.Win10.Utility.Client(localFolder.Path, clientEvents);
+            client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
+            cancel = client.Handler();
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

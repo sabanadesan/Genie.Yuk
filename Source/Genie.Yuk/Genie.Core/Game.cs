@@ -28,5 +28,9 @@ namespace Genie.Yuk
         {
 
         }
+
+        public override void Start()
+        {
+        }
     }
 }

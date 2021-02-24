@@ -160,6 +160,10 @@ namespace Genie.Yuk
             EventQueueServer.Enqueue(new StopEvent());
         }
 
+        public override void Start()
+        {
+        }
+
         public virtual void Calculate(CancellationToken token)
         {
             Boolean DoWhile = true;

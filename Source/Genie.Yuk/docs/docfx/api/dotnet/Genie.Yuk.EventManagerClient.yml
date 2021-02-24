@@ -38,6 +38,7 @@ items:
   - Genie.Yuk.EventManagerServer
   inheritedMembers:
   - Genie.Yuk.EventManagerServer.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.EventManagerServer.Start
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -252,6 +253,34 @@ references:
     nameWithType: CancellationToken
     fullName: System.Threading.CancellationToken
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.EventManagerServer.Start
+  commentId: M:Genie.Yuk.EventManagerServer.Start
+  parent: Genie.Yuk.EventManagerServer
+  name: Start()
+  nameWithType: EventManagerServer.Start()
+  fullName: Genie.Yuk.EventManagerServer.Start()
+  spec.csharp:
+  - uid: Genie.Yuk.EventManagerServer.Start
+    name: Start
+    nameWithType: EventManagerServer.Start
+    fullName: Genie.Yuk.EventManagerServer.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.EventManagerServer.Start
+    name: Start
+    nameWithType: EventManagerServer.Start
+    fullName: Genie.Yuk.EventManagerServer.Start
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )

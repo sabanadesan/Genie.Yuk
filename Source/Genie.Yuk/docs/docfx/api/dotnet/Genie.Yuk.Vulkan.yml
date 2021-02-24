@@ -6,7 +6,9 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Vulkan.#ctor
+  - Genie.Yuk.Vulkan.AlwaysRun
   - Genie.Yuk.Vulkan.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.Vulkan.Start
   - Genie.Yuk.Vulkan.Stop
   langs:
   - csharp
@@ -22,7 +24,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Vulkan
     path: Genie.Core/GameGraphics.cs
-    startLine: 47
+    startLine: 61
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/GameGraphics.cs
-    startLine: 51
+    startLine: 65
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -96,7 +98,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie.Core/GameGraphics.cs
-    startLine: 56
+    startLine: 70
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -108,6 +110,39 @@ items:
     content.vb: Public Overrides Sub Run(token As CancellationToken)
   overridden: Genie.Yuk.Graphics.Run(System.Threading.CancellationToken)
   overload: Genie.Yuk.Vulkan.Run*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.Vulkan.AlwaysRun
+  commentId: M:Genie.Yuk.Vulkan.AlwaysRun
+  id: AlwaysRun
+  parent: Genie.Yuk.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: AlwaysRun()
+  nameWithType: Vulkan.AlwaysRun()
+  fullName: Genie.Yuk.Vulkan.AlwaysRun()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AlwaysRun
+    path: Genie.Core/GameGraphics.cs
+    startLine: 75
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void AlwaysRun()
+    content.vb: Public Overrides Sub AlwaysRun
+  overridden: Genie.Yuk.Graphics.AlwaysRun
+  overload: Genie.Yuk.Vulkan.AlwaysRun*
   modifiers.csharp:
   - public
   - override
@@ -132,7 +167,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie.Core/GameGraphics.cs
-    startLine: 61
+    startLine: 80
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -141,6 +176,39 @@ items:
     content.vb: Public Overrides Sub Stop
   overridden: Genie.Yuk.Graphics.Stop
   overload: Genie.Yuk.Vulkan.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.Vulkan.Start
+  commentId: M:Genie.Yuk.Vulkan.Start
+  id: Start
+  parent: Genie.Yuk.Vulkan
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Vulkan.Start()
+  fullName: Genie.Yuk.Vulkan.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/GameGraphics.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/GameGraphics.cs
+    startLine: 85
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start
+  overridden: Genie.Yuk.Graphics.Start
+  overload: Genie.Yuk.Vulkan.Start*
   modifiers.csharp:
   - public
   - override
@@ -513,6 +581,39 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
+- uid: Genie.Yuk.Graphics.AlwaysRun
+  commentId: M:Genie.Yuk.Graphics.AlwaysRun
+  parent: Genie.Yuk.Graphics
+  name: AlwaysRun()
+  nameWithType: Graphics.AlwaysRun()
+  fullName: Genie.Yuk.Graphics.AlwaysRun()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.AlwaysRun
+    name: AlwaysRun
+    nameWithType: Graphics.AlwaysRun
+    fullName: Genie.Yuk.Graphics.AlwaysRun
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.AlwaysRun
+    name: AlwaysRun
+    nameWithType: Graphics.AlwaysRun
+    fullName: Genie.Yuk.Graphics.AlwaysRun
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Vulkan.AlwaysRun*
+  commentId: Overload:Genie.Yuk.Vulkan.AlwaysRun
+  name: AlwaysRun
+  nameWithType: Vulkan.AlwaysRun
+  fullName: Genie.Yuk.Vulkan.AlwaysRun
 - uid: Genie.Yuk.Graphics.Stop
   commentId: M:Genie.Yuk.Graphics.Stop
   parent: Genie.Yuk.Graphics
@@ -546,4 +647,37 @@ references:
   name: Stop
   nameWithType: Vulkan.Stop
   fullName: Genie.Yuk.Vulkan.Stop
+- uid: Genie.Yuk.Graphics.Start
+  commentId: M:Genie.Yuk.Graphics.Start
+  parent: Genie.Yuk.Graphics
+  name: Start()
+  nameWithType: Graphics.Start()
+  fullName: Genie.Yuk.Graphics.Start()
+  spec.csharp:
+  - uid: Genie.Yuk.Graphics.Start
+    name: Start
+    nameWithType: Graphics.Start
+    fullName: Genie.Yuk.Graphics.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Graphics.Start
+    name: Start
+    nameWithType: Graphics.Start
+    fullName: Genie.Yuk.Graphics.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Vulkan.Start*
+  commentId: Overload:Genie.Yuk.Vulkan.Start
+  name: Start
+  nameWithType: Vulkan.Start
+  fullName: Genie.Yuk.Vulkan.Start
 shouldSkipMarkup: true

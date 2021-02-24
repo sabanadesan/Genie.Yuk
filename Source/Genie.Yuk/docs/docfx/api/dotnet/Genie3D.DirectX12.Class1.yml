@@ -6,9 +6,11 @@ items:
   parent: Genie3D.DirectX12
   children:
   - Genie3D.DirectX12.Class1.#ctor(System.Object,System.Int32,System.Int32)
+  - Genie3D.DirectX12.Class1.AlwaysRun
   - Genie3D.DirectX12.Class1.Dispose
   - Genie3D.DirectX12.Class1.Render
   - Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
+  - Genie3D.DirectX12.Class1.Start
   - Genie3D.DirectX12.Class1.Stop
   - Genie3D.DirectX12.Class1.Update
   langs:
@@ -85,6 +87,36 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie3D.DirectX12.Class1.Start
+  commentId: M:Genie3D.DirectX12.Class1.Start
+  id: Start
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Class1.Start()
+  fullName: Genie3D.DirectX12.Class1.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 29
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Genie3D.DirectX12.Class1.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
   commentId: M:Genie3D.DirectX12.Class1.Run(System.Threading.CancellationToken)
   id: Run(System.Threading.CancellationToken)
@@ -103,7 +135,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Run
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -114,6 +146,36 @@ items:
       type: System.Threading.CancellationToken
     content.vb: Public Sub Run(token As CancellationToken)
   overload: Genie3D.DirectX12.Class1.Run*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie3D.DirectX12.Class1.AlwaysRun
+  commentId: M:Genie3D.DirectX12.Class1.AlwaysRun
+  id: AlwaysRun
+  parent: Genie3D.DirectX12.Class1
+  langs:
+  - csharp
+  - vb
+  name: AlwaysRun()
+  nameWithType: Class1.AlwaysRun()
+  fullName: Genie3D.DirectX12.Class1.AlwaysRun()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie3D.DirectX12/Class1.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: AlwaysRun
+    path: Genie3D.DirectX12/Class1.cs
+    startLine: 42
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie3D.DirectX12
+  syntax:
+    content: public void AlwaysRun()
+    content.vb: Public Sub AlwaysRun
+  overload: Genie3D.DirectX12.Class1.AlwaysRun*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -136,7 +198,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Stop
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 60
+    startLine: 46
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -166,7 +228,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Update
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 159
+    startLine: 145
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -196,7 +258,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Render
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 316
+    startLine: 302
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -226,7 +288,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Dispose
     path: Genie3D.DirectX12/Class1.cs
-    startLine: 330
+    startLine: 316
   assemblies:
   - Genie.Yuk
   namespace: Genie3D.DirectX12
@@ -548,6 +610,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: Genie3D.DirectX12.Class1.Start*
+  commentId: Overload:Genie3D.DirectX12.Class1.Start
+  name: Start
+  nameWithType: Class1.Start
+  fullName: Genie3D.DirectX12.Class1.Start
 - uid: Genie3D.DirectX12.Class1.Run*
   commentId: Overload:Genie3D.DirectX12.Class1.Run
   name: Run
@@ -566,6 +633,11 @@ references:
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
+- uid: Genie3D.DirectX12.Class1.AlwaysRun*
+  commentId: Overload:Genie3D.DirectX12.Class1.AlwaysRun
+  name: AlwaysRun
+  nameWithType: Class1.AlwaysRun
+  fullName: Genie3D.DirectX12.Class1.AlwaysRun
 - uid: Genie3D.DirectX12.Class1.Stop*
   commentId: Overload:Genie3D.DirectX12.Class1.Stop
   name: Stop

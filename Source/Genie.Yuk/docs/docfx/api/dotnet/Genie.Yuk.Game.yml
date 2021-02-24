@@ -7,6 +7,7 @@ items:
   children:
   - Genie.Yuk.Game.#ctor(System.String)
   - Genie.Yuk.Game.Run(System.Threading.CancellationToken)
+  - Genie.Yuk.Game.Start
   - Genie.Yuk.Game.Stop
   langs:
   - csharp
@@ -146,6 +147,39 @@ items:
     content.vb: Public Overrides Sub Stop
   overridden: Genie.Yuk.Do.Stop
   overload: Genie.Yuk.Game.Stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Genie.Yuk.Game.Start
+  commentId: M:Genie.Yuk.Game.Start
+  id: Start
+  parent: Genie.Yuk.Game
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Game.Start()
+  fullName: Genie.Yuk.Game.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Game.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/Game.cs
+    startLine: 31
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start
+  overridden: Genie.Yuk.Do.Start
+  overload: Genie.Yuk.Game.Start*
   modifiers.csharp:
   - public
   - override
@@ -558,4 +592,37 @@ references:
   name: Stop
   nameWithType: Game.Stop
   fullName: Genie.Yuk.Game.Stop
+- uid: Genie.Yuk.Do.Start
+  commentId: M:Genie.Yuk.Do.Start
+  parent: Genie.Yuk.Do
+  name: Start()
+  nameWithType: Do.Start()
+  fullName: Genie.Yuk.Do.Start()
+  spec.csharp:
+  - uid: Genie.Yuk.Do.Start
+    name: Start
+    nameWithType: Do.Start
+    fullName: Genie.Yuk.Do.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Genie.Yuk.Do.Start
+    name: Start
+    nameWithType: Do.Start
+    fullName: Genie.Yuk.Do.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Genie.Yuk.Game.Start*
+  commentId: Overload:Genie.Yuk.Game.Start
+  name: Start
+  nameWithType: Game.Start
+  fullName: Genie.Yuk.Game.Start
 shouldSkipMarkup: true

@@ -130,6 +130,7 @@ references:
   fullName: Genie.Yuk.GraphicsBackend
 - uid: Genie.Yuk.GameGraphics
   commentId: T:Genie.Yuk.GameGraphics
+  parent: Genie.Yuk
   name: GameGraphics
   nameWithType: GameGraphics
   fullName: Genie.Yuk.GameGraphics

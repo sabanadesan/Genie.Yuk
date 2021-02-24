@@ -7,7 +7,9 @@ items:
   children:
   - Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
   - Genie.Yuk.Client.ConnectServer
+  - Genie.Yuk.Client.gg
   - Genie.Yuk.Client.Handler
+  - Genie.Yuk.Client.Start
   langs:
   - csharp
   - vb
@@ -45,6 +47,37 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Genie.Yuk.Client.gg
+  commentId: F:Genie.Yuk.Client.gg
+  id: gg
+  parent: Genie.Yuk.Client
+  langs:
+  - csharp
+  - vb
+  name: gg
+  nameWithType: Client.gg
+  fullName: Genie.Yuk.Client.gg
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: gg
+    path: Genie.Core/Client.cs
+    startLine: 17
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected GameGraphics gg
+    return:
+      type: Genie.Yuk.GameGraphics
+    content.vb: Protected gg As GameGraphics
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
   commentId: M:Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
   id: '#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)'
@@ -63,7 +96,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Client.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -78,6 +111,36 @@ items:
       type: System.String
     content.vb: Public Sub New(path As String, events As EventManagerClient = Nothing, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Client.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Client.Start
+  commentId: M:Genie.Yuk.Client.Start
+  id: Start
+  parent: Genie.Yuk.Client
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Client.Start()
+  fullName: Genie.Yuk.Client.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Client.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/Client.cs
+    startLine: 36
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Genie.Yuk.Client.Start*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -100,7 +163,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Handler
     path: Genie.Core/Client.cs
-    startLine: 35
+    startLine: 41
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -132,7 +195,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ConnectServer
     path: Genie.Core/Client.cs
-    startLine: 67
+    startLine: 91
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -442,6 +505,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Genie.Yuk.GameGraphics
+  commentId: T:Genie.Yuk.GameGraphics
+  parent: Genie.Yuk
+  name: GameGraphics
+  nameWithType: GameGraphics
+  fullName: Genie.Yuk.GameGraphics
 - uid: Genie.Yuk.Client.#ctor*
   commentId: Overload:Genie.Yuk.Client.#ctor
   name: Client
@@ -460,6 +529,11 @@ references:
   name: EventManagerClient
   nameWithType: EventManagerClient
   fullName: Genie.Yuk.EventManagerClient
+- uid: Genie.Yuk.Client.Start*
+  commentId: Overload:Genie.Yuk.Client.Start
+  name: Start
+  nameWithType: Client.Start
+  fullName: Genie.Yuk.Client.Start
 - uid: Genie.Yuk.Client.Handler*
   commentId: Overload:Genie.Yuk.Client.Handler
   name: Handler

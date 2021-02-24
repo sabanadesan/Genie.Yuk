@@ -25,42 +25,28 @@ namespace Genie3D.DirectX12
             this.swapChainPanel = swapChainPanel;
 
             InitializeD3D();
+        }
+
+        public void Start()
+        {
             InitScene();
         }
 
         public void Run(CancellationToken token)
         {
-            MainLoop(token);
+            token.ThrowIfCancellationRequested();
 
-            Dispose();
+            Update();
+            Render();
         }
 
-        private void MainLoop(CancellationToken token)
+        public void AlwaysRun()
         {
-            try
-            {
-                Calculate(token);
-            }
-            catch (OperationCanceledException ex) when (ex.CancellationToken == token) // includes TaskCanceledException
-            {
-                Console.WriteLine("Cancelled Exception.");
-            }
-        }
-
-        private void Calculate(CancellationToken token)
-        {
-            while (true)
-            {
-                token.ThrowIfCancellationRequested();
-
-                Update();
-                Render();
-            }
         }
 
         public void Stop()
         {
-            
+            Dispose();
         }
 
         private void UpdateScene()
