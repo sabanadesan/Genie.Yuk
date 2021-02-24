@@ -16,6 +16,10 @@ namespace Genie.Yuk
     {
     }
 
+    public class StartEvent : Event
+    {
+    }
+
     public class JobEvent : Event
     {
         private Queue<Event> _jobEvents;

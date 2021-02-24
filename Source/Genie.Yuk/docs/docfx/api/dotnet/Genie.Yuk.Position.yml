@@ -5,6 +5,7 @@ items:
   id: Position
   parent: Genie.Yuk
   children:
+  - Genie.Yuk.Position.#ctor(System.Double,System.Double,System.Double)
   - Genie.Yuk.Position.X
   - Genie.Yuk.Position.Y
   - Genie.Yuk.Position.Z
@@ -65,10 +66,10 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public int X
+    content: public double X
     return:
-      type: System.Int32
-    content.vb: Public X As Integer
+      type: System.Double
+    content.vb: Public X As Double
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -96,10 +97,10 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public int Y
+    content: public double Y
     return:
-      type: System.Int32
-    content.vb: Public Y As Integer
+      type: System.Double
+    content.vb: Public Y As Double
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -127,10 +128,47 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public int Z
+    content: public double Z
     return:
-      type: System.Int32
-    content.vb: Public Z As Integer
+      type: System.Double
+    content.vb: Public Z As Double
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Genie.Yuk.Position.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Genie.Yuk.Position.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Genie.Yuk.Position
+  langs:
+  - csharp
+  - vb
+  name: Position(Double, Double, Double)
+  nameWithType: Position.Position(Double, Double, Double)
+  fullName: Genie.Yuk.Position.Position(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/Math.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: .ctor
+    path: Genie.Core/Math.cs
+    startLine: 10
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public Position(double x, double y, double z)
+    parameters:
+    - id: x
+      type: System.Double
+    - id: y
+      type: System.Double
+    - id: z
+      type: System.Double
+    content.vb: Public Sub New(x As Double, y As Double, z As Double)
+  overload: Genie.Yuk.Position.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -409,11 +447,16 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Genie.Yuk.Position.#ctor*
+  commentId: Overload:Genie.Yuk.Position.#ctor
+  name: Position
+  nameWithType: Position.Position
+  fullName: Genie.Yuk.Position.Position
 shouldSkipMarkup: true

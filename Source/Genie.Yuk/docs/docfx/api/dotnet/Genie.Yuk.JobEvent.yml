@@ -22,7 +22,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: JobEvent
     path: Genie.Core/Event.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Event.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Enqueue
     path: Genie.Core/Event.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -131,7 +131,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Dequeue
     path: Genie.Core/Event.cs
-    startLine: 32
+    startLine: 36
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk

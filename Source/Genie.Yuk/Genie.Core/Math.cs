@@ -6,6 +6,13 @@ namespace Genie.Yuk
 {
     public struct Position
     {
-        public int X, Y, Z;
+        public double X, Y, Z;
+
+        public Position(double x, double y, double z)
+        {
+            X = x;
+            Y = y;
+            Z = z;
+        }
     } 
 }

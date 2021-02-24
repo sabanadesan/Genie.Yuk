@@ -39,7 +39,7 @@ namespace Genie.Yuk
         public Component()
         {
             guid = Guid.NewGuid();
-            position = new Position();
+            position = new Position(0.0, 0.0, 0.0);
 
             ComponentManager.Register(guid, this);
             this.Start();

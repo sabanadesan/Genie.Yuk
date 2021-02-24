@@ -5,7 +5,7 @@ items:
   id: Server
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Server.#ctor(Genie.Yuk.EventManagerServer,System.String)
+  - Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
   - Genie.Yuk.Server.StartServer
   langs:
   - csharp
@@ -44,16 +44,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Server.#ctor(Genie.Yuk.EventManagerServer,System.String)
-  commentId: M:Genie.Yuk.Server.#ctor(Genie.Yuk.EventManagerServer,System.String)
-  id: '#ctor(Genie.Yuk.EventManagerServer,System.String)'
+- uid: Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
+  commentId: M:Genie.Yuk.Server.#ctor(Genie.Yuk.EventManager,System.String)
+  id: '#ctor(Genie.Yuk.EventManager,System.String)'
   parent: Genie.Yuk.Server
   langs:
   - csharp
   - vb
-  name: Server(EventManagerServer, String)
-  nameWithType: Server.Server(EventManagerServer, String)
-  fullName: Genie.Yuk.Server.Server(Genie.Yuk.EventManagerServer, System.String)
+  name: Server(EventManager, String)
+  nameWithType: Server.Server(EventManager, String)
+  fullName: Genie.Yuk.Server.Server(Genie.Yuk.EventManager, System.String)
   type: Constructor
   source:
     remote:
@@ -67,13 +67,13 @@ items:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Server(EventManagerServer events = null, string IPAddress = "127.0.0.1")
+    content: public Server(EventManager events = null, string IPAddress = "127.0.0.1")
     parameters:
     - id: events
-      type: Genie.Yuk.EventManagerServer
+      type: Genie.Yuk.EventManager
     - id: IPAddress
       type: System.String
-    content.vb: Public Sub New(events As EventManagerServer = Nothing, IPAddress As String = "127.0.0.1")
+    content.vb: Public Sub New(events As EventManager = Nothing, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Server.#ctor*
   modifiers.csharp:
   - public
@@ -412,12 +412,12 @@ references:
   name: Server
   nameWithType: Server.Server
   fullName: Genie.Yuk.Server.Server
-- uid: Genie.Yuk.EventManagerServer
-  commentId: T:Genie.Yuk.EventManagerServer
+- uid: Genie.Yuk.EventManager
+  commentId: T:Genie.Yuk.EventManager
   parent: Genie.Yuk
-  name: EventManagerServer
-  nameWithType: EventManagerServer
-  fullName: Genie.Yuk.EventManagerServer
+  name: EventManager
+  nameWithType: EventManager
+  fullName: Genie.Yuk.EventManager
 - uid: System.String
   commentId: T:System.String
   parent: System

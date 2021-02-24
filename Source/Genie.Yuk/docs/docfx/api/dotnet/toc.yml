@@ -16,10 +16,8 @@
     name: Do
   - uid: Genie.Yuk.Event
     name: Event
-  - uid: Genie.Yuk.EventManagerClient
-    name: EventManagerClient
-  - uid: Genie.Yuk.EventManagerServer
-    name: EventManagerServer
+  - uid: Genie.Yuk.EventManager
+    name: EventManager
   - uid: Genie.Yuk.EventQueueClient
     name: EventQueueClient
   - uid: Genie.Yuk.EventQueueServer
@@ -62,6 +60,8 @@
     name: ShaderResource
   - uid: Genie.Yuk.ShaderResourceNode
     name: ShaderResourceNode
+  - uid: Genie.Yuk.StartEvent
+    name: StartEvent
   - uid: Genie.Yuk.StopEvent
     name: StopEvent
   - uid: Genie.Yuk.Vulkan

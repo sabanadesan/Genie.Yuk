@@ -5,11 +5,10 @@ items:
   id: Client
   parent: Genie.Yuk
   children:
-  - Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
+  - Genie.Yuk.Client.#ctor(System.String,System.String)
   - Genie.Yuk.Client.ConnectServer
-  - Genie.Yuk.Client.gg
-  - Genie.Yuk.Client.Handler
-  - Genie.Yuk.Client.Start
+  - Genie.Yuk.Client.m_Events
+  - Genie.Yuk.Client.Start(Genie.Yuk.EventManager)
   langs:
   - csharp
   - vb
@@ -47,47 +46,47 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Genie.Yuk.Client.gg
-  commentId: F:Genie.Yuk.Client.gg
-  id: gg
+- uid: Genie.Yuk.Client.m_Events
+  commentId: F:Genie.Yuk.Client.m_Events
+  id: m_Events
   parent: Genie.Yuk.Client
   langs:
   - csharp
   - vb
-  name: gg
-  nameWithType: Client.gg
-  fullName: Genie.Yuk.Client.gg
+  name: m_Events
+  nameWithType: Client.m_Events
+  fullName: Genie.Yuk.Client.m_Events
   type: Field
   source:
     remote:
       path: Source/Genie.Yuk/Genie.Core/Client.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: gg
+    id: m_Events
     path: Genie.Core/Client.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: protected GameGraphics gg
+    content: protected EventManager m_Events
     return:
-      type: Genie.Yuk.GameGraphics
-    content.vb: Protected gg As GameGraphics
+      type: Genie.Yuk.EventManager
+    content.vb: Protected m_Events As EventManager
   modifiers.csharp:
   - protected
   modifiers.vb:
   - Protected
-- uid: Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
-  commentId: M:Genie.Yuk.Client.#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)
-  id: '#ctor(System.String,Genie.Yuk.EventManagerClient,System.String)'
+- uid: Genie.Yuk.Client.#ctor(System.String,System.String)
+  commentId: M:Genie.Yuk.Client.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
   parent: Genie.Yuk.Client
   langs:
   - csharp
   - vb
-  name: Client(String, EventManagerClient, String)
-  nameWithType: Client.Client(String, EventManagerClient, String)
-  fullName: Genie.Yuk.Client.Client(System.String, Genie.Yuk.EventManagerClient, System.String)
+  name: Client(String, String)
+  nameWithType: Client.Client(String, String)
+  fullName: Genie.Yuk.Client.Client(System.String, System.String)
   type: Constructor
   source:
     remote:
@@ -96,35 +95,33 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/Client.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public Client(string path, EventManagerClient events = null, string IPAddress = "127.0.0.1")
+    content: public Client(string path, string IPAddress = "127.0.0.1")
     parameters:
     - id: path
       type: System.String
-    - id: events
-      type: Genie.Yuk.EventManagerClient
     - id: IPAddress
       type: System.String
-    content.vb: Public Sub New(path As String, events As EventManagerClient = Nothing, IPAddress As String = "127.0.0.1")
+    content.vb: Public Sub New(path As String, IPAddress As String = "127.0.0.1")
   overload: Genie.Yuk.Client.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Genie.Yuk.Client.Start
-  commentId: M:Genie.Yuk.Client.Start
-  id: Start
+- uid: Genie.Yuk.Client.Start(Genie.Yuk.EventManager)
+  commentId: M:Genie.Yuk.Client.Start(Genie.Yuk.EventManager)
+  id: Start(Genie.Yuk.EventManager)
   parent: Genie.Yuk.Client
   langs:
   - csharp
   - vb
-  name: Start()
-  nameWithType: Client.Start()
-  fullName: Genie.Yuk.Client.Start()
+  name: Start(EventManager)
+  nameWithType: Client.Start(EventManager)
+  fullName: Genie.Yuk.Client.Start(Genie.Yuk.EventManager)
   type: Method
   source:
     remote:
@@ -133,46 +130,17 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Start
     path: Genie.Core/Client.cs
-    startLine: 36
+    startLine: 24
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public void Start()
-    content.vb: Public Sub Start
+    content: public void Start(EventManager events = null)
+    parameters:
+    - id: events
+      type: Genie.Yuk.EventManager
+    content.vb: Public Sub Start(events As EventManager = Nothing)
   overload: Genie.Yuk.Client.Start*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Genie.Yuk.Client.Handler
-  commentId: M:Genie.Yuk.Client.Handler
-  id: Handler
-  parent: Genie.Yuk.Client
-  langs:
-  - csharp
-  - vb
-  name: Handler()
-  nameWithType: Client.Handler()
-  fullName: Genie.Yuk.Client.Handler()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Client.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Handler
-    path: Genie.Core/Client.cs
-    startLine: 41
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public CancellationTokenSource Handler()
-    return:
-      type: System.Threading.CancellationTokenSource
-    content.vb: Public Function Handler As CancellationTokenSource
-  overload: Genie.Yuk.Client.Handler*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -195,7 +163,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: ConnectServer
     path: Genie.Core/Client.cs
-    startLine: 91
+    startLine: 40
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -505,12 +473,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.GameGraphics
-  commentId: T:Genie.Yuk.GameGraphics
+- uid: Genie.Yuk.EventManager
+  commentId: T:Genie.Yuk.EventManager
   parent: Genie.Yuk
-  name: GameGraphics
-  nameWithType: GameGraphics
-  fullName: Genie.Yuk.GameGraphics
+  name: EventManager
+  nameWithType: EventManager
+  fullName: Genie.Yuk.EventManager
 - uid: Genie.Yuk.Client.#ctor*
   commentId: Overload:Genie.Yuk.Client.#ctor
   name: Client
@@ -523,35 +491,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Genie.Yuk.EventManagerClient
-  commentId: T:Genie.Yuk.EventManagerClient
-  parent: Genie.Yuk
-  name: EventManagerClient
-  nameWithType: EventManagerClient
-  fullName: Genie.Yuk.EventManagerClient
 - uid: Genie.Yuk.Client.Start*
   commentId: Overload:Genie.Yuk.Client.Start
   name: Start
   nameWithType: Client.Start
   fullName: Genie.Yuk.Client.Start
-- uid: Genie.Yuk.Client.Handler*
-  commentId: Overload:Genie.Yuk.Client.Handler
-  name: Handler
-  nameWithType: Client.Handler
-  fullName: Genie.Yuk.Client.Handler
-- uid: System.Threading.CancellationTokenSource
-  commentId: T:System.Threading.CancellationTokenSource
-  parent: System.Threading
-  isExternal: true
-  name: CancellationTokenSource
-  nameWithType: CancellationTokenSource
-  fullName: System.Threading.CancellationTokenSource
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
 - uid: Genie.Yuk.Client.ConnectServer*
   commentId: Overload:Genie.Yuk.Client.ConnectServer
   name: ConnectServer

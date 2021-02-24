@@ -23,10 +23,8 @@ namespace Genie.Console
 
             Client client = new Client("Output");
             client.Start();
-            CancellationTokenSource cancel = client.Handler();
-            CancellationToken token1 = cancel.Token;
 
-            while (!token1.IsCancellationRequested)
+            while (true)
             {
 
             }

@@ -30,8 +30,6 @@ namespace Genie.Win10
         public Genie.Win10.Utility.Client client;
         public Server server;
 
-        private CancellationTokenSource cancel;
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -46,7 +44,6 @@ namespace Genie.Win10
 
             client = new Genie.Win10.Utility.Client(localFolder.Path);
             client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
-            cancel = client.Handler();
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -59,7 +56,7 @@ namespace Genie.Win10
 
         private void SubscribeButton_Click(object sender, RoutedEventArgs e)
         {
-            cancel.Cancel();
+
         }
     }
 }

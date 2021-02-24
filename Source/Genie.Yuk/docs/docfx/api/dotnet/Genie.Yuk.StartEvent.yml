@@ -1,39 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Genie.Yuk.Do
-  commentId: T:Genie.Yuk.Do
-  id: Do
+- uid: Genie.Yuk.StartEvent
+  commentId: T:Genie.Yuk.StartEvent
+  id: StartEvent
   parent: Genie.Yuk
-  children:
-  - Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  - Genie.Yuk.Do.Start
-  - Genie.Yuk.Do.Stop
+  children: []
   langs:
   - csharp
   - vb
-  name: Do
-  nameWithType: Do
-  fullName: Genie.Yuk.Do
+  name: StartEvent
+  nameWithType: StartEvent
+  fullName: Genie.Yuk.StartEvent
   type: Class
   source:
     remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
+      path: Source/Genie.Yuk/Genie.Core/Event.cs
       branch: master
       repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Do
-    path: Genie.Core/Process.cs
-    startLine: 100
+    id: StartEvent
+    path: Genie.Core/Event.cs
+    startLine: 18
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
   syntax:
-    content: public abstract class Do
-    content.vb: Public MustInherit Class Do
+    content: 'public class StartEvent : Event'
+    content.vb: >-
+      Public Class StartEvent
+          Inherits
+
+           Event
   inheritance:
   - System.Object
-  derivedClasses:
-  - Genie.Yuk.Game
-  - Genie.Yuk.GameGraphics
+  - Genie.Yuk.Event
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -44,111 +43,10 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - abstract
   - class
   modifiers.vb:
   - Public
-  - MustInherit
   - Class
-- uid: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  commentId: M:Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  id: Run(System.Threading.CancellationToken)
-  parent: Genie.Yuk.Do
-  langs:
-  - csharp
-  - vb
-  name: Run(CancellationToken)
-  nameWithType: Do.Run(CancellationToken)
-  fullName: Genie.Yuk.Do.Run(System.Threading.CancellationToken)
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Run
-    path: Genie.Core/Process.cs
-    startLine: 102
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public abstract void Run(CancellationToken token)
-    parameters:
-    - id: token
-      type: System.Threading.CancellationToken
-    content.vb: Public MustOverride Sub Run(token As CancellationToken)
-  overload: Genie.Yuk.Do.Run*
-  modifiers.csharp:
-  - public
-  - abstract
-  modifiers.vb:
-  - Public
-  - MustOverride
-- uid: Genie.Yuk.Do.Stop
-  commentId: M:Genie.Yuk.Do.Stop
-  id: Stop
-  parent: Genie.Yuk.Do
-  langs:
-  - csharp
-  - vb
-  name: Stop()
-  nameWithType: Do.Stop()
-  fullName: Genie.Yuk.Do.Stop()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Stop
-    path: Genie.Core/Process.cs
-    startLine: 104
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public abstract void Stop()
-    content.vb: Public MustOverride Sub Stop
-  overload: Genie.Yuk.Do.Stop*
-  modifiers.csharp:
-  - public
-  - abstract
-  modifiers.vb:
-  - Public
-  - MustOverride
-- uid: Genie.Yuk.Do.Start
-  commentId: M:Genie.Yuk.Do.Start
-  id: Start
-  parent: Genie.Yuk.Do
-  langs:
-  - csharp
-  - vb
-  name: Start()
-  nameWithType: Do.Start()
-  fullName: Genie.Yuk.Do.Start()
-  type: Method
-  source:
-    remote:
-      path: Source/Genie.Yuk/Genie.Core/Process.cs
-      branch: master
-      repo: https://github.com/sabanadesan/Genie.Yuk.git
-    id: Start
-    path: Genie.Core/Process.cs
-    startLine: 106
-  assemblies:
-  - Genie.Yuk
-  namespace: Genie.Yuk
-  syntax:
-    content: public abstract void Start()
-    content.vb: Public MustOverride Sub Start
-  overload: Genie.Yuk.Do.Start*
-  modifiers.csharp:
-  - public
-  - abstract
-  modifiers.vb:
-  - Public
-  - MustOverride
 references:
 - uid: Genie.Yuk
   commentId: N:Genie.Yuk
@@ -162,6 +60,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Genie.Yuk.Event
+  commentId: T:Genie.Yuk.Event
+  parent: Genie.Yuk
+  name: Event
+  nameWithType: Event
+  fullName: Genie.Yuk.Event
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -447,32 +351,4 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Genie.Yuk.Do.Run*
-  commentId: Overload:Genie.Yuk.Do.Run
-  name: Run
-  nameWithType: Do.Run
-  fullName: Genie.Yuk.Do.Run
-- uid: System.Threading.CancellationToken
-  commentId: T:System.Threading.CancellationToken
-  parent: System.Threading
-  isExternal: true
-  name: CancellationToken
-  nameWithType: CancellationToken
-  fullName: System.Threading.CancellationToken
-- uid: System.Threading
-  commentId: N:System.Threading
-  isExternal: true
-  name: System.Threading
-  nameWithType: System.Threading
-  fullName: System.Threading
-- uid: Genie.Yuk.Do.Stop*
-  commentId: Overload:Genie.Yuk.Do.Stop
-  name: Stop
-  nameWithType: Do.Stop
-  fullName: Genie.Yuk.Do.Stop
-- uid: Genie.Yuk.Do.Start*
-  commentId: Overload:Genie.Yuk.Do.Start
-  name: Start
-  nameWithType: Do.Start
-  fullName: Genie.Yuk.Do.Start
 shouldSkipMarkup: true

@@ -45,9 +45,8 @@ namespace Genie.Sample.RPG
 
             RpgEventManagerClient clientEvents = new RpgEventManagerClient();
 
-            Genie.Win10.Utility.Client client = new Genie.Win10.Utility.Client(localFolder.Path, clientEvents);
-            client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height);
-            cancel = client.Handler();
+            Genie.Win10.Utility.Client client = new Genie.Win10.Utility.Client(localFolder.Path);
+            client.Start(swapChainPanel, (int)swapChainPanel.RenderSize.Width, (int)swapChainPanel.RenderSize.Height, clientEvents);
         }
 
         private void swapChainPanel_SizeChanged(object sender, SizeChangedEventArgs e)

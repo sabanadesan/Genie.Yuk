@@ -11,8 +11,7 @@ items:
   - Genie.Yuk.DirectX
   - Genie.Yuk.Do
   - Genie.Yuk.Event
-  - Genie.Yuk.EventManagerClient
-  - Genie.Yuk.EventManagerServer
+  - Genie.Yuk.EventManager
   - Genie.Yuk.EventQueueClient
   - Genie.Yuk.EventQueueServer
   - Genie.Yuk.Game
@@ -34,6 +33,7 @@ items:
   - Genie.Yuk.Service
   - Genie.Yuk.ShaderResource
   - Genie.Yuk.ShaderResourceNode
+  - Genie.Yuk.StartEvent
   - Genie.Yuk.StopEvent
   - Genie.Yuk.Vulkan
   - Genie.Yuk.WinUtility
@@ -85,6 +85,11 @@ references:
   name: StopEvent
   nameWithType: StopEvent
   fullName: Genie.Yuk.StopEvent
+- uid: Genie.Yuk.StartEvent
+  commentId: T:Genie.Yuk.StartEvent
+  name: StartEvent
+  nameWithType: StartEvent
+  fullName: Genie.Yuk.StartEvent
 - uid: Genie.Yuk.JobEvent
   commentId: T:Genie.Yuk.JobEvent
   name: JobEvent
@@ -105,18 +110,12 @@ references:
   name: EventQueueClient
   nameWithType: EventQueueClient
   fullName: Genie.Yuk.EventQueueClient
-- uid: Genie.Yuk.EventManagerClient
-  commentId: T:Genie.Yuk.EventManagerClient
+- uid: Genie.Yuk.EventManager
+  commentId: T:Genie.Yuk.EventManager
   parent: Genie.Yuk
-  name: EventManagerClient
-  nameWithType: EventManagerClient
-  fullName: Genie.Yuk.EventManagerClient
-- uid: Genie.Yuk.EventManagerServer
-  commentId: T:Genie.Yuk.EventManagerServer
-  parent: Genie.Yuk
-  name: EventManagerServer
-  nameWithType: EventManagerServer
-  fullName: Genie.Yuk.EventManagerServer
+  name: EventManager
+  nameWithType: EventManager
+  fullName: Genie.Yuk.EventManager
 - uid: Genie.Yuk.Game
   commentId: T:Genie.Yuk.Game
   name: Game
@@ -130,7 +129,6 @@ references:
   fullName: Genie.Yuk.GraphicsBackend
 - uid: Genie.Yuk.GameGraphics
   commentId: T:Genie.Yuk.GameGraphics
-  parent: Genie.Yuk
   name: GameGraphics
   nameWithType: GameGraphics
   fullName: Genie.Yuk.GameGraphics

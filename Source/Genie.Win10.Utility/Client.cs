@@ -15,13 +15,24 @@ namespace Genie.Win10.Utility
 {
     public class Client : Genie.Yuk.Client
     {
-        public Client(String path, EventManagerClient events = null, String IPAddress = "127.0.0.1") : base(path, events, IPAddress)
+        public Client(String path, String IPAddress = "127.0.0.1") : base(path, IPAddress)
         {
         }
 
-        public void Start(Object swapChainPanel, int Width, int Height)
+        public void Start(Object swapChainPanel, int Width, int Height, EventManager events = null)
         {
-            gg = new GameGraphics(swapChainPanel, Width, Height);
+            if (events == null)
+            {
+                m_Events = new EventManager();
+            }
+            else
+            {
+                m_Events = events;
+            }
+
+            EventQueueClient.Enqueue(new StartEvent());
+
+            m_Events.Start(swapChainPanel, Width, Height);
         }
     }
 }

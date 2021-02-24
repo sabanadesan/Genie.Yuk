@@ -43,20 +43,52 @@ namespace Genie.Yuk
         }
     }
 
-    public class EventManagerClient : EventManagerServer
+    public class EventManager
     {
-        public EventManagerClient(String process = "EventsWorkerClient") : base(process)
+        public EventManager()
         {
+
         }
 
-        public override void Stop()
+        public virtual void Start(Object swapChainPanel, int Width, int Height)
+        {
+            GameGraphics gg = new GameGraphics(swapChainPanel, Width, Height);
+            Service.Register<GameGraphics>(gg);
+
+            StartAfter();
+        }
+
+        public virtual void Start()
+        {
+            GameGraphics gg = new GameGraphics();
+            Service.Register<GameGraphics>(gg);
+
+            StartAfter();
+        }
+
+        protected void StartAfter()
+        {
+            WinUtility win = new WinUtility();
+
+            CancellationTokenSource source1 = new CancellationTokenSource();
+            CancellationToken token1 = source1.Token;
+
+            Service.Register<WinUtility>(win);
+            Service.Register<CancellationToken>(source1.Token);
+
+            Calculate();
+        }
+
+
+        public void Stop()
         {
             EventQueueClient.Enqueue(new StopEvent());
         }
 
-        public override void Calculate(CancellationToken token)
+        public void Calculate()
         {
-            Boolean DoWhile = true;
+            WinUtility win = Service.Resolve<WinUtility>();
+            CancellationToken token = Service.Resolve<CancellationToken>();
 
             Clock timer = new Clock();
             timer.Start();
@@ -66,40 +98,80 @@ namespace Genie.Yuk
 
             double fps;
 
-            while (DoWhile)
+            Action myAction = (Action)(async () =>
             {
-                token.ThrowIfCancellationRequested();
-
-                int current = timer.MsElapsed();
-                int elapsed = current - lastTime;
-                fps = timer.FPS(elapsed);
-
-                Console.WriteLine(fps);
-
-                try
+                while (!token.IsCancellationRequested)
                 {
-                    _event = EventQueueClient.Dequeue();
-                    DoWhile = Loop(_event);
-                }
-                catch (InvalidOperationException e)
-                {
-                    //DoWhile = false;
+                    int current = timer.MsElapsed();
+                    int elapsed = current - lastTime;
+                    fps = timer.FPS(elapsed);
+
+                    Console.WriteLine(fps);
+                    try
+                    {
+                        _event = EventQueueClient.Dequeue();
+                        Loop(_event);
+                    }
+                    catch (InvalidOperationException e)
+                    {
+                        //DoWhile = false;
+                    }
+
+                    try
+                    {
+                        await Task.Delay(500, token);
+                    }
+                    catch (TaskCanceledException)
+                    {
+                        System.Console.WriteLine("Request was cancelled");
+                    };
+
+                    lastTime = current;
                 }
 
-                lastTime = current;
-            }
+                timer.Stop();
+            });
 
-            timer.Stop();
+            win.OnUiThread(myAction);
         }
 
-        public override Boolean Loop(Genie.Yuk.Event _event)
+        public virtual Boolean Loop(Genie.Yuk.Event _event)
         {
+            WinUtility win = Service.Resolve<WinUtility>();
+            GameGraphics gg = Service.Resolve<GameGraphics>();
+            CancellationToken token = Service.Resolve<CancellationToken>();
+
             if (_event != null)
             {
-                if (_event.GetType() == typeof(GraphicsEvent))
+                if(_event.GetType() == typeof(StartEvent))
+                {
+                    Action myAction0 = (Action)(() =>
+                    {
+                        gg.Start();
+                    });
+
+                    Task taskA = Task.Run(myAction0);
+                    taskA.Wait();
+
+                    Action myAction1 = (Action)(() =>
+                    {
+                        while (!token.IsCancellationRequested)
+                        {
+                            gg.AlwaysRun();
+                        }
+                    });
+
+                    win.OnUiThread(myAction1);
+
+                    EventQueueClient.Enqueue(new GraphicsEvent());
+                }
+                else if (_event.GetType() == typeof(GraphicsEvent))
                 {
                     lock (WriteServer.balanceLock)
                     {
+                        ComponentManager.Update();
+                        gg.Run(token);
+
                         System.Console.WriteLine("Draw Client");
                     }
 
@@ -109,116 +181,6 @@ namespace Genie.Yuk
                 {
                     JobEvent job = (JobEvent)_event;
 
-                    Boolean doLoop = true;
-
-                    while (doLoop)
-                    {
-                        try
-                        {
-                            Genie.Yuk.Event tmpEvent = job.Dequeue();
-                            Loop(tmpEvent);
-                        }
-                        catch (InvalidOperationException e)
-                        {
-                            doLoop = false;
-                        }
-                    }
-                }
-                else if (_event.GetType() == typeof(StopEvent))
-                {
-                    System.Console.WriteLine("Stop");
-                    return false;
-                }
-            }
-
-            return true;
-        }
-    }
-
-    public class EventManagerServer : Do
-    {
-        public EventManagerServer(String process = "EventsWorkerServer")
-        {
-            Process BackgroundWorker = new Process(process);
-            Task t = BackgroundWorker.Run(this);
-        }
-
-        public override void Run(CancellationToken token)
-        {
-            try
-            {
-                Calculate(token);
-            }
-            catch (OperationCanceledException ex) when (ex.CancellationToken == token) // includes TaskCanceledException
-            {
-                Console.WriteLine("Cancelled Exception.");
-            }
-        }
-
-        public override void Stop()
-        {
-            EventQueueServer.Enqueue(new StopEvent());
-        }
-
-        public override void Start()
-        {
-        }
-
-        public virtual void Calculate(CancellationToken token)
-        {
-            Boolean DoWhile = true;
-
-            Clock timer = new Clock();
-            timer.Start();
-            int lastTime = timer.MsElapsed();
-
-            Genie.Yuk.Event _event = null;
-
-            double fps;
-
-            while (DoWhile)
-            {
-                token.ThrowIfCancellationRequested();
-
-                int current = timer.MsElapsed();
-                int elapsed = current - lastTime;
-                fps = timer.FPS(elapsed);
-
-                Console.WriteLine(fps);
-
-                try
-                {
-                    _event = EventQueueServer.Dequeue();
-                    DoWhile = Loop(_event);
-                }
-                catch (InvalidOperationException e)
-                {
-                    //DoWhile = false;
-                }
-
-                lastTime = current;
-            }
-
-            timer.Stop();
-        }
-
-        public virtual Boolean Loop(Genie.Yuk.Event _event)
-        {
-            if (_event != null)
-            {
-                if (_event.GetType() == typeof(GraphicsEvent))
-                {
-                    lock (WriteServer.balanceLock)
-                    {
-                        System.Console.WriteLine("Draw Server");
-                    }
-              
-                    EventQueueServer.Enqueue(new GraphicsEvent());
-                }
-                else if (_event.GetType() == typeof(JobEvent))
-                {
-                    JobEvent job = (JobEvent) _event;
-               
                     Boolean doLoop = true;
 
                     while (doLoop)
