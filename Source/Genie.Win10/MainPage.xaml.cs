@@ -15,10 +15,10 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 using Windows.Storage;
+using System.Threading;
 using Genie.Yuk;
 using Genie.Win10.Utility;
-
-using System.Threading;
+using Genie.Make;
 
 namespace Genie.Win10
 {
@@ -36,6 +36,7 @@ namespace Genie.Win10
         {
             this.InitializeComponent();
 
+            Script script = new Script();
             server = new Server();
         }
 

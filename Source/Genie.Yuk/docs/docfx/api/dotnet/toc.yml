@@ -34,12 +34,12 @@
     name: GraphicsBackend
   - uid: Genie.Yuk.GraphicsEvent
     name: GraphicsEvent
-  - uid: Genie.Yuk.InputComponent
-    name: InputComponent
   - uid: Genie.Yuk.JobEvent
     name: JobEvent
   - uid: Genie.Yuk.MenuType
     name: MenuType
+  - uid: Genie.Yuk.Position
+    name: Position
   - uid: Genie.Yuk.Process
     name: Process
   - uid: Genie.Yuk.Process.MyFunction

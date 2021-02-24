@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 using Genie.Yuk;
 using Genie.Win10.Utility;
+using Genie.Make;
 
 namespace Genie.Sample.RPG
 {
@@ -31,6 +32,7 @@ namespace Genie.Sample.RPG
 
             RpgEventManagerServer serverEvents = new RpgEventManagerServer();
 
+            Script script = new Script();
             Server s = new Server(serverEvents);
         }
 

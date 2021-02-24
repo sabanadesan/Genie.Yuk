@@ -157,6 +157,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Source\Genie.Make\Genie.Make.csproj">
+      <Project>{41507cf0-a740-467f-906e-f8142779bab0}</Project>
+      <Name>Genie.Make</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Source\Genie.Win10.Utility\Genie.Win10.Utility.csproj">
       <Project>{70a5c82c-7e0d-4c40-a206-ebd4007fd48b}</Project>
       <Name>Genie.Win10.Utility</Name>

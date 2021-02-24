@@ -20,9 +20,9 @@ items:
   - Genie.Yuk.Graphics
   - Genie.Yuk.GraphicsBackend
   - Genie.Yuk.GraphicsEvent
-  - Genie.Yuk.InputComponent
   - Genie.Yuk.JobEvent
   - Genie.Yuk.MenuType
+  - Genie.Yuk.Position
   - Genie.Yuk.Process
   - Genie.Yuk.Process.MyFunction
   - Genie.Yuk.ProcessServer
@@ -69,11 +69,6 @@ references:
   name: Component
   nameWithType: Component
   fullName: Genie.Yuk.Component
-- uid: Genie.Yuk.InputComponent
-  commentId: T:Genie.Yuk.InputComponent
-  name: InputComponent
-  nameWithType: InputComponent
-  fullName: Genie.Yuk.InputComponent
 - uid: Genie.Yuk.Event
   commentId: T:Genie.Yuk.Event
   parent: Genie.Yuk
@@ -154,6 +149,12 @@ references:
   name: DirectX
   nameWithType: DirectX
   fullName: Genie.Yuk.DirectX
+- uid: Genie.Yuk.Position
+  commentId: T:Genie.Yuk.Position
+  parent: Genie.Yuk
+  name: Position
+  nameWithType: Position
+  fullName: Genie.Yuk.Position
 - uid: Genie.Yuk.ProcessServer
   commentId: T:Genie.Yuk.ProcessServer
   name: ProcessServer

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
+using Genie.Make;
+
 namespace Genie.Console
 {
     class Program
@@ -14,6 +16,8 @@ namespace Genie.Console
         {
             ScriptingEngine e = new ScriptingEngine();
             e.GenerateAssembly();
+
+            Script script = new Script();
 
             Server s = new Server();
 

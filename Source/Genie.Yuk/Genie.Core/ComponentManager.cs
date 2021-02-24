@@ -34,26 +34,18 @@ namespace Genie.Yuk
     public abstract class Component
     {
         private Guid guid;
+        protected Position position;
 
         public Component()
         {
             guid = Guid.NewGuid();
+            position = new Position();
+
             ComponentManager.Register(guid, this);
+            this.Start();
         }
 
+        public abstract void Start();
         public abstract void Update();
     };
-
-    public class InputComponent : Component
-    {
-        public override void Update()
-        {
-
-        }
-
-        ~InputComponent()  // finalizer
-        {
-            // cleanup statements...
-        }
-    }
 }

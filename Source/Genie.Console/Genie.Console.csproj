@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Genie.Make\Genie.Make.csproj" />
     <ProjectReference Include="..\Genie.Yuk\Genie.Yuk.csproj" />
   </ItemGroup>
 

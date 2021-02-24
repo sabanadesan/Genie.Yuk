@@ -6,6 +6,8 @@ items:
   parent: Genie.Yuk
   children:
   - Genie.Yuk.Component.#ctor
+  - Genie.Yuk.Component.position
+  - Genie.Yuk.Component.Start
   - Genie.Yuk.Component.Update
   langs:
   - csharp
@@ -30,8 +32,6 @@ items:
     content.vb: Public MustInherit Class Component
   inheritance:
   - System.Object
-  derivedClasses:
-  - Genie.Yuk.InputComponent
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -48,6 +48,37 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: Genie.Yuk.Component.position
+  commentId: F:Genie.Yuk.Component.position
+  id: position
+  parent: Genie.Yuk.Component
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: Component.position
+  fullName: Genie.Yuk.Component.position
+  type: Field
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ComponentManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: position
+    path: Genie.Core/ComponentManager.cs
+    startLine: 36
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: protected Position position
+    return:
+      type: Genie.Yuk.Position
+    content.vb: Protected position As Position
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Genie.Yuk.Component.#ctor
   commentId: M:Genie.Yuk.Component.#ctor
   id: '#ctor'
@@ -66,7 +97,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: .ctor
     path: Genie.Core/ComponentManager.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -78,6 +109,38 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Genie.Yuk.Component.Start
+  commentId: M:Genie.Yuk.Component.Start
+  id: Start
+  parent: Genie.Yuk.Component
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Component.Start()
+  fullName: Genie.Yuk.Component.Start()
+  type: Method
+  source:
+    remote:
+      path: Source/Genie.Yuk/Genie.Core/ComponentManager.cs
+      branch: master
+      repo: https://github.com/sabanadesan/Genie.Yuk.git
+    id: Start
+    path: Genie.Core/ComponentManager.cs
+    startLine: 47
+  assemblies:
+  - Genie.Yuk
+  namespace: Genie.Yuk
+  syntax:
+    content: public abstract void Start()
+    content.vb: Public MustOverride Sub Start
+  overload: Genie.Yuk.Component.Start*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
 - uid: Genie.Yuk.Component.Update
   commentId: M:Genie.Yuk.Component.Update
   id: Update
@@ -96,7 +159,7 @@ items:
       repo: https://github.com/sabanadesan/Genie.Yuk.git
     id: Update
     path: Genie.Core/ComponentManager.cs
-    startLine: 43
+    startLine: 48
   assemblies:
   - Genie.Yuk
   namespace: Genie.Yuk
@@ -408,11 +471,22 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Genie.Yuk.Position
+  commentId: T:Genie.Yuk.Position
+  parent: Genie.Yuk
+  name: Position
+  nameWithType: Position
+  fullName: Genie.Yuk.Position
 - uid: Genie.Yuk.Component.#ctor*
   commentId: Overload:Genie.Yuk.Component.#ctor
   name: Component
   nameWithType: Component.Component
   fullName: Genie.Yuk.Component.Component
+- uid: Genie.Yuk.Component.Start*
+  commentId: Overload:Genie.Yuk.Component.Start
+  name: Start
+  nameWithType: Component.Start
+  fullName: Genie.Yuk.Component.Start
 - uid: Genie.Yuk.Component.Update*
   commentId: Overload:Genie.Yuk.Component.Update
   name: Update
